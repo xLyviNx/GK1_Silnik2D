@@ -34,3 +34,7 @@
 *.tlog
 *.lock
 .vs/GK1_Silnik2D/v17/Browse.VC.opendb
+*.db
+*.pdb
+*.idb
+.vs/GK1_Silnik2D/v17/.suo
