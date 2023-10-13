@@ -38,3 +38,4 @@
 *.pdb
 *.idb
 .vs/GK1_Silnik2D/v17/.suo
+*.vsidx

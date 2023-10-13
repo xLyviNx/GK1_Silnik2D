@@ -1,13 +1,21 @@
 #pragma once
 
-class Engine
+namespace GRUPA3
 {
-private:	
-
-protected:
-	static Engine* singleton;
-public:
-	Engine();
-	~Engine();
-	static Engine* GetSingleton(bool);
-};
+	namespace Engine2D
+	{
+		class Engine
+		{
+		private:
+			void InitGame();
+			void EngineLoop();
+			bool enabled;
+		protected:
+			static Engine* singleton;
+		public:
+			Engine();
+			~Engine();
+			static Engine* GetSingleton(bool);
+		};
+	}
+}
