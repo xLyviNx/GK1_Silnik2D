@@ -44,9 +44,7 @@ void Engine::InitGame()
 		cout << "TEST" << endl;
 		cout << appData->WindowSize.x << endl;
 		cout << appData->WindowSize.y << endl;
-		string stdStr = "ja pierdole";
-		sf::String sfStr = sf::String::fromUtf8(stdStr.begin(), stdStr.end());
-		//RenderWindow window(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName);
+		RenderWindow* window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName);
 
 		this->EngineLoop();
 	}

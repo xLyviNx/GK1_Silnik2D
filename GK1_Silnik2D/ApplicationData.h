@@ -1,15 +1,16 @@
 // ApplicationData.h
 #pragma once
 #include <SFML/System/Vector2.hpp>
+#include <SFML/Graphics.hpp>
 #include <string>
 using namespace std;
 namespace GRUPA3
 {
     struct ApplicationData
     {
-        string ApplicationName;
+        sf::String ApplicationName;
         sf::Vector2<int> WindowSize;
-        struct ApplicationData(string appName, int Width, int Height);
+        struct ApplicationData(sf::String appName, int Width, int Height);
         struct ApplicationData();
     };
     extern ApplicationData* appData;
