@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 using namespace GRUPA3::Engine2D;
+using namespace sf;
 
 Engine* Engine::singleton = NULL;
 
@@ -37,12 +38,14 @@ Engine::~Engine()
 }
 void Engine::InitGame()
 {
-	cout << "TEST"<<endl;
+	cout << "TEST" << endl;
 	cout << appData->WindowSize.x << endl;
 	cout << appData->WindowSize.y << endl;
-	cout << appData->ApplicationName<< endl;
-	
-	Window = new sf::RenderWindow(sf::VideoMode(800, 600), "My Window");
+	string appname = appData->ApplicationName;
+	cout << appname << endl;
+	sf::String mySfString(appname);
+	cout << mySfString.toAnsiString() << endl;
+	Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), mySfString);
 
 	this->EngineLoop();
 }
