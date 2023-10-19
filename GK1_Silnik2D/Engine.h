@@ -12,6 +12,7 @@ namespace GRUPA3
 			void EngineLoop();
 			bool enabled;
 			sf::RenderWindow* Window;
+			void ClearMess();
 		protected:
 			static Engine* singleton;
 		public:

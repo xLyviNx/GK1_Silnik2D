@@ -8,7 +8,7 @@ namespace GRUPA3
 	{
         if (appData==NULL)
             appData = new ApplicationData();
-        createApplicationDataIfNone(appData);
+        //createApplicationDataIfNone(appData);
         fstream file(ApplicationDataFile, ios::in);
         if (file.is_open())
         {

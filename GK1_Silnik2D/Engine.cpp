@@ -1,6 +1,7 @@
 #include "Engine.h"
 #include "ApplicationData.h"
 #include <iostream>
+#include <string>
 using namespace std;
 using namespace GRUPA3::Engine2D;
 using namespace sf;
@@ -38,16 +39,20 @@ Engine::~Engine()
 }
 void Engine::InitGame()
 {
-	cout << "TEST" << endl;
-	cout << appData->WindowSize.x << endl;
-	cout << appData->WindowSize.y << endl;
-	string appname = appData->ApplicationName;
-	cout << appname << endl;
-	sf::String mySfString(appname);
-	cout << mySfString.toAnsiString() << endl;
-	Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), mySfString);
+	if (appData != NULL)
+	{
+		cout << "TEST" << endl;
+		cout << appData->WindowSize.x << endl;
+		cout << appData->WindowSize.y << endl;
+		string stdStr = "ja pierdole";
+		sf::String sfStr = sf::String::fromUtf8(stdStr.begin(), stdStr.end());
+		//RenderWindow window(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName);
 
-	this->EngineLoop();
+		this->EngineLoop();
+	}
+	else {
+		cout << "ERROR! APP DATA NOT FOUND\n";
+	}
 }
 void Engine::EngineLoop()
 {
@@ -55,4 +60,10 @@ void Engine::EngineLoop()
 	{
 
 	}
+	ClearMess();
+}
+void Engine::ClearMess()
+{
+	delete(appData);
+	appData = NULL;
 }
