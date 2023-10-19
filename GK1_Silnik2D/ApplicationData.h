@@ -6,14 +6,21 @@
 using namespace std;
 namespace GRUPA3
 {
+    enum DisplayMode
+    {
+        Windowed,
+        Fullscreen,
+    };
     struct ApplicationData
     {
         sf::String ApplicationName;
         sf::Vector2<int> WindowSize;
-        struct ApplicationData(sf::String appName, int Width, int Height);
+        DisplayMode displayMode;
+        struct ApplicationData(sf::String appName, int Width, int Height, DisplayMode dispMode);
         struct ApplicationData();
     };
     extern ApplicationData* appData;
     void LoadAppData();
     void createApplicationDataIfNone(ApplicationData* data);
+
 }

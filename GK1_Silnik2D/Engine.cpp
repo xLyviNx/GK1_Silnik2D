@@ -41,10 +41,8 @@ void Engine::InitGame()
 {
 	if (appData != NULL)
 	{
-		cout << "TEST" << endl;
-		cout << appData->WindowSize.x << endl;
-		cout << appData->WindowSize.y << endl;
-		RenderWindow* window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName);
+		if (Window==NULL)
+			Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName, (appData->displayMode == Fullscreen ? sf::Style::Fullscreen : sf::Style::Default));
 
 		this->EngineLoop();
 	}
