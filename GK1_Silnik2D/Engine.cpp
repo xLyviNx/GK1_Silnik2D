@@ -1,6 +1,5 @@
 #include "Engine.h"
 #include "ApplicationData.h"
-#include <SFML/Graphics.hpp>
 #include <iostream>
 using namespace std;
 using namespace GRUPA3::Engine2D;
@@ -38,7 +37,13 @@ Engine::~Engine()
 }
 void Engine::InitGame()
 {
-	sf::RenderWindow window(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName);
+	cout << "TEST"<<endl;
+	cout << appData->WindowSize.x << endl;
+	cout << appData->WindowSize.y << endl;
+	cout << appData->ApplicationName<< endl;
+	
+	Window = new sf::RenderWindow(sf::VideoMode(800, 600), "My Window");
+
 	this->EngineLoop();
 }
 void Engine::EngineLoop()

@@ -1,4 +1,5 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 
 namespace GRUPA3
 {
@@ -10,6 +11,7 @@ namespace GRUPA3
 			void InitGame();
 			void EngineLoop();
 			bool enabled;
+			sf::RenderWindow* Window;
 		protected:
 			static Engine* singleton;
 		public:
