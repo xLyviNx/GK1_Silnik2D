@@ -29,12 +29,6 @@
     <ClInclude Include="Engine.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="DataTypes.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="DataTypes.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClInclude>
     <ClInclude Include="ApplicationData.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>

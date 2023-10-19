@@ -24,6 +24,7 @@ Engine::Engine()
 	}
 	cout << "Creating Engine Singleton.\n";
 	enabled = true;
+	LoadAppData();
 	InitGame();
 	EngineLoop();
 }
@@ -37,7 +38,7 @@ Engine::~Engine()
 }
 void Engine::InitGame()
 {
-	sf::RenderWindow window(sf::VideoMode(GRUPA3::ApplicationData::Resolution.x, GRUPA3::ApplicationData::Resolution.y), GRUPA3::ApplicationData::ApplicationName);
+	sf::RenderWindow window(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName);
 	this->EngineLoop();
 }
 void Engine::EngineLoop()

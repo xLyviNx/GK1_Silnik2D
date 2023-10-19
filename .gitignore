@@ -14,7 +14,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -39,3 +38,12 @@
 *.idb
 .vs/GK1_Silnik2D/v17/.suo
 *.vsidx
+*.db-shm
+*.db-wal
+*.ipch
+.vs/GK1_Silnik2D/v17/.suo
+*.opendb
+.vs/GK1_Silnik2D/v17/.suo
+*.idb
+*.pdb
+*.ilk

@@ -1,13 +1,18 @@
+// ApplicationData.h
 #pragma once
-#include "DataTypes.h"
-#include <iostream>
+#include <SFML/System/Vector2.hpp>
+#include <string>
 using namespace std;
 namespace GRUPA3
 {
-    using namespace DataTypes;
-    namespace ApplicationData
+    struct ApplicationData
     {
         string ApplicationName;
-        Vector2 Resolution;
-    }
+        sf::Vector2<int> WindowSize;
+        struct ApplicationData(string appName, int Width, int Height);
+        struct ApplicationData();
+    };
+    extern ApplicationData* appData;
+    void LoadAppData();
+    void createApplicationDataIfNone(ApplicationData* data);
 }
