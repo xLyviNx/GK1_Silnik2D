@@ -24,6 +24,7 @@ Engine::Engine()
 	enabled = true;
 	keyboardInputEnabled = true;
 	mouseInputEnabled = true;
+	deltaTime = 0.0;
 	LoadAppData();
 	InitGame();
 	EngineLoop();
@@ -53,8 +54,11 @@ void Engine::InitGame()
 void Engine::EngineLoop()
 {
 	InputReader* testReader = new InputReader();
+	sf::Clock clock;
+	deltaTime = 0.0;
 	while (enabled && Window->isOpen())
 	{
+		deltaTime = clock.restart().asSeconds();
 		sf::Event event;
 		if (mouseInputEnabled)
 		{

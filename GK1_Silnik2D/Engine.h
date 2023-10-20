@@ -33,6 +33,7 @@ namespace GRUPA3
 			Engine();
 			~Engine();
 			static Engine* GetSingleton(bool);
+			double deltaTime;
 		};
 	}
 }
