@@ -21,6 +21,7 @@ namespace GRUPA3
 			void EngineLoop();
 			bool enabled;
 			sf::RenderWindow* Window;
+			int fps;
 			void Cleanup();
 			bool keyboardInputEnabled;
 			bool mouseInputEnabled;
