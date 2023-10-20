@@ -58,15 +58,16 @@ void Engine::EngineLoop()
 	deltaTime = 0.0;
 
 	sf::Font font;
-	if (!font.loadFromFile("fonts/Swansea.ttf"))
+	//cout << "EXISTS: " << exists_test1("fonts/Swansea.ttf")<<endl;
+	/*if (!font.loadFromFile("fonts/Swansea.ttf"))
 	{
 		
-	}
+	}*/
 	sf::Text text;
-	text.setFont(font); // Ustaw wczytan¹ czcionkê
-	text.setCharacterSize(24); // Ustaw rozmiar tekstu
-	text.setFillColor(sf::Color::White); // Ustaw kolor tekstu
-	text.setString("Hello, SFML!"); // Ustaw zawartoœæ tekstu
+	text.setFont(font);
+	text.setCharacterSize(24);
+	text.setFillColor(sf::Color::White);
+	text.setString("Hello, SFML!");
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
