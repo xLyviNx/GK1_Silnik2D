@@ -16,7 +16,8 @@ namespace GRUPA3
         sf::String ApplicationName;
         sf::Vector2<int> WindowSize;
         DisplayMode displayMode;
-        struct ApplicationData(sf::String appName, int Width, int Height, DisplayMode dispMode);
+        int maxFramerate;
+        struct ApplicationData(sf::String appName, int Width, int Height, DisplayMode dispMode, int maxFps);
         struct ApplicationData();
     };
     extern ApplicationData* appData;

@@ -17,6 +17,7 @@ namespace GRUPA3
             int dm = 0;
             file >> dm;
             appData->displayMode = (DisplayMode)dm;
+            file >> appData->maxFramerate;
         }
 
         file.close();
@@ -28,20 +29,23 @@ namespace GRUPA3
         {
             file.open(ApplicationDataFile, ios::out);
             file << data->WindowSize.x << " " << data->WindowSize.y << endl;
-            file << (int)appData->displayMode;
+            file << (int)appData->displayMode << endl;
+            file << (int)appData->maxFramerate<<endl;
             file.close();
         }
     }
-    ApplicationData::ApplicationData(sf::String appName, int Width, int Height, DisplayMode dispMode)
+    ApplicationData::ApplicationData(sf::String appName, int Width, int Height, DisplayMode dispMode, int maxFps)
     {
         this->ApplicationName = appName;
         this->WindowSize = sf::Vector2<int>(Width, Height);
         this->displayMode = dispMode;
+        this->maxFramerate = maxFps;
     }
     ApplicationData::ApplicationData()
     {
         this->ApplicationName = "Application";
         this->WindowSize = sf::Vector2<int>(1280, 720);
         this->displayMode = Windowed;
+        this->maxFramerate = 60;
     }
 }
