@@ -56,9 +56,23 @@ void Engine::EngineLoop()
 	InputReader* testReader = new InputReader();
 	sf::Clock clock;
 	deltaTime = 0.0;
-	while (enabled && Window->isOpen())
+
+	sf::Font font;
+	if (!font.loadFromFile("fonts/Swansea.ttf"))
 	{
+		
+	}
+	sf::Text text;
+	text.setFont(font); // Ustaw wczytan¹ czcionkê
+	text.setCharacterSize(24); // Ustaw rozmiar tekstu
+	text.setFillColor(sf::Color::White); // Ustaw kolor tekstu
+	text.setString("Hello, SFML!"); // Ustaw zawartoœæ tekstu
+	while (Window != NULL && enabled && Window->isOpen())
+	{
+		text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
+
 		deltaTime = clock.restart().asSeconds();
+		Window->clear(sf::Color::Black);
 		sf::Event event;
 		if (mouseInputEnabled)
 		{
@@ -95,8 +109,13 @@ void Engine::EngineLoop()
 				}
 			}
 			if (event.type == sf::Event::Closed)
+			{
 				Window->close();
+				break;
+			}
 		}
+		Window->draw(text);
+		Window->display();
 	}
 	enabled = false;
 	delete(testReader);

@@ -1,6 +1,7 @@
 ﻿#include "Engine.h"
 #include <stdio.h>
 #include <iostream>
+#include <SFML/Graphics.hpp>
 using namespace GRUPA3::Engine2D;
 using namespace std;
 int main()
