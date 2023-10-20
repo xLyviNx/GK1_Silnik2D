@@ -50,7 +50,7 @@ void Engine::InitGame()
 	if (Window == NULL)
 		Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName, (appData->displayMode == Fullscreen ? sf::Style::Fullscreen : sf::Style::Default));
 
-	Window->setFramerateLimit(fps);
+	Window->setFramerateLimit(appData->maxFramerate);
 
 	this->EngineLoop();
 }
