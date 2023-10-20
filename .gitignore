@@ -48,3 +48,4 @@
 *.pdb
 *.ilk
 *.pdb
+.vs/*
