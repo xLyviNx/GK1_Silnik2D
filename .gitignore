@@ -49,3 +49,5 @@
 *.ilk
 *.pdb
 .vs/*
+GK1_Silnik2D/log-old.txt
+GK1_Silnik2D/log.txt
