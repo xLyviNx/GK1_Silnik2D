@@ -61,7 +61,6 @@ void Engine::EngineLoop()
 	deltaTime = 0.0;
 
 	sf::Font font;
-	//cout << "EXISTS: " << exists_test1("fonts/Swansea.ttf")<<endl;
 	/*if (!font.loadFromFile("fonts/Swansea.ttf"))
 	{
 		
@@ -179,3 +178,4 @@ void Engine::PrintLog(const std::string& log) {
 		std::cerr << "ERROR READING LOGS FILE" << std::endl;
 	}
 }
+ 
