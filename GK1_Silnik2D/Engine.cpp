@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "PrimitiveRenderer.h"
 
 using namespace std;
 using namespace GRUPA3::Engine2D;
@@ -20,6 +21,7 @@ Engine::Engine()
 		delete(this);
 		return;
 	}
+	singleton = this;
 	cout << "Creating Engine Singleton.\n";
 	enabled = true;
 	keyboardInputEnabled = true;
@@ -61,7 +63,7 @@ void Engine::EngineLoop()
 	deltaTime = 0.0;
 
 	sf::Font font;
-	/*if (!font.loadFromFile("fonts/Swansea.ttf"))
+	/*if (!font.loadFromFile("./Swansea.ttf"))
 	{
 		
 	}*/
@@ -70,11 +72,22 @@ void Engine::EngineLoop()
 	text.setCharacterSize(24);
 	text.setFillColor(sf::Color::White);
 	text.setString("Hello, SFML!");
+	LineRenderer* line = new LineRenderer(Color::Green, 5.0, sf::Vector2f(150, 150), sf::Vector2f(700, 700));
+	float angle = 0;
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
-
 		deltaTime = clock.restart().asSeconds();
+
+		angle += 0.5 * deltaTime;
+
+		// Oblicz nowe po³o¿enie punktów linii
+		sf::Vector2f center(Window->getSize().x / 2, Window->getSize().y / 2);
+		sf::Vector2f offset1(std::cos(angle) * 100, std::sin(angle) * 100);
+		sf::Vector2f offset2(std::cos(angle + 3.14159) * 100, std::sin(angle + 3.14159) * 100);
+
+		line->posA = center + offset1;
+		line->posB = center + offset2;
 		Window->clear(sf::Color::Black);
 		sf::Event event;
 		if (mouseInputEnabled)
@@ -118,9 +131,11 @@ void Engine::EngineLoop()
 			}
 		}
 		Window->draw(text);
+		line->Draw();
 		Window->display();
 	}
 	enabled = false;
+	delete(line);
 	delete(testReader);
 	Cleanup();
 }

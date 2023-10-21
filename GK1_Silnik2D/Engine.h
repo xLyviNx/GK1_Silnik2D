@@ -20,18 +20,19 @@ namespace GRUPA3
 			void InitGame();
 			void EngineLoop();
 			bool enabled;
-			sf::RenderWindow* Window;
 			void Cleanup();
 			bool keyboardInputEnabled;
 			bool mouseInputEnabled;
 			sf::Vector2i mousePosition;
 			static void InitLogs();
-			static void PrintLog(const std::string& log);
 		protected:
 			static Engine* singleton;
 		public:
 			Engine();
 			~Engine();
+			static void PrintLog(const std::string& log);
+
+			sf::RenderWindow* Window;
 			static Engine* GetSingleton(bool);
 			double deltaTime;
 		};
