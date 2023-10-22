@@ -11,7 +11,7 @@ public:
 	void DrawSingleLine(sf::Vector2f A, sf::Vector2f B);
 	virtual void Draw();
 	virtual void DrawSFML();
-	void DrawSingleLineSFML();
+	void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB);
 	PrimitiveRenderer(sf::Color color, float width);
 };
 
@@ -21,5 +21,6 @@ public:
 	sf::Vector2f posA;
 	sf::Vector2f posB;
 	void Draw() override;
+	void DrawSFML() override;
 	LineRenderer(sf::Color color, float width, sf::Vector2f positionA, sf::Vector2f positionB);
 };

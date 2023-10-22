@@ -61,7 +61,7 @@ void PrimitiveRenderer::DrawSFML()
 {
 
 }
-void PrimitiveRenderer::DrawSingleLineSFML()
+void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB)
 {
     GRUPA3::Engine2D::Engine* engine = (GRUPA3::Engine2D::Engine::GetSingleton(false));
     if (engine != NULL)
@@ -77,10 +77,10 @@ void PrimitiveRenderer::DrawSingleLineSFML()
             line.setFillColor(Color);
 
             // Ustal pozycjê
-            if (startPoint.x < endPoint.x)
-                line.setPosition(startPoint.x, startPoint.y);
+            if (posA.x < posB.x)
+                line.setPosition(posA.x, posA.y);
             else
-                line.setPosition(endPoint.x, endPoint.y);
+                line.setPosition(posB.x, posB.y);
         }
     }
 }
@@ -88,9 +88,12 @@ PrimitiveRenderer::PrimitiveRenderer(sf::Color color, float width)
 {
 	this->Color = color;
 	this->Width = width;
-
 }
 void LineRenderer::Draw()
 {
     DrawSingleLine(posA, posB);
+}
+void LineRenderer::DrawSFML()
+{
+    DrawSingleLineSFML(posA, posB);
 }
