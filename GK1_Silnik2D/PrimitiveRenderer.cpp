@@ -57,11 +57,11 @@ void PrimitiveRenderer::Draw()
 
 }
 
-void PrimitiveRenderer::DrawSFML()
+void PrimitiveRenderer::DrawSFML(float angle)
 {
 
 }
-void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB)
+void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB, float angle)
 {
     GRUPA3::Engine2D::Engine* engine = (GRUPA3::Engine2D::Engine::GetSingleton(false));
     if (engine != NULL)
@@ -69,21 +69,27 @@ void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB)
         sf::RenderWindow* renderWindow = GRUPA3::Engine2D::Engine::GetSingleton(false)->Window;
         if (renderWindow != NULL)
         {
-            float lineWidth = std::abs(posB.x - posB.x);
-            float lineHeight = std::abs(posA.y - posA.y);
-
             // Stworzenie sf::RectangleShape
-            sf::RectangleShape line(sf::Vector2f(lineWidth, lineHeight));
+            float lineWidth = std::abs(posA.x - posB.x);
+            float lineHeight = std::abs(posA.y - posB.y);
+
+            sf::Vector2f lineSize(160, 5);
+            sf::RectangleShape line(lineSize);
             line.setFillColor(Color);
+            line.setOrigin(80,3);
+            line.setRotation(angle);
+            
 
             // Ustal pozycjê
-            if (posA.x < posB.x)
-                line.setPosition(posA.x, posA.y);
-            else
-                line.setPosition(posB.x, posB.y);
+            line.setPosition(std::min(posA.x, posB.x), posA.y);
+
+            // Rendererowanie linii w oknie
+            renderWindow->draw(line);
         }
     }
 }
+
+
 PrimitiveRenderer::PrimitiveRenderer(sf::Color color, float width)
 {
 	this->Color = color;
@@ -93,7 +99,7 @@ void LineRenderer::Draw()
 {
     DrawSingleLine(posA, posB);
 }
-void LineRenderer::DrawSFML()
+void LineRenderer::DrawSFML(float angle)
 {
-    DrawSingleLineSFML(posA, posB);
+    DrawSingleLineSFML(posA, posB, angle);
 }

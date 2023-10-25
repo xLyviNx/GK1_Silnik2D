@@ -10,8 +10,8 @@ public:
 	float Width;
 	void DrawSingleLine(sf::Vector2f A, sf::Vector2f B);
 	virtual void Draw();
-	virtual void DrawSFML();
-	void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB);
+	virtual void DrawSFML(float angle);
+	void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,float angle);
 	PrimitiveRenderer(sf::Color color, float width);
 };
 
@@ -21,6 +21,6 @@ public:
 	sf::Vector2f posA;
 	sf::Vector2f posB;
 	void Draw() override;
-	void DrawSFML() override;
+	void DrawSFML(float angle) override;
 	LineRenderer(sf::Color color, float width, sf::Vector2f positionA, sf::Vector2f positionB);
 };

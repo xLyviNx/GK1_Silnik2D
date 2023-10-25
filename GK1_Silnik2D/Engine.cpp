@@ -72,14 +72,19 @@ void Engine::EngineLoop()
 	text.setCharacterSize(24);
 	text.setFillColor(sf::Color::White);
 	text.setString("Hello, SFML!");
-	LineRenderer* line = new LineRenderer(Color::Green, 5.0, sf::Vector2f(150, 150), sf::Vector2f(700, 700));
+	LineRenderer* line = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 150), sf::Vector2f(700, 700));
+	LineRenderer* lineSFML = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 350), sf::Vector2f(700, 700));
+
 	float angle = 0;
+	float angleSFML = 0;
+	
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
 
 		angle += 0.5 * deltaTime;
+		angleSFML = angle*100;
 
 		// Oblicz nowe po³o¿enie punktów linii
 		sf::Vector2f center(Window->getSize().x / 2, Window->getSize().y / 2);
@@ -88,6 +93,7 @@ void Engine::EngineLoop()
 
 		line->posA = center + offset1;
 		line->posB = center + offset2;
+		
 		Window->clear(sf::Color::Black);
 		sf::Event event;
 		if (mouseInputEnabled)
@@ -132,8 +138,10 @@ void Engine::EngineLoop()
 		}
 		Window->draw(text);
 		line->Draw();
+		lineSFML->DrawSFML(angleSFML);
 		Window->display();
 	}
+	
 	enabled = false;
 	delete(line);
 	delete(testReader);
