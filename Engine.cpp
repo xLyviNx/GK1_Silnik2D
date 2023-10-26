@@ -1,6 +1,7 @@
 #include "Engine.h"
 #include "PrimitiveRenderer.h"
 #include <vector>
+#include "GameObject.h"
 using namespace std;
 using namespace Engine2D;
 using namespace sf;
@@ -104,7 +105,8 @@ void Engine::EngineLoop()
 
 	float angle = 0;
 	float angleSFML = 0;
-	UpdatableObject* upd = new UpdatableObject();
+	for (int i = 0; i<10; i++)
+		UpdatableObject* upd = new UpdatableObject(); // aby potem przetestowac czyszczenie
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		frameCount++;
@@ -186,16 +188,41 @@ void Engine::EngineLoop()
 
 	enabled = false;
 	delete(line);
-	delete(testReader);
 	Cleanup();
 }
 void Engine::Cleanup()
 {
 	PrintLog("Cleaning up the Engine...");
+
+	CleanupScene();
+
 	delete(appData);
 	appData = NULL;
 	delete(Window);
 	Window = NULL;
+}
+void Engine::CleanupScene()
+{
+	auto allObjects = GameObject::All;
+	for (auto goit = allObjects.begin(); goit != allObjects.end(); ++goit)
+	{
+		delete (*goit);
+	}
+	GameObject::All.clear();
+
+	auto allUpdatables = UpdatableObject::All;
+	for (auto updit = allUpdatables.begin(); updit != allUpdatables.end(); ++updit)
+	{
+		delete (*updit);
+	}
+	UpdatableObject::All.clear();
+
+	auto allInputReaders = InputReader::InputReaders;
+	for (auto irit = allInputReaders.begin(); irit != allInputReaders.end(); ++irit)
+	{
+		delete (*irit);
+	}
+	InputReader::InputReaders.clear();
 }
 void Engine::InitLogs()
 {

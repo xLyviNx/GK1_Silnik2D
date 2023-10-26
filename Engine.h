@@ -20,6 +20,7 @@ namespace Engine2D
 		void EngineLoop();
 		bool enabled;
 		void Cleanup();
+		void CleanupScene();
 		bool keyboardInputEnabled;
 		bool mouseInputEnabled;
 		sf::Vector2i mousePosition;
