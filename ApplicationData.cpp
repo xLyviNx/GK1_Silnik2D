@@ -6,8 +6,8 @@ namespace GRUPA3
 {
     ApplicationData* appData = nullptr;
     void LoadAppData()
-	{
-        if (appData==NULL)
+    {
+        if (appData == NULL)
             appData = new ApplicationData();
         createApplicationDataIfNone(appData);
         fstream file(ApplicationDataFile, ios::in);
@@ -21,7 +21,7 @@ namespace GRUPA3
         }
 
         file.close();
-	}
+    }
     void createApplicationDataIfNone(ApplicationData* data)
     {
         fstream file(ApplicationDataFile, ios::in);
@@ -30,7 +30,7 @@ namespace GRUPA3
             file.open(ApplicationDataFile, ios::out);
             file << data->WindowSize.x << " " << data->WindowSize.y << endl;
             file << (int)appData->displayMode << endl;
-            file << (int)appData->maxFramerate<<endl;
+            file << (int)appData->maxFramerate << endl;
             file.close();
         }
     }
@@ -46,6 +46,6 @@ namespace GRUPA3
         this->ApplicationName = "Application";
         this->WindowSize = sf::Vector2<int>(1280, 720);
         this->displayMode = Windowed;
-        this->maxFramerate = 60;
+        this->maxFramerate = 144;
     }
 }

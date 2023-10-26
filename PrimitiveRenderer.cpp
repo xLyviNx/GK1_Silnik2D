@@ -3,8 +3,8 @@
 #define M_PI 3.14159265358979323846
 LineRenderer::LineRenderer(sf::Color color, float width, sf::Vector2f positionA, sf::Vector2f positionB) : PrimitiveRenderer(color, width)
 {
-	this->posA = positionA;
-	this->posB = positionB;
+    this->posA = positionA;
+    this->posB = positionB;
 }
 
 void PrimitiveRenderer::DrawSingleLine(sf::Vector2f A, sf::Vector2f B)
@@ -51,7 +51,7 @@ void PrimitiveRenderer::DrawSingleLine(sf::Vector2f A, sf::Vector2f B)
                 }
             }
         }
-   }
+    }
 }
 void PrimitiveRenderer::Draw()
 {
@@ -77,9 +77,9 @@ void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,
             sf::Vector2f lineSize(160, 5);
             sf::RectangleShape line(lineSize);
             line.setFillColor(Color);
-            line.setOrigin(80,3);
+            line.setOrigin(80, 3);
             line.setRotation(angle);
-            
+
 
             // Ustal pozycjê
             line.setPosition(std::min(posA.x, posB.x), posA.y);
@@ -153,23 +153,34 @@ void PrimitiveRenderer::DrawEllipse(sf::Vector2f center, float RX, float RY) {
 
 void PrimitiveRenderer::PointLine(std::vector < sf::Vector2f > points)
 {
-   
 
-        if (points.size() < 2) {
-            return;
-        }
 
-        for (size_t i = 0; i < points.size() - 1; ++i) {
-            cout << points[i].x<<endl;
-            DrawSingleLine(points[i],points[i+1]);
-        }
+    if (points.size() < 2) {
+        return;
     }
+
+    for (size_t i = 0; i < points.size() - 1; ++i) {
+        cout << points[i].x << endl;
+        DrawSingleLine(points[i], points[i + 1]);
+    }
+}
 
 PrimitiveRenderer::PrimitiveRenderer(sf::Color color, float width)
 {
-	this->Color = color;
-	this->Width = width;
+    this->Color = color;
+    this->Width = width;
 }
+/*
+void LineRenderer::Draw()
+{
+    DrawSingleLine(posA, posB);
+}
+*/
+void LineRenderer::DrawSFML(float angle)
+{
+    DrawSingleLineSFML(posA, posB, angle);
+}
+
 void LineRenderer::Draw()
 {
     DrawSingleLine(posA, posB);
@@ -183,7 +194,40 @@ void LineRenderer::Draw()
     float ellipseRY = 50.0f;  // Pó³osi RY
     DrawEllipse(ellipseCenter, ellipseRX, ellipseRY);
 }
-void LineRenderer::DrawSFML(float angle)
+
+Point2D::Point2D(sf::Color color, float width, sf::Vector2f position)
 {
-    DrawSingleLineSFML(posA, posB, angle);
+    this->Color = color;
+    this->Width = width;
+    this->Position = position;
 }
+
+sf::Vector2f Point2D::getPosition()
+{
+    return Position;
+}
+
+void Point2D::setPosition(sf::Vector2f newPos)
+{
+    Position = newPos; 
+}
+
+void Point2D::DrawPointSFML()
+{
+    GRUPA3::Engine2D::Engine* engine = (GRUPA3::Engine2D::Engine::GetSingleton(false));
+    if (engine != NULL)
+    {
+        sf::RenderWindow* renderWindow = GRUPA3::Engine2D::Engine::GetSingleton(false)->Window;
+        if (renderWindow != NULL)
+        {
+            sf::CircleShape pointShape(Width);  // Tworzenie punktu jako kó³ko
+            pointShape.setFillColor(Color);
+            pointShape.setPosition(Position);
+            renderWindow->draw(pointShape);
+        }
+    }
+}
+
+
+
+

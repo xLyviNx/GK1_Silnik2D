@@ -30,9 +30,9 @@ Engine::Engine()
 	LoadAppData();
 	InitGame();
 	EngineLoop();
-	
+
 }
-Engine::~Engine() 
+Engine::~Engine()
 {
 	if (Engine::singleton == this)
 	{
@@ -63,19 +63,33 @@ void Engine::EngineLoop()
 	sf::Clock clock;
 	deltaTime = 0.0;
 
+	sf::Clock fpsClock;
+	int frameCount = 0;
+	int fps = 0;
+
 	sf::Font font;
-	/*if (!font.loadFromFile("./Swansea.ttf"))
-	{
-		
-	}*/
 	sf::Text text;
+
+	if (!font.loadFromFile("fonts/PixellettersFull.ttf"))
+	{
+		cout << "Blad przy zaladowaniu czcionki";
+	}
+
+	//td::string tekst = "TEST";
+	//sf::String sfmlString(tekst);
+	//text.setString(sfmlString);
+
 	text.setFont(font);
 	text.setCharacterSize(24);
 	text.setFillColor(sf::Color::White);
-	text.setString("Hello, SFML!");
+	text.setPosition(10.f, 10.f);
+
+
 	LineRenderer* line = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 150), sf::Vector2f(700, 700));
 	LineRenderer* lineSFML = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 350), sf::Vector2f(700, 700));
-	
+
+	Point2D* point = new Point2D(Color::Red, 10.0f, sf::Vector2f(600, 600));
+
 	PrimitiveRenderer* linia = new PrimitiveRenderer(sf::Color::Green, 5);
 	std::vector < sf::Vector2f > points;
 	points.push_back(sf::Vector2f(180, 100));
@@ -84,20 +98,29 @@ void Engine::EngineLoop()
 	points.push_back(sf::Vector2f(170, 420));
 	points.push_back(sf::Vector2f(200, 520));
 
-	
-	
+
+
 
 
 	float angle = 0;
 	float angleSFML = 0;
-	
+
 	while (Window != NULL && enabled && Window->isOpen())
 	{
-		text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
+		frameCount++;
+		if (fpsClock.getElapsedTime().asSeconds() >= 1.0)
+		{
+			fps = frameCount;
+			frameCount = 0;
+			fpsClock.restart();
+		}
+		text.setString("FPS: " + to_string(fps));
+
+		//text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
 
 		angle += 0.5 * deltaTime;
-		angleSFML = angle*100;
+		angleSFML = angle * 100;
 
 		// Oblicz nowe po³o¿enie punktów linii
 		sf::Vector2f center(Window->getSize().x / 2, Window->getSize().y / 2);
@@ -106,7 +129,7 @@ void Engine::EngineLoop()
 
 		line->posA = center + offset1;
 		line->posB = center + offset2;
-		
+
 		Window->clear(sf::Color::Black);
 		sf::Event event;
 		if (mouseInputEnabled)
@@ -125,7 +148,7 @@ void Engine::EngineLoop()
 				{
 					for (InputReader* reader : InputReader::InputReaders)
 						reader->KeyPressed(event.key.code);
-					
+
 				}
 				else if (event.type == sf::Event::KeyReleased)
 				{
@@ -153,9 +176,10 @@ void Engine::EngineLoop()
 		line->Draw();
 		lineSFML->DrawSFML(angleSFML);
 		linia->PointLine(points);
+		point->DrawPointSFML();
 		Window->display();
 	}
-	
+
 	enabled = false;
 	delete(line);
 	delete(testReader);
@@ -215,4 +239,3 @@ void Engine::PrintLog(const std::string& log) {
 		std::cerr << "ERROR READING LOGS FILE" << std::endl;
 	}
 }
- 

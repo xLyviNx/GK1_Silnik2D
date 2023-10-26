@@ -12,7 +12,7 @@ namespace Engine2D
 		void Initialize();
 	public:
 		static set<GameObject*> All;
-		
+
 		Transform* transform;
 		string name;
 

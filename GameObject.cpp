@@ -24,7 +24,7 @@ namespace Engine2D
 
 	GameObject::~GameObject()
 	{
-		GameObject::All.erase(this);		
+		GameObject::All.erase(this);
 		if (transform != NULL)
 		{
 			if (transform->GetParent())
