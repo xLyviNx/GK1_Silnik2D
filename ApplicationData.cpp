@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 #define ApplicationDataFile "applicationData"
-namespace GRUPA3
+namespace Engine2D
 {
     ApplicationData* appData = nullptr;
     void LoadAppData()

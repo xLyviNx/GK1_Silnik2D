@@ -21,10 +21,4 @@ namespace Engine2D
 		~GameObject();
 
 	};
-	class UpdatableObject
-	{
-	public:
-		virtual void Update(float deltaTime);
-		virtual void Start();
-	};
 }

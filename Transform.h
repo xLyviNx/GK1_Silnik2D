@@ -7,12 +7,13 @@ using namespace std;
 using namespace sf;
 namespace Engine2D
 {
+	class GameObject;
 	class Transform
 	{
 	private:
 		Transform* parent;
 	public:
-		//GameObject* gameObject;
+		GameObject* gameObject;
 		set<Transform*> children;
 		Vector2f position;
 		Vector2f worldPosition();

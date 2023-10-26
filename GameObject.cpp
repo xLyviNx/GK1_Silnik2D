@@ -6,7 +6,8 @@ namespace Engine2D
 	set<GameObject*> GameObject::All;
 	void GameObject::Initialize()
 	{
-		//transform.gameObject = this;
+		if (transform)
+			transform->gameObject = this;
 		GameObject::All.insert(this);
 	}
 
@@ -34,7 +35,7 @@ namespace Engine2D
 			for (auto child : transform->children)
 			{
 				child->SetParent(NULL);
-				delete(child);
+				delete(child->gameObject);
 			}
 			delete(transform);
 			transform = NULL;

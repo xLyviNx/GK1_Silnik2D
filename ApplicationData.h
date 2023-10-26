@@ -4,7 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 using namespace std;
-namespace GRUPA3
+namespace Engine2D
 {
     enum DisplayMode
     {

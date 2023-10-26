@@ -20,10 +20,10 @@ void PrimitiveRenderer::DrawSingleLine(sf::Vector2f A, sf::Vector2f B)
     int sx = (x1 < x2) ? 1 : -1;
     int sy = (y1 < y2) ? 1 : -1;
     int err = dx - dy;
-    GRUPA3::Engine2D::Engine* engine = (GRUPA3::Engine2D::Engine::GetSingleton(false));
+    Engine2D::Engine* engine = (Engine2D::Engine::GetSingleton(false));
     if (engine != NULL)
     {
-        sf::RenderWindow* renderWindow = GRUPA3::Engine2D::Engine::GetSingleton(false)->Window;
+        sf::RenderWindow* renderWindow = Engine2D::Engine::GetSingleton(false)->Window;
         if (renderWindow != NULL)
         {
 
@@ -64,10 +64,10 @@ void PrimitiveRenderer::DrawSFML(float angle)
 }
 void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB, float angle)
 {
-    GRUPA3::Engine2D::Engine* engine = (GRUPA3::Engine2D::Engine::GetSingleton(false));
+    Engine2D::Engine* engine = (Engine2D::Engine::GetSingleton(false));
     if (engine != NULL)
     {
-        sf::RenderWindow* renderWindow = GRUPA3::Engine2D::Engine::GetSingleton(false)->Window;
+        sf::RenderWindow* renderWindow = Engine2D::Engine::GetSingleton(false)->Window;
         if (renderWindow != NULL)
         {
             // Stworzenie sf::RectangleShape
@@ -90,7 +90,7 @@ void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,
 
 void PrimitiveRenderer::DrawCircle(sf::Vector2f center, float radius) {
     return;// do optymalizacji i zmiany na osobny obiekt
-    GRUPA3::Engine2D::Engine* engine = GRUPA3::Engine2D::Engine::GetSingleton(false);
+    Engine2D::Engine* engine = Engine2D::Engine::GetSingleton(false);
     if (engine != NULL) {
         sf::RenderWindow* renderWindow = engine->Window;
         if (renderWindow != NULL) {
@@ -133,7 +133,7 @@ void PrimitiveRenderer::DrawCircle(sf::Vector2f center, float radius) {
 
 void PrimitiveRenderer::DrawEllipse(sf::Vector2f center, float RX, float RY) {
     return; // do optymalizacji
-    GRUPA3::Engine2D::Engine* engine = GRUPA3::Engine2D::Engine::GetSingleton(false);
+    Engine2D::Engine* engine = Engine2D::Engine::GetSingleton(false);
 
     if (engine != NULL) {
         sf::RenderWindow* renderWindow = engine->Window;
@@ -214,10 +214,10 @@ void Point2D::setPosition(sf::Vector2f newPos)
 
 void Point2D::DrawPointSFML()
 {
-    GRUPA3::Engine2D::Engine* engine = (GRUPA3::Engine2D::Engine::GetSingleton(false));
+    Engine2D::Engine* engine = (Engine2D::Engine::GetSingleton(false));
     if (engine != NULL)
     {
-        sf::RenderWindow* renderWindow = GRUPA3::Engine2D::Engine::GetSingleton(false)->Window;
+        sf::RenderWindow* renderWindow = Engine2D::Engine::GetSingleton(false)->Window;
         if (renderWindow != NULL)
         {
             sf::CircleShape pointShape(Width);  // Tworzenie punktu jako kó³ko

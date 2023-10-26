@@ -140,6 +140,7 @@
     </ClCompile>
     <ClCompile Include="PrimitiveRenderer.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="UpdatableObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationData.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="InputReader.h" />
     <ClInclude Include="PrimitiveRenderer.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="UpdatableObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

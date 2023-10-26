@@ -2,7 +2,7 @@
 #include "PrimitiveRenderer.h"
 #include <vector>
 using namespace std;
-using namespace GRUPA3::Engine2D;
+using namespace Engine2D;
 using namespace sf;
 
 Engine* Engine::singleton = NULL;
@@ -104,7 +104,7 @@ void Engine::EngineLoop()
 
 	float angle = 0;
 	float angleSFML = 0;
-
+	UpdatableObject* upd = new UpdatableObject();
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		frameCount++;
@@ -171,6 +171,10 @@ void Engine::EngineLoop()
 				Window->close();
 				break;
 			}
+		}
+		for (UpdatableObject* upd : UpdatableObject::All)
+		{
+			upd->Update(deltaTime);
 		}
 		Window->draw(text);
 		line->Draw();
