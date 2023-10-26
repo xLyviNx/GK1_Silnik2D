@@ -55,3 +55,4 @@ GK1_Silnik2D/log.txt
 .vs/GK1_Silnik2D/v17/ipch/AutoPCH/223bdcc4dd4c10bf/ENGINE.ipch
 v17/*
 *.recipe
+*.dll
