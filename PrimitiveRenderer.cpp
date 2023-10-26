@@ -81,16 +81,15 @@ void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,
             line.setRotation(angle);
 
 
-            // Ustal pozycjê
             line.setPosition(std::min(posA.x, posB.x), posA.y);
 
-            // Rendererowanie linii w oknie
             renderWindow->draw(line);
         }
     }
 }
 
 void PrimitiveRenderer::DrawCircle(sf::Vector2f center, float radius) {
+    return;// do optymalizacji i zmiany na osobny obiekt
     GRUPA3::Engine2D::Engine* engine = GRUPA3::Engine2D::Engine::GetSingleton(false);
     if (engine != NULL) {
         sf::RenderWindow* renderWindow = engine->Window;
@@ -133,6 +132,7 @@ void PrimitiveRenderer::DrawCircle(sf::Vector2f center, float radius) {
 
 
 void PrimitiveRenderer::DrawEllipse(sf::Vector2f center, float RX, float RY) {
+    return; // do optymalizacji
     GRUPA3::Engine2D::Engine* engine = GRUPA3::Engine2D::Engine::GetSingleton(false);
 
     if (engine != NULL) {

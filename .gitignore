@@ -56,3 +56,5 @@ GK1_Silnik2D/log.txt
 v17/*
 *.recipe
 *.dll
+log.txt
+log-old.txt
