@@ -1,6 +1,6 @@
 #include "Engine.h"
 #include "PrimitiveRenderer.h"
-
+#include <vector>
 using namespace std;
 using namespace GRUPA3::Engine2D;
 using namespace sf;
@@ -30,6 +30,7 @@ Engine::Engine()
 	LoadAppData();
 	InitGame();
 	EngineLoop();
+	
 }
 Engine::~Engine() 
 {
@@ -74,6 +75,18 @@ void Engine::EngineLoop()
 	text.setString("Hello, SFML!");
 	LineRenderer* line = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 150), sf::Vector2f(700, 700));
 	LineRenderer* lineSFML = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 350), sf::Vector2f(700, 700));
+	
+	PrimitiveRenderer* linia = new PrimitiveRenderer(sf::Color::Green, 5);
+	std::vector < sf::Vector2f > points;
+	points.push_back(sf::Vector2f(180, 100));
+	points.push_back(sf::Vector2f(150, 320));
+	points.push_back(sf::Vector2f(120, 320));
+	points.push_back(sf::Vector2f(170, 420));
+	points.push_back(sf::Vector2f(200, 520));
+
+	
+	
+
 
 	float angle = 0;
 	float angleSFML = 0;
@@ -139,6 +152,7 @@ void Engine::EngineLoop()
 		Window->draw(text);
 		line->Draw();
 		lineSFML->DrawSFML(angleSFML);
+		linia->PointLine(points);
 		Window->display();
 	}
 	

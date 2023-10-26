@@ -13,6 +13,8 @@ public:
 	virtual void DrawSFML(float angle);
 	void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,float angle);
 	PrimitiveRenderer(sf::Color color, float width);
+		void PointLine(std::vector < sf::Vector2f > points);
+	
 };
 
 class LineRenderer : public PrimitiveRenderer

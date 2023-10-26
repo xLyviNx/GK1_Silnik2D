@@ -90,6 +90,20 @@ void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,
 }
 
 
+void PrimitiveRenderer::PointLine(std::vector < sf::Vector2f > points)
+{
+   
+
+        if (points.size() < 2) {
+            return;
+        }
+
+        for (size_t i = 0; i < points.size() - 1; ++i) {
+            cout << points[i].x<<endl;
+            DrawSingleLine(points[i],points[i+1]);
+        }
+    }
+
 PrimitiveRenderer::PrimitiveRenderer(sf::Color color, float width)
 {
 	this->Color = color;
