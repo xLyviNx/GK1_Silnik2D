@@ -12,6 +12,8 @@ public:
 	virtual void Draw();
 	virtual void DrawSFML(float angle);
 	void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB,float angle);
+	void DrawCircle(sf::Vector2f center, float radius);
+	void DrawEllipse(sf::Vector2f center, float RX, float RY);
 	PrimitiveRenderer(sf::Color color, float width);
 		void PointLine(std::vector < sf::Vector2f > points);
 	
