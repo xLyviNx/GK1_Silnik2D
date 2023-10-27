@@ -86,12 +86,6 @@ void Engine::EngineLoop()
 	text.setPosition(10.f, 10.f);
 
 
-	LineRenderer* line = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 150), sf::Vector2f(700, 700));
-	LineRenderer* lineSFML = new LineRenderer(Color::Green, 5.0, sf::Vector2f(200, 350), sf::Vector2f(700, 700));
-
-	Point2D* point = new Point2D(Color::Red, 10.0f, sf::Vector2f(600, 600));
-
-	PrimitiveRenderer* linia = new PrimitiveRenderer(sf::Color::Green, 5);
 	std::vector < sf::Vector2f > points;
 	points.push_back(sf::Vector2f(180, 100));
 	points.push_back(sf::Vector2f(150, 320));
@@ -99,12 +93,6 @@ void Engine::EngineLoop()
 	points.push_back(sf::Vector2f(170, 420));
 	points.push_back(sf::Vector2f(200, 520));
 
-
-
-
-
-	float angle = 0;
-	float angleSFML = 0;
 	for (int i = 0; i<10; i++)
 		UpdatableObject* upd = new UpdatableObject(); // aby potem przetestowac czyszczenie
 	while (Window != NULL && enabled && Window->isOpen())
@@ -120,18 +108,6 @@ void Engine::EngineLoop()
 
 		//text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
-
-		angle += 0.5 * deltaTime;
-		angleSFML = angle * 100;
-
-		// Oblicz nowe po³o¿enie punktów linii
-		sf::Vector2f center(Window->getSize().x / 2, Window->getSize().y / 2);
-		sf::Vector2f offset1(std::cos(angle) * 100, std::sin(angle) * 100);
-		sf::Vector2f offset2(std::cos(angle + 3.14159) * 100, std::sin(angle + 3.14159) * 100);
-
-		line->posA = center + offset1;
-		line->posB = center + offset2;
-
 		Window->clear(sf::Color::Black);
 		sf::Event event;
 		if (mouseInputEnabled)
@@ -179,15 +155,16 @@ void Engine::EngineLoop()
 			upd->Update(deltaTime);
 		}
 		Window->draw(text);
-		line->Draw();
-		lineSFML->DrawSFML(angleSFML);
-		linia->PointLine(points);
-		point->DrawPointSFML();
+		Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
+		p2d.DrawPointSFML();
+		PrimitiveRenderer::DrawEllipse(Vector2f(155, 360), 150, 200, Color::White);
+		PrimitiveRenderer::DrawCircle(Vector2f(500, 360), 150, Color::White);
+		PrimitiveRenderer::DrawSingleLine(Vector2f(700, 200), Vector2f(700, 600), 3.0, Color::Red);
+		PrimitiveRenderer::PointLine(&points, 2.0, Color::Yellow);
 		Window->display();
 	}
 
 	enabled = false;
-	delete(line);
 	Cleanup();
 }
 void Engine::Cleanup()

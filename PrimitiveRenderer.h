@@ -5,29 +5,18 @@
 using namespace std;
 class PrimitiveRenderer
 {
+protected:
 public:
 	sf::Color Color;
 	float Width;
-	void DrawSingleLine(sf::Vector2f A, sf::Vector2f B);
-	virtual void Draw();
-	virtual void DrawSFML(float angle);
-	void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB, float angle);
-	void DrawCircle(sf::Vector2f center, float radius);
-	void DrawEllipse(sf::Vector2f center, float RX, float RY);
+	static void DrawSingleLine(sf::Vector2f A, sf::Vector2f B, float Width, sf::Color Color);
+	static void DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB, float angle, sf::Color Color);
+	static void DrawCircle(sf::Vector2f center, float radius, sf::Color color);
+	static void DrawEllipse(sf::Vector2f center, float RX, float RY, sf::Color color);
 	PrimitiveRenderer() : Color(sf::Color::White), Width(1.0f) {};
 	PrimitiveRenderer(sf::Color color, float width);
-	void PointLine(std::vector < sf::Vector2f > points);
+	static void PointLine(std::vector < sf::Vector2f >* points, float Width, sf::Color Color);
 
-};
-
-class LineRenderer : public PrimitiveRenderer
-{
-public:
-	sf::Vector2f posA;
-	sf::Vector2f posB;
-	void Draw() override;
-	void DrawSFML(float angle) override;
-	LineRenderer(sf::Color color, float width, sf::Vector2f positionA, sf::Vector2f positionB);
 };
 
 class Point2D : public PrimitiveRenderer

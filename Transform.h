@@ -1,20 +1,19 @@
 #pragma once
-#include "GameObject.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <set>
+#include "GameObject.h"
+
 using namespace std;
 using namespace sf;
 namespace Engine2D
 {
-	class GameObject;
-	class Transform
+	class TransformableObject : public GameObject
 	{
 	private:
-		Transform* parent;
+		TransformableObject* parent;
 	public:
-		GameObject* gameObject;
-		set<Transform*> children;
+		set<TransformableObject*> children;
 		Vector2f position;
 		Vector2f worldPosition();
 		Vector2f scale;
@@ -27,13 +26,14 @@ namespace Engine2D
 		void Scale(float X, float Y);
 		void Scale(Vector2f XY);
 		void Rotate(float rotation);
-		void SetParent(Transform* newParent);
-		Transform();
-		Transform(Vector2f position);
-		Transform(Vector2f position, float rotation);
-		Transform(Vector2f position, Vector2f scale, float rotation);
-		Transform(Vector2f position, Vector2f scale, float rotation, Transform* parent);
-		Transform(Transform* parent);
-		Transform* GetParent();
+		void SetParent(TransformableObject* newParent);
+		TransformableObject();
+		TransformableObject(Vector2f position);
+		TransformableObject(Vector2f position, float rotation);
+		TransformableObject(Vector2f position, Vector2f scale, float rotation);
+		TransformableObject(Vector2f position, Vector2f scale, float rotation, TransformableObject* parent);
+		TransformableObject(TransformableObject* parent);
+		TransformableObject* GetParent();
+		~TransformableObject();
 	};
 }

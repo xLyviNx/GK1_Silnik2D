@@ -1,53 +1,53 @@
 #include "Transform.h"
 
-Vector2f Engine2D::Transform::worldPosition()
+Vector2f Engine2D::TransformableObject::worldPosition()
 {
 	return parent == NULL ? this->position : (this->position + parent->worldPosition());
 }
 
-Vector2f Engine2D::Transform::worldScale()
+Vector2f Engine2D::TransformableObject::worldScale()
 {
 	return parent == NULL ? this->scale : (this->scale + parent->worldScale());
 }
 
-float Engine2D::Transform::worldRotation()
+float Engine2D::TransformableObject::worldRotation()
 {
 	return fmodf(parent == NULL ? this->rotation : (this->rotation + parent->worldRotation()), 360);
 }
 
-void Engine2D::Transform::Translate(float X, float Y)
+void Engine2D::TransformableObject::Translate(float X, float Y)
 {
 	position.x += X;
 	position.y += Y;
 }
-void Engine2D::Transform::Translate(Vector2f XY)
+void Engine2D::TransformableObject::Translate(Vector2f XY)
 {
 	position += XY;
 }
 
-void Engine2D::Transform::Scale(float XY)
+void Engine2D::TransformableObject::Scale(float XY)
 {
 	scale *= XY;
 }
 
-void Engine2D::Transform::Scale(float X, float Y)
+void Engine2D::TransformableObject::Scale(float X, float Y)
 {
 	scale.x *= X;
 	scale.y *= Y;
 }
 
-void Engine2D::Transform::Scale(Vector2f XY)
+void Engine2D::TransformableObject::Scale(Vector2f XY)
 {
 	scale.x* XY.x;
 	scale.y* XY.y;
 }
 
-void Engine2D::Transform::Rotate(float rotation)
+void Engine2D::TransformableObject::Rotate(float rotation)
 {
 	this->rotation += rotation;
 }
 
-void Engine2D::Transform::SetParent(Transform* newParent)
+void Engine2D::TransformableObject::SetParent(TransformableObject* newParent)
 {
 	position = worldPosition();
 	scale = worldScale();
@@ -66,43 +66,43 @@ void Engine2D::Transform::SetParent(Transform* newParent)
 	parent = newParent;
 }
 
-Engine2D::Transform::Transform()
+Engine2D::TransformableObject::TransformableObject()
 {
-	children = set<Transform*>();
+	children = set<TransformableObject*>();
 	this->parent = NULL;
 	this->position = Vector2f(0, 0);
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 }
 
-Engine2D::Transform::Transform(Vector2f position)
+Engine2D::TransformableObject::TransformableObject(Vector2f position)
 {
-	children = set<Transform*>();
+	children = set<TransformableObject*>();
 	this->parent = NULL;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 }
 
-Engine2D::Transform::Transform(Vector2f position, float rotation)
+Engine2D::TransformableObject::TransformableObject(Vector2f position, float rotation)
 {
-	children = set<Transform*>();
+	children = set<TransformableObject*>();
 	this->parent = NULL;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = rotation;
 }
 
-Engine2D::Transform::Transform(Vector2f position, Vector2f scale, float rotation)
+Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f scale, float rotation)
 {
-	children = set<Transform*>();
+	children = set<TransformableObject*>();
 	this->parent = NULL;
 	this->position = position;
 	this->scale = scale;
 	this->rotation = rotation;
 }
 
-Engine2D::Transform::Transform(Vector2f position, Vector2f scale, float rotation, Transform* parent)
+Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f scale, float rotation, TransformableObject* parent)
 {
 	if (parent != NULL)
 	{
@@ -114,20 +114,33 @@ Engine2D::Transform::Transform(Vector2f position, Vector2f scale, float rotation
 	this->rotation = rotation;
 }
 
-Engine2D::Transform::Transform(Transform* parent)
+Engine2D::TransformableObject::TransformableObject(TransformableObject* parent)
 {
 	if (parent != NULL)
 	{
 		parent->children.insert(this);
 	}
-	children = set<Transform*>();
+	children = set<TransformableObject*>();
 	this->parent = parent;
 	this->position = Vector2f(0, 0);
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 }
 
-Engine2D::Transform* Engine2D::Transform::GetParent()
+Engine2D::TransformableObject* Engine2D::TransformableObject::GetParent()
 {
 	return this->parent;
+}
+
+Engine2D::TransformableObject::~TransformableObject()
+{
+	if (GetParent())
+	{
+		GetParent()->children.erase(this);
+	}
+	for (auto child : this->children)
+	{
+		child->SetParent(NULL);
+		delete(child);
+	}
 }

@@ -7,12 +7,12 @@ namespace Engine2D
 
 	void UpdatableObject::Update(float deltaTime)
 	{
-		
+		puts("UPDATABLE UPDATE");
 	}
 
 	void UpdatableObject::Start()
 	{
-
+		puts("updatable start");
 	}
 
 	UpdatableObject::UpdatableObject()
