@@ -1,1 +1,2 @@
-[2023-10-27 12:35:03] Initializing Game Engine.
+[2023-11-10 00:15:05] Initializing Game Engine.
+[2023-11-10 00:15:06] Entering Engine Loop

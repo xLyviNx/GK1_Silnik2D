@@ -2,49 +2,44 @@
 #include "Engine.h"
 #define M_PI 3.14159265358979323846
 
-void PrimitiveRenderer::DrawSingleLine(sf::Vector2f A, sf::Vector2f B, float Width, sf::Color Color)
+void PrimitiveRenderer::DrawSingleLine(sf::RenderWindow* renderWindow, sf::Vector2f A, sf::Vector2f B, float Width, sf::Color Color)
 {
-
-    int x1 = A.x;
-    int y1 = A.y;
-    int x2 = B.x;
-    int y2 = B.y;
-
-    int dx = abs(x2 - x1);
-    int dy = abs(y2 - y1);
-    int sx = (x1 < x2) ? 1 : -1;
-    int sy = (y1 < y2) ? 1 : -1;
-    int err = dx - dy;
-    if (Engine2D::Engine::GetSingleton(false) != NULL)
+    if (renderWindow != NULL)
     {
-        sf::RenderWindow* renderWindow = Engine2D::Engine::GetSingleton(false)->Window;
-        if (renderWindow != NULL)
+        int x1 = A.x;
+        int y1 = A.y;
+        int x2 = B.x;
+        int y2 = B.y;
+
+        int dx = abs(x2 - x1);
+        int dy = abs(y2 - y1);
+        int sx = (x1 < x2) ? 1 : -1;
+        int sy = (y1 < y2) ? 1 : -1;
+        int err = dx - dy;
+        sf::VertexArray line(sf::Points);
+        while (x1 != x2 || y1 != y2)
         {
-
-            while (x1 != x2 || y1 != y2)
+            for (int i = 0; i < Width; i++)
             {
-                for (int i = 0; i < Width; i++)
+                for (int j = 0; j < Width; j++)
                 {
-                    for (int j = 0; j < Width; j++)
-                    {
-                        sf::Vertex pixel(sf::Vector2f(x1 + i, y1 + j), Color);
-                        renderWindow->draw(&pixel, 1, sf::Points);
-                    }
-                }
-
-                int err2 = 2 * err;
-                if (err2 > -dy)
-                {
-                    err -= dy;
-                    x1 += sx;
-                }
-                if (err2 < dx)
-                {
-                    err += dx;
-                    y1 += sy;
+                    sf::Vertex pixel(sf::Vector2f(x1 + i, y1 + j), Color);
+                    line.append(pixel);
                 }
             }
+            int err2 = 2 * err;
+            if (err2 > -dy)
+            {
+                err -= dy;
+                x1 += sx;
+            }
+            if (err2 < dx)
+            {
+                err += dx;
+                y1 += sy;
+            }
         }
+        renderWindow->draw(line);
     }
 }
 void PrimitiveRenderer::DrawSingleLineSFML(sf::Vector2f posA, sf::Vector2f posB, float angle, sf::Color color)
@@ -112,19 +107,46 @@ void PrimitiveRenderer::DrawCircle(sf::Vector2f center, float radius, sf::Color 
         }
     }
 }
-
-void PrimitiveRenderer::PointLine(std::vector < sf::Vector2f >* points, float Width, sf::Color Color)
+void PrimitiveRenderer::DrawCircle(sf::RenderWindow* renderWindow, sf::Vector2f center, std::vector<sf::Vector2f> points, sf::Color color)
 {
-    if (points == NULL || (*points).size() < 2) {
+    if (renderWindow != nullptr)
+    {
+        sf::VertexArray circle(sf::Points);
+        for (sf::Vector2f point : points)
+        {
+            circle.append(sf::Vertex(center + point, color));
+            circle.append(sf::Vertex(center + sf::Vector2f(point.y, point.x), color));
+            circle.append(sf::Vertex(center + sf::Vector2f(-point.y, point.x), color));
+            circle.append(sf::Vertex(center + sf::Vector2f(-point.x, point.y), color));
+            circle.append(sf::Vertex(center - point, color));
+            circle.append(sf::Vertex(center + sf::Vector2f(-point.y, -point.x), color));
+            circle.append(sf::Vertex(center + sf::Vector2f(point.y, -point.x), color));
+            circle.append(sf::Vertex(center + sf::Vector2f(point.x, -point.y), color));
+        }
+        renderWindow->draw(circle);
+    }
+}
+void PrimitiveRenderer::PointLine(sf::RenderWindow* renderWindow, std::vector < sf::Vector2f >* points, float Width, sf::Color Color)
+{
+    if (renderWindow == NULL || points == NULL || (*points).size() < 2) {
         return;
     }
     for (size_t i = 0; i < (*points).size() - 1; ++i)
     {
         //cout << (*points)[i].x << endl;
-        PrimitiveRenderer::DrawSingleLine((*points)[i], (*points)[i + 1], Width, Color);
+        PrimitiveRenderer::DrawSingleLine(renderWindow, (*points)[i], (*points)[i + 1], Width, Color);
     }
 }
-
+void PrimitiveRenderer::PointLine(sf::RenderWindow* renderWindow, sf::Vector2f points[], int pointsCount, float Width, sf::Color Color)
+{
+    if (pointsCount>=0) {
+        return;
+    }
+    for (int i = 0; i < pointsCount - 1; ++i)
+    {
+        PrimitiveRenderer::DrawSingleLine(renderWindow, points[i], points[i + 1], Width, Color);
+    }
+}
 PrimitiveRenderer::PrimitiveRenderer(sf::Color color, float width)
 {
     this->Color = color;

@@ -2,6 +2,8 @@
 #include "PrimitiveRenderer.h"
 #include <vector>
 #include "GameObject.h"
+#include "DrawableObject.h"
+#include "ShapeObject.h"
 using namespace std;
 using namespace Engine2D;
 using namespace sf;
@@ -48,19 +50,23 @@ void Engine::InitGame()
 		PrintLog("ERROR! APP DATA NOT FOUND! QUITTING");
 		return;
 	}
+	if (Window == NULL) {
+		if (enabled) {
+			InitLogs();
+			PrintLog("Initializing Game Engine.");
+			if (Window == NULL)
+				Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName, (appData->displayMode == Fullscreen ? sf::Style::Fullscreen : sf::Style::Default));
 
-	InitLogs();
-	PrintLog("Initializing Game Engine.");
-	if (Window == NULL)
-		Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName, (appData->displayMode == Fullscreen ? sf::Style::Fullscreen : sf::Style::Default));
+			Window->setFramerateLimit(appData->maxFramerate);
 
-	Window->setFramerateLimit(appData->maxFramerate);
-
-	this->EngineLoop();
+			this->EngineLoop();
+		}
+	}
 }
 void Engine::EngineLoop()
 {
-	InputReader* testReader = new InputReader();
+	PrintLog("Entering Engine Loop");
+	//InputReader* testReader = new InputReader();
 	sf::Clock clock;
 	deltaTime = 0.0;
 
@@ -93,10 +99,11 @@ void Engine::EngineLoop()
 	points.push_back(sf::Vector2f(170, 420));
 	points.push_back(sf::Vector2f(200, 520));
 
-	for (int i = 0; i<10; i++)
-		UpdatableObject* upd = new UpdatableObject(); // aby potem przetestowac czyszczenie
+	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 50, 30, sf::Color::Yellow, 1.0);
+	rectangle->name = "TEST";
 	while (Window != NULL && enabled && Window->isOpen())
 	{
+		
 		frameCount++;
 		if (fpsClock.getElapsedTime().asSeconds() >= 1.0)
 		{
@@ -153,17 +160,22 @@ void Engine::EngineLoop()
 		for (UpdatableObject* upd : UpdatableObject::All)
 		{
 			upd->Update(deltaTime);
+		}		
+		for (DrawableObject* drawable : DrawableObject::All)
+		{
+			if (drawable->visible)
+				drawable->Draw();
 		}
 		Window->draw(text);
 		Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		p2d.DrawPointSFML();
 		PrimitiveRenderer::DrawEllipse(Vector2f(155, 360), 150, 200, Color::White);
 		PrimitiveRenderer::DrawCircle(Vector2f(500, 360), 150, Color::White);
-		PrimitiveRenderer::DrawSingleLine(Vector2f(700, 200), Vector2f(700, 600), 3.0, Color::Red);
-		PrimitiveRenderer::PointLine(&points, 2.0, Color::Yellow);
+		PrimitiveRenderer::DrawSingleLine(Window, Vector2f(700, 200), Vector2f(700, 600), 3.0, Color::Red);
+		//PrimitiveRenderer::PointLine(Window, &points, 2.0, Color::Yellow);
 		Window->display();
 	}
-
+	PrintLog("CLOSED THE GAME WINDOW.");
 	enabled = false;
 	Cleanup();
 }
@@ -180,7 +192,19 @@ void Engine::Cleanup()
 }
 void Engine::CleanupScene()
 {
-	auto allObjects = GameObject::All;
+	while (GameObject::All.size() > 0)
+	{
+		for (set<GameObject*>::iterator gObj = GameObject::All.begin(); gObj != GameObject::All.end(); ++gObj)
+		{
+			if (*gObj != NULL) {
+				cout << "DELETING '" << (*gObj)->name;
+				printf("' : % p\n", *gObj);
+				//delete (*gObj);
+				return;
+			}
+		}
+	}
+	auto allObjects = UpdatableObject::All;
 	for (auto goit = allObjects.begin(); goit != allObjects.end(); ++goit)
 	{
 		delete (*goit);

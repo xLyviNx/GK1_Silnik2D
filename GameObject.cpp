@@ -10,6 +10,12 @@ namespace Engine2D
 
 	GameObject::GameObject()
 	{
+		this->name = "Game Object";
+		this->Initialize();
+	}
+	GameObject::GameObject(std::string name)
+	{
+		this->name = name;
 		this->Initialize();
 	}
 	GameObject::~GameObject()

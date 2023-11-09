@@ -35,5 +35,7 @@ namespace Engine2D
 		TransformableObject(TransformableObject* parent);
 		TransformableObject* GetParent();
 		~TransformableObject();
+		virtual void PropertiesChanged();
+		TransformableObject(std::string name, Vector2f position);
 	};
 }

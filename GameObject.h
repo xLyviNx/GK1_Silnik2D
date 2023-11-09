@@ -14,6 +14,7 @@ namespace Engine2D
 		string name;
 
 		GameObject();
+		GameObject(std::string name);
 		~GameObject();
 
 	};

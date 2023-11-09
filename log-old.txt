@@ -1,1 +1,7 @@
-[2023-10-27 12:06:18] Initializing Game Engine.
+[2023-11-09 21:00:02] Initializing Game Engine.
+[2023-11-09 21:00:03] Entering Engine Loop
+[2023-11-09 21:00:05] CLOSED THE GAME WINDOW.
+[2023-11-09 21:00:05] Cleaning up the Engine...
+[2023-11-09 21:00:05] Entering Engine Loop
+[2023-11-09 21:00:05] CLOSED THE GAME WINDOW.
+[2023-11-09 21:00:05] Cleaning up the Engine...
