@@ -120,9 +120,9 @@ void Engine::EngineLoop()
 		//text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
 		Window->clear(sf::Color::Black);
-		rectangle->Translate(10 * deltaTime, 0);
+		rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
-		rectangle->Rotate(10 * deltaTime);
+		rectangle->Rotate(10.0 * deltaTime);
 
 		sf::Event event;
 		if (mouseInputEnabled)

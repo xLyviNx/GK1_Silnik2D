@@ -9,7 +9,6 @@ namespace Engine2D
 	{
 	protected:
 		sf::RenderWindow* renderWindow;
-		VertexArray vertices;
 	public:
 		ShapeObject(Vector2f position);
 		ShapeObject(std::string name, Vector2f position);
@@ -27,14 +26,18 @@ namespace Engine2D
 			float worldA;
 			float worldB;
 			float width;
-			Vector2f points[5];
+			sf::RectangleShape rectShape;
 		public:
+			Color fillColor;
 			Color color;
 			void PropertiesChanged() override;
 			//RectangleShape();
 			RectangleShape(Vector2f position, float A, float B, Color color, float width);
+			RectangleShape(Vector2f position, float A, float B, Color color, Color fillColor, float width);
 			RectangleShape(std::string name, Vector2f position, float A, float B, Color color, float width);
+			RectangleShape(std::string name, Vector2f position, float A, float B, Color color, Color fillColor, float width);
 			void deleteMe() override;
+			void Draw() override;
 		};
 		class CircleShape : public virtual ShapeObject
 		{
@@ -48,6 +51,7 @@ namespace Engine2D
 			CircleShape(Vector2f position, float R, Color color);
 			CircleShape(std::string name, Vector2f position, float R, Color color);
 			void deleteMe() override;
+			void Draw() override;
 		};
 	}
 }
