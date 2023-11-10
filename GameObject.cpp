@@ -8,6 +8,11 @@ namespace Engine2D
 		GameObject::All.insert(this);
 	}
 
+	void GameObject::deleteMe()
+	{
+		delete(this);
+	}
+
 	GameObject::GameObject()
 	{
 		this->name = "Game Object";
@@ -20,6 +25,10 @@ namespace Engine2D
 	}
 	GameObject::~GameObject()
 	{
-		GameObject::All.erase(this);
+		auto it = GameObject::All.find(this);
+		if (it != GameObject::All.end())
+		{
+			GameObject::All.erase(it);
+		}
 	}
 }

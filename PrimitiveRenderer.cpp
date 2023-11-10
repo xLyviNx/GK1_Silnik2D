@@ -1,6 +1,5 @@
 #include "PrimitiveRenderer.h"
 #include "Engine.h"
-#define M_PI 3.14159265358979323846
 
 void PrimitiveRenderer::DrawSingleLine(sf::RenderWindow* renderWindow, sf::Vector2f A, sf::Vector2f B, float Width, sf::Color Color)
 {
@@ -139,11 +138,12 @@ void PrimitiveRenderer::PointLine(sf::RenderWindow* renderWindow, std::vector < 
 }
 void PrimitiveRenderer::PointLine(sf::RenderWindow* renderWindow, sf::Vector2f points[], int pointsCount, float Width, sf::Color Color)
 {
-    if (pointsCount>=0) {
+    if (pointsCount<=0) {
         return;
     }
     for (int i = 0; i < pointsCount - 1; ++i)
     {
+        //cout << "POINT " << i << ": " << points[i].x << ", " << points[i].y << endl;
         PrimitiveRenderer::DrawSingleLine(renderWindow, points[i], points[i + 1], Width, Color);
     }
 }

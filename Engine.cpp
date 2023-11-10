@@ -17,6 +17,10 @@ Engine* Engine::GetSingleton(bool CreateIfNull)
 	}
 	return singleton;
 }
+double Engine2D::Engine::AngleToRad(float degrees)
+{
+	return degrees * (M_PI / 180.0);
+}
 Engine::Engine()
 {
 	if (singleton != NULL)
@@ -32,11 +36,10 @@ Engine::Engine()
 	deltaTime = 0.0;
 	LoadAppData();
 	InitGame();
-	EngineLoop();
-
 }
 Engine::~Engine()
 {
+	cout << "Called Engine Destructor." << endl;
 	if (Engine::singleton == this)
 	{
 		Engine::singleton = NULL;
@@ -66,7 +69,7 @@ void Engine::InitGame()
 void Engine::EngineLoop()
 {
 	PrintLog("Entering Engine Loop");
-	//InputReader* testReader = new InputReader();
+	InputReader* testReader = new InputReader();
 	sf::Clock clock;
 	deltaTime = 0.0;
 
@@ -99,7 +102,8 @@ void Engine::EngineLoop()
 	points.push_back(sf::Vector2f(170, 420));
 	points.push_back(sf::Vector2f(200, 520));
 
-	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 50, 30, sf::Color::Yellow, 1.0);
+	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
+	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 150, Color::Red);
 	rectangle->name = "TEST";
 	while (Window != NULL && enabled && Window->isOpen())
 	{
@@ -116,6 +120,10 @@ void Engine::EngineLoop()
 		//text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
 		Window->clear(sf::Color::Black);
+		rectangle->Translate(10 * deltaTime, 0);
+		//circle->Translate(-10 * deltaTime, 0);
+		rectangle->Rotate(10 * deltaTime);
+
 		sf::Event event;
 		if (mouseInputEnabled)
 		{
@@ -167,11 +175,11 @@ void Engine::EngineLoop()
 				drawable->Draw();
 		}
 		Window->draw(text);
-		Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
-		p2d.DrawPointSFML();
-		PrimitiveRenderer::DrawEllipse(Vector2f(155, 360), 150, 200, Color::White);
-		PrimitiveRenderer::DrawCircle(Vector2f(500, 360), 150, Color::White);
-		PrimitiveRenderer::DrawSingleLine(Window, Vector2f(700, 200), Vector2f(700, 600), 3.0, Color::Red);
+		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
+		//p2d.DrawPointSFML();
+		//PrimitiveRenderer::DrawEllipse(Vector2f(155, 360), 150, 200, Color::White);
+		//PrimitiveRenderer::DrawCircle(Vector2f(500, 360), 150, Color::White);
+		//PrimitiveRenderer::DrawSingleLine(Window, Vector2f(700, 200), Vector2f(700, 600), 3.0, Color::Red);
 		//PrimitiveRenderer::PointLine(Window, &points, 2.0, Color::Yellow);
 		Window->display();
 	}
@@ -192,38 +200,40 @@ void Engine::Cleanup()
 }
 void Engine::CleanupScene()
 {
-	while (GameObject::All.size() > 0)
+	while (!GameObject::All.empty())
 	{
-		for (set<GameObject*>::iterator gObj = GameObject::All.begin(); gObj != GameObject::All.end(); ++gObj)
+		GameObject* gObject = *(GameObject::All.begin());
+		if (gObject != NULL)
 		{
-			if (*gObj != NULL) {
-				cout << "DELETING '" << (*gObj)->name;
-				printf("' : % p\n", *gObj);
-				//delete (*gObj);
-				return;
-			}
+			gObject->deleteMe();
 		}
-	}
-	auto allObjects = UpdatableObject::All;
-	for (auto goit = allObjects.begin(); goit != allObjects.end(); ++goit)
-	{
-		delete (*goit);
+		else
+			GameObject::All.erase(gObject);
 	}
 	GameObject::All.clear();
-
-	auto allUpdatables = UpdatableObject::All;
-	for (auto updit = allUpdatables.begin(); updit != allUpdatables.end(); ++updit)
+	while (!UpdatableObject::All.empty())
 	{
-		delete (*updit);
+		UpdatableObject* object = *(UpdatableObject::All.begin());
+		if (object != NULL)
+		{
+			object->deleteMe();
+		}
+		else
+			UpdatableObject::All.erase(object);
 	}
 	UpdatableObject::All.clear();
 
-	auto allInputReaders = InputReader::InputReaders;
-	for (auto irit = allInputReaders.begin(); irit != allInputReaders.end(); ++irit)
+	while (!InputReader::InputReaders.empty())
 	{
-		delete (*irit);
+		InputReader* object = *(InputReader::InputReaders.begin());
+		if (object != NULL)
+		{
+			object->deleteMe();
+		}
+		else
+			InputReader::InputReaders.erase(object);
 	}
-	InputReader::InputReaders.clear();
+	UpdatableObject::All.clear();
 }
 void Engine::InitLogs()
 {

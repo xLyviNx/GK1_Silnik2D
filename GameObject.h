@@ -12,7 +12,7 @@ namespace Engine2D
 	public:
 		static set<GameObject*> All;
 		string name;
-
+		virtual void deleteMe();
 		GameObject();
 		GameObject(std::string name);
 		~GameObject();

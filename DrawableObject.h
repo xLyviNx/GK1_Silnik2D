@@ -9,5 +9,6 @@ namespace Engine2D {
 		virtual void Draw();
 		DrawableObject();
 		~DrawableObject();
+		virtual void deleteMe();
 	};
 }

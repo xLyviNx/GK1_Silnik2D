@@ -13,4 +13,5 @@ public:
 	static set<InputReader*> InputReaders;
 	InputReader();
 	~InputReader();
+	virtual void deleteMe();
 };

@@ -25,4 +25,8 @@ namespace Engine2D
 	{
 		UpdatableObject::All.erase(this);
 	}
+	void UpdatableObject::deleteMe()
+	{
+		delete this;
+	}
 }

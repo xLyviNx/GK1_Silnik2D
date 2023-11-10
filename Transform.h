@@ -8,11 +8,13 @@ using namespace std;
 using namespace sf;
 namespace Engine2D
 {
-	class TransformableObject : public GameObject
+	class TransformableObject : public virtual GameObject
 	{
 	private:
+		
 		TransformableObject* parent;
 	public:
+		static set<TransformableObject*> All;
 		set<TransformableObject*> children;
 		Vector2f position;
 		Vector2f worldPosition();
@@ -37,5 +39,7 @@ namespace Engine2D
 		~TransformableObject();
 		virtual void PropertiesChanged();
 		TransformableObject(std::string name, Vector2f position);
+		virtual void deleteMe() override;
+		//virtual void checkPropertyChanged();
 	};
 }

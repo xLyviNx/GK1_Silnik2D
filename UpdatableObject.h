@@ -11,5 +11,6 @@ namespace Engine2D
 		virtual void Start();
 		UpdatableObject();
 		~UpdatableObject();
+		virtual void deleteMe();
 	};
 }

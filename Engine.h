@@ -35,5 +35,6 @@ namespace Engine2D
 		sf::RenderWindow* Window;
 		static Engine* GetSingleton(bool);
 		double deltaTime;
+		static double AngleToRad(float angle);
 	};
 }

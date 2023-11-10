@@ -16,4 +16,9 @@ namespace Engine2D {
 		All.erase(this);
 	}
 
+	void DrawableObject::deleteMe()
+	{
+		delete this;
+	}
+
 }

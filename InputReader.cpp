@@ -13,3 +13,8 @@ InputReader::~InputReader()
 {
 	InputReaders.erase(this);
 }
+
+void InputReader::deleteMe()
+{
+	delete this;
+}

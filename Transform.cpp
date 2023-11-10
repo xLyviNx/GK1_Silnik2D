@@ -2,6 +2,7 @@
 
 Vector2f Engine2D::TransformableObject::worldPosition()
 {
+	//cout << "Local Position: " << this->position.x << " " << this->position.y << endl;
 	return parent == NULL ? this->position : (this->position + parent->worldPosition());
 }
 
@@ -177,10 +178,15 @@ void Engine2D::TransformableObject::PropertiesChanged()
 
 Engine2D::TransformableObject::TransformableObject(std::string name, Vector2f position) : GameObject(name)
 {
+	cout << "TRANSFORM CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 	children = set<TransformableObject*>();
 	this->parent = NULL;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 	PropertiesChanged();
+}
+void Engine2D::TransformableObject::deleteMe()
+{
+	delete (TransformableObject*)this;
 }
