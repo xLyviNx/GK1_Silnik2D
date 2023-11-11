@@ -31,10 +31,11 @@ namespace Engine2D
 		Engine();
 		~Engine();
 		static void PrintLog(const std::string& log);
-
 		sf::RenderWindow* Window;
 		static Engine* GetSingleton(bool);
 		double deltaTime;
 		static double AngleToRad(float angle);
+		bool isKeyTriggered(sf::Keyboard::Key key);
+		float Gravity;
 	};
 }

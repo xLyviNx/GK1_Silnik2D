@@ -3,9 +3,10 @@
 #include "Transform.h"
 #include "PrimitiveRenderer.h"
 #include "Engine.h"
+#include "Collisions.h"
 namespace Engine2D
 {
-	class ShapeObject : public virtual TransformableObject, public virtual DrawableObject
+	class ShapeObject : public virtual TransformableObject, public virtual DrawableObject, public virtual Collisions
 	{
 	protected:
 		sf::RenderWindow* renderWindow;
@@ -30,7 +31,7 @@ namespace Engine2D
 		public:
 			Color fillColor;
 			Color color;
-			void PropertiesChanged() override;
+			virtual void PropertiesChanged() override;
 			//RectangleShape();
 			RectangleShape(Vector2f position, float A, float B, Color color, float width);
 			RectangleShape(Vector2f position, float A, float B, Color color, Color fillColor, float width);

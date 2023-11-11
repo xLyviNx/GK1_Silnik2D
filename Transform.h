@@ -18,12 +18,15 @@ namespace Engine2D
 		set<TransformableObject*> children;
 		Vector2f position;
 		Vector2f worldPosition();
+		Vector2f screenPosition();
 		Vector2f scale;
 		Vector2f worldScale();
 		float rotation;
 		float worldRotation();
+		float screenRotation();
 		void Translate(float X, float Y);
 		void Translate(Vector2f XY);
+		void setPosition(Vector2f XY);
 		void Scale(float XY);
 		void Scale(float X, float Y);
 		void Scale(Vector2f XY);

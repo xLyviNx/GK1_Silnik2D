@@ -32,19 +32,22 @@ namespace Engine2D
 	{
 		delete (ShapeObject*)this;
 	}
+	void ShapeObject::Draw()
+	{
+	}
 	void Shapes::RectangleShape::PropertiesChanged()
 	{
 
 		worldA = localA * this->worldScale().x;
 		worldB = localB * this->worldScale().y;
-		rectShape.setPosition(worldPosition());
+		
 		rectShape.setSize(Vector2f(worldA, worldB));
 		sf::FloatRect bounds = rectShape.getLocalBounds();
 		rectShape.setOrigin(bounds.left + bounds.width / 2.0f, bounds.top + bounds.height / 2.0f);
 		rectShape.setOutlineColor(color);
 		rectShape.setOutlineThickness(width);
 		rectShape.setFillColor(fillColor);
-		rectShape.setRotation(this->rotation);
+		globalBounds = rectShape.getGlobalBounds();
 	}
 	Shapes::RectangleShape::RectangleShape(Vector2f position, float A, float B, Color color, float width)
 		: ShapeObject("RectangleShape Object", position) {
@@ -85,7 +88,11 @@ namespace Engine2D
 	{
 		//rysowanie rectangle
 		if (renderWindow)
+		{
+			rectShape.setPosition(screenPosition());
+			rectShape.setRotation(this->screenRotation());
 			renderWindow->draw(rectShape);
+		}
 	}
 	void Shapes::CircleShape::PropertiesChanged()
 	{

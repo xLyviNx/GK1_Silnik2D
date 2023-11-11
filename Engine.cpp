@@ -4,6 +4,8 @@
 #include "GameObject.h"
 #include "DrawableObject.h"
 #include "ShapeObject.h"
+#include "Player.h"
+#include "Camera.h"
 using namespace std;
 using namespace Engine2D;
 using namespace sf;
@@ -21,6 +23,7 @@ double Engine2D::Engine::AngleToRad(float degrees)
 {
 	return degrees * (M_PI / 180.0);
 }
+
 Engine::Engine()
 {
 	if (singleton != NULL)
@@ -36,6 +39,7 @@ Engine::Engine()
 	deltaTime = 0.0;
 	LoadAppData();
 	InitGame();
+	Gravity = 9.81;
 }
 Engine::~Engine()
 {
@@ -105,6 +109,9 @@ void Engine::EngineLoop()
 	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
 	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 150, Color::Red);
 	rectangle->name = "TEST";
+	Camera* camera = new Camera("Main Camera", Vector2f(0, 0));
+	Player* plr = new Player("Player Object", Vector2f(500, 500));
+
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		
@@ -122,7 +129,7 @@ void Engine::EngineLoop()
 		Window->clear(sf::Color::Black);
 		rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
-		rectangle->Rotate(10.0 * deltaTime);
+		//rectangle->Rotate(10.0 * deltaTime);
 
 		sf::Event event;
 		if (mouseInputEnabled)
@@ -187,6 +194,11 @@ void Engine::EngineLoop()
 	enabled = false;
 	Cleanup();
 }
+bool Engine2D::Engine::isKeyTriggered(sf::Keyboard::Key key)
+{
+	return (keyboardInputEnabled && sf::Keyboard::isKeyPressed(key));
+}
+
 void Engine::Cleanup()
 {
 	PrintLog("Cleaning up the Engine...");

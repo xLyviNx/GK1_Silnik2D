@@ -1,9 +1,23 @@
 #include "Transform.h"
+#include "Camera.h"
 
 Vector2f Engine2D::TransformableObject::worldPosition()
 {
 	//cout << "Local Position: " << this->position.x << " " << this->position.y << endl;
 	return parent == NULL ? this->position : (this->position + parent->worldPosition());
+}
+
+Vector2f Engine2D::TransformableObject::screenPosition()
+{
+	if (Camera::current != NULL)
+	{
+		if (Camera::current == this)
+			return Vector2f(0, 0);
+		Vector2f objectPosition = worldPosition();
+		Vector2f cameraPosition = Camera::current->worldPosition();
+		return objectPosition - cameraPosition;
+	}
+	return worldPosition();
 }
 
 Vector2f Engine2D::TransformableObject::worldScale()
@@ -14,6 +28,17 @@ Vector2f Engine2D::TransformableObject::worldScale()
 float Engine2D::TransformableObject::worldRotation()
 {
 	return fmodf(parent == NULL ? this->rotation : (this->rotation + parent->worldRotation()), 360);
+}
+
+float Engine2D::TransformableObject::screenRotation()
+{
+	if (Camera::current != NULL)
+	{
+		if (Camera::current == this)
+			return 0;
+		return worldRotation() - Camera::current->worldRotation();
+	}
+	return worldRotation();
 }
 
 void Engine2D::TransformableObject::Translate(float X, float Y)
@@ -28,6 +53,12 @@ void Engine2D::TransformableObject::Translate(Vector2f XY)
 	position += XY;
 	PropertiesChanged();
 
+}
+
+void Engine2D::TransformableObject::setPosition(Vector2f XY)
+{
+	position = XY;
+	PropertiesChanged();
 }
 
 void Engine2D::TransformableObject::Scale(float XY)

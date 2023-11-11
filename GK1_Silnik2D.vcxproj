@@ -132,6 +132,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationData.cpp" />
+    <ClCompile Include="Calculations.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="DrawableObject.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -139,6 +142,7 @@
     <ClCompile Include="GK1_Silnik2D.cpp">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
     </ClCompile>
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PrimitiveRenderer.cpp" />
     <ClCompile Include="ShapeObject.cpp" />
     <ClCompile Include="Transform.cpp" />
@@ -146,10 +150,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationData.h" />
+    <ClInclude Include="Calculations.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Collisions.h" />
     <ClInclude Include="DrawableObject.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputReader.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="PrimitiveRenderer.h" />
     <ClInclude Include="ShapeObject.h" />
     <ClInclude Include="Transform.h" />
