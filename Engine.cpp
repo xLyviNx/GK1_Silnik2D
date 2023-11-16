@@ -5,6 +5,7 @@
 #include "DrawableObject.h"
 #include "ShapeObject.h"
 #include "Player.h"
+#include "BitmapHandler.h"
 #include "Camera.h"
 using namespace std;
 using namespace Engine2D;
@@ -83,6 +84,8 @@ void Engine::EngineLoop()
 
 	sf::Font font;
 	sf::Text text;
+	
+
 
 	if (!font.loadFromFile("fonts/PixellettersFull.ttf"))
 	{
@@ -111,6 +114,15 @@ void Engine::EngineLoop()
 	rectangle->name = "TEST";
 	Camera* camera = new Camera("Main Camera", Vector2f(0, 0));
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
+
+	BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
+	bitmapa1->loadFromFile("grafika.png");
+	sf::Texture texture;
+	texture.loadFromImage(bitmapa1->getImage());
+	sf::Sprite Bitmapa_skonwertowana;
+	Bitmapa_skonwertowana.setTexture(texture, true);
+	Bitmapa_skonwertowana.setPosition(400, 300);
+	
 
 	while (Window != NULL && enabled && Window->isOpen())
 	{
@@ -181,6 +193,7 @@ void Engine::EngineLoop()
 			if (drawable->visible)
 				drawable->Draw();
 		}
+		Window->draw(Bitmapa_skonwertowana);
 		Window->draw(text);
 		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		//p2d.DrawPointSFML();

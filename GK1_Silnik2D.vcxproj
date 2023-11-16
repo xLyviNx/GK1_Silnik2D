@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationData.cpp" />
+    <ClCompile Include="BitmapHandler.cpp" />
     <ClCompile Include="Calculations.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Collisions.cpp" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationData.h" />
+    <ClInclude Include="BitmapHandler.h" />
     <ClInclude Include="Calculations.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Collisions.h" />
