@@ -115,6 +115,7 @@ void Engine::EngineLoop()
 	Camera* camera = new Camera("Main Camera", Vector2f(0, 0));
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
 
+	// Obs³uga bitmapy  czyli przejscie z image>>texture>>sprite
 	BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
 	bitmapa1->loadFromFile("grafika.png");
 	sf::Texture texture;

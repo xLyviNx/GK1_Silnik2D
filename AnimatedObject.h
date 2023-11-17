@@ -3,4 +3,7 @@
 #include <iostream>
 
 
-
+class AnimatedObject
+{
+	void animate();
+};
