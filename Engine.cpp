@@ -110,7 +110,8 @@ void Engine::EngineLoop()
 	points.push_back(sf::Vector2f(200, 520));
 
 	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
-	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 150, Color::Red);
+	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color::Red, Color::White);
+
 	rectangle->name = "TEST";
 	Camera* camera = new Camera("Main Camera", Vector2f(0, 0));
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
@@ -192,6 +193,7 @@ void Engine::EngineLoop()
 		{
 			if (drawable->visible)
 				drawable->Draw();
+			
 		}
 		Window->draw(Bitmapa_skonwertowana);
 		Window->draw(text);
