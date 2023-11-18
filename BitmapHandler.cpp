@@ -25,6 +25,11 @@ BitmapHandler::BitmapHandler(int width, int height) {
      }
  }
 
+ sf::Image BitmapHandler::getbitmap()
+ {
+     return bitmap;
+ }
+
  void BitmapHandler::copyTo(BitmapHandler& other) {
      other.bitmap = bitmap;
      other.width = width;

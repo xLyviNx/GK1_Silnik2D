@@ -3,11 +3,15 @@
 #include <SFML/Graphics.hpp>
 #include "Calculations.h"
 #include "BitmapHandler.h"
+#include "Player.h"
+
 namespace Engine2D
 {
+
 	void SpriteObject::setTexture()
 	{
-		texture = th
+		loadFromFile("sprite sheet.png");
+		texture.loadFromImage(bitmap);
 	}
 	void SpriteObject::Movement(Engine* engine, float deltaTime)
 	{

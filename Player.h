@@ -6,9 +6,8 @@
 
 namespace Engine2D
 {
-	class Player : public virtual Shapes::RectangleShape, public InputReader, public UpdatableObject, public virtual Collisions
+	class Player : public virtual Shapes::RectangleShape, public InputReader, public UpdatableObject, public virtual	Collisions
 	{
-
 	protected:
 		bool isTopView;
 		float movementSpeed;

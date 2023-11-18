@@ -2,4 +2,5 @@
 
 void AnimatedObject::animate()
 {
+
 }

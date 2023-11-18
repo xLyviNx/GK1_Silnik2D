@@ -1,14 +1,23 @@
 #include "DrawableObject.h"
+#include "SFML/Graphics.hpp"
 namespace Engine2D {
 	std::set<DrawableObject*> DrawableObject::All;
-	void DrawableObject::Draw()
+	
+	
+	DrawableObject::DrawableObject(sf::RenderWindow *window)
 	{
-
-	}
-	DrawableObject::DrawableObject()
-	{
+		this->window = window;
 		visible = true;
 		All.insert(this);
+	}
+
+	void DrawableObject::Draw(sf::Texture texture)
+	{
+		//window->draw();
+	}
+
+	void DrawableObject::Draw()
+	{
 	}
 
 	DrawableObject::~DrawableObject()

@@ -120,6 +120,7 @@ void Engine::EngineLoop()
 	BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
 	bitmapa1->loadFromFile("grafika.png");
 	sf::Texture texture;
+	
 	texture.loadFromImage(bitmapa1->getImage());
 	sf::Sprite Bitmapa_skonwertowana;
 	Bitmapa_skonwertowana.setTexture(texture, true);
@@ -192,7 +193,7 @@ void Engine::EngineLoop()
 		}		
 		for (DrawableObject* drawable : DrawableObject::All)
 		{
-			if (drawable->visible)
+			if (drawable->visible);
 				drawable->Draw();
 			
 		}

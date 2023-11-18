@@ -1,5 +1,7 @@
 #pragma once
 #include <set>
+#include <SFML/Graphics.hpp>
+
 namespace Engine2D {
 	class DrawableObject
 	{
@@ -7,7 +9,8 @@ namespace Engine2D {
 		bool visible;
 		static std::set<DrawableObject*> All;
 		virtual void Draw();
-		DrawableObject();
+		sf::RenderWindow window;
+		DrawableObject(sf::RenderWindow window);
 		~DrawableObject();
 		virtual void deleteMe();
 	};

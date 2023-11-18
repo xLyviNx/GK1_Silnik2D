@@ -10,6 +10,8 @@ namespace Engine2D
 { 
 	class SpriteObject : public BitmapObject, public AnimatedObject, public Player
 	{ 
+
+
 		sf::Texture texture;
 		void setTexture();
 		void Movement(Engine* engine, float deltaTime);
