@@ -45,11 +45,13 @@ namespace Engine2D
 		private:
 			float localRadius;
 			float worldRadius;
-			//float width;
+			float width;
+			sf::CircleShape circleShape;
 		public:
 			Color color;
+			Color fillColor;
 			void PropertiesChanged() override;
-			CircleShape(Vector2f position, float R, Color color);
+			CircleShape(Vector2f position, float Rad, float width, Color color, Color fillColor);
 			CircleShape(std::string name, Vector2f position, float R, Color color);
 			void deleteMe() override;
 			void Draw() override;

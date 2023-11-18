@@ -26,6 +26,7 @@ namespace Engine2D
 		cout << "SHAPE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 		this->position = position;
 		this->name = name;
+		visible = true; 
 	}
 
 	void ShapeObject::deleteMe()
@@ -97,7 +98,16 @@ namespace Engine2D
 	void Shapes::CircleShape::PropertiesChanged()
 	{
 		worldRadius = localRadius * this->worldScale().x;
-		//tutaj
+		
+
+		circleShape.setRadius(worldRadius);
+		sf::FloatRect bounds = circleShape.getLocalBounds();
+		circleShape.setOrigin(bounds.left + bounds.width / 2.0f, bounds.top + bounds.height / 2.0f);
+		circleShape.setOutlineColor(color);
+		circleShape.setOutlineThickness(width);
+		circleShape.setFillColor(fillColor);
+		globalBounds = circleShape.getGlobalBounds();
+
 	}
 	void Shapes::CircleShape::deleteMe()
 	{
@@ -106,17 +116,28 @@ namespace Engine2D
 	void Shapes::CircleShape::Draw()
 	{
 		//rysowanie kolka
+		if (renderWindow)
+		{
+			circleShape.setPosition(screenPosition());
+			circleShape.setRotation(this->screenRotation());
+			renderWindow->draw(circleShape);
+		}
 	}
-	Shapes::CircleShape::CircleShape(Vector2f position, float R, Color color) : ShapeObject("CircleShape Object", position)
+	
+	Shapes::CircleShape::CircleShape(Vector2f position, float Rad, float width, Color color, Color fillColor) : ShapeObject("CircleShape Object", position)
 	{
-		this->localRadius = R;
+		this->localRadius = Rad;
 		this->color = color;
+		this->fillColor = fillColor;
+		this->width = width;
 		PropertiesChanged();
+		cout << "aa";
 	}
 	Shapes::CircleShape::CircleShape(std::string name, Vector2f position, float R, Color color) : ShapeObject(name, position)
 	{
 		this->localRadius = R;
 		this->color = color;
 		PropertiesChanged();
+		cout << "bb";
 	}
 }
