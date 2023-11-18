@@ -29,7 +29,7 @@ void Engine2D::Player::Update(float deltaTime)
 		Movement(engine, deltaTime);
 	}
 }
-void Engine2D::Player::Movement(Engine* engine, float deltaTime)
+virtual void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 {
 	Vector2f movement(0, 0);
 	if (isTopView)

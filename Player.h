@@ -20,7 +20,7 @@ namespace Engine2D
 		void deleteMe() override;
 		Player(string name, Vector2f position);
 		void Start() override;
-		void Movement(Engine* engine, float deltaTime);
+		virtual void Movement(Engine* engine, float deltaTime);
 		void Update(float deltaTime) override;
 		void KeyPressed(sf::Keyboard::Key keyPressed) override;
 		virtual void PropertiesChanged() override;

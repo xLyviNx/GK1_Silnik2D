@@ -4,7 +4,7 @@
 #include <vector>
 class BitmapObject : public Engine2D::DrawableObject 
 {
-	sf::Image bitmap[4];
+	std::vector <sf::Image> gif;
 
 	void virtual draw()
 	{

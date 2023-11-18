@@ -3,7 +3,7 @@
 #include <iostream>
 
 class BitmapHandler {
-private:
+protected:
    
     int width;
     int height;
@@ -13,6 +13,7 @@ public:
     BitmapHandler(int width, int height);
     void loadFromFile(const std::string& filename);
     void saveToFile(const std::string& filename);
+    
     void copyTo(BitmapHandler& other);
     sf::Image getImage();
 };

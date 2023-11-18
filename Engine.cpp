@@ -162,7 +162,7 @@ void Engine::EngineLoop()
 				{
 					for (InputReader* reader : InputReader::InputReaders)
 						reader->KeyPressed(event.key.code);
-
+					
 				}
 				else if (event.type == sf::Event::KeyReleased)
 				{

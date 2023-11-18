@@ -148,6 +148,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PrimitiveRenderer.cpp" />
     <ClCompile Include="ShapeObject.cpp" />
+    <ClCompile Include="spriteObject.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="UpdatableObject.cpp" />
   </ItemGroup>
@@ -166,6 +167,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="PrimitiveRenderer.h" />
     <ClInclude Include="ShapeObject.h" />
+    <ClInclude Include="spriteObject.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="UpdatableObject.h" />
   </ItemGroup>
