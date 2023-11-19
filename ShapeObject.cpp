@@ -44,7 +44,7 @@ namespace Engine2D
 		
 		rectShape.setSize(Vector2f(worldA, worldB));
 		sf::FloatRect bounds = rectShape.getLocalBounds();
-		rectShape.setOrigin(bounds.left + bounds.width / 2.0f, bounds.top + bounds.height / 2.0f);
+		rectShape.setOrigin(rectShape.getSize().x / 2, rectShape.getSize().y / 2);
 		rectShape.setOutlineColor(color);
 		rectShape.setOutlineThickness(width);
 		rectShape.setFillColor(fillColor);

@@ -57,7 +57,7 @@ namespace Engine2D {
 		sf::Vector2f direction = end - start;
 		float distance = std::sqrt(direction.x * direction.x + direction.y * direction.y);
 		direction /= distance; // normalize the direction
-
+		sf::Vector2f noncollide = start;
 		for (float i = 0; i < distance; i += 1.0f) {
 			sf::Vector2f currentPoint = start + direction * i;
 
@@ -67,32 +67,62 @@ namespace Engine2D {
 				}
 
 				if (collision->getGlobalBounds().contains(currentPoint)) {
-					RaycastHit hit(true, collision, currentPoint, end);
+					RaycastHit hit(true, collision, currentPoint, end,noncollide);
 					return hit;
 				}
 			}
+			noncollide = currentPoint;
 		}
 
-		return RaycastHit{ false, nullptr, end, end };
+		return RaycastHit{ false, nullptr, end, end, end};
+	}
+	RaycastHit Collisions::RaycastBox(Collisions* self, sf::Vector2f selfPosition, sf::Vector2f end, std::set<Collisions*> ignore)
+	{
+		sf::Vector2f direction = end - selfPosition;
+		float distance = std::sqrt(direction.x * direction.x + direction.y * direction.y);
+		direction /= distance; // normalize the direction
+		sf::Vector2f noncollide = selfPosition;
+		for (float i = 0; i < distance; i += 5.0f) {
+			sf::Vector2f currentPoint = selfPosition + direction * i;
+
+			for (Collisions* collision : All) {
+				if (ignore.find(collision) != ignore.end() || !collision->enabled || collision == self) {
+					continue;
+				}
+
+				if (collision->getGlobalBounds().intersects(self->getGlobalBounds())) {
+					RaycastHit hit(true, collision, currentPoint, end, noncollide);
+					return hit;
+				}
+			}
+			noncollide = currentPoint;
+		}
+
+		return RaycastHit{ false, nullptr, end, end, end };
 	}
 	RaycastHit Collisions::FindClosestNonCollidingPoint(Collisions* Target, sf::Vector2f start, sf::Vector2f end, std::set<Collisions*> ignore) {
-		sf::Vector2f direction = end - start;
-		float distance = sqrt(direction.x * direction.x + direction.y * direction.y);
-		direction /= distance;
-		sf::FloatRect targetBounds = Target->getGlobalBounds();
-
-		for (float d = 0; d <= distance; d += 1.0f) {
-			sf::Vector2f point = start + d * direction;
-			targetBounds.left = point.x - targetBounds.width / 2; // uwzglêdniamy przesuniêcie
-			targetBounds.top = point.y - targetBounds.height / 2; // uwzglêdniamy przesuniêcie
-			for (Collisions* obj : Collisions::All) {
-				if (obj != Target && ignore.find(obj) == ignore.end() && obj->getGlobalBounds().intersects(targetBounds)) {
-					return RaycastHit(true, obj, point, start);
+		return RaycastHit(false, NULL, end, end, end);
+	}
+	static sf::Vector2f moveOutOfCollision(Collisions* coll, sf::Vector2f position) {
+		sf::FloatRect tempBounds = coll->getGlobalBounds();
+		tempBounds.left = position.x - tempBounds.width / 2.f; // Ustawiamy lewy górny róg tak, aby œrodek by³ na pozycji
+		tempBounds.top = position.y - tempBounds.height / 2.f; // Ustawiamy górny róg tak, aby œrodek by³ na pozycji
+		for (auto& other : Collisions::All) {
+			if (coll == other) continue; // Pomiñ ten sam obiekt
+			while (tempBounds.intersects(other->getGlobalBounds())) {
+				// Przesuñ ten obiekt w dowolnym kierunku, w którym nie ma kolizji
+				tempBounds.left += 1.f;
+				if (tempBounds.intersects(other->getGlobalBounds())) {
+					tempBounds.left -= 2.f;
+					if (tempBounds.intersects(other->getGlobalBounds())) {
+						tempBounds.top += 1.f;
+						if (tempBounds.intersects(other->getGlobalBounds())) {
+							tempBounds.top -= 2.f;
+						}
+					}
 				}
 			}
 		}
-		return RaycastHit(false, nullptr, end, start); // zwraca RaycastHit z punktem koñcowym, jeœli nie mo¿na znaleŸæ punktu bez kolizji
+		return sf::Vector2f(tempBounds.left + tempBounds.width / 2.f, tempBounds.top + tempBounds.height / 2.f); // Zwracamy œrodek, a nie lewy górny róg
 	}
-
-
 }

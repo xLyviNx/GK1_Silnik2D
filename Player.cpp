@@ -52,9 +52,9 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 		}
 		if (Calculations::Vector2f_Magnitude(movement) > 0.0)
 		{
-			movement = Calculations::Vector2f_Normalize(movement);
-			Vector2f goalPosition = position+ (movement * (float)(movementSpeed * 25.0) * deltaTime);
-			this->Move(goalPosition, NULL);
+			Vector2f movementNorm = Calculations::Vector2f_Normalize(movement);
+			Vector2f goalPosition = position+ (movementNorm * (float)(movementSpeed * 25.0) * deltaTime);
+			this->Move(goalPosition, movement, NULL);
 		}
 	}
 	else
@@ -76,8 +76,8 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 		if (Calculations::Vector2f_Magnitude(movement) > 0.0 || gravityForce != 0)
 		{
 			Vector2f goalPosition = position + (movement * (float)(movementSpeed * 25.0) * deltaTime);
-			this->Move(goalPosition, NULL);
-			this->Move(this->worldPosition() - Vector2f(0, gravityForce) * deltaTime, &isGrounded);
+			this->Move(goalPosition, movement, NULL);
+			this->Move(this->worldPosition() - Vector2f(0, gravityForce) * deltaTime, movement, &isGrounded);
 		}
 	}
 }
@@ -97,12 +97,33 @@ void Engine2D::Player::PropertiesChanged()
 {
 	RectangleShape::PropertiesChanged();
 }
-
-void Engine2D::Player::Move(Vector2f position, bool* collided)
+void Engine2D::Player::Move(Vector2f position, Vector2f dir, bool* collided)
+{
+	this->Move(position, dir, collided, true);
+}
+void Engine2D::Player::Move(Vector2f position, Vector2f dir, bool* collided, bool collisionsMoveOut)
 {
 	set<Collisions*>ignores;
+	Vector2f normalizedDirection = dir;
+	sf::CircleShape cs1(3.0);
+
+	cs1.setPosition(worldPosition());
+	renderWindow->draw(cs1);
+	float diagonal = sqrt(pow(getGlobalBounds().width, 2) + pow(getGlobalBounds().height, 2));
+	diagonal /= 2.0;
+	Vector2f startPos = worldPosition() + Vector2f(getGlobalBounds().width/2.0 * normalizedDirection.x, getGlobalBounds().height/2.0 * normalizedDirection.y);
+
+
+	sf::CircleShape cs(3.0);
+	renderWindow->draw(cs);
 	ignores.insert((Collisions*)this);
-	RaycastHit raycast = Collisions::Raycast(worldPosition(), position, ignores);
-	position = Vector2f(raycast.point.x, raycast.point.y);
+	RaycastHit raycast = Collisions::RaycastBox((Collisions*)this, worldPosition(), position, ignores);
+	cs.setPosition(position);
+
+	position = Vector2f(raycast.pointBefore.x, raycast.pointBefore.y);
+	if (raycast.hit)
+	{
+		Engine2D::Shapes::CircleShape* ns = new Shapes::CircleShape(position, 3, 1, Color::Transparent, Color::Red);
+	}
 	setPosition(position);
 }

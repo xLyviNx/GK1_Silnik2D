@@ -7,6 +7,11 @@ Vector2f Engine2D::TransformableObject::worldPosition()
 	return parent == NULL ? this->position : (this->position + parent->worldPosition());
 }
 
+Vector2f Engine2D::TransformableObject::lastWorldPosition()
+{
+	return parent == NULL ? this->lastPosition : (this->lastPosition + parent->lastWorldPosition());
+}
+
 Vector2f Engine2D::TransformableObject::screenPosition()
 {
 	if (Camera::current != NULL)
@@ -43,6 +48,7 @@ float Engine2D::TransformableObject::screenRotation()
 
 void Engine2D::TransformableObject::Translate(float X, float Y)
 {
+	lastPosition = position;
 	position.x += X;
 	position.y += Y;
 	PropertiesChanged();
@@ -50,6 +56,7 @@ void Engine2D::TransformableObject::Translate(float X, float Y)
 }
 void Engine2D::TransformableObject::Translate(Vector2f XY)
 {
+	lastPosition = position;
 	position += XY;
 	PropertiesChanged();
 
@@ -57,6 +64,7 @@ void Engine2D::TransformableObject::Translate(Vector2f XY)
 
 void Engine2D::TransformableObject::setPosition(Vector2f XY)
 {
+	lastPosition = position;
 	position = XY;
 	PropertiesChanged();
 }
@@ -127,6 +135,7 @@ Engine2D::TransformableObject::TransformableObject(Vector2f position)
 {
 	children = set<TransformableObject*>();
 	this->parent = NULL;
+	lastPosition = position;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
@@ -149,6 +158,7 @@ Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f s
 {
 	children = set<TransformableObject*>();
 	this->parent = NULL;
+	lastPosition = position;
 	this->position = position;
 	this->scale = scale;
 	this->rotation = rotation;
@@ -163,6 +173,7 @@ Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f s
 		parent->children.insert(this);
 	}
 	this->parent = parent;
+	lastPosition = position;
 	this->position = position;
 	this->scale = scale;
 	this->rotation = rotation;
@@ -179,6 +190,7 @@ Engine2D::TransformableObject::TransformableObject(TransformableObject* parent)
 	children = set<TransformableObject*>();
 	this->parent = parent;
 	this->position = Vector2f(0, 0);
+	lastPosition = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 	PropertiesChanged();
@@ -212,6 +224,7 @@ Engine2D::TransformableObject::TransformableObject(std::string name, Vector2f po
 	cout << "TRANSFORM CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 	children = set<TransformableObject*>();
 	this->parent = NULL;
+	lastPosition = position;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;

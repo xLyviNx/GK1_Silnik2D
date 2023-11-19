@@ -23,6 +23,7 @@ namespace Engine2D
 		void Update(float deltaTime) override;
 		void KeyPressed(sf::Keyboard::Key keyPressed) override;
 		virtual void PropertiesChanged() override;
-		void Move(Vector2f position, bool* collided);
+		void Move(Vector2f position, Vector2f dir, bool* collided);
+		void Move(Vector2f position, Vector2f dir, bool* collided, bool collisionsMoveOut);
 	};
 }

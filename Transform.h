@@ -17,7 +17,9 @@ namespace Engine2D
 		static set<TransformableObject*> All;
 		set<TransformableObject*> children;
 		Vector2f position;
+		Vector2f lastPosition;
 		Vector2f worldPosition();
+		Vector2f lastWorldPosition();
 		Vector2f screenPosition();
 		Vector2f scale;
 		Vector2f worldScale();
