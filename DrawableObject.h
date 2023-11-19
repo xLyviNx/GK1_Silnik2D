@@ -9,8 +9,9 @@ namespace Engine2D {
 		bool visible;
 		static std::set<DrawableObject*> All;
 		virtual void Draw();
-		sf::RenderWindow window;
-		DrawableObject(sf::RenderWindow window);
+		sf::RenderWindow* window;
+		DrawableObject();
+		virtual void Draw(sf::Texture texture);
 		~DrawableObject();
 		virtual void deleteMe();
 	};

@@ -8,7 +8,7 @@
 #include "BitmapHandler.h"
 namespace Engine2D
 { 
-	class SpriteObject : public BitmapObject, public AnimatedObject, public Player
+	class SpriteObject : public virtual BitmapObject, public virtual AnimatedObject, public virtual Player
 	{ 
 
 

@@ -1,4 +1,0 @@
-[2023-11-17 12:42:06] Initializing Game Engine.
-[2023-11-17 12:42:06] Entering Engine Loop
-[2023-11-17 12:42:08] CLOSED THE GAME WINDOW.
-[2023-11-17 12:42:08] Cleaning up the Engine...

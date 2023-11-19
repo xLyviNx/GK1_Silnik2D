@@ -11,6 +11,7 @@ namespace Engine2D
 	protected:
 		sf::RenderWindow* renderWindow;
 	public:
+		ShapeObject();
 		ShapeObject(Vector2f position);
 		ShapeObject(std::string name, Vector2f position);
 		virtual void deleteMe() override;

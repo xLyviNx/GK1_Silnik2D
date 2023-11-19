@@ -1,12 +1,14 @@
 #include "DrawableObject.h"
 #include "SFML/Graphics.hpp"
+#include "Engine.h"
 namespace Engine2D {
 	std::set<DrawableObject*> DrawableObject::All;
 	
 	
-	DrawableObject::DrawableObject(sf::RenderWindow *window)
+	DrawableObject::DrawableObject()
 	{
-		this->window = window;
+		Engine* eng = Engine::GetSingleton(false);
+		this->window = eng? eng->Window : NULL;
 		visible = true;
 		All.insert(this);
 	}

@@ -29,7 +29,7 @@ void Engine2D::Player::Update(float deltaTime)
 		Movement(engine, deltaTime);
 	}
 }
-virtual void Engine2D::Player::Movement(Engine* engine, float deltaTime)
+void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 {
 	Vector2f movement(0, 0);
 	if (isTopView)
@@ -54,13 +54,7 @@ virtual void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 		{
 			movement = Calculations::Vector2f_Normalize(movement);
 			Vector2f goalPosition = position+ (movement * (float)(movementSpeed * 25.0) * deltaTime);
-			set<Collisions*>ignores;
-			ignores.insert((Collisions*)this);
-			RaycastHit raycastx = Collisions::Raycast(worldPosition(), Vector2f(goalPosition.x, worldPosition().y), ignores);
-			RaycastHit raycasty = Collisions::Raycast(worldPosition(), Vector2f(worldPosition().x, goalPosition.y), ignores);
-			goalPosition = Vector2f(raycastx.point.x, raycasty.point.y);
-			cout << "AA";
-			setPosition(goalPosition);
+			this->Move(goalPosition, NULL);
 		}
 	}
 	else
@@ -82,16 +76,8 @@ virtual void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 		if (Calculations::Vector2f_Magnitude(movement) > 0.0 || gravityForce != 0)
 		{
 			Vector2f goalPosition = position + (movement * (float)(movementSpeed * 25.0) * deltaTime);
-			set<Collisions*>ignores;
-			ignores.insert((Collisions*)this);
-			RaycastHit raycast = Collisions::Raycast(worldPosition(), goalPosition, ignores);
-			goalPosition = raycast.point;
-			setPosition(goalPosition);
-			goalPosition -= Vector2f(0, gravityForce) * deltaTime;
-			raycast = Collisions::Raycast(worldPosition(), goalPosition, ignores);
-			goalPosition = raycast.point;
-			setPosition(goalPosition);
-			isGrounded = raycast.hit;
+			this->Move(goalPosition, NULL);
+			this->Move(this->worldPosition() - Vector2f(0, gravityForce) * deltaTime, &isGrounded);
 		}
 	}
 }
@@ -110,4 +96,13 @@ void Engine2D::Player::KeyPressed(sf::Keyboard::Key keyPressed)
 void Engine2D::Player::PropertiesChanged()
 {
 	RectangleShape::PropertiesChanged();
+}
+
+void Engine2D::Player::Move(Vector2f position, bool* collided)
+{
+	set<Collisions*>ignores;
+	ignores.insert((Collisions*)this);
+	RaycastHit raycast = Collisions::Raycast(worldPosition(), position, ignores);
+	position = Vector2f(raycast.point.x, raycast.point.y);
+	setPosition(position);
 }

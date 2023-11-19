@@ -10,8 +10,8 @@ namespace Engine2D
 
 	void SpriteObject::setTexture()
 	{
-		loadFromFile("sprite sheet.png");
-		texture.loadFromImage(bitmap);
+		//loadFromFile("sprite sheet.png");
+		// texture.loadFromImage(bitmap);
 	}
 	void SpriteObject::Movement(Engine* engine, float deltaTime)
 	{
