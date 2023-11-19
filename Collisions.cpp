@@ -6,6 +6,7 @@ namespace Engine2D {
 	Collisions::Collisions()
 	{
 		Collisions::All.insert(this);
+		enabled = true;
 	}
 	Collisions::~Collisions()
 	{
@@ -66,12 +67,32 @@ namespace Engine2D {
 				}
 
 				if (collision->getGlobalBounds().contains(currentPoint)) {
-					RaycastHit hit(true, collision, currentPoint);
+					RaycastHit hit(true, collision, currentPoint, end);
 					return hit;
 				}
 			}
 		}
 
-		return RaycastHit{ false, nullptr, end };
+		return RaycastHit{ false, nullptr, end, end };
 	}
+	RaycastHit Collisions::FindClosestNonCollidingPoint(Collisions* Target, sf::Vector2f start, sf::Vector2f end, std::set<Collisions*> ignore) {
+		sf::Vector2f direction = end - start;
+		float distance = sqrt(direction.x * direction.x + direction.y * direction.y);
+		direction /= distance;
+		sf::FloatRect targetBounds = Target->getGlobalBounds();
+
+		for (float d = 0; d <= distance; d += 1.0f) {
+			sf::Vector2f point = start + d * direction;
+			targetBounds.left = point.x - targetBounds.width / 2; // uwzglêdniamy przesuniêcie
+			targetBounds.top = point.y - targetBounds.height / 2; // uwzglêdniamy przesuniêcie
+			for (Collisions* obj : Collisions::All) {
+				if (obj != Target && ignore.find(obj) == ignore.end() && obj->getGlobalBounds().intersects(targetBounds)) {
+					return RaycastHit(true, obj, point, start);
+				}
+			}
+		}
+		return RaycastHit(false, nullptr, end, start); // zwraca RaycastHit z punktem koñcowym, jeœli nie mo¿na znaleŸæ punktu bez kolizji
+	}
+
+
 }

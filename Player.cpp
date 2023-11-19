@@ -56,8 +56,10 @@ virtual void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 			Vector2f goalPosition = position+ (movement * (float)(movementSpeed * 25.0) * deltaTime);
 			set<Collisions*>ignores;
 			ignores.insert((Collisions*)this);
-			RaycastHit raycast = Collisions::Raycast(worldPosition(), goalPosition, ignores);
-			goalPosition = raycast.point;
+			RaycastHit raycastx = Collisions::Raycast(worldPosition(), Vector2f(goalPosition.x, worldPosition().y), ignores);
+			RaycastHit raycasty = Collisions::Raycast(worldPosition(), Vector2f(worldPosition().x, goalPosition.y), ignores);
+			goalPosition = Vector2f(raycastx.point.x, raycasty.point.y);
+			cout << "AA";
 			setPosition(goalPosition);
 		}
 	}
