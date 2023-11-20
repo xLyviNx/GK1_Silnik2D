@@ -8,13 +8,12 @@
 #include "BitmapHandler.h"
 namespace Engine2D
 { 
-	class SpriteObject : public virtual BitmapObject, public virtual AnimatedObject, public virtual Player
+	class SpriteObject : public virtual BitmapObject, public virtual AnimatedObject
 	{ 
-
-
 		sf::Texture texture;
-		void setTexture();
-		void Movement(Engine* engine, float deltaTime);
+		void setTexture(sf::Image image);
+	protected:
+		int animation_index;
 
 	};
 }

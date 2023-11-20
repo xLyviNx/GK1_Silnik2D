@@ -125,6 +125,16 @@ void Engine::EngineLoop()
 	sf::Sprite Bitmapa_skonwertowana;
 	Bitmapa_skonwertowana.setTexture(texture, true);
 	Bitmapa_skonwertowana.setPosition(400, 300);
+
+	//test animacji
+	std::vector <sf::Image> toLoadVector;
+	sf::Image frame;
+	//frame.loadFromFile(
+//
+	//)
+	//toLoadVector.push_back()
+
+
 	
 
 	while (Window != NULL && enabled && Window->isOpen())
