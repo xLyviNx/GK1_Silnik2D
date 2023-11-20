@@ -16,3 +16,6 @@ float Engine2D::Calculations::Vector2f_Magnitude(sf::Vector2f Vector)
 {
     return std::sqrt((Vector.x * Vector.x) + (Vector.y * Vector.y));
 }
+float Engine2D::Calculations::dotProduct(const sf::Vector2f& a, const sf::Vector2f& b) {
+    return a.x * b.x + a.y * b.y;
+}

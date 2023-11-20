@@ -2,8 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <vector>
-#define M_PI 3.14159265358979323846
-
+#include "Calculations.h"
 using namespace std;
 class PrimitiveRenderer
 {

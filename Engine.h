@@ -28,6 +28,7 @@ namespace Engine2D
 	protected:
 		static Engine* singleton;
 	public:
+		static float Gravity;
 		Engine();
 		~Engine();
 		static void PrintLog(const std::string& log);
@@ -36,6 +37,5 @@ namespace Engine2D
 		double deltaTime;
 		static double AngleToRad(float angle);
 		bool isKeyTriggered(sf::Keyboard::Key key);
-		float Gravity;
 	};
 }

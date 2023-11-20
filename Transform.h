@@ -20,12 +20,12 @@ namespace Engine2D
 		Vector2f lastPosition;
 		Vector2f worldPosition();
 		Vector2f lastWorldPosition();
-		Vector2f screenPosition();
 		Vector2f scale;
 		Vector2f worldScale();
+		Vector2f bounds;
+		Vector2f worldBounds();
 		float rotation;
 		float worldRotation();
-		float screenRotation();
 		void Translate(float X, float Y);
 		void Translate(Vector2f XY);
 		void setPosition(Vector2f XY);
