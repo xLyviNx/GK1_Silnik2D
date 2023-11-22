@@ -1,5 +1,4 @@
 #include "Transform.h"
-#include "Camera.h"
 
 Vector2f Engine2D::TransformableObject::worldPosition()
 {
@@ -12,38 +11,19 @@ Vector2f Engine2D::TransformableObject::lastWorldPosition()
 	return parent == NULL ? this->lastPosition : (this->lastPosition + parent->lastWorldPosition());
 }
 
-Vector2f Engine2D::TransformableObject::screenPosition()
-{
-	if (Camera::current != NULL)
-	{
-		if (Camera::current == this)
-			return Vector2f(0, 0);
-		Vector2f objectPosition = worldPosition();
-		Vector2f cameraPosition = Camera::current->worldPosition();
-		return objectPosition - cameraPosition;
-	}
-	return worldPosition();
-}
-
 Vector2f Engine2D::TransformableObject::worldScale()
 {
 	return parent == NULL ? this->scale : (this->scale + parent->worldScale());
 }
 
+Vector2f Engine2D::TransformableObject::worldBounds()
+{
+	return Vector2f(bounds.x * worldScale().x, bounds.y * worldScale().y);
+}
+
 float Engine2D::TransformableObject::worldRotation()
 {
 	return fmodf(parent == NULL ? this->rotation : (this->rotation + parent->worldRotation()), 360);
-}
-
-float Engine2D::TransformableObject::screenRotation()
-{
-	if (Camera::current != NULL)
-	{
-		if (Camera::current == this)
-			return 0;
-		return worldRotation() - Camera::current->worldRotation();
-	}
-	return worldRotation();
 }
 
 void Engine2D::TransformableObject::Translate(float X, float Y)

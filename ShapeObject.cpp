@@ -3,7 +3,7 @@
 namespace Engine2D
 {
 	ShapeObject::ShapeObject(Vector2f position)
-		: TransformableObject(position)
+		: TransformableObject(position), Collisions((TransformableObject*)this)
 	{
 		Engine* engine = Engine::GetSingleton(false);
 		if (engine)
@@ -16,7 +16,7 @@ namespace Engine2D
 	}
 
 	ShapeObject::ShapeObject(std::string name, Vector2f position)
-		: TransformableObject(name, position)
+		: TransformableObject(name, position), Collisions((TransformableObject*)this)
 	{
 		Engine* engine = Engine::GetSingleton(false);
 		if (engine)
@@ -38,7 +38,6 @@ namespace Engine2D
 	}
 	void Shapes::RectangleShape::PropertiesChanged()
 	{
-
 		worldA = localA * this->worldScale().x;
 		worldB = localB * this->worldScale().y;
 		
@@ -48,7 +47,10 @@ namespace Engine2D
 		rectShape.setOutlineColor(color);
 		rectShape.setOutlineThickness(width);
 		rectShape.setFillColor(fillColor);
+		//rectShape.setRotation(this->worldRotation());
 		globalBounds = rectShape.getGlobalBounds();
+		this->bounds = rectShape.getSize();
+		this->CalculateCorners(worldA, worldB, this->worldRotation(), this->worldPosition());
 	}
 	Shapes::RectangleShape::RectangleShape(Vector2f position, float A, float B, Color color, float width)
 		: ShapeObject("RectangleShape Object", position) {
@@ -90,8 +92,10 @@ namespace Engine2D
 		//rysowanie rectangle
 		if (renderWindow)
 		{
-			rectShape.setPosition(screenPosition());
-			rectShape.setRotation(this->screenRotation());
+			rectShape.setPosition(worldPosition());
+			rectShape.setRotation(this->worldRotation());
+			rectShape.setFillColor(fillColor);
+			rectShape.setOutlineColor(color);
 			renderWindow->draw(rectShape);
 		}
 	}
@@ -118,8 +122,8 @@ namespace Engine2D
 		//rysowanie kolka
 		if (renderWindow)
 		{
-			circleShape.setPosition(screenPosition());
-			circleShape.setRotation(this->screenRotation());
+			circleShape.setPosition(worldPosition());
+			circleShape.setRotation(this->worldRotation());
 			renderWindow->draw(circleShape);
 		}
 	}

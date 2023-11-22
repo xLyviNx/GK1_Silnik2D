@@ -6,13 +6,17 @@
 #include "ShapeObject.h"
 #include "Player.h"
 #include "BitmapHandler.h"
+<<<<<<< HEAD
 #include "Camera.h"
 #include "BitmapObject.h"
+=======
+>>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
 using namespace std;
 using namespace Engine2D;
 using namespace sf;
 
 Engine* Engine::singleton = NULL;
+float Engine::Gravity = 9.81f;
 Engine* Engine::GetSingleton(bool CreateIfNull)
 {
 	if (Engine::singleton == NULL && CreateIfNull)
@@ -41,7 +45,6 @@ Engine::Engine()
 	deltaTime = 0.0;
 	LoadAppData();
 	InitGame();
-	Gravity = 9.81;
 }
 Engine::~Engine()
 {
@@ -85,7 +88,7 @@ void Engine::EngineLoop()
 
 	sf::Font font;
 	sf::Text text;
-	
+	cout << "GRAVITY NOW: " << Gravity << endl;
 
 
 	if (!font.loadFromFile("fonts/PixellettersFull.ttf"))
@@ -115,9 +118,7 @@ void Engine::EngineLoop()
 	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color::Red, Color::White);
 
 	rectangle->name = "TEST";
-	Camera* camera = new Camera("Main Camera", Vector2f(0, 0));
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
-
 	// Obs³uga bitmapy  czyli przejscie z image>>texture>>sprite
 	//BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
 	//bitmapa1->loadFromFile("grafika.png");
@@ -159,6 +160,7 @@ void Engine::EngineLoop()
 	sf::Sprite Bitmapa_skonwertowana;
 	Bitmapa_skonwertowana.setTexture(texture, true);
 	Bitmapa_skonwertowana.setPosition(400, 300);
+<<<<<<< HEAD
 	
 
 
@@ -167,9 +169,16 @@ void Engine::EngineLoop()
 
 	
 
+=======
+	//rectangle->Rotate(10.0);
+	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
+	sf::View view = Window->getDefaultView();
+	Shapes::RectangleShape* podloga = new Shapes::RectangleShape("Floor", Vector2f(750, 670), 1500,100, Color::Green, 0);
+	podloga->fillColor = Color::Green;
+	podloga->color = Color::Transparent;
+>>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
 	while (Window != NULL && enabled && Window->isOpen())
 	{
-		
 		frameCount++;
 		if (fpsClock.getElapsedTime().asSeconds() >= 1.0)
 		{
@@ -184,8 +193,12 @@ void Engine::EngineLoop()
 		Window->clear(sf::Color::Black);
 		rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
+<<<<<<< HEAD
 		//rectangle->Rotate(10.0 * deltaTime);
 		
+=======
+
+>>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
 		sf::Event event;
 		if (mouseInputEnabled)
 		{
@@ -230,13 +243,15 @@ void Engine::EngineLoop()
 		for (UpdatableObject* upd : UpdatableObject::All)
 		{
 			upd->Update(deltaTime);
-		}		
+		}
+		
 		for (DrawableObject* drawable : DrawableObject::All)
 		{
 			if (drawable->visible);
 				drawable->Draw();
 			
 		}
+<<<<<<< HEAD
 		//Window->draw(Bitmapa_skonwertowana);
 		bitmapobj->renderobj.setPosition(100, 100);
 		
@@ -244,6 +259,38 @@ void Engine::EngineLoop()
 	
 		Window->draw(bitmapobj->renderobj);
 
+=======
+		for (Collisions* colA : Collisions::All)
+		{
+			if (!colA->enabled)
+				continue;
+			for (Collisions* colB : Collisions::All)
+			{
+				if (colB == colA || !colB->enabled)
+					continue;
+				bool contains = colA->currentCollisions.find(colB) != colA->currentCollisions.end();
+				if (colB->Collides(colA))
+				{
+					if (!contains)
+					{
+						colA->OnCollisionEnter(colB);
+						colA->currentCollisions.insert(colB);
+					}
+					else
+					{
+						colA->OnCollisionStay(colB);
+					}
+				}
+				else if (contains)
+				{
+					colA->currentCollisions.erase(colB);
+					colA->OnCollisionExit(colB);
+				}
+			}
+		}
+		Window->draw(Bitmapa_skonwertowana);
+		Window->setView(Window->getDefaultView());
+>>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
 		Window->draw(text);
 		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		//p2d.DrawPointSFML();
@@ -308,7 +355,19 @@ void Engine::CleanupScene()
 		else
 			InputReader::InputReaders.erase(object);
 	}
-	UpdatableObject::All.clear();
+	InputReader::InputReaders.clear();
+
+	while (!Collisions::All.empty())
+	{
+		Collisions* object = *(Collisions::All.begin());
+		if (object != NULL)
+		{
+			object->deleteMe();
+		}
+		else
+			Collisions::All.erase(object);
+	}
+	Collisions::All.clear();
 }
 void Engine::InitLogs()
 {

@@ -13,6 +13,7 @@ namespace Engine2D
 		float movementSpeed;
 		float gravityForce;
 		bool isGrounded;
+		Vector2f movement;
 	public:
 		float jumpForce;
 		bool enableGravity;
@@ -22,7 +23,8 @@ namespace Engine2D
 		virtual void Movement(Engine* engine, float deltaTime);
 		void Update(float deltaTime) override;
 		void KeyPressed(sf::Keyboard::Key keyPressed) override;
-		virtual void PropertiesChanged() override;
+		void OnCollisionEnter(Collisions* col) override;
+		void OnCollisionStay(Collisions* col) override;
 		void Move(Vector2f position, Vector2f dir, bool* collided);
 		void Move(Vector2f position, Vector2f dir, bool* collided, bool collisionsMoveOut);
 	};
