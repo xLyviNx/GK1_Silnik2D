@@ -25,6 +25,7 @@ namespace Engine2D
 		void KeyPressed(sf::Keyboard::Key keyPressed) override;
 		void OnCollisionEnter(Collisions* col) override;
 		void OnCollisionStay(Collisions* col) override;
+		void OnCollisionExit(Collisions* col) override;
 		void Move(Vector2f position, Vector2f dir, bool* collided);
 		void Move(Vector2f position, Vector2f dir, bool* collided, bool collisionsMoveOut);
 	};

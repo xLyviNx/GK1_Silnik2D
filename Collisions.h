@@ -60,6 +60,10 @@ namespace Engine2D
 		static void printCorners(const std::vector<sf::Vector2f>& corners);
 		static void drawCorners(const std::vector<sf::Vector2f>& corners);
 		std::vector<Vector2f> myCorners;
+		/*Vector2f left;
+		Vector2f right;
+		Vector2f bottom;
+		Vector2f top;*/
 	};
 
 }

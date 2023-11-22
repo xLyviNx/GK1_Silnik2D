@@ -78,7 +78,7 @@ namespace Engine2D {
 					continue;
 				}
 
-				if (collision->getGlobalBounds().contains(currentPoint)) {
+				if (collision->Collides(end)) {
 					RaycastHit hit(true, collision, currentPoint, end,noncollide);
 					return hit;
 				}
@@ -97,7 +97,7 @@ namespace Engine2D {
 		std::vector<sf::Vector2f> corners(self->myCorners.size());
 
 
-		for (float i = 0; i < distance; i += 3.0f) {
+		for (float i = 0; i < distance; i += 0.5f) {
 			sf::Vector2f currentPoint = selfPosition + direction * i;
 			
 			for (int v = 0; v < corners.size(); v++)
@@ -173,40 +173,7 @@ namespace Engine2D {
 	{
 		if (myCorners.size() > 0 && other->myCorners.size()>0)
 		{
-			//cout << myCorners.size() << endl;
-			if (drawPoints) {
-				drawCorners(myCorners);
-			}
-			for (int i = 0; i < 2; ++i) {
-				const std::vector<sf::Vector2f>& corners = (i == 0) ? this->myCorners : other->myCorners;
-
-				for (size_t j = 0; j < corners.size(); ++j) {
-					sf::Vector2f edge = corners[j] - corners[(j + 1) % corners.size()];
-					sf::Vector2f axis(-edge.y, edge.x); // Perpendicular to the edge
-
-					float minA = std::numeric_limits<float>::max();
-					float maxA = std::numeric_limits<float>::lowest();
-					for (const auto& corner : this->myCorners) {
-						float projection = Calculations::dotProduct(corner, axis);
-						minA = std::min(minA, projection);
-						maxA = std::max(maxA, projection);
-					}
-
-					float minB = std::numeric_limits<float>::max();
-					float maxB = std::numeric_limits<float>::lowest();
-					for (const auto& corner : other->myCorners) {
-						float projection = Calculations::dotProduct(corner, axis);
-						minB = std::min(minB, projection);
-						maxB = std::max(maxB, projection);
-					}
-
-					if (maxA < minB || maxB < minA)
-						return false; // No collision
-				}
-			}
-
-			return true; // Collision
-
+			return Collides(other->myCorners);
 		}
 		return false;
 	}
@@ -272,6 +239,9 @@ namespace Engine2D {
 	{
 		if (myCorners.size() > 0 && inputCorners.size() > 0)
 		{
+			if (drawPoints) {
+				drawCorners(myCorners);
+			}
 			for (int i = 0; i < 2; ++i) {
 				const std::vector<sf::Vector2f>& corners = (i == 0) ? this->myCorners : inputCorners;
 
@@ -289,7 +259,7 @@ namespace Engine2D {
 
 					float minB = std::numeric_limits<float>::max();
 					float maxB = std::numeric_limits<float>::lowest();
-					for (const auto& corner : corners) {
+					for (const auto& corner : inputCorners) {
 						float projection = Calculations::dotProduct(corner, axis);
 						minB = std::min(minB, projection);
 						maxB = std::max(maxB, projection);
@@ -332,7 +302,37 @@ namespace Engine2D {
 			corners[2] = sf::Vector2f(position.x - halfWidth, position.y - halfHeight); // lewy górny róg
 			corners[3] = sf::Vector2f(position.x + halfWidth, position.y - halfHeight); // prawy górny róg
 		}
-		
+		/*sf::Vector2f middle1 = 0.5f * (corners[0] + corners[1]);
+		sf::Vector2f middle2 = 0.5f * (corners[1] + corners[2]);
+		sf::Vector2f middle3 = 0.5f * (corners[2] + corners[3]);
+		sf::Vector2f middle4 = 0.5f * (corners[3] + corners[0]);
+		std::vector<sf::Vector2f> middles{middle1,middle2,middle3,middle4};
+
+		bottom = middle1;
+		left = middle2;
+		top = middle3;
+		right = middle4;
+
+		for (int i = 0; i < 4; i++)
+		{
+			if (middles[i].y < top.y)
+			{
+				top = middles[i];
+			}
+			if (middles[i].x < left.x)
+			{
+				left = middles[i];
+			}
+			if (middles[i].x > right.x)
+			{
+				right = middles[i];
+			}
+			if (middles[i].y > bottom.y)
+			{
+				bottom = middles[i];
+			}
+		}
+		*/
 		/*if (halfWidth < 50)
 		{
 			cout << "   A: " << halfWidth << " B: " << halfHeight << endl;
@@ -350,26 +350,13 @@ namespace Engine2D {
 	}
 	void Collisions::drawCorners(const std::vector<sf::Vector2f>& myCorners)
 	{
-		sf::CircleShape a(3);
-		a.setPosition(myCorners[0]);
-		a.setFillColor(Color::Red);
-		Engine::GetSingleton(false)->Window->draw(a);
-
-
-		sf::CircleShape b(3);
-		b.setPosition(myCorners[1]);
-		b.setFillColor(Color::Red);
-		Engine::GetSingleton(false)->Window->draw(b);
-
-		sf::CircleShape c(3);
-		c.setPosition(myCorners[2]);
-		c.setFillColor(Color::Red);
-		Engine::GetSingleton(false)->Window->draw(c);
-
-		sf::CircleShape d(3);
-		d.setPosition(myCorners[3]);
-		d.setFillColor(Color::Red);
-		Engine::GetSingleton(false)->Window->draw(d);
+		for (sf::Vector2f corner : myCorners) 
+		{
+			sf::CircleShape a(3);
+			a.setPosition(myCorners[0]);
+			a.setFillColor(Color::Red);
+			Engine::GetSingleton(false)->Window->draw(a);
+		}
 	}
 }
 

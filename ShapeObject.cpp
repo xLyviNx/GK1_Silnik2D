@@ -106,12 +106,11 @@ namespace Engine2D
 			rectShape.setOutlineColor(color);
 			renderWindow->draw(rectShape);
 		}
+		//drawCorners(std::vector<sf::Vector2f>({ top }));
 	}
 	void Shapes::CircleShape::PropertiesChanged()
 	{
 		worldRadius = localRadius * this->worldScale().x;
-		
-
 		circleShape.setRadius(worldRadius);
 		sf::FloatRect bounds = circleShape.getLocalBounds();
 		circleShape.setOrigin(bounds.left + bounds.width / 2.0f, bounds.top + bounds.height / 2.0f);

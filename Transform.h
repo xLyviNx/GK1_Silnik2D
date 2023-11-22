@@ -24,6 +24,7 @@ namespace Engine2D
 		Vector2f worldScale();
 		Vector2f bounds;
 		Vector2f worldBounds();
+		String tag;
 		float rotation;
 		float worldRotation();
 		void Translate(float X, float Y);
