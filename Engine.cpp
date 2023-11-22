@@ -7,6 +7,7 @@
 #include "Player.h"
 #include "BitmapHandler.h"
 #include "Camera.h"
+#include "BitmapObject.h"
 using namespace std;
 using namespace Engine2D;
 using namespace sf;
@@ -101,6 +102,7 @@ void Engine::EngineLoop()
 	text.setFillColor(sf::Color::White);
 	text.setPosition(10.f, 10.f);
 
+	
 
 	std::vector < sf::Vector2f > points;
 	points.push_back(sf::Vector2f(180, 100));
@@ -117,22 +119,50 @@ void Engine::EngineLoop()
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
 
 	// Obs³uga bitmapy  czyli przejscie z image>>texture>>sprite
-	BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
-	bitmapa1->loadFromFile("grafika.png");
+	//BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
+	//bitmapa1->loadFromFile("grafika.png");
 	sf::Texture texture;
 	
-	texture.loadFromImage(bitmapa1->getImage());
+	
+
+	//test animacji
+	std::vector<sf::Texture> toLoadVector;
+	sf::Texture frame;
+	frame.loadFromFile("sprite sheet.png", sf::IntRect(0, 0, 64, 64));
+	toLoadVector.push_back(frame);
+	frame.loadFromFile("sprite sheet.png", sf::IntRect(65, 1, 64, 64));
+	toLoadVector.push_back(frame);
+	frame.loadFromFile("sprite sheet.png", sf::IntRect(129, 0, 64, 64));
+	toLoadVector.push_back(frame);
+	frame.loadFromFile("sprite sheet.png", sf::IntRect(193, 0, 64, 64));
+	toLoadVector.push_back(frame);
+	//ruch w prawo
+
+
+
+
+	BitmapObject *bitmapobj = new BitmapObject();
+	bitmapobj->loadbitmaps(toLoadVector);
+	
+	
+	
+
+	/*frame.copy(frame, 0, 0, );
+	toLoadVector.push_back(frame);
+	frame.copy(frame, 0, 0, ,1);
+	toLoadVector.push_back(frame);
+	frame.copy(frame, 0, 0, sf::IntRect);
+	toLoadVector.push_back(frame);
+	frame.copy(frame, 0, 0, sf::IntRect);
+	toLoadVector.push_back(frame);*/
+
 	sf::Sprite Bitmapa_skonwertowana;
 	Bitmapa_skonwertowana.setTexture(texture, true);
 	Bitmapa_skonwertowana.setPosition(400, 300);
+	
 
-	//test animacji
-	std::vector <sf::Image> toLoadVector;
-	sf::Image frame;
-	//frame.loadFromFile(
-//
-	//)
-	//toLoadVector.push_back()
+
+	
 
 
 	
@@ -155,7 +185,7 @@ void Engine::EngineLoop()
 		rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
 		//rectangle->Rotate(10.0 * deltaTime);
-
+		
 		sf::Event event;
 		if (mouseInputEnabled)
 		{
@@ -207,7 +237,13 @@ void Engine::EngineLoop()
 				drawable->Draw();
 			
 		}
-		Window->draw(Bitmapa_skonwertowana);
+		//Window->draw(Bitmapa_skonwertowana);
+		bitmapobj->renderobj.setPosition(100, 100);
+		
+		bitmapobj->animate(deltaTime, 0.2,1);
+	
+		Window->draw(bitmapobj->renderobj);
+
 		Window->draw(text);
 		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		//p2d.DrawPointSFML();

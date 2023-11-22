@@ -19,3 +19,4 @@ public:
     void copyTo(BitmapHandler& other);
     sf::Image getImage();
 };
+
