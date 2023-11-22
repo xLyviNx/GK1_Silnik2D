@@ -58,6 +58,7 @@ namespace Engine2D
 		bool Collides(std::vector<sf::Vector2f> corners);
 		void CalculateCorners(float width, float height, float angle, const sf::Vector2f position);
 		static void printCorners(const std::vector<sf::Vector2f>& corners);
+		static void drawCorners(const std::vector<sf::Vector2f>& corners);
 		std::vector<Vector2f> myCorners;
 	};
 

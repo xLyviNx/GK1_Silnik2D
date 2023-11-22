@@ -2,6 +2,10 @@
 #include "PrimitiveRenderer.h"
 namespace Engine2D
 {
+	ShapeObject::ShapeObject() : Collisions()
+	{
+		myTransform = (TransformableObject*)myTransform;
+	}
 	ShapeObject::ShapeObject(Vector2f position)
 		: TransformableObject(position), Collisions((TransformableObject*)this)
 	{
@@ -26,7 +30,9 @@ namespace Engine2D
 		cout << "SHAPE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 		this->position = position;
 		this->name = name;
-		visible = true; 
+		visible = true;
+		printf("ADDRESS: %p\n NAME: ", myTransform);
+		cout << name << endl;
 	}
 
 	void ShapeObject::deleteMe()
@@ -51,6 +57,8 @@ namespace Engine2D
 		globalBounds = rectShape.getGlobalBounds();
 		this->bounds = rectShape.getSize();
 		this->CalculateCorners(worldA, worldB, this->worldRotation(), this->worldPosition());
+		myTransform = (TransformableObject*)this;
+
 	}
 	Shapes::RectangleShape::RectangleShape(Vector2f position, float A, float B, Color color, float width)
 		: ShapeObject("RectangleShape Object", position) {
@@ -111,6 +119,7 @@ namespace Engine2D
 		circleShape.setOutlineThickness(width);
 		circleShape.setFillColor(fillColor);
 		globalBounds = circleShape.getGlobalBounds();
+		myTransform = (TransformableObject*)this;
 
 	}
 	void Shapes::CircleShape::deleteMe()

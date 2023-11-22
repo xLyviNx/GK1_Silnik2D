@@ -117,7 +117,6 @@ void Engine::EngineLoop()
 	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color::Red, Color::White);
 
 	rectangle->name = "TEST";
-	Player* plr = new Player("Player Object", Vector2f(500, 500));
 	// Obs³uga bitmapy  czyli przejscie z image>>texture>>sprite
 	//BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
 	//bitmapa1->loadFromFile("grafika.png");
@@ -171,9 +170,11 @@ void Engine::EngineLoop()
 	//rectangle->Rotate(10.0);
 	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
 	sf::View view = Window->getDefaultView();
-	Shapes::RectangleShape* podloga = new Shapes::RectangleShape("Floor", Vector2f(750, 670), 1500,100, Color::Green, 0);
-	podloga->fillColor = Color::Green;
-	podloga->color = Color::Transparent;
+	Shapes::RectangleShape* podloga = new Shapes::RectangleShape("Floor", Vector2f(750, 670), 1500,100, Color::Green, 1);
+	podloga->fillColor = Color::Transparent;
+	podloga->color = Color::Green;
+	Player* plr = new Player("Player Object", Vector2f(500, 500));
+
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		frameCount++;

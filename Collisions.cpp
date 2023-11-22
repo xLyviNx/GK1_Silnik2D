@@ -94,15 +94,25 @@ namespace Engine2D {
 		float distance = std::sqrt(direction.x * direction.x + direction.y * direction.y);
 		direction /= distance; // normalize the direction
 		sf::Vector2f noncollide = selfPosition;
+		std::vector<sf::Vector2f> corners(self->myCorners.size());
+
+
 		for (float i = 0; i < distance; i += 3.0f) {
 			sf::Vector2f currentPoint = selfPosition + direction * i;
-
-			for (Collisions* collision : All) {
+			
+			for (int v = 0; v < corners.size(); v++)
+			{
+				corners[v] = self->myCorners[v] + direction * i;
+			}
+			if (drawPoints) {
+				drawCorners(corners);
+			}
+			for (Collisions* collision : All)
+			{
 				if (ignore.find(collision) != ignore.end() || !collision->enabled || collision == self) {
 					continue;
 				}
-
-				if (collision->Collides(self)) {
+				if (collision->Collides(corners)) {
 					RaycastHit hit(true, collision, currentPoint, end, noncollide);
 					return hit;
 				}
@@ -165,26 +175,7 @@ namespace Engine2D {
 		{
 			//cout << myCorners.size() << endl;
 			if (drawPoints) {
-				sf::CircleShape a(3);
-				a.setPosition(myCorners[0]);
-				a.setFillColor(Color::Red);
-				Engine::GetSingleton(false)->Window->draw(a);
-
-
-				sf::CircleShape b(3);
-				b.setPosition(myCorners[1]);
-				b.setFillColor(Color::Red);
-				Engine::GetSingleton(false)->Window->draw(b);
-
-				sf::CircleShape c(3);
-				c.setPosition(myCorners[2]);
-				c.setFillColor(Color::Red);
-				Engine::GetSingleton(false)->Window->draw(c);
-
-				sf::CircleShape d(3);
-				d.setPosition(myCorners[3]);
-				d.setFillColor(Color::Red);
-				Engine::GetSingleton(false)->Window->draw(d);
+				drawCorners(myCorners);
 			}
 			for (int i = 0; i < 2; ++i) {
 				const std::vector<sf::Vector2f>& corners = (i == 0) ? this->myCorners : other->myCorners;
@@ -356,6 +347,29 @@ namespace Engine2D {
 		for (size_t i = 0; i < corners.size(); ++i) {
 			std::cout << "Corner " << i << ": (" << corners[i].x << ", " << corners[i].y << ")\n";
 		}
+	}
+	void Collisions::drawCorners(const std::vector<sf::Vector2f>& myCorners)
+	{
+		sf::CircleShape a(3);
+		a.setPosition(myCorners[0]);
+		a.setFillColor(Color::Red);
+		Engine::GetSingleton(false)->Window->draw(a);
+
+
+		sf::CircleShape b(3);
+		b.setPosition(myCorners[1]);
+		b.setFillColor(Color::Red);
+		Engine::GetSingleton(false)->Window->draw(b);
+
+		sf::CircleShape c(3);
+		c.setPosition(myCorners[2]);
+		c.setFillColor(Color::Red);
+		Engine::GetSingleton(false)->Window->draw(c);
+
+		sf::CircleShape d(3);
+		d.setPosition(myCorners[3]);
+		d.setFillColor(Color::Red);
+		Engine::GetSingleton(false)->Window->draw(d);
 	}
 }
 

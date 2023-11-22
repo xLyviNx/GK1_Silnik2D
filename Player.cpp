@@ -29,7 +29,7 @@ void Engine2D::Player::Update(float deltaTime)
 	{
 		Movement(engine, deltaTime);
 	}
-	cout << "STAT: " << isGrounded << endl;
+	//cout << "STAT: " << isGrounded << endl;
 }
 void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 {
@@ -64,13 +64,21 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 		Vector2f gravpos = this->worldPosition() - Vector2f(0, gravityForce) * deltaTime;
 		std::set<Collisions*> ignore;
 		ignore.insert((Collisions*)this);
-		RaycastHit hit = Collisions::RaycastBox((Collisions*)this, worldPosition(), worldPosition() + Vector2f(0, 50.0f), ignore);
+		Vector2f bottom = worldPosition() + Vector2f(0, bounds.y / 2.0);
+		sf::CircleShape cs(5.0);
+		RaycastHit hit = Collisions::RaycastBox((Collisions*)this, bottom, bottom + Vector2f(0, 2), ignore);
 		isGrounded = hit.hit;
+		cs.setPosition(hit.point);
+		cs.setFillColor(hit.hit ? Color::Red : Color::Green);
+		renderWindow->draw(cs);
+		if (hit.hit && hit.collidedObject && hit.collidedObject->myTransform) {
+			cout << "NAME: " << hit.collidedObject->myTransform->name << endl;
+		}
 		if (isGrounded || !enableGravity)
 			gravityForce = 0;
 		else if (enableGravity && !isGrounded)
 		{
-			cout << "GRAV: " << Engine::Gravity << endl;
+			//cout << "GRAV: " << Engine::Gravity << endl;
 			gravityForce -= Engine::Gravity * deltaTime * 100.0f;
 		}
 		if (engine->isKeyTriggered(Keyboard::A))
@@ -105,13 +113,13 @@ void Engine2D::Player::KeyPressed(sf::Keyboard::Key keyPressed)
 void Engine2D::Player::OnCollisionEnter(Collisions* col)
 {
 	Engine::PrintLog("ENTER COLLISION");
-	setPosition(moveOutOfCollision(this, worldPosition(), movement));
+	setPosition(lastPosition);
 }
 
 void Engine2D::Player::OnCollisionStay(Collisions* col)
 {
 	Engine::PrintLog("STAY COLLISION");
-	setPosition(moveOutOfCollision(this, worldPosition(), movement));
+	//setPosition(moveOutOfCollision(this, worldPosition(), movement));
 }
 
 
