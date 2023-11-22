@@ -6,11 +6,10 @@
 #include "ShapeObject.h"
 #include "Player.h"
 #include "BitmapHandler.h"
-<<<<<<< HEAD
+
 #include "Camera.h"
 #include "BitmapObject.h"
-=======
->>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
+
 using namespace std;
 using namespace Engine2D;
 using namespace sf;
@@ -160,7 +159,6 @@ void Engine::EngineLoop()
 	sf::Sprite Bitmapa_skonwertowana;
 	Bitmapa_skonwertowana.setTexture(texture, true);
 	Bitmapa_skonwertowana.setPosition(400, 300);
-<<<<<<< HEAD
 	
 
 
@@ -169,14 +167,13 @@ void Engine::EngineLoop()
 
 	
 
-=======
+
 	//rectangle->Rotate(10.0);
 	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
 	sf::View view = Window->getDefaultView();
 	Shapes::RectangleShape* podloga = new Shapes::RectangleShape("Floor", Vector2f(750, 670), 1500,100, Color::Green, 0);
 	podloga->fillColor = Color::Green;
 	podloga->color = Color::Transparent;
->>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
 	while (Window != NULL && enabled && Window->isOpen())
 	{
 		frameCount++;
@@ -193,12 +190,12 @@ void Engine::EngineLoop()
 		Window->clear(sf::Color::Black);
 		rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
-<<<<<<< HEAD
+
 		//rectangle->Rotate(10.0 * deltaTime);
 		
-=======
 
->>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
+
+
 		sf::Event event;
 		if (mouseInputEnabled)
 		{
@@ -251,7 +248,7 @@ void Engine::EngineLoop()
 				drawable->Draw();
 			
 		}
-<<<<<<< HEAD
+
 		//Window->draw(Bitmapa_skonwertowana);
 		bitmapobj->renderobj.setPosition(100, 100);
 		
@@ -259,7 +256,7 @@ void Engine::EngineLoop()
 	
 		Window->draw(bitmapobj->renderobj);
 
-=======
+
 		for (Collisions* colA : Collisions::All)
 		{
 			if (!colA->enabled)
@@ -290,7 +287,6 @@ void Engine::EngineLoop()
 		}
 		Window->draw(Bitmapa_skonwertowana);
 		Window->setView(Window->getDefaultView());
->>>>>>> 04287ef51096b30770d743152e8adf879e7eb717
 		Window->draw(text);
 		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		//p2d.DrawPointSFML();
