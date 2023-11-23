@@ -3,3 +3,4 @@ C:\Studia\Semestr 3\Grafika Komputerowa 1\Aktualne\GK1_Silnik2D\x64\Debug\GK1_Si
 N:\PSK\GK1_Silnik2D\x64\Debug\GK1_Silnik2D.exe
 D:\PSK\Semestr3\GRAFIKA\Silnik2D\GK1_Silnik2D\x64\Debug\GK1_Silnik2D.exe
 C:\Users\Jasiek\source\repos\xLyviNx\GK1_Silnik2D\x64\Debug\GK1_Silnik2D.exe
+C:\Users\user\Desktop\projekt\x64\Debug\GK1_Silnik2D.exe

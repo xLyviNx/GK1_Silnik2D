@@ -20,9 +20,8 @@ void BitmapObject::animate(double deltatime, double frame_speed, int version)
 		i++;
 		offset = 0;
 	}
-	if (i == 4)
+	if (i >= bitmaps.size())
 		i = 0;
-		renderobj.setTexture(bitmaps[i]);
-	
+	renderobj.setTexture(bitmaps[i]);
 	
 }

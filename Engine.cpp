@@ -127,6 +127,15 @@ void Engine::EngineLoop()
 	//test animacji
 	std::vector<sf::Texture> toLoadVector;
 	sf::Texture frame;
+	frame.loadFromFile("flappy_bird.png", sf::IntRect(0, 0, 86, 86));
+	toLoadVector.push_back(frame);
+
+	frame.loadFromFile("flappy_bird.png", sf::IntRect(96, 0, 86, 86));
+	toLoadVector.push_back(frame);
+
+	frame.loadFromFile("flappy_bird.png", sf::IntRect(192, 0, 86, 86));
+	toLoadVector.push_back(frame);
+	/*
 	frame.loadFromFile("sprite sheet.png", sf::IntRect(0, 0, 64, 64));
 	toLoadVector.push_back(frame);
 	frame.loadFromFile("sprite sheet.png", sf::IntRect(65, 1, 64, 64));
@@ -135,6 +144,7 @@ void Engine::EngineLoop()
 	toLoadVector.push_back(frame);
 	frame.loadFromFile("sprite sheet.png", sf::IntRect(193, 0, 64, 64));
 	toLoadVector.push_back(frame);
+	*/
 	//ruch w prawo
 
 
