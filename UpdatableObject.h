@@ -1,12 +1,12 @@
 #pragma once
-#include <set>
+#include <vector>
 using namespace std;
 namespace Engine2D 
 {
 	class UpdatableObject
 	{
 	public:
-		static set<UpdatableObject*> All;
+		static vector<UpdatableObject*> All;
 		virtual void Update(float deltaTime);
 		virtual void Start();
 		UpdatableObject();

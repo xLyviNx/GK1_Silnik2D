@@ -51,7 +51,7 @@ namespace Engine2D
 		sf::FloatRect bounds = rectShape.getLocalBounds();
 		rectShape.setOrigin(rectShape.getSize().x / 2, rectShape.getSize().y / 2);
 		rectShape.setOutlineColor(color);
-		rectShape.setOutlineThickness(width);
+		rectShape.setOutlineThickness(outlinewidth);
 		rectShape.setFillColor(fillColor);
 		//rectShape.setRotation(this->worldRotation());
 		globalBounds = rectShape.getGlobalBounds();
@@ -64,7 +64,7 @@ namespace Engine2D
 		: ShapeObject("RectangleShape Object", position) {
 		this->fillColor = Color::Transparent;
 		cout << "RECTANGLE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
-		this->width = width;
+		this->outlinewidth = width;
 		localA = A;
 		localB = B;
 		this->color = color;
@@ -79,7 +79,7 @@ namespace Engine2D
 	Shapes::RectangleShape::RectangleShape(std::string name, Vector2f position, float A, float B, Color color, float width) : ShapeObject(name, position)
 	{
 		this->fillColor = Color::Transparent;
-		this->width = width;
+		this->outlinewidth = width;
 		localA = A;
 		localB = B;
 		this->color = color;
@@ -107,6 +107,12 @@ namespace Engine2D
 			renderWindow->draw(rectShape);
 		}
 		//drawCorners(std::vector<sf::Vector2f>({ top }));
+	}
+	void Shapes::RectangleShape::ChangeSize(float A, float B)
+	{
+		localA = A;
+		localB = B;
+		PropertiesChanged();
 	}
 	void Shapes::CircleShape::PropertiesChanged()
 	{

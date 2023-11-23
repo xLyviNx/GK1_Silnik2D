@@ -2,7 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "Engine.h"
 namespace Engine2D {
-	std::set<DrawableObject*> DrawableObject::All;
+	std::vector<DrawableObject*> DrawableObject::All;
 	
 	
 	DrawableObject::DrawableObject()
@@ -10,7 +10,7 @@ namespace Engine2D {
 		Engine* eng = Engine::GetSingleton(false);
 		this->window = eng? eng->Window : NULL;
 		visible = true;
-		All.insert(this);
+		All.push_back(this);
 	}
 
 	void DrawableObject::Draw(sf::Texture texture)
@@ -24,7 +24,14 @@ namespace Engine2D {
 
 	DrawableObject::~DrawableObject()
 	{
-		All.erase(this);
+		std::cout << "SETTING NULL DRAWABLE" << std::endl;
+		for (vector<DrawableObject*>::iterator it = DrawableObject::All.begin(); it != DrawableObject::All.end(); ++it)
+		{
+			if (*it == this) {
+				*it = NULL;
+				break;
+			}
+		}
 	}
 
 	void DrawableObject::deleteMe()

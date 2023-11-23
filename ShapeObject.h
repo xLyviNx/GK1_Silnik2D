@@ -22,12 +22,12 @@ namespace Engine2D
 	{
 		class RectangleShape : public virtual ShapeObject
 		{
-		private:
+		protected:
 			float localA;
 			float localB;
 			float worldA;
 			float worldB;
-			float width;
+			float outlinewidth;
 			sf::RectangleShape rectShape;
 		public:
 			Color fillColor;
@@ -40,6 +40,7 @@ namespace Engine2D
 			RectangleShape(std::string name, Vector2f position, float A, float B, Color color, Color fillColor, float width);
 			void deleteMe() override;
 			void Draw() override;
+			void ChangeSize(float A, float B);
 		};
 		class CircleShape : public virtual ShapeObject
 		{

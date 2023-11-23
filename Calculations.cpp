@@ -1,5 +1,6 @@
 #include "Calculations.h"
 #include <cmath>
+
 sf::Vector2f Engine2D::Calculations::Vector2f_Normalize(sf::Vector2f Vector)
 {
     float magnitude = Vector2f_Magnitude(Vector);
@@ -18,4 +19,8 @@ float Engine2D::Calculations::Vector2f_Magnitude(sf::Vector2f Vector)
 }
 float Engine2D::Calculations::dotProduct(const sf::Vector2f& a, const sf::Vector2f& b) {
     return a.x * b.x + a.y * b.y;
+}
+int Engine2D::Calculations::Random(int min, int max)
+{
+    return min + rand() % ((max + 1) - min);
 }

@@ -7,7 +7,7 @@ namespace Engine2D {
 	{
 	public:
 		bool visible;
-		static std::set<DrawableObject*> All;
+		static std::vector<DrawableObject*> All;
 		virtual void Draw();
 		sf::RenderWindow* window;
 		DrawableObject();

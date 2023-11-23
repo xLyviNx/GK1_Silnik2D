@@ -8,6 +8,10 @@ void BitmapObject::loadbitmaps(std::vector<sf::Texture> bitmapstoload)
 	{
 		bitmaps.push_back(bitmapa);
 	}
+	if (bitmaps.size() >= 1)
+	{
+		renderobj.setTexture(bitmaps[0]);
+	}
 }
 
 void BitmapObject::animate(double deltatime, double frame_speed, int version)

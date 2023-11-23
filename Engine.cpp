@@ -6,7 +6,7 @@
 #include "ShapeObject.h"
 #include "Player.h"
 #include "BitmapHandler.h"
-
+#include "GameManager.hpp"
 #include "Camera.h"
 #include "BitmapObject.h"
 
@@ -61,6 +61,7 @@ void Engine::InitGame()
 		PrintLog("ERROR! APP DATA NOT FOUND! QUITTING");
 		return;
 	}
+	srand(time(NULL));
 	if (Window == NULL) {
 		if (enabled) {
 			InitLogs();
@@ -83,7 +84,7 @@ void Engine::SpawnGame()
 	dol->fillColor = Color::Transparent;
 	gora->color = Color::Transparent;
 	dol->color = Color::Transparent;
-
+	FlappyBird::GameManager* game = new FlappyBird::GameManager();
 
 }
 void Engine::EngineLoop()
@@ -217,7 +218,7 @@ void Engine::EngineLoop()
 		//text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
 		Window->clear(sf::Color::Black);
-		rectangle->Translate(10.0 * deltaTime, 0);
+		//rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
 
 		//rectangle->Rotate(10.0 * deltaTime);
@@ -268,16 +269,22 @@ void Engine::EngineLoop()
 				break;
 			}
 		}
-		for (UpdatableObject* upd : UpdatableObject::All)
+		for (int i = 0; i < UpdatableObject::All.size(); i++)
 		{
-			upd->Update(deltaTime);
+			if (UpdatableObject::All[i] != NULL)
+			{
+				UpdatableObject::All[i]->Update(deltaTime);
+			}
 		}
-		
-		for (DrawableObject* drawable : DrawableObject::All)
+
+		for (int i = 0; i < DrawableObject::All.size(); i++)
 		{
-			if (drawable->visible);
-				drawable->Draw();
-			
+			if (DrawableObject::All[i] != NULL)
+			{
+				DrawableObject* drawable = DrawableObject::All[i];
+				if (drawable->visible);
+					drawable->Draw();
+			}
 		}
 
 
@@ -361,10 +368,24 @@ void Engine::CleanupScene()
 		{
 			object->deleteMe();
 		}
-		else
-			UpdatableObject::All.erase(object);
+		else {
+			UpdatableObject::All.erase(UpdatableObject::All.begin());
+		}
 	}
 	UpdatableObject::All.clear();
+
+	while (!DrawableObject::All.empty())
+	{
+		DrawableObject* object = *(DrawableObject::All.begin());
+		if (object != NULL)
+		{
+			object->deleteMe();
+		}
+		else {
+			DrawableObject::All.erase(DrawableObject::All.begin());
+		}
+	}
+	DrawableObject::All.clear();
 
 	while (!InputReader::InputReaders.empty())
 	{

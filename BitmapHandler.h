@@ -8,9 +8,8 @@ protected:
    
     int width;
     int height;
-    sf::Image bitmap;
 public:
-    
+    sf::Image bitmap;
     BitmapHandler(int width, int height);
     void loadFromFile(const std::string& filename);
     void saveToFile(const std::string& filename);

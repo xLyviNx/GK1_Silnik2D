@@ -145,6 +145,7 @@
     <ClCompile Include="GK1_Silnik2D.cpp">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
     </ClCompile>
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PrimitiveRenderer.cpp" />
     <ClCompile Include="ShapeObject.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="fb_Obstacle.hpp" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputReader.h" />
+    <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PrimitiveRenderer.h" />
     <ClInclude Include="ShapeObject.h" />

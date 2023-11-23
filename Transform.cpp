@@ -63,6 +63,13 @@ void Engine2D::TransformableObject::Scale(float X, float Y)
 	PropertiesChanged();
 
 }
+void Engine2D::TransformableObject::setScale(float X, float Y)
+{
+	scale.x = X;
+	scale.y = Y;
+	PropertiesChanged();
+
+}
 
 void Engine2D::TransformableObject::Scale(Vector2f XY)
 {

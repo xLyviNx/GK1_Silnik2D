@@ -32,6 +32,7 @@ namespace Engine2D
 		void setPosition(Vector2f XY);
 		void Scale(float XY);
 		void Scale(float X, float Y);
+		void setScale(float X, float Y);
 		void Scale(Vector2f XY);
 		void Rotate(float rotation);
 		void SetParent(TransformableObject* newParent);

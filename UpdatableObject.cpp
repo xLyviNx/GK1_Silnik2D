@@ -1,9 +1,10 @@
 #include "UpdatableObject.h"
+#include <iostream>
 
 
 namespace Engine2D 
 {
-	set<UpdatableObject*> UpdatableObject::All;
+	vector<UpdatableObject*> UpdatableObject::All;
 
 	void UpdatableObject::Update(float deltaTime)
 	{
@@ -17,16 +18,25 @@ namespace Engine2D
 
 	UpdatableObject::UpdatableObject()
 	{
-		UpdatableObject::All.insert(this);
+		UpdatableObject::All.push_back(this);
 		this->Start();
 	}
 
 	UpdatableObject::~UpdatableObject()
 	{
-		UpdatableObject::All.erase(this);
+		std::cout << "SETTING NULL" << std::endl;
+		for (vector<UpdatableObject*>::iterator it = UpdatableObject::All.begin(); it != UpdatableObject::All.end(); ++it)
+		{
+			if (*it == this) {
+				*it = NULL;
+				break;
+			}
+		}
+		std::cout << "SET UPDATABLE NULL" << std::endl;
+
 	}
 	void UpdatableObject::deleteMe()
 	{
-		delete this;
+		delete (UpdatableObject*)(this);
 	}
 }
