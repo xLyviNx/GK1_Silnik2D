@@ -166,7 +166,17 @@ void Engine::EngineLoop()
 	bitmapobj->loadbitmaps(toLoadVector);
 	
 	
-	
+	sf::Texture backgroundTexture;
+	if (!backgroundTexture.loadFromFile("background_day.png")) {
+		PrintLog("ERROR! Failed to load background texture.");
+		return;
+	}
+
+	// Create a sprite for the background
+	sf::Sprite backgroundSprite;
+	backgroundSprite.setTexture(backgroundTexture);
+	backgroundSprite.setScale(static_cast<float>(Window->getSize().x) / backgroundTexture.getSize().x,
+		static_cast<float>(Window->getSize().y) / backgroundTexture.getSize().y);
 
 	/*frame.copy(frame, 0, 0, );
 	toLoadVector.push_back(frame);
@@ -184,8 +194,6 @@ void Engine::EngineLoop()
 
 
 	
-
-
 	
 
 
@@ -214,6 +222,8 @@ void Engine::EngineLoop()
 
 		//rectangle->Rotate(10.0 * deltaTime);
 		
+		// Draw the background sprite
+		Window->draw(backgroundSprite);
 
 
 
