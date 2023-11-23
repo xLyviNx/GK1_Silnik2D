@@ -126,10 +126,10 @@ void Engine::EngineLoop()
 	points.push_back(sf::Vector2f(170, 420));
 	points.push_back(sf::Vector2f(200, 520));
 
-	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
-	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color::Red, Color::White);
+	//Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
+	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color(255,150,50), Color::Yellow);
 	
-	rectangle->name = "TEST";
+	//rectangle->name = "TEST";
 	// Obs³uga bitmapy  czyli przejscie z image>>texture>>sprite
 	//BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
 	//bitmapa1->loadFromFile("grafika.png");
@@ -188,10 +188,10 @@ void Engine::EngineLoop()
 	frame.copy(frame, 0, 0, sf::IntRect);
 	toLoadVector.push_back(frame);*/
 
-	sf::Sprite Bitmapa_skonwertowana;
+	/*sf::Sprite Bitmapa_skonwertowana;
 	Bitmapa_skonwertowana.setTexture(texture, true);
 	Bitmapa_skonwertowana.setPosition(400, 300);
-	
+	*/
 
 
 	
@@ -276,16 +276,21 @@ void Engine::EngineLoop()
 				UpdatableObject::All[i]->Update(deltaTime);
 			}
 		}
-
+		std::vector<DrawableObject*> uiobjects;
 		for (int i = 0; i < DrawableObject::All.size(); i++)
 		{
 			if (DrawableObject::All[i] != NULL)
 			{
 				DrawableObject* drawable = DrawableObject::All[i];
+				if (drawable->isUi) {
+					uiobjects.push_back(drawable);
+					continue;
+				}
 				if (drawable->visible);
 					drawable->Draw();
 			}
 		}
+
 
 
 
@@ -317,8 +322,17 @@ void Engine::EngineLoop()
 				}
 			}
 		}
-		Window->draw(Bitmapa_skonwertowana);
+		//Window->draw(Bitmapa_skonwertowana);
 		Window->setView(Window->getDefaultView());
+		for (int i = 0; i < uiobjects.size(); i++)
+		{
+			if (uiobjects[i] != NULL)
+			{
+				DrawableObject* drawable = uiobjects[i];
+				if (drawable->visible);
+				drawable->Draw();
+			}
+		}
 		Window->draw(text);
 		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		//p2d.DrawPointSFML();

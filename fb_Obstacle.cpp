@@ -40,7 +40,7 @@ void FlappyBird::flappyObstacle::Draw()
 	//cout << "width: " << outlinewidth << "  color: " << (int)color.r << endl;
 	Shapes::RectangleShape::Draw();
 	renderobj.setPosition(worldPosition());
-	renderobj.setRotation(isTopOne? worldRotation() : worldRotation() * -1.f);
+	renderobj.setRotation(isTopOne? worldRotation() +180.f: worldRotation());
 	renderobj.setScale(worldScale());
 	renderWindow->draw(renderobj);
 

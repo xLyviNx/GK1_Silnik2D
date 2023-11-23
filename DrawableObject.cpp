@@ -10,6 +10,7 @@ namespace Engine2D {
 		Engine* eng = Engine::GetSingleton(false);
 		this->window = eng? eng->Window : NULL;
 		visible = true;
+		isUi = false;
 		All.push_back(this);
 	}
 

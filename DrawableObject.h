@@ -13,6 +13,7 @@ namespace Engine2D {
 		DrawableObject();
 		virtual void Draw(sf::Texture texture);
 		~DrawableObject();
+		bool isUi;
 		virtual void deleteMe();
 	};
 }
