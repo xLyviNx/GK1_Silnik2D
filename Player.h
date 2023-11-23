@@ -34,5 +34,6 @@ namespace Engine2D
 		bool canJumpMidAir;
 		void Move(Vector2f position, Vector2f dir, bool* collided);
 		void Move(Vector2f position, Vector2f dir, bool* collided, bool collisionsMoveOut);
+		virtual void Draw() override;
 	};
 }

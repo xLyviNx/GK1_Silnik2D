@@ -25,6 +25,7 @@ namespace Engine2D
 		bool mouseInputEnabled;
 		sf::Vector2i mousePosition;
 		static void InitLogs();
+		void SpawnGame();
 	protected:
 		static Engine* singleton;
 	public:

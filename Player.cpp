@@ -65,8 +65,8 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 		ignore.insert((Collisions*)this);
 		Vector2f bottomL = worldPosition() + Vector2f(0, bounds.y / 2.0) - Vector2f(worldBounds().x * 0.5f, 0);
 		Vector2f bottomR = worldPosition() + Vector2f(0, bounds.y / 2.0) + Vector2f(worldBounds().x * 0.5f, 0);
-		RaycastHit hitL = Collisions::Raycast(bottomL , bottomL + Vector2f(0, 5), ignore);
-		RaycastHit hitR = Collisions::Raycast(bottomR, bottomR + Vector2f(0, 5), ignore);
+		RaycastHit hitL = Collisions::Raycast(bottomL , bottomL + Vector2f(0, 1), ignore);
+		RaycastHit hitR = Collisions::Raycast(bottomR, bottomR + Vector2f(0, 1), ignore);
 		isGrounded = hitL.hit || hitR.hit;
 		/*sf::CircleShape cs(5.0);
 		sf::CircleShape cs2(5.0);
@@ -212,4 +212,9 @@ void Engine2D::Player::Move(Vector2f position, Vector2f dir, bool* collided, boo
 		position.y = yPos.y;
 	setPosition(position);
 	//printCorners(this->myCorners);
+}
+
+void Engine2D::Player::Draw()
+{
+	Shapes::RectangleShape::Draw();
 }

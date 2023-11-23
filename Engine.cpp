@@ -69,10 +69,22 @@ void Engine::InitGame()
 				Window = new RenderWindow(sf::VideoMode(appData->WindowSize.x, appData->WindowSize.y), appData->ApplicationName, (appData->displayMode == Fullscreen ? sf::Style::Fullscreen : sf::Style::Default));
 
 			Window->setFramerateLimit(appData->maxFramerate);
-
+			SpawnGame();
 			this->EngineLoop();
 		}
 	}
+}
+void Engine::SpawnGame()
+{
+	Shapes::RectangleShape* gora = new Shapes::RectangleShape("Top", Vector2f(750, -50), 1500, 100, Color::Green, 1);
+	Shapes::RectangleShape* dol = new Shapes::RectangleShape("Floor", Vector2f(750, 770), 1500, 100, Color::Green, 1);
+	gora->tag = "kill";
+	dol->tag = "kill";
+	dol->fillColor = Color::Transparent;
+	gora->color = Color::Transparent;
+	dol->color = Color::Transparent;
+
+
 }
 void Engine::EngineLoop()
 {
@@ -180,10 +192,6 @@ void Engine::EngineLoop()
 	//rectangle->Rotate(10.0);
 	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
 	sf::View view = Window->getDefaultView();
-	Shapes::RectangleShape* podloga = new Shapes::RectangleShape("Floor", Vector2f(750, 670), 1500,100, Color::Green, 1);
-	podloga->tag = "floor";
-	podloga->fillColor = Color::Transparent;
-	podloga->color = Color::Green;
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
 
 	while (Window != NULL && enabled && Window->isOpen())
