@@ -127,7 +127,7 @@ void Engine::EngineLoop()
 
 	Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
 	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color::Red, Color::White);
-
+	
 	rectangle->name = "TEST";
 	// Obs³uga bitmapy  czyli przejscie z image>>texture>>sprite
 	//BitmapHandler *bitmapa1 = new BitmapHandler(200,100);
@@ -193,6 +193,7 @@ void Engine::EngineLoop()
 	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
 	sf::View view = Window->getDefaultView();
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
+	plr->loadbitmaps(toLoadVector);
 
 	while (Window != NULL && enabled && Window->isOpen())
 	{
@@ -269,12 +270,6 @@ void Engine::EngineLoop()
 			
 		}
 
-		//Window->draw(Bitmapa_skonwertowana);
-		bitmapobj->renderobj.setPosition(100, 100);
-		
-		bitmapobj->animate(deltaTime, 0.2,1);
-	
-		Window->draw(bitmapobj->renderobj);
 
 
 		for (Collisions* colA : Collisions::All)

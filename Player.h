@@ -3,10 +3,10 @@
 #include "Transform.h"
 #include "ShapeObject.h"
 #include "Collisions.h"
-
+#include "BitmapObject.h"
 namespace Engine2D
 {
-	class Player : public virtual Shapes::RectangleShape, public InputReader, public UpdatableObject, public virtual Collisions
+	class Player : public virtual Shapes::RectangleShape, public InputReader, public UpdatableObject, public virtual Collisions,public BitmapObject
 	{
 	private:
 		bool jumped;

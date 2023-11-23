@@ -1,5 +1,6 @@
 #include "Player.h"
 #include "Calculations.h"
+#include "Engine.h"
 void Engine2D::Player::deleteMe()
 {
 	delete this;
@@ -14,6 +15,7 @@ Engine2D::Player::Player(string name, Vector2f position) : RectangleShape(name, 
 	gravityForce = 0;
 	isGrounded = false;
 	movement = Vector2f(0, 0);
+	canJumpMidAir = true;
 }
 
 void Engine2D::Player::Start()
@@ -216,5 +218,13 @@ void Engine2D::Player::Move(Vector2f position, Vector2f dir, bool* collided, boo
 
 void Engine2D::Player::Draw()
 {
-	Shapes::RectangleShape::Draw();
+	
+	BitmapObject::animate(Engine::GetSingleton(false)->deltaTime,0.2,1);
+	renderobj.setOrigin(renderobj.getLocalBounds().width / 2, renderobj.getLocalBounds().height / 2);
+	renderobj.setPosition(worldPosition());
+	Engine::GetSingleton(false)->Window->draw(renderobj);
+
+
+	//RectangleShape::Draw();
+	
 }
