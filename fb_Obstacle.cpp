@@ -1,5 +1,7 @@
 #include "fb_Obstacle.hpp"
 float FlappyBird::flappyObstacle::obstacleSpeed = 10.0f;
+int FlappyBird::flappyObstacle::minY = 0 ;
+int FlappyBird::flappyObstacle::maxY = 0 ;
 void FlappyBird::flappyObstacle::Update(float deltaTime)
 {
 
@@ -10,9 +12,9 @@ void FlappyBird::flappyObstacle::Update(float deltaTime)
 
 void FlappyBird::flappyObstacle::Start()
 {
-	if (bottom == NULL && isTopOne)
+	if (isTopOne)
 	{
-		bottom = flappyObstacle();
+		
 	}
 }
 

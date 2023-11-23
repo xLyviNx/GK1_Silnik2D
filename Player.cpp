@@ -14,7 +14,6 @@ Engine2D::Player::Player(string name, Vector2f position) : RectangleShape(name, 
 	gravityForce = 0;
 	isGrounded = false;
 	movement = Vector2f(0, 0);
-
 }
 
 void Engine2D::Player::Start()
@@ -31,6 +30,7 @@ void Engine2D::Player::Update(float deltaTime)
 	}
 	//cout << "STAT: " << isGrounded << endl;
 }
+
 void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 {
 	movement = Vector2f(0, 0);
@@ -110,10 +110,23 @@ void Engine2D::Player::KeyPressed(sf::Keyboard::Key keyPressed)
 {
 	if (keyPressed == Keyboard::Space)
 	{
-		if (!isTopView && isGrounded && jumpForce>0)
+		if (!isTopView && ((isGrounded && jumpForce >= 0) || canJumpMidAir) && !jumped)
 		{
-			gravityForce += jumpForce * 50;
+			if (canJumpMidAir && jumpForce < 0)
+				jumpForce = 0;
+			if (gravityForce <= (jumpForce * 20))
+			{
+				gravityForce += jumpForce * 50;
+				jumped = true;
+			}
 		}
+	}
+}
+void Engine2D::Player::KeyReleased(sf::Keyboard::Key keyReleased)
+{
+	if (keyReleased == Keyboard::Space && jumped)
+	{
+		jumped = false;
 	}
 }
 

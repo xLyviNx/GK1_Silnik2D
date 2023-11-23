@@ -139,6 +139,7 @@
     <ClCompile Include="Collisions.cpp" />
     <ClCompile Include="DrawableObject.cpp" />
     <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="fb_Obstacle.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputReader.cpp" />
     <ClCompile Include="GK1_Silnik2D.cpp">
@@ -160,6 +161,7 @@
     <ClInclude Include="Collisions.h" />
     <ClInclude Include="DrawableObject.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="fb_Obstacle.hpp" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputReader.h" />
     <ClInclude Include="Player.h" />

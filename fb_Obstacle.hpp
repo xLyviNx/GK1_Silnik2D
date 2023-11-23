@@ -12,7 +12,8 @@ namespace FlappyBird
 	{
 	private:
 		static float obstacleSpeed;
-		flappyObstacle bottom;
+		static int minY;
+		static int maxY;
 		bool isTopOne;
 	public:
 		virtual void Update(float deltaTime) override;
