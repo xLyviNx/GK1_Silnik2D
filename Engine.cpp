@@ -7,6 +7,8 @@
 #include "Player.h"
 #include "BitmapHandler.h"
 #include "GameManager.hpp"
+#include "Menu.h"
+
 #include "Camera.h"
 #include "BitmapObject.h"
 
@@ -203,9 +205,12 @@ void Engine::EngineLoop()
 	sf::View view = Window->getDefaultView();
 	Player* plr = new Player("Player Object", Vector2f(500, 500));
 	plr->loadbitmaps(toLoadVector);
+	Menu menu(this->Window->getSize().x, this->Window->getSize().y);
 
 	while (Window != NULL && enabled && Window->isOpen())
 	{
+		
+		sf::Event event;
 		frameCount++;
 		if (fpsClock.getElapsedTime().asSeconds() >= 1.0)
 		{
@@ -217,6 +222,7 @@ void Engine::EngineLoop()
 
 		//text.setPosition(Window->getSize().x / 2, Window->getSize().y / 2);
 		deltaTime = clock.restart().asSeconds();
+		
 		Window->clear(sf::Color::Black);
 		//rectangle->Translate(10.0 * deltaTime, 0);
 		//circle->Translate(-10 * deltaTime, 0);
@@ -226,9 +232,14 @@ void Engine::EngineLoop()
 		// Draw the background sprite
 		Window->draw(backgroundSprite);
 
-
-
-		sf::Event event;
+		
+		/*
+		while (menuActive)
+		{
+			menu.Draw();
+		}
+		*/
+		
 		if (mouseInputEnabled)
 		{
 			mousePosition = sf::Mouse::getPosition();
@@ -262,12 +273,16 @@ void Engine::EngineLoop()
 					for (InputReader* reader : InputReader::InputReaders)
 						reader->MouseReleased(event.mouseButton);
 				}
+				
+				
 			}
 			if (event.type == sf::Event::Closed)
 			{
 				Window->close();
 				break;
 			}
+
+			
 		}
 		for (int i = 0; i < UpdatableObject::All.size(); i++)
 		{
@@ -350,6 +365,7 @@ bool Engine2D::Engine::isKeyTriggered(sf::Keyboard::Key key)
 {
 	return (keyboardInputEnabled && sf::Keyboard::isKeyPressed(key));
 }
+
 
 void Engine::Cleanup()
 {
