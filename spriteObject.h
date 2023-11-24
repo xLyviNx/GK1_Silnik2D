@@ -14,6 +14,7 @@ namespace Engine2D
 		void setTexture(sf::Image image);
 	protected:
 		int animation_index;
-
+	public:
+		virtual void deleteMe() override;
 	};
 }

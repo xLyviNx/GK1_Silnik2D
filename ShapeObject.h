@@ -28,8 +28,8 @@ namespace Engine2D
 			float worldA;
 			float worldB;
 			float outlinewidth;
-			sf::RectangleShape rectShape;
 		public:
+			sf::RectangleShape rectShape;
 			Color fillColor;
 			Color color;
 			virtual void PropertiesChanged() override;

@@ -2,15 +2,16 @@
 
 namespace Engine2D
 {
-	set<GameObject*> GameObject::All;
+	vector<GameObject*> GameObject::All;
 	void GameObject::Initialize()
 	{
-		GameObject::All.insert(this);
+		isRemoving = false;
+		GameObject::All.push_back(this);
 	}
 
 	void GameObject::deleteMe()
 	{
-		delete(this);
+		delete (GameObject*)(this);
 	}
 
 	GameObject::GameObject()
@@ -25,10 +26,13 @@ namespace Engine2D
 	}
 	GameObject::~GameObject()
 	{
-		auto it = GameObject::All.find(this);
-		if (it != GameObject::All.end())
+		for (vector<GameObject*>::iterator it = All.begin(); it != All.end(); ++it)
 		{
-			GameObject::All.erase(it);
+			if (*it == this)
+			{
+				All.erase(it);
+				break;
+			}
 		}
 	}
 }

@@ -5,35 +5,39 @@ void FlappyBird::flappyObstacle::Update(float deltaTime)
 {
 
 	setPosition(Vector2f(position.x - deltaTime * obstacleSpeed * 10.0f, position.y));
-	if (worldPosition().x <= -13.f * worldScale().x)
+	if (worldPosition().x <= -13.f * worldScale().x || (GameManager::singleton && !GameManager::singleton->inGame))
 	{
-		deleteMe();
-		cout << "JA PIERODLE";
+		isRemoving = true;
+		
 	}
 }
 
 void FlappyBird::flappyObstacle::Start()
 {
-	if (isTopOne)
-	{
-		
-	}
-}
 
+}
 void FlappyBird::flappyObstacle::deleteMe()
 {
-	if (obstacleMan != NULL)
+	GameManager* obstacleMan = GameManager::singleton;
+	if (obstacleMan != nullptr)
 	{
-		for (vector<flappyObstacle*>::iterator it = obstacleMan->obstacles.begin(); it != obstacleMan->obstacles.end(); ++it)
+		for (auto it = obstacleMan->obstacles.begin(); it != obstacleMan->obstacles.end();)
 		{
-			if (*it == this) {
-				obstacleMan->obstacles.erase(it);
-				break;
+			if (*it == this)
+			{
+				it = obstacleMan->obstacles.erase(it);
+				break; // przerwij pêtlê, bo ju¿ usuniêto obiekt
+			}
+			else
+			{
+				++it;
 			}
 		}
 	}
-	delete (flappyObstacle*)(this);
+
+	delete this;
 }
+
 
 void FlappyBird::flappyObstacle::Draw()
 {
@@ -53,12 +57,12 @@ void FlappyBird::flappyObstacle::SetProperties()
 FlappyBird::flappyObstacle::flappyObstacle(GameManager* obstacleman) : Engine2D::Shapes::RectangleShape("Obstacle", Vector2f(appData->WindowSize.x + 13, -200), 26, 160, sf::Color::Red, 1)
 {
 	this->name = "Obstacle";
+	this->tag = "kill";
 	localA = 26;
 	localB= 160;
 	color = Color::Red;
 	outlinewidth = 1;
 	renderWindow = Engine::GetSingleton(false)->Window;
-	this->obstacleMan = obstacleman;
 	Texture tx;
 	renderobj.setScale(worldScale());
 	tx.loadFromFile("img/obstacle.png");

@@ -32,6 +32,8 @@ void Engine2D::TransformableObject::Translate(float X, float Y)
 	position.x += X;
 	position.y += Y;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
+
 
 }
 void Engine2D::TransformableObject::Translate(Vector2f XY)
@@ -39,6 +41,7 @@ void Engine2D::TransformableObject::Translate(Vector2f XY)
 	lastPosition = position;
 	position += XY;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -47,12 +50,15 @@ void Engine2D::TransformableObject::setPosition(Vector2f XY)
 	lastPosition = position;
 	position = XY;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
+
 }
 
 void Engine2D::TransformableObject::Scale(float XY)
 {
 	scale *= XY;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -61,6 +67,7 @@ void Engine2D::TransformableObject::Scale(float X, float Y)
 	scale.x *= X;
 	scale.y *= Y;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 void Engine2D::TransformableObject::setScale(float X, float Y)
@@ -68,6 +75,7 @@ void Engine2D::TransformableObject::setScale(float X, float Y)
 	scale.x = X;
 	scale.y = Y;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -76,6 +84,7 @@ void Engine2D::TransformableObject::Scale(Vector2f XY)
 	scale.x* XY.x;
 	scale.y* XY.y;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -83,6 +92,7 @@ void Engine2D::TransformableObject::Rotate(float rotation)
 {
 	this->rotation += rotation;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -93,63 +103,71 @@ void Engine2D::TransformableObject::SetParent(TransformableObject* newParent)
 	rotation = worldRotation();
 	if (parent != NULL)
 	{
-		parent->children.erase(this);
+		auto it = find(children.begin(), children.end(), this);
+		if (it != children.end()) {
+			parent->children.erase(it);
+		}
 	}
 	if (newParent != NULL)
 	{
 		position -= newParent->worldPosition();
 		scale -= newParent->worldScale();
 		rotation -= newParent->worldRotation();
-		newParent->children.insert(this);
+		newParent->children.push_back(this);
 	}
 	parent = newParent;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
 Engine2D::TransformableObject::TransformableObject()
 {
-	children = set<TransformableObject*>();
+	children = vector<TransformableObject*>();
 	this->parent = NULL;
 	this->position = Vector2f(0, 0);
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
 Engine2D::TransformableObject::TransformableObject(Vector2f position)
 {
-	children = set<TransformableObject*>();
+	children = vector<TransformableObject*>();
 	this->parent = NULL;
 	lastPosition = position;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
 Engine2D::TransformableObject::TransformableObject(Vector2f position, float rotation)
 {
-	children = set<TransformableObject*>();
+	children = vector<TransformableObject*>();
 	this->parent = NULL;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = rotation;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
 Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f scale, float rotation)
 {
-	children = set<TransformableObject*>();
+	children = vector<TransformableObject*>();
 	this->parent = NULL;
 	lastPosition = position;
 	this->position = position;
 	this->scale = scale;
 	this->rotation = rotation;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -157,7 +175,7 @@ Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f s
 {
 	if (parent != NULL)
 	{
-		parent->children.insert(this);
+		parent->children.push_back(this);
 	}
 	this->parent = parent;
 	lastPosition = position;
@@ -165,6 +183,7 @@ Engine2D::TransformableObject::TransformableObject(Vector2f position, Vector2f s
 	this->scale = scale;
 	this->rotation = rotation;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 
 }
 
@@ -172,15 +191,17 @@ Engine2D::TransformableObject::TransformableObject(TransformableObject* parent)
 {
 	if (parent != NULL)
 	{
-		parent->children.insert(this);
+		parent->children.push_back(this);
 	}
-	children = set<TransformableObject*>();
+	children = vector<TransformableObject*>();
 	this->parent = parent;
 	this->position = Vector2f(0, 0);
 	lastPosition = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
+
 }
 
 Engine2D::TransformableObject* Engine2D::TransformableObject::GetParent()
@@ -190,32 +211,48 @@ Engine2D::TransformableObject* Engine2D::TransformableObject::GetParent()
 
 Engine2D::TransformableObject::~TransformableObject()
 {
-	if (GetParent())
+	while (!children.empty())
 	{
-		GetParent()->children.erase(this);
+		auto it = children.begin();
+		(*it)->isRemoving = true;
+		(*it)->parent = NULL;
+		children.erase(it);
 	}
-	for (auto child : this->children)
-	{
-		child->SetParent(NULL);
-		delete(child);
-	}
+
+    if (GetParent())
+    {
+		auto it = find(GetParent()->children.begin(),GetParent()->children.end(), this);
+		if (it != GetParent()->children.end()) {
+			GetParent()->children.erase(it);
+		}
+    }
+	
 }
 
 void Engine2D::TransformableObject::PropertiesChanged()
 {
-
+	
+}
+void Engine2D::TransformableObject::ChildrenPropertiesChange()
+{
+	for (auto ch : children)
+	{
+		if (ch)
+			ch->PropertiesChanged();
+	}
 }
 
 Engine2D::TransformableObject::TransformableObject(std::string name, Vector2f position) : GameObject(name)
 {
 	cout << "TRANSFORM CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
-	children = set<TransformableObject*>();
+	children = vector<TransformableObject*>();
 	this->parent = NULL;
 	lastPosition = position;
 	this->position = position;
 	this->scale = Vector2f(1, 1);
 	this->rotation = 0;
 	PropertiesChanged();
+	ChildrenPropertiesChange();
 }
 void Engine2D::TransformableObject::deleteMe()
 {

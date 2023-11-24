@@ -1,9 +1,10 @@
 #include "Player.h"
 #include "Calculations.h"
 #include "Engine.h"
+#include "GameManager.hpp"
 void Engine2D::Player::deleteMe()
 {
-	delete this;
+	delete (Player*)this;
 }
 
 Engine2D::Player::Player(string name, Vector2f position) : RectangleShape(name, position, 64, 64, Color::White, 2.0), ShapeObject(name, position), Collisions((TransformableObject*)this)
@@ -11,7 +12,7 @@ Engine2D::Player::Player(string name, Vector2f position) : RectangleShape(name, 
 	movementSpeed = 5;
 	enableGravity = true;
 	isTopView = false;
-	jumpForce = 10;
+	jumpForce = 8;
 	gravityForce = 0;
 	isGrounded = false;
 	movement = Vector2f(0, 0);
@@ -65,10 +66,10 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 	{
 		std::set<Collisions*> ignore;
 		ignore.insert((Collisions*)this);
-		Vector2f bottomL = worldPosition() + Vector2f(0, bounds.y / 2.0) - Vector2f(worldBounds().x * 0.5f, 0);
-		Vector2f bottomR = worldPosition() + Vector2f(0, bounds.y / 2.0) + Vector2f(worldBounds().x * 0.5f, 0);
-		RaycastHit hitL = Collisions::Raycast(bottomL , bottomL + Vector2f(0, 1), ignore);
-		RaycastHit hitR = Collisions::Raycast(bottomR, bottomR + Vector2f(0, 1), ignore);
+		Vector2f bottomL = worldPosition() + Vector2f(0, -2.5f + bounds.y / 2.0) - Vector2f(worldBounds().x * 0.5f, 0);
+		Vector2f bottomR = worldPosition() + Vector2f(0, -2.5f + bounds.y / 2.0) + Vector2f(worldBounds().x * 0.5f, 0);
+		RaycastHit hitL = Collisions::Raycast(bottomL , bottomL + Vector2f(0, 2), ignore);
+		RaycastHit hitR = Collisions::Raycast(bottomR, bottomR + Vector2f(0, 2), ignore);
 		isGrounded = hitL.hit || hitR.hit;
 		/*sf::CircleShape cs(5.0);
 		sf::CircleShape cs2(5.0);
@@ -114,10 +115,11 @@ void Engine2D::Player::KeyPressed(sf::Keyboard::Key keyPressed)
 	{
 		if (!isTopView && ((isGrounded && jumpForce >= 0) || canJumpMidAir) && !jumped)
 		{
-			if (canJumpMidAir && jumpForce < 0)
-				jumpForce = 0;
+			//if (canJumpMidAir && jumpForce < 0)
+				//jumpForce = 0;
 			if (gravityForce <= (jumpForce * 20))
 			{
+				gravityForce = 0;
 				gravityForce += jumpForce * 50;
 				jumped = true;
 			}
@@ -134,8 +136,19 @@ void Engine2D::Player::KeyReleased(sf::Keyboard::Key keyReleased)
 
 void Engine2D::Player::OnCollisionEnter(Collisions* col)
 {
-	if (gravityForce > 0)
+	if (gravityForce > 0 && (col && col->myTransform && col->myTransform->tag!="ignore"))
 		gravityForce = 0;
+
+	Engine::PrintLog("Player entered a collision!");
+	if (col && col->myTransform != NULL)
+	{
+		if (col->myTransform->tag == "kill")
+		{
+			if (FlappyBird::GameManager::singleton) {
+				FlappyBird::GameManager::singleton->GameOver();
+			}
+		}
+	}
 }
 
 void Engine2D::Player::OnCollisionStay(Collisions* col)
@@ -182,6 +195,12 @@ void Engine2D::Player::Move(Vector2f position, Vector2f dir, bool* collided, boo
 	{
 		//Engine2D::Shapes::CircleShape* ns = new Shapes::CircleShape(position, 3, 1, Color::Transparent, Color::Red);
 	}*/
+	for (Collisions* col : Collisions::All)
+	{
+		if (col && col->myTransform)
+			if (col->myTransform->tag == "ignore")
+				ignores.insert(col);
+	}
 	Vector2f xPos(position.x, worldPosition().y);
 	Vector2f yPos(worldPosition().x, position.y);
 	RaycastHit raycastX = Collisions::RaycastBox((Collisions*)this, worldPosition(), xPos, ignores);
@@ -219,12 +238,10 @@ void Engine2D::Player::Move(Vector2f position, Vector2f dir, bool* collided, boo
 void Engine2D::Player::Draw()
 {
 	
-	BitmapObject::animate(Engine::GetSingleton(false)->deltaTime,0.2,1);
+	animate(Engine::GetSingleton(false)->deltaTime,0.2,1);
 	renderobj.setOrigin(renderobj.getLocalBounds().width / 2, renderobj.getLocalBounds().height / 2);
 	renderobj.setPosition(worldPosition());
 	Engine::GetSingleton(false)->Window->draw(renderobj);
-
-
 	//RectangleShape::Draw();
 	
 }

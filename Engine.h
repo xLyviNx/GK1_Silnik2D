@@ -26,6 +26,7 @@ namespace Engine2D
 		sf::Vector2i mousePosition;
 		static void InitLogs();
 		void SpawnGame();
+		void removeAwaitingObjects();
 	protected:
 		static Engine* singleton;
 	public:
@@ -38,5 +39,6 @@ namespace Engine2D
 		double deltaTime;
 		static double AngleToRad(float angle);
 		bool isKeyTriggered(sf::Keyboard::Key key);
+		sf::Font baseFont;
 	};
 }

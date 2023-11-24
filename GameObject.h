@@ -10,12 +10,12 @@ namespace Engine2D
 	{
 		void Initialize();
 	public:
-		static set<GameObject*> All;
+		static vector<GameObject*> All;
 		string name;
 		virtual void deleteMe();
 		GameObject();
 		GameObject(std::string name);
 		~GameObject();
-
+		bool isRemoving;
 	};
 }

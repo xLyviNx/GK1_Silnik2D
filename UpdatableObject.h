@@ -1,9 +1,10 @@
 #pragma once
 #include <vector>
+#include "GameObject.h"
 using namespace std;
 namespace Engine2D 
 {
-	class UpdatableObject
+	class UpdatableObject : public virtual GameObject
 	{
 	public:
 		static vector<UpdatableObject*> All;
@@ -11,6 +12,6 @@ namespace Engine2D
 		virtual void Start();
 		UpdatableObject();
 		~UpdatableObject();
-		virtual void deleteMe();
+		virtual void deleteMe() override;
 	};
 }

@@ -1,7 +1,7 @@
 #include "Menu.h"
 #include "ShapeObject.h"
 #include "DrawableObject.h"
-
+#include "GameManager.hpp"
 Menu::Menu(float width, float height)
 {
 	menuActive = true;
@@ -63,17 +63,18 @@ int Menu::getPressedOption()
 
 void Menu::deleteMe()
 {
-	delete this;
+	delete (Menu*)this;
 }
 
 void Menu::Draw()
 {
-	
-	for (int i = 0; i < MAX_NUMBER_OF_OPTIONS; i++)
-	{
-		this->window->draw(menu[i]);
+	if (visible && menuActive) {
+		for (int i = 0; i < MAX_NUMBER_OF_OPTIONS; i++)
+		{
+			this->window->draw(menu[i]);
+		}
+		//this->window->display();
 	}
-	//this->window->display();
 }
 
 void Menu::KeyPressed(sf::Keyboard::Key keyPressed)
@@ -100,8 +101,10 @@ void Menu::KeyReleased(sf::Keyboard::Key keyPressed)
 			switch (getPressedOption())
 			{
 			case 0:
-				cout << "Wcisnieto graj" << endl;
-				menuActive = false;
+				if (menuActive) {
+					FlappyBird::GameManager::singleton->StartGame();
+					menuActive = false;
+				}
 				break;
 			case 1:
 				cout << "Wcisnieto wyjdz" << endl;

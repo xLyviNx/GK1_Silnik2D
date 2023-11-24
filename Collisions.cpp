@@ -4,12 +4,12 @@
 #include "Calculations.h"
 #define drawPoints false
 namespace Engine2D {
-	std::set<Engine2D::Collisions*> Collisions::All;
+	std::vector<Engine2D::Collisions*> Collisions::All;
 	Collisions::Collisions()
 	{
 		myTransform = NULL;
-		Collisions::All.insert(this);
-		this->currentCollisions = std::set<Collisions*>();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+		Collisions::All.push_back(this);
+		this->currentCollisions = std::vector<Collisions*>();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 		enabled = true;
 	}
 	Collisions::Collisions(TransformableObject* transform) : Collisions()
@@ -18,11 +18,25 @@ namespace Engine2D {
 	}
 	Collisions::~Collisions()
 	{
-		Collisions::All.erase(this);
+		for (vector<Collisions*>::iterator it = Collisions::All.begin(); it != Collisions::All.end(); ++it)
+		{
+			if (*it == this) {
+				*it = NULL;
+				break;
+			}
+		}
 		for (Collisions* c : Collisions::All)
 		{
-			c->OnCollisionExit(this);
-			c->currentCollisions.erase(this);
+			if (c != NULL) {
+				c->OnCollisionExit(this);
+				for (vector<Collisions*>::iterator it = c->currentCollisions.begin(); it != c->currentCollisions.end(); ++it)
+				{
+					if (*it == this) {
+						*it = NULL;
+						break;
+					}
+				}
+			}
 		}
 	}
 	void Collisions::deleteMe()
@@ -73,11 +87,13 @@ namespace Engine2D {
 		for (float i = 0; i < distance; i += 1.0f) {
 			sf::Vector2f currentPoint = start + direction * i;
 
-			for (Collisions* collision : All) {
+			for (Collisions* collision : All) 
+			{
+				if (collision == NULL)
+					continue;
 				if (ignore.find(collision) != ignore.end() || !collision->enabled) {
 					continue;
 				}
-
 				if (collision->Collides(end)) {
 					RaycastHit hit(true, collision, currentPoint, end,noncollide);
 					return hit;
@@ -109,6 +125,8 @@ namespace Engine2D {
 			}
 			for (Collisions* collision : All)
 			{
+				if (collision == NULL)
+					continue;
 				if (ignore.find(collision) != ignore.end() || !collision->enabled || collision == self) {
 					continue;
 				}

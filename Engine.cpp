@@ -7,8 +7,6 @@
 #include "Player.h"
 #include "BitmapHandler.h"
 #include "GameManager.hpp"
-#include "Menu.h"
-
 #include "Camera.h"
 #include "BitmapObject.h"
 
@@ -100,12 +98,12 @@ void Engine::EngineLoop()
 	int frameCount = 0;
 	int fps = 0;
 
-	sf::Font font;
 	sf::Text text;
+	sf::Text scoreText;
 	cout << "GRAVITY NOW: " << Gravity << endl;
 
 
-	if (!font.loadFromFile("fonts/PixellettersFull.ttf"))
+	if (!baseFont.loadFromFile("fonts/PixellettersFull.ttf"))
 	{
 		cout << "Blad przy zaladowaniu czcionki";
 	}
@@ -114,20 +112,22 @@ void Engine::EngineLoop()
 	//sf::String sfmlString(tekst);
 	//text.setString(sfmlString);
 
-	text.setFont(font);
+	text.setFont(baseFont);
 	text.setCharacterSize(24);
 	text.setFillColor(sf::Color::White);
 	text.setPosition(10.f, 10.f);
 
-	
+	scoreText.setFont(baseFont);
+	scoreText.setCharacterSize(32);
+	scoreText.setFillColor(sf::Color::White);
 
-	std::vector < sf::Vector2f > points;
+	/*std::vector < sf::Vector2f > points;
 	points.push_back(sf::Vector2f(180, 100));
 	points.push_back(sf::Vector2f(150, 320));
 	points.push_back(sf::Vector2f(120, 320));
 	points.push_back(sf::Vector2f(170, 420));
 	points.push_back(sf::Vector2f(200, 520));
-
+	*/
 	//Shapes::RectangleShape* rectangle = new Shapes::RectangleShape(Vector2f(500,350), 150, 100, sf::Color::Yellow, 5.0);
 	Shapes::CircleShape* circle = new Shapes::CircleShape(Vector2f(800, 300), 50, 5, Color(255,150,50), Color::Yellow);
 	
@@ -140,16 +140,7 @@ void Engine::EngineLoop()
 	
 
 	//test animacji
-	std::vector<sf::Texture> toLoadVector;
-	sf::Texture frame;
-	frame.loadFromFile("flappy_bird.png", sf::IntRect(0, 0, 86, 86));
-	toLoadVector.push_back(frame);
 
-	frame.loadFromFile("flappy_bird.png", sf::IntRect(96, 0, 86, 86));
-	toLoadVector.push_back(frame);
-
-	frame.loadFromFile("flappy_bird.png", sf::IntRect(192, 0, 86, 86));
-	toLoadVector.push_back(frame);
 	/*
 	frame.loadFromFile("sprite sheet.png", sf::IntRect(0, 0, 64, 64));
 	toLoadVector.push_back(frame);
@@ -160,13 +151,6 @@ void Engine::EngineLoop()
 	frame.loadFromFile("sprite sheet.png", sf::IntRect(193, 0, 64, 64));
 	toLoadVector.push_back(frame);
 	*/
-	//ruch w prawo
-
-
-
-
-	BitmapObject *bitmapobj = new BitmapObject();
-	bitmapobj->loadbitmaps(toLoadVector);
 	
 	
 	sf::Texture backgroundTexture;
@@ -202,10 +186,11 @@ void Engine::EngineLoop()
 
 	//rectangle->Rotate(10.0);
 	text.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
+	//scoreText.setOrigin(text.getGlobalBounds().width / 2.0f, text.getGlobalBounds().height / 2.0f);
+	scoreText.setOrigin(text.getLocalBounds().width / 2.0f, text.getLocalBounds().height / 2.0f);
+	scoreText.setPosition(Vector2f(appData->WindowSize.x / 2.0f, 100));
 	sf::View view = Window->getDefaultView();
-	Player* plr = new Player("Player Object", Vector2f(500, 500));
-	plr->loadbitmaps(toLoadVector);
-	Menu menu(this->Window->getSize().x, this->Window->getSize().y);
+
 
 	while (Window != NULL && enabled && Window->isOpen())
 	{
@@ -252,26 +237,38 @@ void Engine::EngineLoop()
 		{
 			if (keyboardInputEnabled)
 			{
+				vector<InputReader*> inputs = InputReader::InputReaders;
 				if (event.type == sf::Event::KeyPressed)
 				{
-					for (InputReader* reader : InputReader::InputReaders)
-						reader->KeyPressed(event.key.code);
-					
+					for (InputReader* reader : inputs)
+					{
+						if (reader != NULL && !reader->isRemoving)
+							reader->KeyPressed(event.key.code);
+					}
+						
 				}
 				else if (event.type == sf::Event::KeyReleased)
 				{
-					for (InputReader* reader : InputReader::InputReaders)
-						reader->KeyReleased(event.key.code);
+					for (InputReader* reader : inputs)
+					{
+						//printf("ADDRESS: %p\n", reader);
+						//printf("%d\n",reader->isRemoving);
+						if (reader != NULL && !reader->isRemoving)
+							reader->KeyReleased(event.key.code);
+
+					}
 				}
 				else if (event.type == sf::Event::MouseButtonPressed)
 				{
-					for (InputReader* reader : InputReader::InputReaders)
-						reader->MousePressed(event.mouseButton);
+					for (InputReader* reader : inputs)
+						if (reader != NULL && !reader->isRemoving)
+							reader->MousePressed(event.mouseButton);
 				}
 				else if (event.type == sf::Event::MouseButtonReleased)
 				{
-					for (InputReader* reader : InputReader::InputReaders)
-						reader->MouseReleased(event.mouseButton);
+					for (InputReader* reader : inputs)
+						if (reader != NULL && !reader->isRemoving)
+							reader->MouseReleased(event.mouseButton);
 				}
 				
 				
@@ -308,22 +305,27 @@ void Engine::EngineLoop()
 
 
 
-
+		/*
 		for (Collisions* colA : Collisions::All)
 		{
+			if (colA == NULL)
+				continue;
 			if (!colA->enabled)
 				continue;
 			for (Collisions* colB : Collisions::All)
 			{
-				if (colB == colA || !colB->enabled)
+				if (colB == NULL || colA == NULL || colB == colA || !colB->enabled)
 					continue;
-				bool contains = colA->currentCollisions.find(colB) != colA->currentCollisions.end();
+				bool contains = std::find(colA->currentCollisions.begin(), colA->currentCollisions.end(), colB) != colA->currentCollisions.end();
 				if (colB->Collides(colA))
 				{
 					if (!contains)
 					{
 						colA->OnCollisionEnter(colB);
-						colA->currentCollisions.insert(colB);
+						cout << colA << endl;
+						colA->enabled = false;
+						cout << colA->currentCollisions.size()<<endl;
+						colA->currentCollisions.push_back(colB);
 					}
 					else
 					{
@@ -332,8 +334,53 @@ void Engine::EngineLoop()
 				}
 				else if (contains)
 				{
-					colA->currentCollisions.erase(colB);
+					for (vector<Collisions*>::iterator it = colA->currentCollisions.begin(); it != colA->currentCollisions.end(); ++it)
+					{
+						if (*it == colB) {
+							*it = NULL;
+							break;
+						}
+					}
 					colA->OnCollisionExit(colB);
+				}
+			}
+		}*/
+		vector<Collisions*>::iterator itA;
+		vector<Collisions*>::iterator itF;
+		vector<Collisions*>::iterator itB;
+		for (itA = Collisions::All.begin(); itA != Collisions::All.end();itA++)
+		{
+			if (*itA == NULL || !(*itA)->enabled)
+			{
+				continue;
+			}
+			for (itB = Collisions::All.begin(); itB != Collisions::All.end();itB++)
+			{
+				if (*itB == NULL || *itA == *itB || !(*itB)->enabled)
+				{
+					continue;
+				}
+				itF = std::find((*itA)->currentCollisions.begin(), (*itA)->currentCollisions.end(), (*itB));
+				bool contains = itF != (*itA)->currentCollisions.end();
+				if ((*itA)->Collides(*itB))
+				{
+					if (contains)
+					{
+						(*itA)->OnCollisionStay(*itB);
+					}
+					else
+					{
+						(*itA)->currentCollisions.push_back(*itB);
+						(*itA)->OnCollisionEnter(*itB);
+					}
+				}
+				else
+				{
+					if (contains)
+					{
+						(*itA)->currentCollisions.erase(itF);
+						(*itA)->OnCollisionExit(*itB);
+					}
 				}
 			}
 		}
@@ -345,10 +392,14 @@ void Engine::EngineLoop()
 			{
 				DrawableObject* drawable = uiobjects[i];
 				if (drawable->visible);
-				drawable->Draw();
+					drawable->Draw();
 			}
 		}
+		int score = FlappyBird::GameManager::singleton? FlappyBird::GameManager::singleton->points : -1;
+		scoreText.setString((score >= 0 ? to_string(score) : ""));
 		Window->draw(text);
+		Window->draw(scoreText);
+		removeAwaitingObjects();
 		//Point2D p2d(sf::Color::Red, (double)5.0, Vector2f(640, 360));
 		//p2d.DrawPointSFML();
 		//PrimitiveRenderer::DrawEllipse(Vector2f(155, 360), 150, 200, Color::White);
@@ -380,66 +431,15 @@ void Engine::Cleanup()
 }
 void Engine::CleanupScene()
 {
-	while (!GameObject::All.empty())
+	for(GameObject* gObject : GameObject::All)
 	{
-		GameObject* gObject = *(GameObject::All.begin());
 		if (gObject != NULL)
 		{
-			gObject->deleteMe();
+			gObject->isRemoving = true;
 		}
-		else
-			GameObject::All.erase(gObject);
 	}
+	removeAwaitingObjects();
 	GameObject::All.clear();
-	while (!UpdatableObject::All.empty())
-	{
-		UpdatableObject* object = *(UpdatableObject::All.begin());
-		if (object != NULL)
-		{
-			object->deleteMe();
-		}
-		else {
-			UpdatableObject::All.erase(UpdatableObject::All.begin());
-		}
-	}
-	UpdatableObject::All.clear();
-
-	while (!DrawableObject::All.empty())
-	{
-		DrawableObject* object = *(DrawableObject::All.begin());
-		if (object != NULL)
-		{
-			object->deleteMe();
-		}
-		else {
-			DrawableObject::All.erase(DrawableObject::All.begin());
-		}
-	}
-	DrawableObject::All.clear();
-
-	while (!InputReader::InputReaders.empty())
-	{
-		InputReader* object = *(InputReader::InputReaders.begin());
-		if (object != NULL)
-		{
-			object->deleteMe();
-		}
-		else
-			InputReader::InputReaders.erase(object);
-	}
-	InputReader::InputReaders.clear();
-
-	while (!Collisions::All.empty())
-	{
-		Collisions* object = *(Collisions::All.begin());
-		if (object != NULL)
-		{
-			object->deleteMe();
-		}
-		else
-			Collisions::All.erase(object);
-	}
-	Collisions::All.clear();
 }
 void Engine::InitLogs()
 {
@@ -485,5 +485,37 @@ void Engine::PrintLog(const std::string& log) {
 	}
 	else {
 		std::cerr << "ERROR READING LOGS FILE" << std::endl;
+	}
+}
+void Engine::removeAwaitingObjects()
+{
+	vector<GameObject*> toRemove;
+	for (vector<GameObject*>::iterator it = GameObject::All.begin(); it != GameObject::All.end();)
+	{
+		if ((*it) == NULL)
+		{
+			GameObject::All.erase(it);
+			continue;
+		}
+		else if ((*it)->isRemoving)
+		{
+			toRemove.push_back(*it);
+			++it;
+		}
+		else {
+			++it;
+		}
+	}
+	for (GameObject* g : toRemove)
+	{
+		vector<GameObject*>::iterator itF = std::find(GameObject::All.begin(), GameObject::All.end(), g);
+		if (*itF != NULL)
+		{
+			cout << "REMOVING OBJECT '" << (*itF) << "'" << endl;
+			(*itF)->deleteMe();
+		}
+		else {
+			PrintLog("Couldn't remove an object.");
+		}
 	}
 }

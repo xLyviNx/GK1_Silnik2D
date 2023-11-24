@@ -29,3 +29,8 @@ void BitmapObject::animate(double deltatime, double frame_speed, int version)
 	renderobj.setTexture(bitmaps[i]);
 	
 }
+
+void BitmapObject::deleteMe()
+{
+	delete this;
+}

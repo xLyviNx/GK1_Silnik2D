@@ -14,7 +14,6 @@ namespace FlappyBird
 	class flappyObstacle : public virtual TransformableObject, public virtual Collisions, public virtual Shapes::RectangleShape, public virtual BitmapObject, public virtual UpdatableObject
 	{
 	private:
-		GameManager* obstacleMan;
 		static float obstacleSpeed;
 		static int minY;
 		static int maxY;

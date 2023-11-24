@@ -15,7 +15,7 @@ namespace Engine2D
 		TransformableObject* parent;
 	public:
 		static set<TransformableObject*> All;
-		set<TransformableObject*> children;
+		vector<TransformableObject*> children;
 		Vector2f position;
 		Vector2f lastPosition;
 		Vector2f worldPosition();
@@ -45,6 +45,7 @@ namespace Engine2D
 		TransformableObject* GetParent();
 		~TransformableObject();
 		virtual void PropertiesChanged();
+		void ChildrenPropertiesChange();
 		TransformableObject(std::string name, Vector2f position);
 		virtual void deleteMe() override;
 		//virtual void checkPropertyChanged();

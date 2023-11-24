@@ -15,7 +15,7 @@ public:
 	void animate(double deltatime, double frame_speed,int version);
 	sf::Sprite renderobj;
 	std::vector <sf::Texture> bitmaps;
-	
+	virtual void deleteMe() override;
 
 	//void virtual Draw();
 

@@ -23,7 +23,7 @@ namespace Engine2D
 		}
 	};
 
-	class Collisions
+	class Collisions : public virtual GameObject
 	{
 	private:
 		float oldAngle;
@@ -36,8 +36,8 @@ namespace Engine2D
 		Collisions();
 		Collisions(TransformableObject* transform);
 		~Collisions();
-		static std::set<Collisions*> All;
-		virtual void deleteMe();
+		static std::vector<Collisions*> All;
+		virtual void deleteMe() override;
 		sf::FloatRect getGlobalBounds();
 		bool Collides(sf::FloatRect otherRect);
 		Collisions* CollidesWithAny();
@@ -50,7 +50,7 @@ namespace Engine2D
 		virtual void OnCollisionEnter(Collisions* other);
 		virtual void OnCollisionStay(Collisions* other);
 		virtual void OnCollisionExit(Collisions* other);
-		std::set<Collisions*> currentCollisions;
+		std::vector<Collisions*> currentCollisions;
 		static sf::Vector2f moveOutOfCollision(Collisions* coll, sf::Vector2f position);
 		bool Collides(Collisions* other);
 		bool Collides(sf::Vector2f point);

@@ -1,9 +1,10 @@
 #pragma once
-#include <set>
+#include <vector>
 #include <SFML/Graphics.hpp>
+#include "GameObject.h"
 
 namespace Engine2D {
-	class DrawableObject
+	class DrawableObject : public virtual GameObject
 	{
 	public:
 		bool visible;
@@ -14,6 +15,6 @@ namespace Engine2D {
 		virtual void Draw(sf::Texture texture);
 		~DrawableObject();
 		bool isUi;
-		virtual void deleteMe();
+		virtual void deleteMe() override;
 	};
 }

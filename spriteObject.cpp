@@ -12,6 +12,11 @@ namespace Engine2D
 	{
 			 texture.loadFromImage(bitmap);
 	}
+
+	void SpriteObject::deleteMe()
+	{
+		delete (SpriteObject*)this;
+	}
 	
 	
 }

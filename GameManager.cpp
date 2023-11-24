@@ -1,8 +1,29 @@
 #include "GameManager.hpp"
+#include "flappyScore.hpp"
 
 int FlappyBird::GameManager::gap = 500;
 int FlappyBird::GameManager::minY = -100;
 int FlappyBird::GameManager::maxY = 100;
+FlappyBird::GameManager* FlappyBird::GameManager::singleton = NULL;
+FlappyBird::GameManager::GameManager()
+{
+	if (singleton == NULL)
+	{
+		singleton = this;
+	}
+	else {
+		isRemoving = true;
+	}
+	GamePlayer = NULL;
+	inGame = false;
+	GameMenu = new Menu(Engine::GetSingleton(false)->Window->getSize().x, Engine::GetSingleton(false)->Window->getSize().y);
+
+}
+FlappyBird::GameManager::~GameManager()
+{
+	if (GameManager::singleton == this)
+		GameManager::singleton = NULL;
+}
 void FlappyBird::GameManager::SpawnObstales()
 {
 	int maxOnScreen = 6;
@@ -25,20 +46,62 @@ void FlappyBird::GameManager::SpawnObstales()
 			else {
 				pos.y += gap;
 			}
-			cout << "["<<i<<"] X: " << pos.x << ", Y : " << pos.y << ", posY: " << posY << endl;
+
 			obst->setPosition(pos);
 			obst->SetProperties();
 			obstacles.push_back(obst);
+			if (i == 0) {
+				pos.y = appData->WindowSize.y / 2.0 + posY;
+				flappyScore* score = new flappyScore(pos);
+				cout << "X: " << score->worldPosition().x << ", Y : " << score->worldPosition().y << endl;
+				score->SetParent((TransformableObject*)obst);
+			}
 		}
 	}
 }
 
 void FlappyBird::GameManager::deleteMe()
 {
-	delete(this);
+	delete (GameManager*)this;
 }
 
 void FlappyBird::GameManager::Update(float deltaTime)
 {
-	SpawnObstales();
+	GameMenu->visible = !inGame;
+	if (inGame) {
+		SpawnObstales();
+	}
+}
+
+void FlappyBird::GameManager::GameOver()
+{
+	points = -1;
+	inGame = false;
+	GameMenu->menuActive = true;
+	if (GamePlayer)
+		((GameObject*)(GamePlayer))->isRemoving = true;
+	GamePlayer = NULL;
+}
+void FlappyBird::GameManager::StartGame()
+{
+	points = 0;
+
+	GamePlayer = new Player("Player Object", Vector2f(500, 500));
+	GamePlayer->tag = "Player";
+	std::vector<sf::Texture> toLoadVector;
+	sf::Texture frame;
+	frame.loadFromFile("flappy_bird.png", sf::IntRect(0, 0, 86, 86));
+	toLoadVector.push_back(frame);
+
+	frame.loadFromFile("flappy_bird.png", sf::IntRect(96, 0, 86, 86));
+	toLoadVector.push_back(frame);
+
+	frame.loadFromFile("flappy_bird.png", sf::IntRect(192, 0, 86, 86));
+	toLoadVector.push_back(frame);
+	BitmapObject* bitmapobj = new BitmapObject();
+	bitmapobj->loadbitmaps(toLoadVector);
+	GamePlayer->loadbitmaps(toLoadVector);
+	inGame = true;
+	GameMenu->menuActive = false;
+	GameMenu->visible = false;
 }

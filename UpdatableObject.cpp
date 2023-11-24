@@ -8,12 +8,12 @@ namespace Engine2D
 
 	void UpdatableObject::Update(float deltaTime)
 	{
-		puts("UPDATABLE UPDATE");
+		//puts("UPDATABLE UPDATE");
 	}
 
 	void UpdatableObject::Start()
 	{
-		puts("updatable start");
+		//puts("updatable start");
 	}
 
 	UpdatableObject::UpdatableObject()
@@ -24,7 +24,6 @@ namespace Engine2D
 
 	UpdatableObject::~UpdatableObject()
 	{
-		std::cout << "SETTING NULL" << std::endl;
 		for (vector<UpdatableObject*>::iterator it = UpdatableObject::All.begin(); it != UpdatableObject::All.end(); ++it)
 		{
 			if (*it == this) {
@@ -32,7 +31,6 @@ namespace Engine2D
 				break;
 			}
 		}
-		std::cout << "SET UPDATABLE NULL" << std::endl;
 
 	}
 	void UpdatableObject::deleteMe()

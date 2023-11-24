@@ -15,11 +15,11 @@ private:
 	int selectedOptionIndex;
 	sf::Font font;
 	sf::Text menu[MAX_NUMBER_OF_OPTIONS];
-	bool menuActive;
 	bool returnToMenu;
 	bool endGame;
 
 public:
+	bool menuActive;
 	Menu(float width, float height);
 	void MoveUp();
 	void MoveDown();
