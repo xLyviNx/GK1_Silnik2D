@@ -1,0 +1,261 @@
+\doxysection{Menu Class Reference}
+\hypertarget{class_menu}{}\label{class_menu}\index{Menu@{Menu}}
+Inheritance diagram for Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.110553cm]{class_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_menu_a8caa6100506d4b8e0d782e550dbc470e}\label{class_menu_a8caa6100506d4b8e0d782e550dbc470e} 
+{\bfseries Menu} (float width, float height)
+\item 
+\Hypertarget{class_menu_acfb038bbd1050d6c55c86eec1f35dbdb}\label{class_menu_acfb038bbd1050d6c55c86eec1f35dbdb} 
+void {\bfseries Move\+Up} ()
+\item 
+\Hypertarget{class_menu_a804da9a381bb6c633d5d2bc4f839ec62}\label{class_menu_a804da9a381bb6c633d5d2bc4f839ec62} 
+void {\bfseries Move\+Down} ()
+\item 
+\Hypertarget{class_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}\label{class_menu_a8d3bd2f28a74f01ff453838dbeb63ec7} 
+int {\bfseries get\+Pressed\+Option} ()
+\item 
+virtual void \mbox{\hyperlink{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{delete\+Me}} () override
+\item 
+virtual void \mbox{\hyperlink{class_menu_a620012b606183501d56667c685c625fe}{Draw}} () override
+\item 
+virtual void \mbox{\hyperlink{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}{Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key key\+Pressed) override
+\item 
+virtual void \mbox{\hyperlink{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7}{Key\+Released}} (sf\+::\+Keyboard\+::\+Key key\+Pressed) override
+\item 
+virtual void \mbox{\hyperlink{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}{Mouse\+Pressed}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event) override
+\item 
+virtual void \mbox{\hyperlink{class_menu_af6c488322a6423ea0dcf27990dff3613}{Mouse\+Released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Update} (float delta\+Time)
+\item 
+virtual void {\bfseries Start} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_aca38754c86ab80159821e8f52cd1357e}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_game_object_a082e2f4c4eefc227d9b26cf309e060bc}{delete\+Me}} ()
+\item 
+{\bfseries Game\+Object} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Vector2f {\bfseries world\+Position} ()
+\item 
+Vector2f {\bfseries last\+World\+Position} ()
+\item 
+Vector2f {\bfseries world\+Scale} ()
+\item 
+Vector2f {\bfseries world\+Bounds} ()
+\item 
+float {\bfseries world\+Rotation} ()
+\item 
+void {\bfseries Translate} (float X, float Y)
+\item 
+void {\bfseries Translate} (Vector2f XY)
+\item 
+void {\bfseries set\+Position} (Vector2f XY)
+\item 
+void {\bfseries Scale} (float XY)
+\item 
+void {\bfseries Scale} (float X, float Y)
+\item 
+void {\bfseries set\+Scale} (float X, float Y)
+\item 
+void {\bfseries Scale} (Vector2f XY)
+\item 
+void {\bfseries Rotate} (float rotation)
+\item 
+void {\bfseries Set\+Parent} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}new\+Parent)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position, float rotation)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position, Vector2f scale, float rotation)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position, Vector2f scale, float rotation, \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+{\bfseries Transformable\+Object} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Parent} ()
+\item 
+virtual void {\bfseries Properties\+Changed} ()
+\item 
+void {\bfseries Children\+Properties\+Change} ()
+\item 
+{\bfseries Transformable\+Object} (std\+::string name, Vector2f position)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a00b40a401d377584501c810c1d33038e}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_input_reader_a7994ee47581dce5628930d881b915de6}\label{class_input_reader_a7994ee47581dce5628930d881b915de6} 
+virtual void {\bfseries Key\+Pressed} (sf\+::\+Keyboard\+::\+Key key\+Pressed)
+\item 
+\Hypertarget{class_input_reader_aac224c27aa127213ac417b30e85b7be9}\label{class_input_reader_aac224c27aa127213ac417b30e85b7be9} 
+virtual void {\bfseries Key\+Released} (sf\+::\+Keyboard\+::\+Key key\+Pressed)
+\item 
+\Hypertarget{class_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e}\label{class_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e} 
+virtual void {\bfseries Mouse\+Pressed} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event)
+\item 
+\Hypertarget{class_input_reader_acb6f8db83ce53f06adcdadd29b7f232a}\label{class_input_reader_acb6f8db83ce53f06adcdadd29b7f232a} 
+virtual void {\bfseries Mouse\+Released} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event)
+\item 
+virtual void \mbox{\hyperlink{class_input_reader_a0133ab08194ec0f4a2b0ed3b7ce489de}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Draw} ()
+\item 
+virtual void {\bfseries Draw} (sf\+::\+Texture texture)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae3025eb45f8dfef8d9bade9047023502}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_menu_a45ce5ec0dd4a9c1b1d8129471096e40a}\label{class_menu_a45ce5ec0dd4a9c1b1d8129471096e40a} 
+bool {\bfseries menu\+Active}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\item 
+bool {\bfseries is\+Removing}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries children}
+\item 
+Vector2f {\bfseries position}
+\item 
+Vector2f {\bfseries last\+Position}
+\item 
+Vector2f {\bfseries scale}
+\item 
+Vector2f {\bfseries bounds}
+\item 
+String {\bfseries tag}
+\item 
+float {\bfseries rotation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries visible}
+\item 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} {\bfseries window}
+\item 
+bool {\bfseries is\+Ui}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Updatable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static set$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_input_reader}{Input\+Reader}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Input\+Readers} = vector$<$\mbox{\hyperlink{class_input_reader}{Input\+Reader}}\texorpdfstring{$\ast$}{*}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}\label{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0} 
+\index{Menu@{Menu}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Menu\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}.
+
+\Hypertarget{class_menu_a620012b606183501d56667c685c625fe}\label{class_menu_a620012b606183501d56667c685c625fe} 
+\index{Menu@{Menu}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Menu\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}.
+
+\Hypertarget{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}\label{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112} 
+\index{Menu@{Menu}!KeyPressed@{KeyPressed}}
+\index{KeyPressed@{KeyPressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{KeyPressed()}{KeyPressed()}}
+{\footnotesize\ttfamily void Menu\+::\+Key\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}.
+
+\Hypertarget{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7}\label{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7} 
+\index{Menu@{Menu}!KeyReleased@{KeyReleased}}
+\index{KeyReleased@{KeyReleased}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{KeyReleased()}{KeyReleased()}}
+{\footnotesize\ttfamily void Menu\+::\+Key\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}.
+
+\Hypertarget{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}\label{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64} 
+\index{Menu@{Menu}!MousePressed@{MousePressed}}
+\index{MousePressed@{MousePressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MousePressed()}{MousePressed()}}
+{\footnotesize\ttfamily void Menu\+::\+Mouse\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}.
+
+\Hypertarget{class_menu_af6c488322a6423ea0dcf27990dff3613}\label{class_menu_af6c488322a6423ea0dcf27990dff3613} 
+\index{Menu@{Menu}!MouseReleased@{MouseReleased}}
+\index{MouseReleased@{MouseReleased}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MouseReleased()}{MouseReleased()}}
+{\footnotesize\ttfamily void Menu\+::\+Mouse\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Menu.\+h\item 
+Menu.\+cpp\end{DoxyCompactItemize}

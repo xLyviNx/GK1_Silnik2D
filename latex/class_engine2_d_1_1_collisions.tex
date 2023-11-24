@@ -1,0 +1,138 @@
+\doxysection{Engine2D\+::Collisions Class Reference}
+\hypertarget{class_engine2_d_1_1_collisions}{}\label{class_engine2_d_1_1_collisions}\index{Engine2D::Collisions@{Engine2D::Collisions}}
+Inheritance diagram for Engine2D\+::Collisions\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.167421cm]{class_engine2_d_1_1_collisions}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a72b01e029856cb6ea1f551d388471a3e}\label{class_engine2_d_1_1_collisions_a72b01e029856cb6ea1f551d388471a3e} 
+{\bfseries Collisions} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}transform)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07}{delete\+Me}} () override
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4}\label{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4} 
+sf\+::\+Float\+Rect {\bfseries get\+Global\+Bounds} ()
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}\label{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b} 
+bool {\bfseries Collides} (sf\+::\+Float\+Rect other\+Rect)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517}\label{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517} 
+\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} {\bfseries Collides\+With\+Any} ()
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d}\label{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d} 
+virtual void {\bfseries On\+Collision\+Enter} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c}\label{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c} 
+virtual void {\bfseries On\+Collision\+Stay} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341}\label{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341} 
+virtual void {\bfseries On\+Collision\+Exit} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a1ca8922006e49d33dc9647bde0c199a0}\label{class_engine2_d_1_1_collisions_a1ca8922006e49d33dc9647bde0c199a0} 
+bool {\bfseries Collides} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_ae24ff446c137e1ec27c48e7da3e7cdbe}\label{class_engine2_d_1_1_collisions_ae24ff446c137e1ec27c48e7da3e7cdbe} 
+bool {\bfseries Collides} (sf\+::\+Vector2f point)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a39e0d148b835337fdd40941b0ffcc615}\label{class_engine2_d_1_1_collisions_a39e0d148b835337fdd40941b0ffcc615} 
+sf\+::\+Vector2f {\bfseries move\+Out\+Of\+Collision} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position, sf\+::\+Vector2f velocity)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a25a61796ad1363ce2dca1887d8073b10}\label{class_engine2_d_1_1_collisions_a25a61796ad1363ce2dca1887d8073b10} 
+bool {\bfseries Collides} (std\+::vector$<$ sf\+::\+Vector2f $>$ corners)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c}\label{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c} 
+void {\bfseries Calculate\+Corners} (float width, float height, float angle, const sf\+::\+Vector2f position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_game_object_a082e2f4c4eefc227d9b26cf309e060bc}{delete\+Me}} ()
+\item 
+{\bfseries Game\+Object} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8}\label{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8} 
+static \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} {\bfseries Point\+Collide} (sf\+::\+Vector2f point, \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}ignore\+One)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326}\label{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326} 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} {\bfseries Raycast} (sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352}\label{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352} 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} {\bfseries Raycast\+Box} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}self, sf\+::\+Vector2f self\+Position, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c}\label{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c} 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} {\bfseries Find\+Closest\+Non\+Colliding\+Point} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}Target, sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b}\label{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b} 
+static sf\+::\+Vector2f {\bfseries move\+Out\+Of\+Collision} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70}\label{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70} 
+static void {\bfseries print\+Corners} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31}\label{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31} 
+static void {\bfseries draw\+Corners} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37}\label{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37} 
+bool {\bfseries enabled}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6}\label{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6} 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries my\+Transform}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8}\label{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8} 
+std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries current\+Collisions}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d}\label{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d} 
+std\+::vector$<$ Vector2f $>$ {\bfseries my\+Corners}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\item 
+bool {\bfseries is\+Removing}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d}\label{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d} 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a}\label{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a} 
+sf\+::\+Float\+Rect {\bfseries global\+Bounds}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07}\label{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Collisions.\+h\item 
+Collisions.\+cpp\end{DoxyCompactItemize}

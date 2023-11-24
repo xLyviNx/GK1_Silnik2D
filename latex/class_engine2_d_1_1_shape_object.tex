@@ -1,0 +1,239 @@
+\doxysection{Engine2D\+::Shape\+Object Class Reference}
+\hypertarget{class_engine2_d_1_1_shape_object}{}\label{class_engine2_d_1_1_shape_object}\index{Engine2D::ShapeObject@{Engine2D::ShapeObject}}
+Inheritance diagram for Engine2D\+::Shape\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.167421cm]{class_engine2_d_1_1_shape_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_shape_object_a6ea02595fce95095735d9a985f641e9b}\label{class_engine2_d_1_1_shape_object_a6ea02595fce95095735d9a985f641e9b} 
+{\bfseries Shape\+Object} (Vector2f position)
+\item 
+\Hypertarget{class_engine2_d_1_1_shape_object_abb97701ab4a1a68ca55cb2ee957b9277}\label{class_engine2_d_1_1_shape_object_abb97701ab4a1a68ca55cb2ee957b9277} 
+{\bfseries Shape\+Object} (std\+::string name, Vector2f position)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}{delete\+Me}} () override
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2}{Draw}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Vector2f {\bfseries world\+Position} ()
+\item 
+Vector2f {\bfseries last\+World\+Position} ()
+\item 
+Vector2f {\bfseries world\+Scale} ()
+\item 
+Vector2f {\bfseries world\+Bounds} ()
+\item 
+float {\bfseries world\+Rotation} ()
+\item 
+void {\bfseries Translate} (float X, float Y)
+\item 
+void {\bfseries Translate} (Vector2f XY)
+\item 
+void {\bfseries set\+Position} (Vector2f XY)
+\item 
+void {\bfseries Scale} (float XY)
+\item 
+void {\bfseries Scale} (float X, float Y)
+\item 
+void {\bfseries set\+Scale} (float X, float Y)
+\item 
+void {\bfseries Scale} (Vector2f XY)
+\item 
+void {\bfseries Rotate} (float rotation)
+\item 
+void {\bfseries Set\+Parent} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}new\+Parent)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position, float rotation)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position, Vector2f scale, float rotation)
+\item 
+{\bfseries Transformable\+Object} (Vector2f position, Vector2f scale, float rotation, \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+{\bfseries Transformable\+Object} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Parent} ()
+\item 
+virtual void {\bfseries Properties\+Changed} ()
+\item 
+void {\bfseries Children\+Properties\+Change} ()
+\item 
+{\bfseries Transformable\+Object} (std\+::string name, Vector2f position)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a00b40a401d377584501c810c1d33038e}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_game_object_a082e2f4c4eefc227d9b26cf309e060bc}{delete\+Me}} ()
+\item 
+{\bfseries Game\+Object} (std\+::string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Draw} ()
+\item 
+virtual void {\bfseries Draw} (sf\+::\+Texture texture)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae3025eb45f8dfef8d9bade9047023502}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Collisions} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}transform)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07}{delete\+Me}} () override
+\item 
+sf\+::\+Float\+Rect {\bfseries get\+Global\+Bounds} ()
+\item 
+bool {\bfseries Collides} (sf\+::\+Float\+Rect other\+Rect)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} {\bfseries Collides\+With\+Any} ()
+\item 
+virtual void {\bfseries On\+Collision\+Enter} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+virtual void {\bfseries On\+Collision\+Stay} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+virtual void {\bfseries On\+Collision\+Exit} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+bool {\bfseries Collides} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+bool {\bfseries Collides} (sf\+::\+Vector2f point)
+\item 
+sf\+::\+Vector2f {\bfseries move\+Out\+Of\+Collision} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position, sf\+::\+Vector2f velocity)
+\item 
+bool {\bfseries Collides} (std\+::vector$<$ sf\+::\+Vector2f $>$ corners)
+\item 
+void {\bfseries Calculate\+Corners} (float width, float height, float angle, const sf\+::\+Vector2f position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine2_d_1_1_shape_object_a9df557fb76c95bf84c4dd7df02970006}\label{class_engine2_d_1_1_shape_object_a9df557fb76c95bf84c4dd7df02970006} 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} {\bfseries render\+Window}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Float\+Rect {\bfseries global\+Bounds}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} {\bfseries Point\+Collide} (sf\+::\+Vector2f point, \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}ignore\+One)
+\item 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} {\bfseries Raycast} (sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} {\bfseries Raycast\+Box} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}self, sf\+::\+Vector2f self\+Position, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} {\bfseries Find\+Closest\+Non\+Colliding\+Point} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}Target, sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+static sf\+::\+Vector2f {\bfseries move\+Out\+Of\+Collision} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position)
+\item 
+static void {\bfseries print\+Corners} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
+\item 
+static void {\bfseries draw\+Corners} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries children}
+\item 
+Vector2f {\bfseries position}
+\item 
+Vector2f {\bfseries last\+Position}
+\item 
+Vector2f {\bfseries scale}
+\item 
+Vector2f {\bfseries bounds}
+\item 
+String {\bfseries tag}
+\item 
+float {\bfseries rotation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries name}
+\item 
+bool {\bfseries is\+Removing}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries visible}
+\item 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} {\bfseries window}
+\item 
+bool {\bfseries is\+Ui}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries enabled}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries my\+Transform}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries current\+Collisions}
+\item 
+std\+::vector$<$ Vector2f $>$ {\bfseries my\+Corners}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static set$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries All}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}\label{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d} 
+\index{Engine2D::ShapeObject@{Engine2D::ShapeObject}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!Engine2D::ShapeObject@{Engine2D::ShapeObject}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Shape\+Object\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}.
+
+\Hypertarget{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2}\label{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2} 
+\index{Engine2D::ShapeObject@{Engine2D::ShapeObject}!Draw@{Draw}}
+\index{Draw@{Draw}!Engine2D::ShapeObject@{Engine2D::ShapeObject}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Shape\+Object\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Shape\+Object.\+h\item 
+Shape\+Object.\+cpp\end{DoxyCompactItemize}

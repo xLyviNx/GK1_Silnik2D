@@ -1,0 +1,101 @@
+\doxysection{Bitmap\+Handler Class Reference}
+\hypertarget{class_bitmap_handler}{}\label{class_bitmap_handler}\index{BitmapHandler@{BitmapHandler}}
+
+
+klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku, zaladowanie do pliku, kopiowanie.  
+
+
+
+
+{\ttfamily \#include $<$Bitmap\+Handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bitmap_handler_a09f32eb45ac99e0736d711e16ab83277}\label{class_bitmap_handler_a09f32eb45ac99e0736d711e16ab83277} 
+{\bfseries Bitmap\+Handler} (int \mbox{\hyperlink{class_bitmap_handler_aad204798965e06a3564981c7eca49e9e}{width}}, int \mbox{\hyperlink{class_bitmap_handler_a3a1df71b7300646c1d12a01becc530a4}{height}})
+\item 
+void \mbox{\hyperlink{class_bitmap_handler_ac309d5a11db05b19ae6e746ecb059e30}{load\+From\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em funkcja ladujaca bitmape do obiektu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bitmap_handler_a540242b3987fd3c09733837a5034a535}{save\+To\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em funkcja ladujaca bitmape z obiektu do pliku \end{DoxyCompactList}\item 
+\Hypertarget{class_bitmap_handler_a511066eeb30de789c46b8e9c8f658be2}\label{class_bitmap_handler_a511066eeb30de789c46b8e9c8f658be2} 
+sf\+::\+Image {\bfseries getbitmap} ()
+\item 
+void \mbox{\hyperlink{class_bitmap_handler_a98023ad77ac99f63d1408d4baaf53e0e}{copy\+To}} (\mbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \&other)
+\begin{DoxyCompactList}\small\item\em funkcja kopiujaca bitmape do innego obiektu typu \doxylink{class_bitmap_handler}{Bitmap\+Handler} \end{DoxyCompactList}\item 
+\Hypertarget{class_bitmap_handler_a428cf69304b1384d24f1da99e9680621}\label{class_bitmap_handler_a428cf69304b1384d24f1da99e9680621} 
+sf\+::\+Image {\bfseries get\+Image} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bitmap_handler_a493791ae62071a9e9f507737f0183d53}\label{class_bitmap_handler_a493791ae62071a9e9f507737f0183d53} 
+sf\+::\+Image {\bfseries bitmap}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bitmap_handler_aad204798965e06a3564981c7eca49e9e}\label{class_bitmap_handler_aad204798965e06a3564981c7eca49e9e} 
+int {\bfseries width}
+\begin{DoxyCompactList}\small\item\em szerokosc obiektu \end{DoxyCompactList}\item 
+\Hypertarget{class_bitmap_handler_a3a1df71b7300646c1d12a01becc530a4}\label{class_bitmap_handler_a3a1df71b7300646c1d12a01becc530a4} 
+int {\bfseries height}
+\begin{DoxyCompactList}\small\item\em wysokosc obiektu \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku, zaladowanie do pliku, kopiowanie. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bitmap_handler_a98023ad77ac99f63d1408d4baaf53e0e}\label{class_bitmap_handler_a98023ad77ac99f63d1408d4baaf53e0e} 
+\index{BitmapHandler@{BitmapHandler}!copyTo@{copyTo}}
+\index{copyTo@{copyTo}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{copyTo()}{copyTo()}}
+{\footnotesize\ttfamily void Bitmap\+Handler\+::copy\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bitmap_handler}{Bitmap\+Handler}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+funkcja kopiujaca bitmape do innego obiektu typu \doxylink{class_bitmap_handler}{Bitmap\+Handler} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & obiekt do ktorego ma byc przekopiowana bitmapa \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bitmap_handler_ac309d5a11db05b19ae6e746ecb059e30}\label{class_bitmap_handler_ac309d5a11db05b19ae6e746ecb059e30} 
+\index{BitmapHandler@{BitmapHandler}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily void Bitmap\+Handler\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+funkcja ladujaca bitmape do obiektu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & nazwa pliku z ktorego bitmapa ma byc zaladowana. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bitmap_handler_a540242b3987fd3c09733837a5034a535}\label{class_bitmap_handler_a540242b3987fd3c09733837a5034a535} 
+\index{BitmapHandler@{BitmapHandler}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!BitmapHandler@{BitmapHandler}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void Bitmap\+Handler\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+funkcja ladujaca bitmape z obiektu do pliku 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & nazwa pliku z ktorego bitmapa ma byc zaladowana. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bitmap\+Handler.\+h\item 
+Bitmap\+Handler.\+cpp\end{DoxyCompactItemize}
