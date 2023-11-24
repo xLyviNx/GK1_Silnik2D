@@ -3,7 +3,9 @@
 #include "GameObject.h"
 using namespace std;
 namespace Engine2D 
-{
+{/**
+ * @brief klasa implementujaca do programu obiekt, dla ktorego mozliwe sa zmiany w czasie rzeczywistym
+ */
 	class UpdatableObject : public virtual GameObject
 	{
 	public:

@@ -1,0 +1,58 @@
+\doxysection{Transform.\+h}
+\hypertarget{_transform_8h_source}{}\label{_transform_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GameObject.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Engine2D}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{GameObject}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ parent;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ set<TransformableObject*>\ All;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ vector<TransformableObject*>\ children;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Vector2f\ position;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Vector2f\ lastPosition;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Vector2f\ worldPosition();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Vector2f\ lastWorldPosition();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Vector2f\ scale;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Vector2f\ worldScale();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Vector2f\ bounds;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Vector2f\ worldBounds();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ String\ tag;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rotation;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ worldRotation();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Translate(\textcolor{keywordtype}{float}\ X,\ \textcolor{keywordtype}{float}\ Y);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Translate(Vector2f\ XY);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setPosition(Vector2f\ XY);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Scale(\textcolor{keywordtype}{float}\ XY);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Scale(\textcolor{keywordtype}{float}\ X,\ \textcolor{keywordtype}{float}\ Y);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setScale(\textcolor{keywordtype}{float}\ X,\ \textcolor{keywordtype}{float}\ Y);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Scale(Vector2f\ XY);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Rotate(\textcolor{keywordtype}{float}\ rotation);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetParent(\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ newParent);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}(Vector2f\ position);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}(Vector2f\ position,\ \textcolor{keywordtype}{float}\ rotation);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}(Vector2f\ position,\ Vector2f\ scale,\ \textcolor{keywordtype}{float}\ rotation);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}(Vector2f\ position,\ Vector2f\ scale,\ \textcolor{keywordtype}{float}\ rotation,\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ parent);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}(\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ parent);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ GetParent();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{\string~TransformableObject}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PropertiesChanged();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ChildrenPropertiesChange();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}(std::string\ name,\ Vector2f\ position);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ deleteMe()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//virtual\ void\ checkPropertyChanged();}}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
