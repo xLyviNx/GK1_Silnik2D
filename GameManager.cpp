@@ -24,7 +24,7 @@ FlappyBird::GameManager::~GameManager()
 	if (GameManager::singleton == this)
 		GameManager::singleton = NULL;
 }
-void FlappyBird::GameManager::SpawnObstales()
+void FlappyBird::GameManager::SpawnObstacles()
 {
 	int maxOnScreen = 6;
 	float scale = 5.f;
@@ -69,7 +69,7 @@ void FlappyBird::GameManager::Update(float deltaTime)
 {
 	GameMenu->visible = !inGame;
 	if (inGame) {
-		SpawnObstales();
+		SpawnObstacles();
 	}
 }
 

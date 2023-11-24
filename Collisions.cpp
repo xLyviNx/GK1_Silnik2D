@@ -140,9 +140,6 @@ namespace Engine2D {
 
 		return RaycastHit{ false, nullptr, end, end, end };
 	}
-	RaycastHit Collisions::FindClosestNonCollidingPoint(Collisions* Target, sf::Vector2f start, sf::Vector2f end, std::set<Collisions*> ignore) {
-		return RaycastHit(false, NULL, end, end, end);
-	}
 	void Collisions::OnCollisionEnter(Collisions* other)
 	{
 	}

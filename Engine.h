@@ -13,32 +13,107 @@
 
 namespace Engine2D
 {
-	class Engine
-	{
-	private:
-		void InitGame();
-		void EngineLoop();
-		bool enabled;
-		void Cleanup();
-		void CleanupScene();
-		bool keyboardInputEnabled;
-		bool mouseInputEnabled;
-		sf::Vector2i mousePosition;
-		static void InitLogs();
-		void SpawnGame();
-		void removeAwaitingObjects();
-	protected:
-		static Engine* singleton;
-	public:
-		static float Gravity;
-		Engine();
-		~Engine();
-		static void PrintLog(const std::string& log);
-		sf::RenderWindow* Window;
-		static Engine* GetSingleton(bool);
-		double deltaTime;
-		static double AngleToRad(float angle);
-		bool isKeyTriggered(sf::Keyboard::Key key);
-		sf::Font baseFont;
-	};
-}
+    /**
+     * @brief Klasa reprezentujaca silnik gry.
+     *
+     * Klasa Engine odpowiada za zarzadzanie glowna petla gry, inicjalizacje, sprzatanie
+     * i inne aspekty zarzadzania gra.
+     */
+    class Engine
+    {
+    private:
+        /**
+         * @brief Inicjalizuje gre.
+         */
+        void InitGame();
+
+        /**
+         * @brief Glowna petla gry.
+         */
+        void EngineLoop();
+
+        bool enabled; ///< Flaga wskazujaca, czy silnik jest wlaczony.
+
+        /**
+         * @brief Funkcja czyszczaca zasoby silnika.
+         */
+        void Cleanup();
+
+        /**
+         * @brief Funkcja czyszczaca scene gry.
+         */
+        void CleanupScene();
+
+        bool keyboardInputEnabled; ///< Flaga wskazujaca, czy obsluga klawiatury jest wlaczona.
+        bool mouseInputEnabled; ///< Flaga wskazujaca, czy obsluga myszy jest wlaczona.
+        sf::Vector2i mousePosition; ///< Aktualna pozycja myszy.
+
+        /**
+         * @brief Inicjalizuje logi.
+         */
+        static void InitLogs();
+
+        /**
+         * @brief Funkcja inicjalizujaca nowa gre.
+         */
+        void SpawnGame();
+
+        /**
+         * @brief Usuwa obiekty oczekujace na usuniecie.
+         */
+        void removeAwaitingObjects();
+
+    protected:
+        static Engine* singleton; ///< Jedynka instancja silnika.
+
+    public:
+        static float Gravity; ///< Stala grawitacyjna.
+
+        /**
+         * @brief Konstruktor silnika.
+         */
+        Engine();
+
+        /**
+         * @brief Destruktor silnika.
+         */
+        ~Engine();
+
+        /**
+         * @brief Wypisuje log do pliku.
+         *
+         * @param log Tekst logu do wypisania.
+         */
+        static void PrintLog(const std::string& log);
+
+        sf::RenderWindow* Window; ///< Okno gry.
+
+        /**
+         * @brief Pobiera jedyna instancje silnika.
+         *
+         * @param flag Flaga (nieokreslona) - bez znaczenia w komentarzach.
+         * @return Wskaznik do jedynego obiektu klasy Engine.
+         */
+        static Engine* GetSingleton(bool);
+
+        double deltaTime; ///< Czas, ktory uplynal miedzy klatkami gry.
+
+        /**
+         * @brief Konwertuje kat na radiany.
+         *
+         * @param angle Kat w stopniach.
+         * @return Wartosc kata w radianach.
+         */
+        static double AngleToRad(float angle);
+
+        /**
+         * @brief Sprawdza, czy klawisz zostal nacisniety.
+         *
+         * @param key Klawisz do sprawdzenia.
+         * @return true, jesli klawisz zostal nacisniety, w przeciwnym razie false.
+         */
+        bool isKeyTriggered(sf::Keyboard::Key key);
+
+        sf::Font baseFont; ///< Czcionka uzywana w grze.
+    };
+} // namespace Engine2D

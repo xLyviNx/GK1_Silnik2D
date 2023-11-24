@@ -149,7 +149,6 @@ namespace Engine2D
 		this->fillColor = fillColor;
 		this->width = width;
 		PropertiesChanged();
-		cout << "aa";
 	}
 	Shapes::CircleShape::CircleShape(std::string name, Vector2f position, float R, Color color) : ShapeObject(name, position)
 	{
