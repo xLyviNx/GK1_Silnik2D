@@ -2,6 +2,11 @@
 \hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape}{}\label{class_engine2_d_1_1_shapes_1_1_circle_shape}\index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}}
 
 
+Klasa reprezentujaca okragly ksztalt.  
+
+
+
+
 {\ttfamily \#include $<$Shape\+Object.\+h$>$}
 
 Diagram dziedziczenia dla Engine2D\+::Shapes\+::Circle\+Shape\begin{figure}[H]
@@ -13,236 +18,239 @@ Diagram dziedziczenia dla Engine2D\+::Shapes\+::Circle\+Shape\begin{figure}[H]
 \doxysubsubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_ae24d5790a7a8515f0840c854a23ae218}{Properties\+Changed}} () override
-\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_ae24d5790a7a8515f0840c854a23ae218}{Properties\+Changed}} () override
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja wywolywana po zmianie wlasciwosci okregu. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a0e4d583b13653b9598235f130c472132}{Circle\+Shape}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, float Rad, float \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a0a789dfc83ada7f23cd9b07f7c0a0fb1}{width}}, Color \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}{color}}, Color \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_abc9bfb16d055257dc8896efc30638127}{fill\+Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor okraglego ksztaltu. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_accf7775f31846063b60c78f469206976}{Circle\+Shape}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, float R, Color \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}{color}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor okraglego ksztaltu z pelnymi parametrami. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a25b0f60569320345f0d0618ad7d70bee}{delete\+Me}} () override
-\item 
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja usuwajaca obiekt okregu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a815ce0012a17f00d87d03b8834810743}{Draw}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja rysujaca okrag. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_shape_object}{Engine2\+D\+::\+Shape\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a0d2611062ee174c49aed60ef7378b893}{Shape\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_shape_object}{Shape\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6ea02595fce95095735d9a985f641e9b}{Shape\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_shape_object}{Shape\+Object} z podana pozycja. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_shape_object_abb97701ab4a1a68ca55cb2ee957b9277}{Shape\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_shape_object}{Shape\+Object} z podana nazwa i pozycja. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7006135306f80fda695b125f3c291f00}{world\+Position}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera pozycje obiektu w swiecie. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aac315ec05d0b2079925997381a0677fe}{last\+World\+Position}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera ostatnia pozycje obiektu w swiecie. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aa459f1bfadf4e5a210239b03f98e10f1}{world\+Scale}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera skale obiektu w swiecie. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a298b598ac30b9864295d03532518439c}{world\+Bounds}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera granice obiektu w swiecie. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_af982f629037e562a721c18bd44014fb4}{world\+Rotation}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera globalna rotacje obiektu w swiecie. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ad148c3664977e6720d6b45da75cf2ad4}{Translate}} (float X, float Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Przesuwa obiekt o podane wartosci X i Y. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ac075260cfbfbeec0519d4314c3e27ed7}{Translate}} (Vector2f XY)
-\item 
+\begin{DoxyCompactList}\small\item\em Przesuwa obiekt o podany wektor XY. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a16368890c2162a9a8e1a583759d656ca}{set\+Position}} (Vector2f XY)
-\item 
+\begin{DoxyCompactList}\small\item\em Ustawia pozycje obiektu na podanej wartosci XY. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3738feb9d275d8956dbcf1a27108550c}{Scale}} (float XY)
-\item 
+\begin{DoxyCompactList}\small\item\em Skaluje obiekt o podana wartosc XY. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0004187dde5019c70503fb949e865d5b}{Scale}} (float X, float Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Skaluje obiekt o podane wartosci X i Y. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9a4c2bfeed878aaf7484a1a0287bfb1f}{set\+Scale}} (float X, float Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Ustawia skale obiektu na podane wartosci X i Y. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a21b6e99113c7d40b42dbd0bfaaf0cca9}{Scale}} (Vector2f XY)
-\item 
+\begin{DoxyCompactList}\small\item\em Skaluje obiekt o podany wektor XY. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7308d7e310bbca289073cf9217144444}{Rotate}} (float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
-\item 
+\begin{DoxyCompactList}\small\item\em Obraca obiekt o podany kat. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae77257ff4bf1e004100308e6787f9c89}{Set\+Parent}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}new\+Parent)
-\item 
+\begin{DoxyCompactList}\small\item\em Przypisuje nowego rodzica obiektowi. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{Transformable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Ustawia obiekt jako dziecko nowego rodzica. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a8375e06531ab0da5fefd6ec4b0d03246}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a8336ba0cadb2fa32518a2c41bb512f2e}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja i rotacja. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1eab831d6a908b3574111267c973b2e2}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja, skala i rotacja. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a807c84102be46f84ded02aed59856733}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}}, \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9acab41ebb7848658ef00e2ca101e644}{parent}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja, skala, rotacja i rodzicem. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a717e8d0241c4b49484f1272d01802c69}{Transformable\+Object}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9acab41ebb7848658ef00e2ca101e644}{parent}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podanym rodzicem. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0e9d27bab16116023c0a8b87876983cf}{Get\+Parent}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera rodzica obiektu. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a388cf56b15afd793172205fb40049909}{\texorpdfstring{$\sim$}{\string~}\+Transformable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4766b924212d5efa1d6e3342edeb45e5}{Children\+Properties\+Change}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Aktualizuje wlasciwosci dzieci przy zmianie wlasciwosci tego obiektu. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3e4e5c67cc7870a265ec78720bf7feaa}{Transformable\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana nazwa i pozycja. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja rysujaca obiekt z podana tekstura. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_collisions_a5264316d0b313e520c9defb0e3a73e52}{Collisions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_collisions_a72b01e029856cb6ea1f551d388471a3e}{Collisions}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}transform)
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_collisions}{Collisions} z podanym obiektem \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_collisions_a37260d5b577ffa990b6c7ff27116ccc4}{\texorpdfstring{$\sim$}{\string~}\+Collisions}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \mbox{\hyperlink{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4}{get\+Global\+Bounds}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Zwraca prostokat ograniczajacy obiekt. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}{Collides}} (sf\+::\+Float\+Rect other\+Rect)
-\item 
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy obiekt koliduje z prostokatem o podanych wymiarach. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517}{Collides\+With\+Any}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy obiekt koliduje z ktorymkolwiek innym obiektem \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d}{On\+Collision\+Enter}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja wywolywana, gdy zachodzi kolizja z innym obiektem. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c}{On\+Collision\+Stay}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja wywolywana, gdy kolizja z innym obiektem trwa. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341}{On\+Collision\+Exit}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja wywolywana, gdy kolizja z innym obiektem konczy sie. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a1ca8922006e49d33dc9647bde0c199a0}{Collides}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
-\item 
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizje z innym obiektem \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_ae24ff446c137e1ec27c48e7da3e7cdbe}{Collides}} (sf\+::\+Vector2f point)
-\item 
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizje z danym punktem. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_collisions_a39e0d148b835337fdd40941b0ffcc615}{move\+Out\+Of\+Collision}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position, sf\+::\+Vector2f velocity)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja do przesuwania obiektu na zewnatrz kolizji z uwzglednieniem predkosci. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a25a61796ad1363ce2dca1887d8073b10}{Collides}} (std\+::vector$<$ sf\+::\+Vector2f $>$ corners)
-\item 
+\begin{DoxyCompactList}\small\item\em Sprawdza kolizje z danym zbiorem punktow (wierzcholkow). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c}{Calculate\+Corners}} (float width, float height, float angle, const sf\+::\+Vector2f position)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Oblicza pozycje wierzcholkow obiektu na podstawie szerokosci, wysokosci, kata i pozycji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 Color \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}{color}}
-\item 
+\begin{DoxyCompactList}\small\item\em Kolor obwodki okregu. \end{DoxyCompactList}\item 
 Color \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_abc9bfb16d055257dc8896efc30638127}{fill\+Color}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Kolor wypelnienia okregu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3d8e6a75f95d9932b9f6c6baace36ba7}{children}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wektor dzieci obiektu poddajacego sie transformacjom. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}
-\item 
+\begin{DoxyCompactList}\small\item\em Lokalna pozycja obiektu. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae353655a1c7faf056ac8bcc6472f77f7}{last\+Position}}
-\item 
+\begin{DoxyCompactList}\small\item\em Ostatnia lokalna pozycja obiektu. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}
-\item 
+\begin{DoxyCompactList}\small\item\em Lokalna skala obiektu. \end{DoxyCompactList}\item 
 Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a202e416fbc2668115069500107839d57}{bounds}}
-\item 
-String \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a80ae42606efa183203d8735e5551f571}{tag}}
-\item 
+\begin{DoxyCompactList}\small\item\em Lokalne granice obiektu. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7e1e1035533c53c3109774d8dd59190d}{tag}}
+\begin{DoxyCompactList}\small\item\em Etykieta obiektu. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lokalna rotacja obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
-\item 
+\begin{DoxyCompactList}\small\item\em Nazwa obiektu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga informujaca, czy obiekt jest usuwany. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca widocznosc obiektu. \end{DoxyCompactList}\item 
 sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wskaznik do okna renderowania. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37}{enabled}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga wskazujaca, czy obiekt jest wlaczony. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6}{my\+Transform}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt transformacji zwiazanego z obiektem. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8}{current\+Collisions}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wektor przechowujacy aktualne kolizje z innymi obiektami \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\item 
 std\+::vector$<$ Vector2f $>$ \mbox{\hyperlink{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d}{my\+Corners}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor przechowujacy wspolrzedne wierzcholkow obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a34fb6405ece345f4decaf8f222699ebd}{local\+Radius}}
-\item 
+\begin{DoxyCompactList}\small\item\em Lokalny promien okregu. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a3568fbbbaa99f511f23adeadc675b9f6}{world\+Radius}}
-\item 
+\begin{DoxyCompactList}\small\item\em Globalny promien okregu. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a0a789dfc83ada7f23cd9b07f7c0a0fb1}{width}}
-\item 
+\begin{DoxyCompactList}\small\item\em Grubosc obwodki okregu. \end{DoxyCompactList}\item 
 sf\+::\+Circle\+Shape \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a735f74bc2979412147d8dddd9d24ab6b}{circle\+Shape}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Okragly ksztalt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
 \doxysubsection*{Statyczne metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8}{Point\+Collide}} (sf\+::\+Vector2f point, \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}ignore\+One)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja statyczna do sprawdzania kolizji z okreslonym punktem. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326}{Raycast}} (sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja statyczna do wykrywania kolizji promienia z obiektami \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352}{Raycast\+Box}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}self, sf\+::\+Vector2f self\+Position, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
-\item 
-static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c}{Find\+Closest\+Non\+Colliding\+Point}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}Target, sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja statyczna do wykrywania kolizji promienia z obiektami \doxylink{class_engine2_d_1_1_collisions}{Collisions} (jako caly obiekt). \end{DoxyCompactList}\item 
 static sf\+::\+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b}{move\+Out\+Of\+Collision}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja statyczna do przesuwania obiektu na zewnatrz kolizji. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70}{print\+Corners}} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
-\item 
+\begin{DoxyCompactList}\small\item\em Wypisuje wspolrzedne wierzcholkow obiektu. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31}{draw\+Corners}} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rysuje wspolrzedne wierzcholkow obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static set$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae92e9d8e9dd79d65e1eb662b00e768dd}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Zbior wszystkich obiektow poddajacych sie transformacjom. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor wszystkich obiektow gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor zawierajacy wszystkie obiekty rysowalne. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lista wszystkich obiektow \doxylink{class_engine2_d_1_1_collisions}{Collisions}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_shape_object}{Engine2\+D\+::\+Shape\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a9df557fb76c95bf84c4dd7df02970006}{render\+Window}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wskaznik na okno. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}}}
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Float\+Rect \mbox{\hyperlink{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a}{global\+Bounds}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ograniczenia globalne obiektu w postaci prostokata. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentujaca okragly ksztalt. 
+
+Klasa \doxylink{class_engine2_d_1_1_shapes_1_1_circle_shape}{Circle\+Shape} dziedziczy po klasie \doxylink{class_engine2_d_1_1_shape_object}{Shape\+Object}, dostarczajac funkcjonalnosci zwiazanej z rysowaniem okraglego ksztaltu oraz obsluga zmiany jego rozmiaru. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_a0e4d583b13653b9598235f130c472132}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_a0e4d583b13653b9598235f130c472132} 
@@ -251,12 +259,44 @@ sf\+::\+Float\+Rect \mbox{\hyperlink{class_engine2_d_1_1_collisions_af85b52802bc
 \doxysubsubsection{\texorpdfstring{CircleShape()}{CircleShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::\+Circle\+Shape (\begin{DoxyParamCaption}\item[{Vector2f}]{position,  }\item[{float}]{Rad,  }\item[{float}]{width,  }\item[{Color}]{color,  }\item[{Color}]{fill\+Color }\end{DoxyParamCaption})}
 
+
+
+Konstruktor okraglego ksztaltu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em position} & Pozycja poczatkowa okregu. \\
+\hline
+{\em Rad} & Promien okregu. \\
+\hline
+{\em width} & Grubosc obwodki okregu. \\
+\hline
+{\em color} & Kolor obwodki okregu. \\
+\hline
+{\em fill\+Color} & Kolor wypelnienia okregu. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_accf7775f31846063b60c78f469206976}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_accf7775f31846063b60c78f469206976} 
 \index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}!CircleShape@{CircleShape}}
 \index{CircleShape@{CircleShape}!Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}}
 \doxysubsubsection{\texorpdfstring{CircleShape()}{CircleShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::\+Circle\+Shape (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{Vector2f}]{position,  }\item[{float}]{R,  }\item[{Color}]{color }\end{DoxyParamCaption})}
 
+
+
+Konstruktor okraglego ksztaltu z pelnymi parametrami. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em name} & Nazwa okregu. \\
+\hline
+{\em position} & Pozycja poczatkowa okregu. \\
+\hline
+{\em R} & Promien okregu. \\
+\hline
+{\em color} & Kolor obwodki okregu. \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Dokumentacja funkcji składowych}
@@ -268,6 +308,10 @@ sf\+::\+Float\+Rect \mbox{\hyperlink{class_engine2_d_1_1_collisions_af85b52802bc
 
 
 
+Wirtualna funkcja usuwajaca obiekt okregu. 
+
+Nadpisuje funkcje z klasy bazowej \doxylink{class_engine2_d_1_1_shape_object}{Shape\+Object}. 
+
 Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}{Engine2\+D\+::\+Shape\+Object}}.
 
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_a815ce0012a17f00d87d03b8834810743}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_a815ce0012a17f00d87d03b8834810743} 
@@ -278,6 +322,10 @@ Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd6617
 
 
 
+Wirtualna funkcja rysujaca okrag. 
+
+Nadpisuje funkcje z klasy bazowej \doxylink{class_engine2_d_1_1_shape_object}{Shape\+Object}. 
+
 Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2}{Engine2\+D\+::\+Shape\+Object}}.
 
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_ae24d5790a7a8515f0840c854a23ae218}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_ae24d5790a7a8515f0840c854a23ae218} 
@@ -287,6 +335,10 @@ Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6b746b4fcd
 {\footnotesize\ttfamily void Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::\+Properties\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
+
+Wirtualna funkcja wywolywana po zmianie wlasciwosci okregu. 
+
+Nadpisuje funkcje z klasy bazowej \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}. 
 
 Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4ceff6806fdc7cc2377c8c53be0f732c}{Engine2\+D\+::\+Transformable\+Object}}.
 
@@ -299,11 +351,19 @@ Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4c
 \doxysubsubsection{\texorpdfstring{circleShape}{circleShape}}
 {\footnotesize\ttfamily sf\+::\+Circle\+Shape Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::circle\+Shape\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Okragly ksztalt. 
+
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425} 
 \index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}!color@{color}}
 \index{color@{color}!Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}}
 \doxysubsubsection{\texorpdfstring{color}{color}}
 {\footnotesize\ttfamily Color Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::color}
+
+
+
+Kolor obwodki okregu. 
 
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_abc9bfb16d055257dc8896efc30638127}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_abc9bfb16d055257dc8896efc30638127} 
 \index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}!fillColor@{fillColor}}
@@ -311,11 +371,19 @@ Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4c
 \doxysubsubsection{\texorpdfstring{fillColor}{fillColor}}
 {\footnotesize\ttfamily Color Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::fill\+Color}
 
+
+
+Kolor wypelnienia okregu. 
+
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_a34fb6405ece345f4decaf8f222699ebd}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_a34fb6405ece345f4decaf8f222699ebd} 
 \index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}!localRadius@{localRadius}}
 \index{localRadius@{localRadius}!Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}}
 \doxysubsubsection{\texorpdfstring{localRadius}{localRadius}}
 {\footnotesize\ttfamily float Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::local\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lokalny promien okregu. 
 
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_a0a789dfc83ada7f23cd9b07f7c0a0fb1}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_a0a789dfc83ada7f23cd9b07f7c0a0fb1} 
 \index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}!width@{width}}
@@ -323,11 +391,19 @@ Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4c
 \doxysubsubsection{\texorpdfstring{width}{width}}
 {\footnotesize\ttfamily float Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::width\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Grubosc obwodki okregu. 
+
 \Hypertarget{class_engine2_d_1_1_shapes_1_1_circle_shape_a3568fbbbaa99f511f23adeadc675b9f6}\label{class_engine2_d_1_1_shapes_1_1_circle_shape_a3568fbbbaa99f511f23adeadc675b9f6} 
 \index{Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}!worldRadius@{worldRadius}}
 \index{worldRadius@{worldRadius}!Engine2D::Shapes::CircleShape@{Engine2D::Shapes::CircleShape}}
 \doxysubsubsection{\texorpdfstring{worldRadius}{worldRadius}}
 {\footnotesize\ttfamily float Engine2\+D\+::\+Shapes\+::\+Circle\+Shape\+::world\+Radius\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Globalny promien okregu. 
 
 
 

@@ -175,10 +175,9 @@ boxfont setfont
 1 boundaspect scale
 (Engine2D::TransformableObject) cw
 (Engine2D::GameObject) cw
-(Engine2D::Camera) cw
 (Engine2D::ShapeObject) cw
+(FlappyBird::Menu) cw
 (FlappyBird::flappyObstacle) cw
-(Menu) cw
 (Engine2D::Shapes::CircleShape) cw
 (Engine2D::Shapes::RectangleShape) cw
 (Engine2D::Player) cw
@@ -199,15 +198,14 @@ boundx scalefactor div boundy scalefactor div scale
 dashed
  (Engine2D::GameObject) 1.500000 4.000000 box
 solid
- (Engine2D::Camera) 0.000000 2.000000 box
- (Engine2D::ShapeObject) 1.000000 2.000000 box
- (FlappyBird::flappyObstacle) 2.000000 2.000000 box
- (Menu) 3.000000 2.000000 box
- (Engine2D::Shapes::CircleShape) 0.500000 1.000000 box
- (Engine2D::Shapes::RectangleShape) 1.500000 1.000000 box
- (Engine2D::Player) 0.500000 0.000000 box
- (FlappyBird::flappyObstacle) 1.500000 0.000000 box
- (FlappyBird::flappyScore) 2.500000 0.000000 box
+ (Engine2D::ShapeObject) 0.500000 2.000000 box
+ (FlappyBird::Menu) 1.500000 2.000000 box
+ (FlappyBird::flappyObstacle) 2.500000 2.000000 box
+ (Engine2D::Shapes::CircleShape) 0.000000 1.000000 box
+ (Engine2D::Shapes::RectangleShape) 1.000000 1.000000 box
+ (Engine2D::Player) 0.000000 0.000000 box
+ (FlappyBird::flappyObstacle) 1.000000 0.000000 box
+ (FlappyBird::flappyScore) 2.000000 0.000000 box
 
 % ----- relations -----
 
@@ -218,30 +216,28 @@ solid
 solid
 1 1.500000 2.250000 out
 solid
-0.000000 3.000000 3.000000 conn
+0.500000 2.500000 3.000000 conn
 solid
-0 0.000000 2.750000 in
+0 0.500000 2.750000 in
 solid
-0 1.000000 2.750000 in
+1 0.500000 1.250000 out
 solid
-1 1.000000 1.250000 out
+0.000000 1.000000 2.000000 conn
 solid
-0.500000 1.500000 2.000000 conn
+0 1.500000 2.750000 in
 solid
-0 2.000000 2.750000 in
+0 2.500000 2.750000 in
 solid
-0 3.000000 2.750000 in
+0 0.000000 1.750000 in
 solid
-0 0.500000 1.750000 in
+0 1.000000 1.750000 in
 solid
-0 1.500000 1.750000 in
+1 1.000000 0.250000 out
 solid
-1 1.500000 0.250000 out
+0.000000 2.000000 1.000000 conn
 solid
-0.500000 2.500000 1.000000 conn
+0 0.000000 0.750000 in
 solid
-0 0.500000 0.750000 in
+0 1.000000 0.750000 in
 solid
-0 1.500000 0.750000 in
-solid
-0 2.500000 0.750000 in
+0 2.000000 0.750000 in

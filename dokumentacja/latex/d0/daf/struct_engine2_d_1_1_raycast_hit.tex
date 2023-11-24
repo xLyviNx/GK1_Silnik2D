@@ -2,27 +2,37 @@
 \hypertarget{struct_engine2_d_1_1_raycast_hit}{}\label{struct_engine2_d_1_1_raycast_hit}\index{Engine2D::RaycastHit@{Engine2D::RaycastHit}}
 
 
+Struktura przechowujaca informacje o trafieniu promienia w detekcji kolizji.  
+
+
+
+
 {\ttfamily \#include $<$Collisions.\+h$>$}
 
 \doxysubsubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ad7f7f9e66200b7c34ba22549ee6905d6}{Raycast\+Hit}} (bool hits, \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}collided, sf\+::\+Vector2f hpoint, sf\+::\+Vector2f end, sf\+::\+Vector2f point\+Bef)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Konstruktor struktury \doxylink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_a1273d91f362b44293b065f370f2fbcfb}{hit}}
-\item 
+\begin{DoxyCompactList}\small\item\em Czy promien trafil w obiekt kolidujacy. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_a423f0017dd223a80badba3a591f3a6ee}{collided\+Object}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt \doxylink{class_engine2_d_1_1_collisions}{Collisions}, z ktorym zachodzi kolizja. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_aca24c7c0696d1f2733b23476f6cba709}{point}}
-\item 
+\begin{DoxyCompactList}\small\item\em Punkt trafienia promienia. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_add6b2200deedd3407552f68798b6e06e}{point\+Before}}
-\item 
+\begin{DoxyCompactList}\small\item\em Punkt przed trafieniem. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ac43376cdb31ded016bed308d903d9eb7}{target\+End}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Celowy koniec promienia. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Struktura przechowujaca informacje o trafieniu promienia w detekcji kolizji. 
+
+Struktura ta zawiera informacje o tym, czy promien trafil w obiekt \doxylink{class_engine2_d_1_1_collisions}{Collisions}, ktory koliduje, oraz dodatkowe dane, takie jak punkt trafienia, punkt przed trafieniem, celowy koniec promienia i obiekt kolidujacy. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{struct_engine2_d_1_1_raycast_hit_ad7f7f9e66200b7c34ba22549ee6905d6}\label{struct_engine2_d_1_1_raycast_hit_ad7f7f9e66200b7c34ba22549ee6905d6} 
@@ -33,6 +43,23 @@ sf\+::\+Vector2f \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ac43376cdb31d
 
 
 
+Konstruktor struktury \doxylink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em hits} & Czy promien trafil. \\
+\hline
+{\em collided} & Wskaznik na obiekt \doxylink{class_engine2_d_1_1_collisions}{Collisions}, z ktorym zachodzi kolizja. \\
+\hline
+{\em hpoint} & Punkt trafienia promienia. \\
+\hline
+{\em end} & Celowy koniec promienia. \\
+\hline
+{\em point\+Bef} & Punkt przed trafieniem. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Dokumentacja atrybutów składowych}
 \Hypertarget{struct_engine2_d_1_1_raycast_hit_a423f0017dd223a80badba3a591f3a6ee}\label{struct_engine2_d_1_1_raycast_hit_a423f0017dd223a80badba3a591f3a6ee} 
 \index{Engine2D::RaycastHit@{Engine2D::RaycastHit}!collidedObject@{collidedObject}}
@@ -40,11 +67,19 @@ sf\+::\+Vector2f \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ac43376cdb31d
 \doxysubsubsection{\texorpdfstring{collidedObject}{collidedObject}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}\texorpdfstring{$\ast$}{*} Engine2\+D\+::\+Raycast\+Hit\+::collided\+Object}
 
+
+
+Wskaznik na obiekt \doxylink{class_engine2_d_1_1_collisions}{Collisions}, z ktorym zachodzi kolizja. 
+
 \Hypertarget{struct_engine2_d_1_1_raycast_hit_a1273d91f362b44293b065f370f2fbcfb}\label{struct_engine2_d_1_1_raycast_hit_a1273d91f362b44293b065f370f2fbcfb} 
 \index{Engine2D::RaycastHit@{Engine2D::RaycastHit}!hit@{hit}}
 \index{hit@{hit}!Engine2D::RaycastHit@{Engine2D::RaycastHit}}
 \doxysubsubsection{\texorpdfstring{hit}{hit}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Raycast\+Hit\+::hit}
+
+
+
+Czy promien trafil w obiekt kolidujacy. 
 
 \Hypertarget{struct_engine2_d_1_1_raycast_hit_aca24c7c0696d1f2733b23476f6cba709}\label{struct_engine2_d_1_1_raycast_hit_aca24c7c0696d1f2733b23476f6cba709} 
 \index{Engine2D::RaycastHit@{Engine2D::RaycastHit}!point@{point}}
@@ -52,17 +87,29 @@ sf\+::\+Vector2f \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ac43376cdb31d
 \doxysubsubsection{\texorpdfstring{point}{point}}
 {\footnotesize\ttfamily sf\+::\+Vector2f Engine2\+D\+::\+Raycast\+Hit\+::point}
 
+
+
+Punkt trafienia promienia. 
+
 \Hypertarget{struct_engine2_d_1_1_raycast_hit_add6b2200deedd3407552f68798b6e06e}\label{struct_engine2_d_1_1_raycast_hit_add6b2200deedd3407552f68798b6e06e} 
 \index{Engine2D::RaycastHit@{Engine2D::RaycastHit}!pointBefore@{pointBefore}}
 \index{pointBefore@{pointBefore}!Engine2D::RaycastHit@{Engine2D::RaycastHit}}
 \doxysubsubsection{\texorpdfstring{pointBefore}{pointBefore}}
 {\footnotesize\ttfamily sf\+::\+Vector2f Engine2\+D\+::\+Raycast\+Hit\+::point\+Before}
 
+
+
+Punkt przed trafieniem. 
+
 \Hypertarget{struct_engine2_d_1_1_raycast_hit_ac43376cdb31ded016bed308d903d9eb7}\label{struct_engine2_d_1_1_raycast_hit_ac43376cdb31ded016bed308d903d9eb7} 
 \index{Engine2D::RaycastHit@{Engine2D::RaycastHit}!targetEnd@{targetEnd}}
 \index{targetEnd@{targetEnd}!Engine2D::RaycastHit@{Engine2D::RaycastHit}}
 \doxysubsubsection{\texorpdfstring{targetEnd}{targetEnd}}
 {\footnotesize\ttfamily sf\+::\+Vector2f Engine2\+D\+::\+Raycast\+Hit\+::target\+End}
+
+
+
+Celowy koniec promienia. 
 
 
 

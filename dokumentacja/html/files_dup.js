@@ -10,8 +10,6 @@ var files_dup =
     [ "BitmapObject.h", "dd/d0a/_bitmap_object_8h.html", "dd/d0a/_bitmap_object_8h" ],
     [ "Calculations.cpp", "d9/d1d/_calculations_8cpp.html", null ],
     [ "Calculations.h", "d3/d1f/_calculations_8h.html", "d3/d1f/_calculations_8h" ],
-    [ "Camera.cpp", "d1/d33/_camera_8cpp.html", null ],
-    [ "Camera.h", "d5/d91/_camera_8h.html", "d5/d91/_camera_8h" ],
     [ "Collisions.cpp", "d2/d8c/_collisions_8cpp.html", "d2/d8c/_collisions_8cpp" ],
     [ "Collisions.h", "db/da3/_collisions_8h.html", "db/da3/_collisions_8h" ],
     [ "DrawableObject.cpp", "db/d42/_drawable_object_8cpp.html", null ],

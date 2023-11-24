@@ -4,7 +4,7 @@ var class_flappy_bird_1_1_game_manager =
     [ "~GameManager", "d9/d0e/class_flappy_bird_1_1_game_manager.html#ac29550b9799697edc4caa3519817c219", null ],
     [ "deleteMe", "d9/d0e/class_flappy_bird_1_1_game_manager.html#a6581eedeebec4a0c2bb05570dd145cf4", null ],
     [ "GameOver", "d9/d0e/class_flappy_bird_1_1_game_manager.html#a385c25a469b2eefcf23671536ce8000a", null ],
-    [ "SpawnObstales", "d9/d0e/class_flappy_bird_1_1_game_manager.html#ada056b924f7ef51ffdae1bef9bcafb67", null ],
+    [ "SpawnObstacles", "d9/d0e/class_flappy_bird_1_1_game_manager.html#aa63aef547d2a7aed133642a83419ced9", null ],
     [ "StartGame", "d9/d0e/class_flappy_bird_1_1_game_manager.html#a27e411b3c65d912b33980d8d814866d7", null ],
     [ "Update", "d9/d0e/class_flappy_bird_1_1_game_manager.html#a053629d83ebd013677b394c792810979", null ],
     [ "GameMenu", "d9/d0e/class_flappy_bird_1_1_game_manager.html#ae768fa0d65564fc18244697e8fbf5202", null ],

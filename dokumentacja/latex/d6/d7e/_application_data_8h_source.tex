@@ -3,30 +3,36 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{//\ ApplicationData.h}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}}
-\DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{DisplayMode}}}
-\DoxyCodeLine{00010\ \ \ \ \ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da1807c09157111719ea254460c1117cf5}{Windowed}},}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da71f3aff431a26dc42571671e38dca9ab}{Fullscreen}},}
-\DoxyCodeLine{00013\ \ \ \ \ \};}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}}
-\DoxyCodeLine{00015\ \ \ \ \ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ sf::String\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a7a75086d973804c78502fd71a7a0939c}{ApplicationName}};}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ sf::Vector2<int>\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a6abb4b6c3fd9049e45ddc44c4031cec8}{WindowSize}};}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{DisplayMode}}\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5395c0dbea65592e1e85b27d3c8250bc}{displayMode}};}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fbc5d3445e69d8}{maxFramerate}};}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}(sf::String\ appName,\ int\ Width,\ int\ Height,\ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{DisplayMode}}\ dispMode,\ int\ maxFps);}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ struct\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}();}
-\DoxyCodeLine{00022\ \ \ \ \ \};}
-\DoxyCodeLine{00023\ \ \ \ \ extern\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}*\ \mbox{\hyperlink{namespace_engine2_d_ac425a6c7524266f79ac052ed88c4c7c5}{appData}};}
-\DoxyCodeLine{00024\ \ \ \ \ void\ \mbox{\hyperlink{namespace_engine2_d_a22f69a4c2f654c6a8abe20719171fedd}{LoadAppData}}();}
-\DoxyCodeLine{00025\ \ \ \ \ void\ \mbox{\hyperlink{namespace_engine2_d_a6aa85d0dd03cd42609b67529b6df6510}{createApplicationDataIfNone}}(ApplicationData*\ data);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{DisplayMode}}}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da1807c09157111719ea254460c1117cf5}{Windowed}},\ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da71f3aff431a26dc42571671e38dca9ab}{Fullscreen}},\ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ sf::String\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a7a75086d973804c78502fd71a7a0939c}{ApplicationName}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ sf::Vector2<int>\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a6abb4b6c3fd9049e45ddc44c4031cec8}{WindowSize}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{DisplayMode}}\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5395c0dbea65592e1e85b27d3c8250bc}{displayMode}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fbc5d3445e69d8}{maxFramerate}};\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_af615bd911a81a51ce86ad164bf741940}{ApplicationData}}(sf::String\ appName,\ \textcolor{keywordtype}{int}\ Width,\ \textcolor{keywordtype}{int}\ Height,\ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{DisplayMode}}\ dispMode,\ \textcolor{keywordtype}{int}\ maxFps);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_af615bd911a81a51ce86ad164bf741940}{ApplicationData}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}*\ \mbox{\hyperlink{namespace_engine2_d_ac425a6c7524266f79ac052ed88c4c7c5}{appData}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_engine2_d_a22f69a4c2f654c6a8abe20719171fedd}{LoadAppData}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_engine2_d_a6aa85d0dd03cd42609b67529b6df6510}{createApplicationDataIfNone}}(\mbox{\hyperlink{struct_engine2_d_1_1_application_data}{ApplicationData}}*\ data);}
+\DoxyCodeLine{00060\ \}}
 
 \end{DoxyCode}

@@ -91,13 +91,15 @@ $(document).ready(function(){initNavTree('d1/d0b/class_engine2_d_1_1_sprite_obje
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Metody publiczne</a> &#124;
-<a href="#pro-attribs">Atrybuty chronione</a> &#124;
 <a href="#pri-methods">Metody prywatne</a> &#124;
 <a href="#pri-attribs">Atrybuty prywatne</a> &#124;
 <a href="../../df/d92/class_engine2_d_1_1_sprite_object-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle"><div class="title">Dokumentacja klasy Engine2D::SpriteObject</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>klasa reprezentujaca obiekt typu ,,sprite" dziedziczy po Bitmapobject, na ta chwile jest klasa abstrakcyjna, poniewaz jej role zastepuje klasa <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html" title="Klasa reprezentujaca gracza.">Player</a>  
+ <a href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html#details">Więcej...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d9d/sprite_object_8h_source.html">spriteObject.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -106,86 +108,104 @@ Diagram dziedziczenia dla Engine2D::SpriteObject</div>
  <div class="center">
   <img src="../../d1/d0b/class_engine2_d_1_1_sprite_object.png" usemap="#Engine2D::SpriteObject_map" alt=""/>
   <map id="Engine2D::SpriteObject_map" name="Engine2D::SpriteObject_map">
-<area href="../../d5/d9d/class_bitmap_object.html" alt="BitmapObject" shape="rect" coords="0,112,164,136"/>
-<area href="../../d9/d8f/class_animated_object.html" title="Klasa AnimatedObject." alt="AnimatedObject" shape="rect" coords="174,112,338,136"/>
-<area href="../../df/dab/class_engine2_d_1_1_drawable_object.html" alt="Engine2D::DrawableObject" shape="rect" coords="0,56,164,80"/>
-<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="0,0,164,24"/>
+<area href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html" title="klasa sluzaca do obslugi animowanych obiektow, uzywajacych bitmap" alt="Engine2D::BitmapObject" shape="rect" coords="0,112,164,136"/>
+<area href="../../d1/d29/class_engine2_d_1_1_animated_object.html" title="Klasa AnimatedObject." alt="Engine2D::AnimatedObject" shape="rect" coords="174,112,338,136"/>
+<area href="../../df/dab/class_engine2_d_1_1_drawable_object.html" title="Klasa bazowa dla obiektow rysowalnych." alt="Engine2D::DrawableObject" shape="rect" coords="0,56,164,80"/>
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" title="Klasa reprezentujaca obiekt gry." alt="Engine2D::GameObject" shape="rect" coords="0,0,164,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:a1be0b22130919272fb618cc15ac341ed" id="r_a1be0b22130919272fb618cc15ac341ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html#a1be0b22130919272fb618cc15ac341ed">deleteMe</a> () override</td></tr>
+<tr class="memdesc:a1be0b22130919272fb618cc15ac341ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja usuwajaca obiekt.  <br /></td></tr>
 <tr class="separator:a1be0b22130919272fb618cc15ac341ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_bitmap_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bitmap_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../d5/d9d/class_bitmap_object.html">BitmapObject</a></td></tr>
-<tr class="memitem:aaec61c9acc89036fd1bd3c0645f845b2 inherit pub_methods_class_bitmap_object" id="r_aaec61c9acc89036fd1bd3c0645f845b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#aaec61c9acc89036fd1bd3c0645f845b2">loadbitmaps</a> (std::vector&lt; sf::Texture &gt; bitmapstoload)</td></tr>
-<tr class="separator:aaec61c9acc89036fd1bd3c0645f845b2 inherit pub_methods_class_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36c69823bdaf0c1fd6e4f3d6b9508343 inherit pub_methods_class_bitmap_object" id="r_a36c69823bdaf0c1fd6e4f3d6b9508343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a36c69823bdaf0c1fd6e4f3d6b9508343">animate</a> (double deltatime, double frame_speed, int version)</td></tr>
-<tr class="separator:a36c69823bdaf0c1fd6e4f3d6b9508343 inherit pub_methods_class_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_bitmap_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_bitmap_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html">Engine2D::BitmapObject</a></td></tr>
+<tr class="memitem:aaec61c9acc89036fd1bd3c0645f845b2 inherit pub_methods_class_engine2_d_1_1_bitmap_object" id="r_aaec61c9acc89036fd1bd3c0645f845b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#aaec61c9acc89036fd1bd3c0645f845b2">loadbitmaps</a> (std::vector&lt; sf::Texture &gt; bitmapstoload)</td></tr>
+<tr class="memdesc:aaec61c9acc89036fd1bd3c0645f845b2 inherit pub_methods_class_engine2_d_1_1_bitmap_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja ladujaca bitmape z obiektu typu Vector do wewnetrznego Vectora  <br /></td></tr>
+<tr class="separator:aaec61c9acc89036fd1bd3c0645f845b2 inherit pub_methods_class_engine2_d_1_1_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c69823bdaf0c1fd6e4f3d6b9508343 inherit pub_methods_class_engine2_d_1_1_bitmap_object" id="r_a36c69823bdaf0c1fd6e4f3d6b9508343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#a36c69823bdaf0c1fd6e4f3d6b9508343">animate</a> (double deltatime, double frame_speed, int version)</td></tr>
+<tr class="memdesc:a36c69823bdaf0c1fd6e4f3d6b9508343 inherit pub_methods_class_engine2_d_1_1_bitmap_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja zmieniaj�ca ,,klatki" animacji  <br /></td></tr>
+<tr class="separator:a36c69823bdaf0c1fd6e4f3d6b9508343 inherit pub_methods_class_engine2_d_1_1_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
 <tr class="memitem:af5c0f9b5eb4304b17e2928da56e468a4 inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_af5c0f9b5eb4304b17e2928da56e468a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#af5c0f9b5eb4304b17e2928da56e468a4">Draw</a> ()</td></tr>
+<tr class="memdesc:af5c0f9b5eb4304b17e2928da56e468a4 inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wirtualna funkcja rysujaca obiekt.  <br /></td></tr>
 <tr class="separator:af5c0f9b5eb4304b17e2928da56e468a4 inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_a14166278e3321b9bd5628d2a52c3125c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a14166278e3321b9bd5628d2a52c3125c">DrawableObject</a> ()</td></tr>
+<tr class="memdesc:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor domyslny klasy <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html" title="Klasa bazowa dla obiektow rysowalnych.">DrawableObject</a>.  <br /></td></tr>
 <tr class="separator:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_aa219c52644f4c7b66ca3c7a3386e5f6d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#aa219c52644f4c7b66ca3c7a3386e5f6d">Draw</a> (sf::Texture texture)</td></tr>
+<tr class="memdesc:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja rysujaca obiekt z podana tekstura.  <br /></td></tr>
 <tr class="separator:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_a0270327b9525c4e563545e6c515a5d8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a0270327b9525c4e563545e6c515a5d8e">~DrawableObject</a> ()</td></tr>
+<tr class="memdesc:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wirtualny destruktor klasy <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html" title="Klasa bazowa dla obiektow rysowalnych.">DrawableObject</a>.  <br /></td></tr>
 <tr class="separator:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
 <tr class="memitem:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_abeeaa08c4d6f9f511916204d403450e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#abeeaa08c4d6f9f511916204d403450e0">GameObject</a> ()</td></tr>
+<tr class="memdesc:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor domyslny klasy <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html" title="Klasa reprezentujaca obiekt gry.">GameObject</a>.  <br /></td></tr>
 <tr class="separator:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a862384580261ca5ae326b03dcff52d80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a862384580261ca5ae326b03dcff52d80">GameObject</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>)</td></tr>
+<tr class="memdesc:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html" title="Klasa reprezentujaca obiekt gry.">GameObject</a>.  <br /></td></tr>
 <tr class="separator:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a1de11ee28a22197456e1a88f6ed3156d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a1de11ee28a22197456e1a88f6ed3156d">~GameObject</a> ()</td></tr>
+<tr class="memdesc:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html" title="Klasa reprezentujaca obiekt gry.">GameObject</a>.  <br /></td></tr>
 <tr class="separator:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Atrybuty chronione</h2></td></tr>
-<tr class="memitem:ac9704f093b579b9dc9e5f7153185e786" id="r_ac9704f093b579b9dc9e5f7153185e786"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html#ac9704f093b579b9dc9e5f7153185e786">animation_index</a></td></tr>
-<tr class="separator:ac9704f093b579b9dc9e5f7153185e786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_bitmap_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_bitmap_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="../../d5/d9d/class_bitmap_object.html">BitmapObject</a></td></tr>
-<tr class="memitem:a1ea0e37c4182a860b0699ac87d792c56 inherit pro_attribs_class_bitmap_object" id="r_a1ea0e37c4182a860b0699ac87d792c56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a1ea0e37c4182a860b0699ac87d792c56">i</a> =0</td></tr>
-<tr class="separator:a1ea0e37c4182a860b0699ac87d792c56 inherit pro_attribs_class_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbc46c3c8c95d9ace00874a30c9e81ff inherit pro_attribs_class_bitmap_object" id="r_adbc46c3c8c95d9ace00874a30c9e81ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#adbc46c3c8c95d9ace00874a30c9e81ff">offset</a></td></tr>
-<tr class="separator:adbc46c3c8c95d9ace00874a30c9e81ff inherit pro_attribs_class_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Metody prywatne</h2></td></tr>
 <tr class="memitem:a1f0d5cecf975ac6b3d6f539966b540d2" id="r_a1f0d5cecf975ac6b3d6f539966b540d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html#a1f0d5cecf975ac6b3d6f539966b540d2">setTexture</a> (sf::Image image)</td></tr>
+<tr class="memdesc:a1f0d5cecf975ac6b3d6f539966b540d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja ustawiajaca dana teksture  <br /></td></tr>
 <tr class="separator:a1f0d5cecf975ac6b3d6f539966b540d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
 <tr class="memitem:a1b265d1a55b18c34a9df8191c098ea34" id="r_a1b265d1a55b18c34a9df8191c098ea34"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html#a1b265d1a55b18c34a9df8191c098ea34">texture</a></td></tr>
+<tr class="memdesc:a1b265d1a55b18c34a9df8191c098ea34"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualna tekstura  <br /></td></tr>
 <tr class="separator:a1b265d1a55b18c34a9df8191c098ea34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Dodatkowe Dziedziczone Składowe</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_bitmap_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_bitmap_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../d5/d9d/class_bitmap_object.html">BitmapObject</a></td></tr>
-<tr class="memitem:a027b556213b1555895e6d8af12663ba6 inherit pub_attribs_class_bitmap_object" id="r_a027b556213b1555895e6d8af12663ba6"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a027b556213b1555895e6d8af12663ba6">renderobj</a></td></tr>
-<tr class="separator:a027b556213b1555895e6d8af12663ba6 inherit pub_attribs_class_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4f029d81858b1a996a6e75d0a62d6b7 inherit pub_attribs_class_bitmap_object" id="r_ab4f029d81858b1a996a6e75d0a62d6b7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#ab4f029d81858b1a996a6e75d0a62d6b7">bitmaps</a></td></tr>
-<tr class="separator:ab4f029d81858b1a996a6e75d0a62d6b7 inherit pub_attribs_class_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_bitmap_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_bitmap_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html">Engine2D::BitmapObject</a></td></tr>
+<tr class="memitem:a24c7a972af4a5004f4b9db832ce23615 inherit pub_attribs_class_engine2_d_1_1_bitmap_object" id="r_a24c7a972af4a5004f4b9db832ce23615"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#a24c7a972af4a5004f4b9db832ce23615">renderobj</a></td></tr>
+<tr class="memdesc:a24c7a972af4a5004f4b9db832ce23615 inherit pub_attribs_class_engine2_d_1_1_bitmap_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">obiekt z ktorego pomoca mozna wyrenderowac animacje  <br /></td></tr>
+<tr class="separator:a24c7a972af4a5004f4b9db832ce23615 inherit pub_attribs_class_engine2_d_1_1_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b83ad45fbed8699d2096fee3adc2194 inherit pub_attribs_class_engine2_d_1_1_bitmap_object" id="r_a1b83ad45fbed8699d2096fee3adc2194"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#a1b83ad45fbed8699d2096fee3adc2194">bitmaps</a></td></tr>
+<tr class="memdesc:a1b83ad45fbed8699d2096fee3adc2194 inherit pub_attribs_class_engine2_d_1_1_bitmap_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector sluzacy do przechowywania Bitmap wewnatrz klasy.  <br /></td></tr>
+<tr class="separator:a1b83ad45fbed8699d2096fee3adc2194 inherit pub_attribs_class_engine2_d_1_1_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
 <tr class="memitem:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_ae73cdf98d1ef84dd01d41af21ba018c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ae73cdf98d1ef84dd01d41af21ba018c5">visible</a></td></tr>
+<tr class="memdesc:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga okreslajaca widocznosc obiektu.  <br /></td></tr>
 <tr class="separator:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_addd9535d8e921b206d9aedde771fc395"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#addd9535d8e921b206d9aedde771fc395">window</a></td></tr>
+<tr class="memdesc:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik do okna renderowania.  <br /></td></tr>
 <tr class="separator:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_a5d6eeff01fe1042ae41f9590564bf2c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a5d6eeff01fe1042ae41f9590564bf2c3">isUi</a></td></tr>
+<tr class="memdesc:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika.  <br /></td></tr>
 <tr class="separator:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
 <tr class="memitem:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_ac18b4d45d12f94726e2ea97364187bb7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a></td></tr>
+<tr class="memdesc:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nazwa obiektu.  <br /></td></tr>
 <tr class="separator:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_a4b29dc7811499e94d004bb0adc8167fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a4b29dc7811499e94d004bb0adc8167fa">isRemoving</a></td></tr>
+<tr class="memdesc:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga informujaca, czy obiekt jest usuwany.  <br /></td></tr>
 <tr class="separator:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
 <tr class="memitem:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object" id="r_ab4f1788806b4cf6a682bb2eb6b7bc45c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">DrawableObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ab4f1788806b4cf6a682bb2eb6b7bc45c">All</a></td></tr>
+<tr class="memdesc:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wektor zawierajacy wszystkie obiekty rysowalne.  <br /></td></tr>
 <tr class="separator:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
 <tr class="memitem:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object" id="r_ac56370aaa845877752342e8091325a2b"><td class="memItemLeft" align="right" valign="top">static vector&lt; <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac56370aaa845877752342e8091325a2b">All</a></td></tr>
+<tr class="memdesc:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wektor wszystkich obiektow gry.  <br /></td></tr>
 <tr class="separator:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_engine2_d_1_1_bitmap_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_engine2_d_1_1_bitmap_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html">Engine2D::BitmapObject</a></td></tr>
+<tr class="memitem:af70d42c94be5002e351030248d877345 inherit pro_attribs_class_engine2_d_1_1_bitmap_object" id="r_af70d42c94be5002e351030248d877345"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#af70d42c94be5002e351030248d877345">i</a> = 0</td></tr>
+<tr class="separator:af70d42c94be5002e351030248d877345 inherit pro_attribs_class_engine2_d_1_1_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d411e0ff51759f37bb46e0ef466ab3f inherit pro_attribs_class_engine2_d_1_1_bitmap_object" id="r_a8d411e0ff51759f37bb46e0ef466ab3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#a8d411e0ff51759f37bb46e0ef466ab3f">offset</a></td></tr>
+<tr class="separator:a8d411e0ff51759f37bb46e0ef466ab3f inherit pro_attribs_class_engine2_d_1_1_bitmap_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>klasa reprezentujaca obiekt typu ,,sprite" dziedziczy po Bitmapobject, na ta chwile jest klasa abstrakcyjna, poniewaz jej role zastepuje klasa <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html" title="Klasa reprezentujaca gracza.">Player</a> </p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
 <a id="a1be0b22130919272fb618cc15ac341ed" name="a1be0b22130919272fb618cc15ac341ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1be0b22130919272fb618cc15ac341ed">&#9670;&#160;</a></span>deleteMe()</h2>
 
@@ -209,7 +229,9 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplementowana z <a class="el" href="../../d5/d9d/class_bitmap_object.html#a207fc305d5b844f97418614bfa38547b">BitmapObject</a>.</p>
+<p>funkcja usuwajaca obiekt. </p>
+
+<p>Reimplementowana z <a class="el" href="../../d0/db4/class_engine2_d_1_1_bitmap_object.html#a207fc305d5b844f97418614bfa38547b">Engine2D::BitmapObject</a>.</p>
 
 </div>
 </div>
@@ -237,31 +259,17 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>funkcja ustawiajaca dana teksture </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obraz</td><td>do zaladowania typu sf::Image </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
-<a id="ac9704f093b579b9dc9e5f7153185e786" name="ac9704f093b579b9dc9e5f7153185e786"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9704f093b579b9dc9e5f7153185e786">&#9670;&#160;</a></span>animation_index</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Engine2D::SpriteObject::animation_index</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1b265d1a55b18c34a9df8191c098ea34" name="a1b265d1a55b18c34a9df8191c098ea34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b265d1a55b18c34a9df8191c098ea34">&#9670;&#160;</a></span>texture</h2>
 
@@ -281,6 +289,8 @@ Dodatkowe Dziedziczone Składowe</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>aktualna tekstura </p>
 
 </div>
 </div>

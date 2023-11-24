@@ -2,6 +2,11 @@
 \hypertarget{class_engine2_d_1_1_sprite_object}{}\label{class_engine2_d_1_1_sprite_object}\index{Engine2D::SpriteObject@{Engine2D::SpriteObject}}
 
 
+klasa reprezentujaca obiekt typu ,,sprite"{} dziedziczy po Bitmapobject, na ta chwile jest klasa abstrakcyjna, poniewaz jej role zastepuje klasa \doxylink{class_engine2_d_1_1_player}{Player}  
+
+
+
+
 {\ttfamily \#include $<$sprite\+Object.\+h$>$}
 
 Diagram dziedziczenia dla Engine2D\+::Sprite\+Object\begin{figure}[H]
@@ -14,91 +19,89 @@ Diagram dziedziczenia dla Engine2D\+::Sprite\+Object\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_a1be0b22130919272fb618cc15ac341ed}{delete\+Me}} () override
-\end{DoxyCompactItemize}
-\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_bitmap_object}{Bitmap\+Object}}}
+\begin{DoxyCompactList}\small\item\em funkcja usuwajaca obiekt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object}{Engine2\+D\+::\+Bitmap\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}{loadbitmaps}} (std\+::vector$<$ sf\+::\+Texture $>$ bitmapstoload)
-\item 
-void \mbox{\hyperlink{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}{animate}} (double deltatime, double frame\+\_\+speed, int version)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}{loadbitmaps}} (std\+::vector$<$ sf\+::\+Texture $>$ bitmapstoload)
+\begin{DoxyCompactList}\small\item\em funkcja ladujaca bitmape z obiektu typu Vector do wewnetrznego Vectora \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}{animate}} (double deltatime, double frame\+\_\+speed, int version)
+\begin{DoxyCompactList}\small\item\em funkcja zmieniaj�ca ,,klatki"{} animacji \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}{Draw}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja rysujaca obiekt. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja rysujaca obiekt z podana tekstura. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Atrybuty chronione}
-\begin{DoxyCompactItemize}
-\item 
-int \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_ac9704f093b579b9dc9e5f7153185e786}{animation\+\_\+index}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_bitmap_object}{Bitmap\+Object}}}
-\begin{DoxyCompactItemize}
-\item 
-int \mbox{\hyperlink{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56}{i}} =0
-\item 
-double \mbox{\hyperlink{class_bitmap_object_adbc46c3c8c95d9ace00874a30c9e81ff}{offset}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Metody prywatne}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_a1f0d5cecf975ac6b3d6f539966b540d2}{set\+Texture}} (sf\+::\+Image image)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em funkcja ustawiajaca dana teksture \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Texture \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_a1b265d1a55b18c34a9df8191c098ea34}{texture}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em aktualna tekstura \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
-\doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_bitmap_object}{Bitmap\+Object}}}
+\doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object}{Engine2\+D\+::\+Bitmap\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
-sf\+::\+Sprite \mbox{\hyperlink{class_bitmap_object_a027b556213b1555895e6d8af12663ba6}{renderobj}}
-\item 
-std\+::vector$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7}{bitmaps}}
-\end{DoxyCompactItemize}
+sf\+::\+Sprite \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a24c7a972af4a5004f4b9db832ce23615}{renderobj}}
+\begin{DoxyCompactList}\small\item\em obiekt z ktorego pomoca mozna wyrenderowac animacje \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a1b83ad45fbed8699d2096fee3adc2194}{bitmaps}}
+\begin{DoxyCompactList}\small\item\em Vector sluzacy do przechowywania Bitmap wewnatrz klasy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca widocznosc obiektu. \end{DoxyCompactList}\item 
 sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wskaznik do okna renderowania. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
-\item 
+\begin{DoxyCompactList}\small\item\em Nazwa obiektu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga informujaca, czy obiekt jest usuwany. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor zawierajacy wszystkie obiekty rysowalne. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
+\begin{DoxyCompactList}\small\item\em Wektor wszystkich obiektow gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty chronione dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object}{Engine2\+D\+::\+Bitmap\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_af70d42c94be5002e351030248d877345}{i}} = 0
+\item 
+double \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a8d411e0ff51759f37bb46e0ef466ab3f}{offset}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+klasa reprezentujaca obiekt typu ,,sprite"{} dziedziczy po Bitmapobject, na ta chwile jest klasa abstrakcyjna, poniewaz jej role zastepuje klasa \doxylink{class_engine2_d_1_1_player}{Player} 
 
 \doxysubsection{Dokumentacja funkcji składowych}
 \Hypertarget{class_engine2_d_1_1_sprite_object_a1be0b22130919272fb618cc15ac341ed}\label{class_engine2_d_1_1_sprite_object_a1be0b22130919272fb618cc15ac341ed} 
@@ -109,7 +112,11 @@ static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}
 
 
 
-Reimplementowana z \mbox{\hyperlink{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}{Bitmap\+Object}}.
+funkcja usuwajaca obiekt. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a207fc305d5b844f97418614bfa38547b}{Engine2\+D\+::\+Bitmap\+Object}}.
 
 \Hypertarget{class_engine2_d_1_1_sprite_object_a1f0d5cecf975ac6b3d6f539966b540d2}\label{class_engine2_d_1_1_sprite_object_a1f0d5cecf975ac6b3d6f539966b540d2} 
 \index{Engine2D::SpriteObject@{Engine2D::SpriteObject}!setTexture@{setTexture}}
@@ -119,18 +126,25 @@ Reimplementowana z \mbox{\hyperlink{class_bitmap_object_a207fc305d5b844f97418614
 
 
 
-\doxysubsection{Dokumentacja atrybutów składowych}
-\Hypertarget{class_engine2_d_1_1_sprite_object_ac9704f093b579b9dc9e5f7153185e786}\label{class_engine2_d_1_1_sprite_object_ac9704f093b579b9dc9e5f7153185e786} 
-\index{Engine2D::SpriteObject@{Engine2D::SpriteObject}!animation\_index@{animation\_index}}
-\index{animation\_index@{animation\_index}!Engine2D::SpriteObject@{Engine2D::SpriteObject}}
-\doxysubsubsection{\texorpdfstring{animation\_index}{animation\_index}}
-{\footnotesize\ttfamily int Engine2\+D\+::\+Sprite\+Object\+::animation\+\_\+index\hspace{0.3cm}{\ttfamily [protected]}}
+funkcja ustawiajaca dana teksture 
 
+
+\begin{DoxyParams}{Parametry}
+{\em obraz} & do zaladowania typu sf\+::\+Image \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
 \Hypertarget{class_engine2_d_1_1_sprite_object_a1b265d1a55b18c34a9df8191c098ea34}\label{class_engine2_d_1_1_sprite_object_a1b265d1a55b18c34a9df8191c098ea34} 
 \index{Engine2D::SpriteObject@{Engine2D::SpriteObject}!texture@{texture}}
 \index{texture@{texture}!Engine2D::SpriteObject@{Engine2D::SpriteObject}}
 \doxysubsubsection{\texorpdfstring{texture}{texture}}
 {\footnotesize\ttfamily sf\+::\+Texture Engine2\+D\+::\+Sprite\+Object\+::texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+aktualna tekstura 
 
 
 

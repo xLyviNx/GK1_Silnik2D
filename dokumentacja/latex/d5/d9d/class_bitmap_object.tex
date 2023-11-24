@@ -2,6 +2,11 @@
 \hypertarget{class_bitmap_object}{}\label{class_bitmap_object}\index{BitmapObject@{BitmapObject}}
 
 
+klasa sluzaca do obslugi animowanych obiektow, uzywajacych bitmap  
+
+
+
+
 {\ttfamily \#include $<$Bitmap\+Object.\+h$>$}
 
 Diagram dziedziczenia dla Bitmap\+Object\begin{figure}[H]
@@ -14,54 +19,54 @@ Diagram dziedziczenia dla Bitmap\+Object\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}{loadbitmaps}} (std\+::vector$<$ sf\+::\+Texture $>$ bitmapstoload)
-\item 
+\begin{DoxyCompactList}\small\item\em funkcja ladujaca bitmape z obiektu typu Vector do wewnetrznego Vectora \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}{animate}} (double deltatime, double frame\+\_\+speed, int version)
-\item 
+\begin{DoxyCompactList}\small\item\em funkcja zmieniaj�ca ,,klatki"{} animacji \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}{delete\+Me}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em zmienna usuwajaca obiekt \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}{Draw}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja rysujaca obiekt. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja rysujaca obiekt z podana tekstura. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Sprite \mbox{\hyperlink{class_bitmap_object_a027b556213b1555895e6d8af12663ba6}{renderobj}}
-\item 
+\begin{DoxyCompactList}\small\item\em obiekt z ktorego pomoca mozna wyrenderowac animacje \end{DoxyCompactList}\item 
 std\+::vector$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7}{bitmaps}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Vector sluzacy do przechowywania Bitmap wewnatrz klasy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca widocznosc obiektu. \end{DoxyCompactList}\item 
 sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wskaznik do okna renderowania. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
-\item 
+\begin{DoxyCompactList}\small\item\em Nazwa obiektu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga informujaca, czy obiekt jest usuwany. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty chronione}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,13 +79,16 @@ double \mbox{\hyperlink{class_bitmap_object_adbc46c3c8c95d9ace00874a30c9e81ff}{o
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor zawierajacy wszystkie obiekty rysowalne. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor wszystkich obiektow gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+klasa sluzaca do obslugi animowanych obiektow, uzywajacych bitmap 
 
 \doxysubsection{Dokumentacja funkcji składowych}
 \Hypertarget{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}\label{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343} 
@@ -89,11 +97,28 @@ static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}
 \doxysubsubsection{\texorpdfstring{animate()}{animate()}}
 {\footnotesize\ttfamily void Bitmap\+Object\+::animate (\begin{DoxyParamCaption}\item[{double}]{deltatime,  }\item[{double}]{frame\+\_\+speed,  }\item[{int}]{version }\end{DoxyParamCaption})}
 
+
+
+funkcja zmieniaj�ca ,,klatki"{} animacji 
+
+
+\begin{DoxyParams}{Parametry}
+{\em delta\+Time} & zmienna sluzaca do odmierzania czasu miedzy klatkami. \\
+\hline
+{\em frame\+\_\+speed} & zmienna ktora okresla czas miedzy klatkami wzgledem wartosci delta\+Time \\
+\hline
+{\em version} & wybor wersji animacji, tzn zalozylismy ze w przyszlosci animacji moze byc wiecej a ta zmienna bedzie sluzyla do ich wyboru \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}\label{class_bitmap_object_a207fc305d5b844f97418614bfa38547b} 
 \index{BitmapObject@{BitmapObject}!deleteMe@{deleteMe}}
 \index{deleteMe@{deleteMe}!BitmapObject@{BitmapObject}}
 \doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
 {\footnotesize\ttfamily void Bitmap\+Object\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+zmienna usuwajaca obiekt 
 
 
 
@@ -111,12 +136,25 @@ Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a6901b9
 
 
 
+funkcja ladujaca bitmape z obiektu typu Vector do wewnetrznego Vectora 
+
+
+\begin{DoxyParams}{Parametry}
+{\em Vector} & z ktorego maja byc zaladowane Bitmapy \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Dokumentacja atrybutów składowych}
 \Hypertarget{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7}\label{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7} 
 \index{BitmapObject@{BitmapObject}!bitmaps@{bitmaps}}
 \index{bitmaps@{bitmaps}!BitmapObject@{BitmapObject}}
 \doxysubsubsection{\texorpdfstring{bitmaps}{bitmaps}}
 {\footnotesize\ttfamily std\+::vector$<$sf\+::\+Texture$>$ Bitmap\+Object\+::bitmaps}
+
+
+
+Vector sluzacy do przechowywania Bitmap wewnatrz klasy. 
 
 \Hypertarget{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56}\label{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56} 
 \index{BitmapObject@{BitmapObject}!i@{i}}
@@ -135,6 +173,10 @@ Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a6901b9
 \index{renderobj@{renderobj}!BitmapObject@{BitmapObject}}
 \doxysubsubsection{\texorpdfstring{renderobj}{renderobj}}
 {\footnotesize\ttfamily sf\+::\+Sprite Bitmap\+Object\+::renderobj}
+
+
+
+obiekt z ktorego pomoca mozna wyrenderowac animacje 
 
 
 

@@ -2,20 +2,28 @@
 \hypertarget{class_engine2_d_1_1_calculations}{}\label{class_engine2_d_1_1_calculations}\index{Engine2D::Calculations@{Engine2D::Calculations}}
 
 
+Klasa zawierajaca rozne matematyczne operacje.  
+
+
+
+
 {\ttfamily \#include $<$Calculations.\+h$>$}
 
 \doxysubsubsection*{Statyczne metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 static sf\+::\+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_calculations_a9d1bc264b3400a39a18fccea98316edd}{Vector2f\+\_\+\+Normalize}} (sf\+::\+Vector2f Vector)
-\item 
+\begin{DoxyCompactList}\small\item\em Normalizuje wektor sf\+::\+Vector2f. \end{DoxyCompactList}\item 
 static float \mbox{\hyperlink{class_engine2_d_1_1_calculations_a810281e062428841f4375441197d2dce}{Vector2f\+\_\+\+Magnitude}} (sf\+::\+Vector2f Vector)
-\item 
+\begin{DoxyCompactList}\small\item\em Oblicza dlugosc wektora sf\+::\+Vector2f. \end{DoxyCompactList}\item 
 static float \mbox{\hyperlink{class_engine2_d_1_1_calculations_a52477e696edb5fddeb0911cacc763b12}{dot\+Product}} (const sf\+::\+Vector2f \&a, const sf\+::\+Vector2f \&b)
-\item 
+\begin{DoxyCompactList}\small\item\em Oblicza iloczyn skalarny dwoch wektorow sf\+::\+Vector2f. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{class_engine2_d_1_1_calculations_ac626031222616321b7c38580576e5918}{Random}} (int min, int max)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generuje losowa liczbe calkowita w okreslonym zakresie. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa zawierajaca rozne matematyczne operacje. 
 
 \doxysubsection{Dokumentacja funkcji składowych}
 \Hypertarget{class_engine2_d_1_1_calculations_a52477e696edb5fddeb0911cacc763b12}\label{class_engine2_d_1_1_calculations_a52477e696edb5fddeb0911cacc763b12} 
@@ -24,24 +32,76 @@ static int \mbox{\hyperlink{class_engine2_d_1_1_calculations_ac626031222616321b7
 \doxysubsubsection{\texorpdfstring{dotProduct()}{dotProduct()}}
 {\footnotesize\ttfamily float Engine2\+D\+::\+Calculations\+::dot\+Product (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{a,  }\item[{const sf\+::\+Vector2f \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Oblicza iloczyn skalarny dwoch wektorow sf\+::\+Vector2f. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em a} & Pierwszy wektor. \\
+\hline
+{\em b} & Drugi wektor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Iloczyn skalarny. 
+\end{DoxyReturn}
 \Hypertarget{class_engine2_d_1_1_calculations_ac626031222616321b7c38580576e5918}\label{class_engine2_d_1_1_calculations_ac626031222616321b7c38580576e5918} 
 \index{Engine2D::Calculations@{Engine2D::Calculations}!Random@{Random}}
 \index{Random@{Random}!Engine2D::Calculations@{Engine2D::Calculations}}
 \doxysubsubsection{\texorpdfstring{Random()}{Random()}}
 {\footnotesize\ttfamily int Engine2\+D\+::\+Calculations\+::\+Random (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Generuje losowa liczbe calkowita w okreslonym zakresie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em min} & Dolna granica zakresu. \\
+\hline
+{\em max} & Gorna granica zakresu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wygenerowana liczba losowa. 
+\end{DoxyReturn}
 \Hypertarget{class_engine2_d_1_1_calculations_a810281e062428841f4375441197d2dce}\label{class_engine2_d_1_1_calculations_a810281e062428841f4375441197d2dce} 
 \index{Engine2D::Calculations@{Engine2D::Calculations}!Vector2f\_Magnitude@{Vector2f\_Magnitude}}
 \index{Vector2f\_Magnitude@{Vector2f\_Magnitude}!Engine2D::Calculations@{Engine2D::Calculations}}
 \doxysubsubsection{\texorpdfstring{Vector2f\_Magnitude()}{Vector2f\_Magnitude()}}
 {\footnotesize\ttfamily float Engine2\+D\+::\+Calculations\+::\+Vector2f\+\_\+\+Magnitude (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{Vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Oblicza dlugosc wektora sf\+::\+Vector2f. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em Vector} & Wektor, ktorego dlugosc ma byc obliczona. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Dlugosc wektora. 
+\end{DoxyReturn}
 \Hypertarget{class_engine2_d_1_1_calculations_a9d1bc264b3400a39a18fccea98316edd}\label{class_engine2_d_1_1_calculations_a9d1bc264b3400a39a18fccea98316edd} 
 \index{Engine2D::Calculations@{Engine2D::Calculations}!Vector2f\_Normalize@{Vector2f\_Normalize}}
 \index{Vector2f\_Normalize@{Vector2f\_Normalize}!Engine2D::Calculations@{Engine2D::Calculations}}
 \doxysubsubsection{\texorpdfstring{Vector2f\_Normalize()}{Vector2f\_Normalize()}}
 {\footnotesize\ttfamily sf\+::\+Vector2f Engine2\+D\+::\+Calculations\+::\+Vector2f\+\_\+\+Normalize (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{Vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Normalizuje wektor sf\+::\+Vector2f. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em Vector} & Wektor do znormalizowania. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Znormalizowany wektor sf\+::\+Vector2f. 
+\end{DoxyReturn}
 
 
 Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}

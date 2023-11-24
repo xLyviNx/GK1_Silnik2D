@@ -8,51 +8,61 @@ namespace \mbox{\hyperlink{namespace_engine2_d_1_1_shapes}{Shapes}}
 \doxysubsubsection*{Komponenty}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{class_engine2_d_1_1_animated_object}{Animated\+Object}}
+\begin{DoxyCompactList}\small\item\em Klasa \doxylink{class_engine2_d_1_1_animated_object}{Animated\+Object}. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_engine2_d_1_1_application_data}{Application\+Data}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struktura przechowujaca dane aplikacji. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine2_d_1_1_bitmap_handler}{Bitmap\+Handler}}
+\begin{DoxyCompactList}\small\item\em klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku, zaladowanie do pliku, kopiowanie. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object}{Bitmap\+Object}}
+\begin{DoxyCompactList}\small\item\em klasa sluzaca do obslugi animowanych obiektow, uzywajacych bitmap \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_calculations}{Calculations}}
-\item 
-class \mbox{\hyperlink{class_engine2_d_1_1_camera}{Camera}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa zawierajaca rozne matematyczne operacje. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa reprezentujaca obiekt odpowiedzialny za obsluge kolizji. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa bazowa dla obiektow rysowalnych. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_engine}{Engine}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa reprezentujaca silnik gry. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa reprezentujaca obiekt gry. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}}
+\begin{DoxyCompactList}\small\item\em klasa sluzaca do obslugi wejscia. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_player}{Player}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa reprezentujaca gracza. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine2_d_1_1_point2_d}{Point2D}}
+\begin{DoxyCompactList}\small\item\em klasa reprezentujaca obiekt \doxylink{class_engine2_d_1_1_point2_d}{Point2D} sluzacy do wskazywania wspolrzednych. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer}{Primitive\+Renderer}}
+\begin{DoxyCompactList}\small\item\em klasa sluzaca do obslugi rysowania prymitywow \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}}
-\item 
+\begin{DoxyCompactList}\small\item\em Struktura przechowujaca informacje o trafieniu promienia w detekcji kolizji. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_shape_object}{Shape\+Object}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa bazowa dla obiektow ksztaltow. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_sprite_object}{Sprite\+Object}}
-\item 
+\begin{DoxyCompactList}\small\item\em klasa reprezentujaca obiekt typu ,,sprite"{} dziedziczy po Bitmapobject, na ta chwile jest klasa abstrakcyjna, poniewaz jej role zastepuje klasa \doxylink{class_engine2_d_1_1_player}{Player} \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}}
-\item 
+\begin{DoxyCompactList}\small\item\em Klasa reprezentujaca obiekt gry poddajacy sie transformacjom. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Updatable\+Object}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em klasa implementujaca do programu obiekt, dla ktorego mozliwe sa zmiany w czasie rzeczywistym \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Wyliczenia}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Display\+Mode}} \{ \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da1807c09157111719ea254460c1117cf5}{Windowed}}
 , \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da71f3aff431a26dc42571671e38dca9ab}{Fullscreen}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enumeracja reprezentujaca rozne tryby wyswietlania aplikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Funkcje}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{namespace_engine2_d_a22f69a4c2f654c6a8abe20719171fedd}{Load\+App\+Data}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja odpowiedzialna za wczytanie danych aplikacji. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_engine2_d_a6aa85d0dd03cd42609b67529b6df6510}{create\+Application\+Data\+If\+None}} (\mbox{\hyperlink{struct_engine2_d_1_1_application_data}{Application\+Data}} \texorpdfstring{$\ast$}{*}data)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Funkcja tworzaca obiekt \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data}, jesli nie istnieje. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Zmienne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{struct_engine2_d_1_1_application_data}{Application\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespace_engine2_d_ac425a6c7524266f79ac052ed88c4c7c5}{app\+Data}} = nullptr
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wskaznik na obiekt \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data}, przechowujacy globalne dane aplikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Dokumentacja typów wyliczanych}
@@ -62,13 +72,17 @@ void \mbox{\hyperlink{namespace_engine2_d_a6aa85d0dd03cd42609b67529b6df6510}{cre
 \doxysubsubsection{\texorpdfstring{DisplayMode}{DisplayMode}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Engine2\+D\+::\+Display\+Mode}}}
 
+
+
+Enumeracja reprezentujaca rozne tryby wyswietlania aplikacji. 
+
 \begin{DoxyEnumFields}{Wartości wyliczeń}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Windowed@{Windowed}!Engine2D@{Engine2D}}\index{Engine2D@{Engine2D}!Windowed@{Windowed}}}\Hypertarget{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da1807c09157111719ea254460c1117cf5}\label{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da1807c09157111719ea254460c1117cf5} 
-Windowed&\\
+Windowed&Tryb okienkowy. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Fullscreen@{Fullscreen}!Engine2D@{Engine2D}}\index{Engine2D@{Engine2D}!Fullscreen@{Fullscreen}}}\Hypertarget{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da71f3aff431a26dc42571671e38dca9ab}\label{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58da71f3aff431a26dc42571671e38dca9ab} 
-Fullscreen&\\
+Fullscreen&Tryb pelnoekranowy. \\
 \hline
 
 \end{DoxyEnumFields}
@@ -81,11 +95,24 @@ Fullscreen&\\
 \doxysubsubsection{\texorpdfstring{createApplicationDataIfNone()}{createApplicationDataIfNone()}}
 {\footnotesize\ttfamily void Engine2\+D\+::create\+Application\+Data\+If\+None (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_engine2_d_1_1_application_data}{Application\+Data}} \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
 
+
+
+Funkcja tworzaca obiekt \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data}, jesli nie istnieje. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em data} & Wskaznik na dane aplikacji. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{namespace_engine2_d_a22f69a4c2f654c6a8abe20719171fedd}\label{namespace_engine2_d_a22f69a4c2f654c6a8abe20719171fedd} 
 \index{Engine2D@{Engine2D}!LoadAppData@{LoadAppData}}
 \index{LoadAppData@{LoadAppData}!Engine2D@{Engine2D}}
 \doxysubsubsection{\texorpdfstring{LoadAppData()}{LoadAppData()}}
 {\footnotesize\ttfamily void Engine2\+D\+::\+Load\+App\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja odpowiedzialna za wczytanie danych aplikacji. 
 
 
 
@@ -95,4 +122,8 @@ Fullscreen&\\
 \index{appData@{appData}!Engine2D@{Engine2D}}
 \doxysubsubsection{\texorpdfstring{appData}{appData}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_engine2_d_1_1_application_data}{Application\+Data}} \texorpdfstring{$\ast$}{*} Engine2\+D\+::app\+Data = nullptr}
+
+
+
+Wskaznik na obiekt \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data}, przechowujacy globalne dane aplikacji. 
 

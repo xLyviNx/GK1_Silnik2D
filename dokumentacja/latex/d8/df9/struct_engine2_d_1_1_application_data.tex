@@ -2,27 +2,35 @@
 \hypertarget{struct_engine2_d_1_1_application_data}{}\label{struct_engine2_d_1_1_application_data}\index{Engine2D::ApplicationData@{Engine2D::ApplicationData}}
 
 
+Struktura przechowujaca dane aplikacji.  
+
+
+
+
 {\ttfamily \#include $<$Application\+Data.\+h$>$}
 
 \doxysubsubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a8d0182f0099be17a81ba106c16945fcd}{Application\+Data}} (sf\+::\+String app\+Name, int Width, int Height, \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Display\+Mode}} disp\+Mode, int max\+Fps)
-\item 
-struct \mbox{\hyperlink{struct_engine2_d_1_1_application_data_af615bd911a81a51ce86ad164bf741940}{Application\+Data}} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{struct_engine2_d_1_1_application_data_a8d0182f0099be17a81ba106c16945fcd}{Application\+Data}} (sf\+::\+String app\+Name, int Width, int Height, \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Display\+Mode}} disp\+Mode, int max\+Fps)
+\begin{DoxyCompactList}\small\item\em Konstruktor struktury \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data} z parametrami. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_engine2_d_1_1_application_data_af615bd911a81a51ce86ad164bf741940}{Application\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Domyslny konstruktor struktury \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+String \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a7a75086d973804c78502fd71a7a0939c}{Application\+Name}}
-\item 
+\begin{DoxyCompactList}\small\item\em Nazwa aplikacji. \end{DoxyCompactList}\item 
 sf\+::\+Vector2$<$ int $>$ \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a6abb4b6c3fd9049e45ddc44c4031cec8}{Window\+Size}}
-\item 
+\begin{DoxyCompactList}\small\item\em Rozmiar okna aplikacji. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Display\+Mode}} \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5395c0dbea65592e1e85b27d3c8250bc}{display\+Mode}}
-\item 
+\begin{DoxyCompactList}\small\item\em Tryb wyswietlania. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fbc5d3445e69d8}{max\+Framerate}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Maksymalna liczba klatek na sekunde. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Struktura przechowujaca dane aplikacji. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{struct_engine2_d_1_1_application_data_a8d0182f0099be17a81ba106c16945fcd}\label{struct_engine2_d_1_1_application_data_a8d0182f0099be17a81ba106c16945fcd} 
@@ -31,11 +39,32 @@ int \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fb
 \doxysubsubsection{\texorpdfstring{ApplicationData()}{ApplicationData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Engine2\+D\+::\+Application\+Data\+::\+Application\+Data (\begin{DoxyParamCaption}\item[{sf\+::\+String}]{app\+Name,  }\item[{int}]{Width,  }\item[{int}]{Height,  }\item[{\mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Display\+Mode}}}]{disp\+Mode,  }\item[{int}]{max\+Fps }\end{DoxyParamCaption})}
 
+
+
+Konstruktor struktury \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data} z parametrami. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em app\+Name} & Nazwa aplikacji. \\
+\hline
+{\em Width} & Szerokosc okna. \\
+\hline
+{\em Height} & Wysokosc okna. \\
+\hline
+{\em disp\+Mode} & Tryb wyswietlania. \\
+\hline
+{\em max\+Fps} & Maksymalna liczba klatek na sekunde. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{struct_engine2_d_1_1_application_data_af615bd911a81a51ce86ad164bf741940}\label{struct_engine2_d_1_1_application_data_af615bd911a81a51ce86ad164bf741940} 
 \index{Engine2D::ApplicationData@{Engine2D::ApplicationData}!ApplicationData@{ApplicationData}}
 \index{ApplicationData@{ApplicationData}!Engine2D::ApplicationData@{Engine2D::ApplicationData}}
 \doxysubsubsection{\texorpdfstring{ApplicationData()}{ApplicationData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Engine2\+D\+::\+Application\+Data\+::\+Application\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Domyslny konstruktor struktury \doxylink{struct_engine2_d_1_1_application_data}{Application\+Data}. 
 
 
 
@@ -46,11 +75,19 @@ int \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fb
 \doxysubsubsection{\texorpdfstring{ApplicationName}{ApplicationName}}
 {\footnotesize\ttfamily sf\+::\+String Engine2\+D\+::\+Application\+Data\+::\+Application\+Name}
 
+
+
+Nazwa aplikacji. 
+
 \Hypertarget{struct_engine2_d_1_1_application_data_a5395c0dbea65592e1e85b27d3c8250bc}\label{struct_engine2_d_1_1_application_data_a5395c0dbea65592e1e85b27d3c8250bc} 
 \index{Engine2D::ApplicationData@{Engine2D::ApplicationData}!displayMode@{displayMode}}
 \index{displayMode@{displayMode}!Engine2D::ApplicationData@{Engine2D::ApplicationData}}
 \doxysubsubsection{\texorpdfstring{displayMode}{displayMode}}
 {\footnotesize\ttfamily \mbox{\hyperlink{namespace_engine2_d_a52f122de378e33e8fff8684f44dbb58d}{Display\+Mode}} Engine2\+D\+::\+Application\+Data\+::display\+Mode}
+
+
+
+Tryb wyswietlania. 
 
 \Hypertarget{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fbc5d3445e69d8}\label{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fbc5d3445e69d8} 
 \index{Engine2D::ApplicationData@{Engine2D::ApplicationData}!maxFramerate@{maxFramerate}}
@@ -58,11 +95,19 @@ int \mbox{\hyperlink{struct_engine2_d_1_1_application_data_a5af8d8e496fcc046c0fb
 \doxysubsubsection{\texorpdfstring{maxFramerate}{maxFramerate}}
 {\footnotesize\ttfamily int Engine2\+D\+::\+Application\+Data\+::max\+Framerate}
 
+
+
+Maksymalna liczba klatek na sekunde. 
+
 \Hypertarget{struct_engine2_d_1_1_application_data_a6abb4b6c3fd9049e45ddc44c4031cec8}\label{struct_engine2_d_1_1_application_data_a6abb4b6c3fd9049e45ddc44c4031cec8} 
 \index{Engine2D::ApplicationData@{Engine2D::ApplicationData}!WindowSize@{WindowSize}}
 \index{WindowSize@{WindowSize}!Engine2D::ApplicationData@{Engine2D::ApplicationData}}
 \doxysubsubsection{\texorpdfstring{WindowSize}{WindowSize}}
 {\footnotesize\ttfamily sf\+::\+Vector2$<$int$>$ Engine2\+D\+::\+Application\+Data\+::\+Window\+Size}
+
+
+
+Rozmiar okna aplikacji. 
 
 
 

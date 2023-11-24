@@ -2,6 +2,11 @@
 \hypertarget{class_engine2_d_1_1_drawable_object}{}\label{class_engine2_d_1_1_drawable_object}\index{Engine2D::DrawableObject@{Engine2D::DrawableObject}}
 
 
+Klasa bazowa dla obiektow rysowalnych.  
+
+
+
+
 {\ttfamily \#include $<$Drawable\+Object.\+h$>$}
 
 Diagram dziedziczenia dla Engine2D\+::Drawable\+Object\begin{figure}[H]
@@ -14,51 +19,56 @@ Diagram dziedziczenia dla Engine2D\+::Drawable\+Object\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}{Draw}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja rysujaca obiekt. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja rysujaca obiekt z podana tekstura. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae3025eb45f8dfef8d9bade9047023502}{delete\+Me}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja usuwajaca obiekt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca widocznosc obiektu. \end{DoxyCompactList}\item 
 sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
-\item 
+\begin{DoxyCompactList}\small\item\em Wskaznik do okna renderowania. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
-\item 
+\begin{DoxyCompactList}\small\item\em Nazwa obiektu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flaga informujaca, czy obiekt jest usuwany. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Statyczne atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor zawierajacy wszystkie obiekty rysowalne. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
 \begin{DoxyCompactItemize}
 \item 
 static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Wektor wszystkich obiektow gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa bazowa dla obiektow rysowalnych. 
+
+Klasa \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object} umozliwia rysowanie obiektow, dziedziczy po klasie \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}, z usuwaniem/czyszczeniem obiektow. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}\label{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c} 
@@ -67,11 +77,19 @@ static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}
 \doxysubsubsection{\texorpdfstring{DrawableObject()}{DrawableObject()}}
 {\footnotesize\ttfamily Engine2\+D\+::\+Drawable\+Object\+::\+Drawable\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. 
+
 \Hypertarget{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}\label{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!````~DrawableObject@{\texorpdfstring{$\sim$}{\string~}DrawableObject}}
 \index{````~DrawableObject@{\texorpdfstring{$\sim$}{\string~}DrawableObject}!Engine2D::DrawableObject@{Engine2D::DrawableObject}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DrawableObject()}{\string~DrawableObject()}}
 {\footnotesize\ttfamily Engine2\+D\+::\+Drawable\+Object\+::\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wirtualny destruktor klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. 
 
 
 
@@ -84,11 +102,15 @@ static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}
 
 
 
+Wirtualna funkcja usuwajaca obiekt. 
+
+Nadpisuje funkcje z klasy bazowej \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. 
+
 Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_game_object_a082e2f4c4eefc227d9b26cf309e060bc}{Engine2\+D\+::\+Game\+Object}}.
 
 
 
-Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a98d0e15eb57c946292a7310303a6732d}{Flappy\+Bird\+::flappy\+Score}}, \mbox{\hyperlink{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}{Bitmap\+Object}}, \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a6901b9f1923b781770f201140c31d033}{Flappy\+Bird\+::flappy\+Obstacle}}, \mbox{\hyperlink{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{Menu}}, \mbox{\hyperlink{class_engine2_d_1_1_player_ab83f1535726023514ed80528ec924772}{Engine2\+D\+::\+Player}}, \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}{Engine2\+D\+::\+Shape\+Object}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a60bcccff0e97e5fe745167c361cb28d8}{Engine2\+D\+::\+Shapes\+::\+Rectangle\+Shape}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a25b0f60569320345f0d0618ad7d70bee}{Engine2\+D\+::\+Shapes\+::\+Circle\+Shape}} i \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_a1be0b22130919272fb618cc15ac341ed}{Engine2\+D\+::\+Sprite\+Object}}.
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a98d0e15eb57c946292a7310303a6732d}{Flappy\+Bird\+::flappy\+Score}}, \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a207fc305d5b844f97418614bfa38547b}{Engine2\+D\+::\+Bitmap\+Object}}, \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a6901b9f1923b781770f201140c31d033}{Flappy\+Bird\+::flappy\+Obstacle}}, \mbox{\hyperlink{class_flappy_bird_1_1_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{Flappy\+Bird\+::\+Menu}}, \mbox{\hyperlink{class_engine2_d_1_1_player_ab83f1535726023514ed80528ec924772}{Engine2\+D\+::\+Player}}, \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}{Engine2\+D\+::\+Shape\+Object}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a60bcccff0e97e5fe745167c361cb28d8}{Engine2\+D\+::\+Shapes\+::\+Rectangle\+Shape}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a25b0f60569320345f0d0618ad7d70bee}{Engine2\+D\+::\+Shapes\+::\+Circle\+Shape}} i \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_a1be0b22130919272fb618cc15ac341ed}{Engine2\+D\+::\+Sprite\+Object}}.
 
 \Hypertarget{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}\label{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!Draw@{Draw}}
@@ -98,7 +120,11 @@ Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a98d0e15eb
 
 
 
-Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a8289bc63c4c6b5cdccd52f0f8af12018}{Flappy\+Bird\+::flappy\+Obstacle}}, \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a2357b144f9af2372b176f5a9744db12e}{Flappy\+Bird\+::flappy\+Score}}, \mbox{\hyperlink{class_menu_a620012b606183501d56667c685c625fe}{Menu}}, \mbox{\hyperlink{class_engine2_d_1_1_player_a08bb2dbde38ea18a2442e16767400d61}{Engine2\+D\+::\+Player}}, \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2}{Engine2\+D\+::\+Shape\+Object}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a45a7686de53428ca13d8746eaa412b2e}{Engine2\+D\+::\+Shapes\+::\+Rectangle\+Shape}} i \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a815ce0012a17f00d87d03b8834810743}{Engine2\+D\+::\+Shapes\+::\+Circle\+Shape}}.
+Wirtualna funkcja rysujaca obiekt. 
+
+
+
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a8289bc63c4c6b5cdccd52f0f8af12018}{Flappy\+Bird\+::flappy\+Obstacle}}, \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a2357b144f9af2372b176f5a9744db12e}{Flappy\+Bird\+::flappy\+Score}}, \mbox{\hyperlink{class_flappy_bird_1_1_menu_a620012b606183501d56667c685c625fe}{Flappy\+Bird\+::\+Menu}}, \mbox{\hyperlink{class_engine2_d_1_1_player_a08bb2dbde38ea18a2442e16767400d61}{Engine2\+D\+::\+Player}}, \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2}{Engine2\+D\+::\+Shape\+Object}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a45a7686de53428ca13d8746eaa412b2e}{Engine2\+D\+::\+Shapes\+::\+Rectangle\+Shape}} i \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a815ce0012a17f00d87d03b8834810743}{Engine2\+D\+::\+Shapes\+::\+Circle\+Shape}}.
 
 \Hypertarget{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}\label{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!Draw@{Draw}}
@@ -108,6 +134,15 @@ Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a8289bc
 
 
 
+Funkcja rysujaca obiekt z podana tekstura. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em texture} & Tekstura do narysowania. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Dokumentacja atrybutów składowych}
 \Hypertarget{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}\label{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!All@{All}}
@@ -115,11 +150,19 @@ Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a8289bc
 \doxysubsubsection{\texorpdfstring{All}{All}}
 {\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ Engine2\+D\+::\+Drawable\+Object\+::\+All\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Wektor zawierajacy wszystkie obiekty rysowalne. 
+
 \Hypertarget{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}\label{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!isUi@{isUi}}
 \index{isUi@{isUi}!Engine2D::DrawableObject@{Engine2D::DrawableObject}}
 \doxysubsubsection{\texorpdfstring{isUi}{isUi}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Drawable\+Object\+::is\+Ui}
+
+
+
+Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika. 
 
 \Hypertarget{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}\label{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!visible@{visible}}
@@ -127,11 +170,19 @@ Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a8289bc
 \doxysubsubsection{\texorpdfstring{visible}{visible}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Drawable\+Object\+::visible}
 
+
+
+Flaga okreslajaca widocznosc obiektu. 
+
 \Hypertarget{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}\label{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395} 
 \index{Engine2D::DrawableObject@{Engine2D::DrawableObject}!window@{window}}
 \index{window@{window}!Engine2D::DrawableObject@{Engine2D::DrawableObject}}
 \doxysubsubsection{\texorpdfstring{window}{window}}
 {\footnotesize\ttfamily sf\+::\+Render\+Window\texorpdfstring{$\ast$}{*} Engine2\+D\+::\+Drawable\+Object\+::window}
+
+
+
+Wskaznik do okna renderowania. 
 
 
 

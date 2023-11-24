@@ -2,77 +2,87 @@
 \hypertarget{class_engine2_d_1_1_engine}{}\label{class_engine2_d_1_1_engine}\index{Engine2D::Engine@{Engine2D::Engine}}
 
 
+Klasa reprezentujaca silnik gry.  
+
+
+
+
 {\ttfamily \#include $<$Engine.\+h$>$}
 
 \doxysubsubsection*{Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_engine2_d_1_1_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}{Engine}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktor silnika. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_engine2_d_1_1_engine_a8ef7030a089ecb30bbfcb9e43094717a}{\texorpdfstring{$\sim$}{\string~}\+Engine}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktor silnika. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_engine_aa4997f7b6143ac76506aa7e4cd6c97e3}{is\+Key\+Triggered}} (sf\+::\+Keyboard\+::\+Key key)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy klawisz zostal nacisniety. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Statyczne metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{class_engine2_d_1_1_engine_acf56e5fefb796f7bc953d9af2f63b86a}{Print\+Log}} (const std\+::string \&log)
-\item 
+\begin{DoxyCompactList}\small\item\em Wypisuje log do pliku. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{class_engine2_d_1_1_engine}{Engine}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_engine_aeb7470965f2b7388361b31ec0479e8ec}{Get\+Singleton}} (bool)
-\item 
+\begin{DoxyCompactList}\small\item\em Pobiera jedyna instancje silnika. \end{DoxyCompactList}\item 
 static double \mbox{\hyperlink{class_engine2_d_1_1_engine_a2666f40bdfa2b4f593548a6fb81cdef6}{Angle\+To\+Rad}} (float angle)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Konwertuje kat na radiany. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_engine_a7b6466937a41bce2ea717708295e3d31}{Window}}
-\item 
+\begin{DoxyCompactList}\small\item\em Okno gry. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_engine2_d_1_1_engine_a98e522d197d59108b8c4a1e8f13851a9}{delta\+Time}}
-\item 
+\begin{DoxyCompactList}\small\item\em Czas, ktory uplynal miedzy klatkami gry. \end{DoxyCompactList}\item 
 sf\+::\+Font \mbox{\hyperlink{class_engine2_d_1_1_engine_a08748728ac09b10c8be0c33671d0c8c3}{base\+Font}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Czcionka uzywana w grze. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Statyczne atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 static float \mbox{\hyperlink{class_engine2_d_1_1_engine_aa52909143dad8875ad6cd273115625aa}{Gravity}} = 9.\+81f
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stala grawitacyjna. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Statyczne atrybuty chronione}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{class_engine2_d_1_1_engine}{Engine}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_engine_a485fd989d0148f2db20718c8d9c43b52}{singleton}} = NULL
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Jedynka instancja silnika. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Metody prywatne}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_engine2_d_1_1_engine_a2cbd5624354900239e762aa52e2cfd5a}{Init\+Game}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Inicjalizuje gre. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_engine_a818c383477fd6843a523022aa680bc34}{Engine\+Loop}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Glowna petla gry. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_engine_a09116b4c628847d34c221fd2f43b95e1}{Cleanup}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja czyszczaca zasoby silnika. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_engine_a70ea9ba93ef4ae4d2aa8bb89dfd4138b}{Cleanup\+Scene}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja czyszczaca scene gry. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_engine_a72d831870449eb9b371dfb79ddbc3dd1}{Spawn\+Game}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcja inicjalizujaca nowa gre. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_engine2_d_1_1_engine_a7096272ef8d1f831e780ece7976a8e98}{remove\+Awaiting\+Objects}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Usuwa obiekty oczekujace na usuniecie. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Statyczne metody prywatne}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{class_engine2_d_1_1_engine_a089e1546600008d56ff3a7f7a1740134}{Init\+Logs}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Inicjalizuje logi. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atrybuty prywatne}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_engine_a614215092cdde8ed504074cb30ef8a07}{enabled}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga wskazujaca, czy silnik jest wlaczony. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_engine_ab9b003745f06d75439db3ea01decd3ce}{keyboard\+Input\+Enabled}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga wskazujaca, czy obsluga klawiatury jest wlaczona. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_engine2_d_1_1_engine_aa77734822f9e56796684d2cbe17dadd5}{mouse\+Input\+Enabled}}
-\item 
+\begin{DoxyCompactList}\small\item\em Flaga wskazujaca, czy obsluga myszy jest wlaczona. \end{DoxyCompactList}\item 
 sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfbe316a65447ea62}{mouse\+Position}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Aktualna pozycja myszy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentujaca silnik gry. 
+
+Klasa \doxylink{class_engine2_d_1_1_engine}{Engine} odpowiada za zarzadzanie glowna petla gry, inicjalizacje, sprzatanie i inne aspekty zarzadzania gra. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{class_engine2_d_1_1_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}\label{class_engine2_d_1_1_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2} 
@@ -81,11 +91,19 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
 {\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Konstruktor silnika. 
+
 \Hypertarget{class_engine2_d_1_1_engine_a8ef7030a089ecb30bbfcb9e43094717a}\label{class_engine2_d_1_1_engine_a8ef7030a089ecb30bbfcb9e43094717a} 
 \index{Engine2D::Engine@{Engine2D::Engine}!````~Engine@{\texorpdfstring{$\sim$}{\string~}Engine}}
 \index{````~Engine@{\texorpdfstring{$\sim$}{\string~}Engine}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Engine()}{\string~Engine()}}
 {\footnotesize\ttfamily Engine\+::\texorpdfstring{$\sim$}{\string~}\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor silnika. 
 
 
 
@@ -96,11 +114,27 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{AngleToRad()}{AngleToRad()}}
 {\footnotesize\ttfamily double Engine2\+D\+::\+Engine\+::\+Angle\+To\+Rad (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Konwertuje kat na radiany. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em angle} & Kat w stopniach. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wartosc kata w radianach. 
+\end{DoxyReturn}
 \Hypertarget{class_engine2_d_1_1_engine_a09116b4c628847d34c221fd2f43b95e1}\label{class_engine2_d_1_1_engine_a09116b4c628847d34c221fd2f43b95e1} 
 \index{Engine2D::Engine@{Engine2D::Engine}!Cleanup@{Cleanup}}
 \index{Cleanup@{Cleanup}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{Cleanup()}{Cleanup()}}
 {\footnotesize\ttfamily void Engine\+::\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja czyszczaca zasoby silnika. 
 
 \Hypertarget{class_engine2_d_1_1_engine_a70ea9ba93ef4ae4d2aa8bb89dfd4138b}\label{class_engine2_d_1_1_engine_a70ea9ba93ef4ae4d2aa8bb89dfd4138b} 
 \index{Engine2D::Engine@{Engine2D::Engine}!CleanupScene@{CleanupScene}}
@@ -108,11 +142,19 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{CleanupScene()}{CleanupScene()}}
 {\footnotesize\ttfamily void Engine\+::\+Cleanup\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Funkcja czyszczaca scene gry. 
+
 \Hypertarget{class_engine2_d_1_1_engine_a818c383477fd6843a523022aa680bc34}\label{class_engine2_d_1_1_engine_a818c383477fd6843a523022aa680bc34} 
 \index{Engine2D::Engine@{Engine2D::Engine}!EngineLoop@{EngineLoop}}
 \index{EngineLoop@{EngineLoop}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{EngineLoop()}{EngineLoop()}}
 {\footnotesize\ttfamily void Engine\+::\+Engine\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Glowna petla gry. 
 
 \Hypertarget{class_engine2_d_1_1_engine_aeb7470965f2b7388361b31ec0479e8ec}\label{class_engine2_d_1_1_engine_aeb7470965f2b7388361b31ec0479e8ec} 
 \index{Engine2D::Engine@{Engine2D::Engine}!GetSingleton@{GetSingleton}}
@@ -120,11 +162,27 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{GetSingleton()}{GetSingleton()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_engine2_d_1_1_engine}{Engine}} \texorpdfstring{$\ast$}{*} Engine\+::\+Get\+Singleton (\begin{DoxyParamCaption}\item[{bool}]{Create\+If\+Null }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Pobiera jedyna instancje silnika. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em flag} & Flaga (nieokreslona) -\/ bez znaczenia w komentarzach. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Wskaznik do jedynego obiektu klasy \doxylink{class_engine2_d_1_1_engine}{Engine}. 
+\end{DoxyReturn}
 \Hypertarget{class_engine2_d_1_1_engine_a2cbd5624354900239e762aa52e2cfd5a}\label{class_engine2_d_1_1_engine_a2cbd5624354900239e762aa52e2cfd5a} 
 \index{Engine2D::Engine@{Engine2D::Engine}!InitGame@{InitGame}}
 \index{InitGame@{InitGame}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{InitGame()}{InitGame()}}
 {\footnotesize\ttfamily void Engine\+::\+Init\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inicjalizuje gre. 
 
 \Hypertarget{class_engine2_d_1_1_engine_a089e1546600008d56ff3a7f7a1740134}\label{class_engine2_d_1_1_engine_a089e1546600008d56ff3a7f7a1740134} 
 \index{Engine2D::Engine@{Engine2D::Engine}!InitLogs@{InitLogs}}
@@ -132,29 +190,62 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{InitLogs()}{InitLogs()}}
 {\footnotesize\ttfamily void Engine\+::\+Init\+Logs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
+
+
+Inicjalizuje logi. 
+
 \Hypertarget{class_engine2_d_1_1_engine_aa4997f7b6143ac76506aa7e4cd6c97e3}\label{class_engine2_d_1_1_engine_aa4997f7b6143ac76506aa7e4cd6c97e3} 
 \index{Engine2D::Engine@{Engine2D::Engine}!isKeyTriggered@{isKeyTriggered}}
 \index{isKeyTriggered@{isKeyTriggered}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{isKeyTriggered()}{isKeyTriggered()}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Engine\+::is\+Key\+Triggered (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key }\end{DoxyParamCaption})}
 
+
+
+Sprawdza, czy klawisz zostal nacisniety. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key} & Klawisz do sprawdzenia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true, jesli klawisz zostal nacisniety, w przeciwnym razie false. 
+\end{DoxyReturn}
 \Hypertarget{class_engine2_d_1_1_engine_acf56e5fefb796f7bc953d9af2f63b86a}\label{class_engine2_d_1_1_engine_acf56e5fefb796f7bc953d9af2f63b86a} 
 \index{Engine2D::Engine@{Engine2D::Engine}!PrintLog@{PrintLog}}
 \index{PrintLog@{PrintLog}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{PrintLog()}{PrintLog()}}
 {\footnotesize\ttfamily void Engine\+::\+Print\+Log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{log }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Wypisuje log do pliku. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em log} & Tekst logu do wypisania. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_engine2_d_1_1_engine_a7096272ef8d1f831e780ece7976a8e98}\label{class_engine2_d_1_1_engine_a7096272ef8d1f831e780ece7976a8e98} 
 \index{Engine2D::Engine@{Engine2D::Engine}!removeAwaitingObjects@{removeAwaitingObjects}}
 \index{removeAwaitingObjects@{removeAwaitingObjects}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{removeAwaitingObjects()}{removeAwaitingObjects()}}
 {\footnotesize\ttfamily void Engine\+::remove\+Awaiting\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Usuwa obiekty oczekujace na usuniecie. 
+
 \Hypertarget{class_engine2_d_1_1_engine_a72d831870449eb9b371dfb79ddbc3dd1}\label{class_engine2_d_1_1_engine_a72d831870449eb9b371dfb79ddbc3dd1} 
 \index{Engine2D::Engine@{Engine2D::Engine}!SpawnGame@{SpawnGame}}
 \index{SpawnGame@{SpawnGame}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{SpawnGame()}{SpawnGame()}}
 {\footnotesize\ttfamily void Engine\+::\+Spawn\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Funkcja inicjalizujaca nowa gre. 
 
 
 
@@ -165,11 +256,19 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{baseFont}{baseFont}}
 {\footnotesize\ttfamily sf\+::\+Font Engine2\+D\+::\+Engine\+::base\+Font}
 
+
+
+Czcionka uzywana w grze. 
+
 \Hypertarget{class_engine2_d_1_1_engine_a98e522d197d59108b8c4a1e8f13851a9}\label{class_engine2_d_1_1_engine_a98e522d197d59108b8c4a1e8f13851a9} 
 \index{Engine2D::Engine@{Engine2D::Engine}!deltaTime@{deltaTime}}
 \index{deltaTime@{deltaTime}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{deltaTime}{deltaTime}}
 {\footnotesize\ttfamily double Engine2\+D\+::\+Engine\+::delta\+Time}
+
+
+
+Czas, ktory uplynal miedzy klatkami gry. 
 
 \Hypertarget{class_engine2_d_1_1_engine_a614215092cdde8ed504074cb30ef8a07}\label{class_engine2_d_1_1_engine_a614215092cdde8ed504074cb30ef8a07} 
 \index{Engine2D::Engine@{Engine2D::Engine}!enabled@{enabled}}
@@ -177,11 +276,19 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{enabled}{enabled}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Engine\+::enabled\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Flaga wskazujaca, czy silnik jest wlaczony. 
+
 \Hypertarget{class_engine2_d_1_1_engine_aa52909143dad8875ad6cd273115625aa}\label{class_engine2_d_1_1_engine_aa52909143dad8875ad6cd273115625aa} 
 \index{Engine2D::Engine@{Engine2D::Engine}!Gravity@{Gravity}}
 \index{Gravity@{Gravity}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{Gravity}{Gravity}}
 {\footnotesize\ttfamily float Engine\+::\+Gravity = 9.\+81f\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stala grawitacyjna. 
 
 \Hypertarget{class_engine2_d_1_1_engine_ab9b003745f06d75439db3ea01decd3ce}\label{class_engine2_d_1_1_engine_ab9b003745f06d75439db3ea01decd3ce} 
 \index{Engine2D::Engine@{Engine2D::Engine}!keyboardInputEnabled@{keyboardInputEnabled}}
@@ -189,11 +296,19 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{keyboardInputEnabled}{keyboardInputEnabled}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Engine\+::keyboard\+Input\+Enabled\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Flaga wskazujaca, czy obsluga klawiatury jest wlaczona. 
+
 \Hypertarget{class_engine2_d_1_1_engine_aa77734822f9e56796684d2cbe17dadd5}\label{class_engine2_d_1_1_engine_aa77734822f9e56796684d2cbe17dadd5} 
 \index{Engine2D::Engine@{Engine2D::Engine}!mouseInputEnabled@{mouseInputEnabled}}
 \index{mouseInputEnabled@{mouseInputEnabled}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{mouseInputEnabled}{mouseInputEnabled}}
 {\footnotesize\ttfamily bool Engine2\+D\+::\+Engine\+::mouse\+Input\+Enabled\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga wskazujaca, czy obsluga myszy jest wlaczona. 
 
 \Hypertarget{class_engine2_d_1_1_engine_ab2114bae3ea8475dfbe316a65447ea62}\label{class_engine2_d_1_1_engine_ab2114bae3ea8475dfbe316a65447ea62} 
 \index{Engine2D::Engine@{Engine2D::Engine}!mousePosition@{mousePosition}}
@@ -201,17 +316,29 @@ sf\+::\+Vector2i \mbox{\hyperlink{class_engine2_d_1_1_engine_ab2114bae3ea8475dfb
 \doxysubsubsection{\texorpdfstring{mousePosition}{mousePosition}}
 {\footnotesize\ttfamily sf\+::\+Vector2i Engine2\+D\+::\+Engine\+::mouse\+Position\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Aktualna pozycja myszy. 
+
 \Hypertarget{class_engine2_d_1_1_engine_a485fd989d0148f2db20718c8d9c43b52}\label{class_engine2_d_1_1_engine_a485fd989d0148f2db20718c8d9c43b52} 
 \index{Engine2D::Engine@{Engine2D::Engine}!singleton@{singleton}}
 \index{singleton@{singleton}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{singleton}{singleton}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_engine2_d_1_1_engine}{Engine}} \texorpdfstring{$\ast$}{*} Engine\+::singleton = NULL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
 
+
+
+Jedynka instancja silnika. 
+
 \Hypertarget{class_engine2_d_1_1_engine_a7b6466937a41bce2ea717708295e3d31}\label{class_engine2_d_1_1_engine_a7b6466937a41bce2ea717708295e3d31} 
 \index{Engine2D::Engine@{Engine2D::Engine}!Window@{Window}}
 \index{Window@{Window}!Engine2D::Engine@{Engine2D::Engine}}
 \doxysubsubsection{\texorpdfstring{Window}{Window}}
 {\footnotesize\ttfamily sf\+::\+Render\+Window\texorpdfstring{$\ast$}{*} Engine2\+D\+::\+Engine\+::\+Window}
+
+
+
+Okno gry. 
 
 
 

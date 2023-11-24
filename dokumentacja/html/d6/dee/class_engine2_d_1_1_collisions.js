@@ -11,7 +11,6 @@ var class_engine2_d_1_1_collisions =
     [ "CollidesWithAny", "d6/dee/class_engine2_d_1_1_collisions.html#a78b187d6c671d4c3a70195ca1e4a4517", null ],
     [ "deleteMe", "d6/dee/class_engine2_d_1_1_collisions.html#a964f14c4a467d3e0740ed27b6637ee07", null ],
     [ "drawCorners", "d6/dee/class_engine2_d_1_1_collisions.html#a08fcf16ec995148a9bca335b4118ca31", null ],
-    [ "FindClosestNonCollidingPoint", "d6/dee/class_engine2_d_1_1_collisions.html#a87087ba943cacbab05cc13aaaf41405c", null ],
     [ "getGlobalBounds", "d6/dee/class_engine2_d_1_1_collisions.html#a6b8065a4c5332cc6a31dfad496207cf4", null ],
     [ "moveOutOfCollision", "d6/dee/class_engine2_d_1_1_collisions.html#a7538ca90a93d4c2a12727d28ca25317b", null ],
     [ "moveOutOfCollision", "d6/dee/class_engine2_d_1_1_collisions.html#a39e0d148b835337fdd40941b0ffcc615", null ],
