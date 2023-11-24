@@ -36,7 +36,7 @@ Engine::Engine()
 		return;
 	}
 	singleton = this;
-	cout << "Creating Engine Singleton.\n";
+	Engine::PrintLog("Creating Engine Singleton.");
 	enabled = true;
 	keyboardInputEnabled = true;
 	mouseInputEnabled = true;
@@ -46,11 +46,11 @@ Engine::Engine()
 }
 Engine::~Engine()
 {
-	cout << "Called Engine Destructor." << endl;
+	Engine::PrintLog("Called Engine Destructor.");
 	if (Engine::singleton == this)
 	{
 		Engine::singleton = NULL;
-		cout << "SETTING SINGLETON TO NULL\n";
+		Engine::PrintLog("SETTING SINGLETON TO NULL");
 	}
 }
 void Engine::InitGame()
@@ -101,7 +101,7 @@ void Engine::EngineLoop()
 
 	sf::Text text;
 	sf::Text scoreText;
-	cout << "GRAVITY NOW: " << Gravity << endl;
+	//cout << "GRAVITY NOW: " << Gravity << endl;
 
 
 	if (!baseFont.loadFromFile("fonts/PixellettersFull.ttf"))
@@ -512,7 +512,7 @@ void Engine::removeAwaitingObjects()
 		vector<GameObject*>::iterator itF = std::find(GameObject::All.begin(), GameObject::All.end(), g);
 		if (*itF != NULL)
 		{
-			cout << "REMOVING OBJECT '" << (*itF) << "'" << endl;
+			//cout << "REMOVING OBJECT '" << (*itF) << "'" << endl;
 			(*itF)->deleteMe();
 		}
 		else {

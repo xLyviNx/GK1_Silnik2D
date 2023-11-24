@@ -1,0 +1,196 @@
+\doxysection{Dokumentacja klasy Engine2D\+::Primitive\+Renderer}
+\hypertarget{class_engine2_d_1_1_primitive_renderer}{}\label{class_engine2_d_1_1_primitive_renderer}\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+
+
+klasa sluzaca do obslugi rysowania prymitywow  
+
+
+
+
+{\ttfamily \#include $<$Primitive\+Renderer.\+h$>$}
+
+Diagram dziedziczenia dla Engine2D\+::Primitive\+Renderer\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d0/de3/class_engine2_d_1_1_primitive_renderer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_ad3db6a23e2db7c6fa47773ee1acd429c}{Primitive\+Renderer}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_abec77eb7ec17199fb76914f73b24dca1}{Primitive\+Renderer}} (sf\+::\+Color color, float width)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}{Draw\+Single\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f A, sf\+::\+Vector2f B, float \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}})
+\begin{DoxyCompactList}\small\item\em metoda sluzaca do rysowania pojedynczej linii wedlug algorytmu napisanego recznej \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a77b725f465775a998309afd3e74f7093}{Draw\+Single\+Line\+SFML}} (sf\+::\+Vector2f posA, sf\+::\+Vector2f posB, float angle, sf\+::\+Color \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}})
+\begin{DoxyCompactList}\small\item\em funkcja rysujaca linie za pomoca metod biblioteki SFML \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{Draw\+Circle}} (sf\+::\+Vector2f center, float radius, sf\+::\+Color color)
+\begin{DoxyCompactList}\small\item\em metoda rysujaca kolko \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a5c902ca279cab032ff9c13c4b4731dfa}{Draw\+Circle}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f center, std\+::vector$<$ sf\+::\+Vector2f $>$ points, sf\+::\+Color color)
+\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, std\+::vector$<$ sf\+::\+Vector2f $>$ \texorpdfstring{$\ast$}{*}points, float \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}})
+\begin{DoxyCompactList}\small\item\em funkcja rysujaca linie po Vectorze punktow \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_ac687be5aa16beaae90444d712ed47c98}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f points\mbox{[}$\,$\mbox{]}, int points\+Count, float \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}})
+\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}{Draw\+Ellipse}} (sf\+::\+Vector2f center, float RX, float RY, sf\+::\+Color color)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Color \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}}
+\begin{DoxyCompactList}\small\item\em kolor obiektu \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+klasa sluzaca do obslugi rysowania prymitywow 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_ad3db6a23e2db7c6fa47773ee1acd429c}\label{class_engine2_d_1_1_primitive_renderer_ad3db6a23e2db7c6fa47773ee1acd429c} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!PrimitiveRenderer@{PrimitiveRenderer}}
+\index{PrimitiveRenderer@{PrimitiveRenderer}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{PrimitiveRenderer()}{PrimitiveRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Engine2\+D\+::\+Primitive\+Renderer\+::\+Primitive\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_abec77eb7ec17199fb76914f73b24dca1}\label{class_engine2_d_1_1_primitive_renderer_abec77eb7ec17199fb76914f73b24dca1} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!PrimitiveRenderer@{PrimitiveRenderer}}
+\index{PrimitiveRenderer@{PrimitiveRenderer}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{PrimitiveRenderer()}{PrimitiveRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Primitive\+Renderer\+::\+Primitive\+Renderer (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{color,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_a5c902ca279cab032ff9c13c4b4731dfa}\label{class_engine2_d_1_1_primitive_renderer_a5c902ca279cab032ff9c13c4b4731dfa} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!DrawCircle@{DrawCircle}}
+\index{DrawCircle@{DrawCircle}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{render\+Window,  }\item[{sf\+::\+Vector2f}]{center,  }\item[{std\+::vector$<$ sf\+::\+Vector2f $>$}]{points,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}\label{class_engine2_d_1_1_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!DrawCircle@{DrawCircle}}
+\index{DrawCircle@{DrawCircle}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{center,  }\item[{float}]{radius,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+metoda rysujaca kolko 
+
+
+\begin{DoxyParams}{Parametry}
+{\em center} & sf\+::\+Vector wskazujacy na srodek kola \\
+\hline
+{\em radius} & promien kola \\
+\hline
+{\em color} & kolor \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}\label{class_engine2_d_1_1_primitive_renderer_ac727386a4965cfdde65af04474c1acfc} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!DrawEllipse@{DrawEllipse}}
+\index{DrawEllipse@{DrawEllipse}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{DrawEllipse()}{DrawEllipse()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Ellipse (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{center,  }\item[{float}]{RX,  }\item[{float}]{RY,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}\label{class_engine2_d_1_1_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!DrawSingleLine@{DrawSingleLine}}
+\index{DrawSingleLine@{DrawSingleLine}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{DrawSingleLine()}{DrawSingleLine()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Single\+Line (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{render\+Window,  }\item[{sf\+::\+Vector2f}]{A,  }\item[{sf\+::\+Vector2f}]{B,  }\item[{float}]{Width,  }\item[{sf\+::\+Color}]{Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+metoda sluzaca do rysowania pojedynczej linii wedlug algorytmu napisanego recznej 
+
+
+\begin{DoxyParams}{Parametry}
+{\em render\+Window} & okno w ktorym ma byc wyrenderowana linia \\
+\hline
+{\em A} & obiekt typu sf\+::\+Vector2f majacy wskazac pierwsza wspolrzedna do narysowania \\
+\hline
+{\em B} & obiekt typu sf\+::\+Vector2f majacy wskazac druga wspolrzedna do narysowania \\
+\hline
+{\em Width} & szerokosc linii \\
+\hline
+{\em Color} & kolor linii \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_a77b725f465775a998309afd3e74f7093}\label{class_engine2_d_1_1_primitive_renderer_a77b725f465775a998309afd3e74f7093} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!DrawSingleLineSFML@{DrawSingleLineSFML}}
+\index{DrawSingleLineSFML@{DrawSingleLineSFML}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{DrawSingleLineSFML()}{DrawSingleLineSFML()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Single\+Line\+SFML (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{posA,  }\item[{sf\+::\+Vector2f}]{posB,  }\item[{float}]{angle,  }\item[{sf\+::\+Color}]{Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+funkcja rysujaca linie za pomoca metod biblioteki SFML 
+
+
+\begin{DoxyParams}{Parametry}
+{\em posA} & sf\+::\+Vector wskazujacy poczatek linii \\
+\hline
+{\em posB} & sf\+::\+Vector wskazujacy koniec linii \\
+\hline
+{\em angle} & kat lini \\
+\hline
+{\em Color} & kolor linii \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_ac687be5aa16beaae90444d712ed47c98}\label{class_engine2_d_1_1_primitive_renderer_ac687be5aa16beaae90444d712ed47c98} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!PointLine@{PointLine}}
+\index{PointLine@{PointLine}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{PointLine()}{PointLine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Point\+Line (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{render\+Window,  }\item[{sf\+::\+Vector2f}]{points\mbox{[}$\,$\mbox{]},  }\item[{int}]{points\+Count,  }\item[{float}]{Width,  }\item[{sf\+::\+Color}]{Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}\label{class_engine2_d_1_1_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!PointLine@{PointLine}}
+\index{PointLine@{PointLine}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{PointLine()}{PointLine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::\+Point\+Line (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{render\+Window,  }\item[{std\+::vector$<$ sf\+::\+Vector2f $>$ \texorpdfstring{$\ast$}{*}}]{points,  }\item[{float}]{Width,  }\item[{sf\+::\+Color}]{Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+funkcja rysujaca linie po Vectorze punktow 
+
+
+\begin{DoxyParams}{Parametry}
+{\em render\+Window} & okno w ktorym ma sie wyrenderowac linia \\
+\hline
+{\em points} & Vector z punktami \\
+\hline
+{\em Width} & szerokosc linii \\
+\hline
+{\em Color} & kolor linii \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}\label{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!Color@{Color}}
+\index{Color@{Color}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily sf\+::\+Color Engine2\+D\+::\+Primitive\+Renderer\+::\+Color}
+
+
+
+kolor obiektu 
+
+\Hypertarget{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}\label{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284} 
+\index{Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}!Width@{Width}}
+\index{Width@{Width}!Engine2D::PrimitiveRenderer@{Engine2D::PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily float Engine2\+D\+::\+Primitive\+Renderer\+::\+Width}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_primitive_renderer_8h}{Primitive\+Renderer.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_primitive_renderer_8cpp}{Primitive\+Renderer.\+cpp}}\end{DoxyCompactItemize}

@@ -1,5 +1,6 @@
 #include "InputReader.h"
 
+using namespace Engine2D;
 vector<InputReader*> InputReader::InputReaders = vector<InputReader*>();
 void InputReader::KeyPressed(sf::Keyboard::Key keyPressed) {}
 void InputReader::KeyReleased(sf::Keyboard::Key keyPressed) {}

@@ -14,7 +14,7 @@ namespace Engine2D
 		{
 			renderWindow = engine->Window;
 		}
-		cout << "SHAPE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
+		//cout << "SHAPE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 		this->position = position;
 		this->name = "Shape Object";
 	}
@@ -27,12 +27,12 @@ namespace Engine2D
 		{
 			renderWindow = engine->Window;
 		}
-		cout << "SHAPE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
+		//cout << "SHAPE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 		this->position = position;
 		this->name = name;
 		visible = true;
-		printf("ADDRESS: %p\n NAME: ", myTransform);
-		cout << name << endl;
+		//printf("ADDRESS: %p\n NAME: ", myTransform);
+		//cout << name << endl;
 	}
 
 	void ShapeObject::deleteMe()
@@ -63,7 +63,7 @@ namespace Engine2D
 	Shapes::RectangleShape::RectangleShape(Vector2f position, float A, float B, Color color, float width)
 		: ShapeObject("RectangleShape Object", position) {
 		this->fillColor = Color::Transparent;
-		cout << "RECTANGLE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
+		//cout << "RECTANGLE CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 		this->outlinewidth = width;
 		localA = A;
 		localB = B;
@@ -155,6 +155,6 @@ namespace Engine2D
 		this->localRadius = R;
 		this->color = color;
 		PropertiesChanged();
-		cout << "bb";
+		//cout << "bb";
 	}
 }

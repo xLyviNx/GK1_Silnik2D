@@ -98,6 +98,9 @@ $(document).ready(function(){initNavTree('d9/dbf/class_bitmap_handler.html','../
 </div><!--header-->
 <div class="contents">
 
+<p>klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku, zaladowanie do pliku, kopiowanie.  
+ <a href="../../d9/dbf/class_bitmap_handler.html#details">Więcej...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d7/d0f/_bitmap_handler_8h_source.html">BitmapHandler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,12 +108,15 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a09f32eb45ac99e0736d711e16ab83277" id="r_a09f32eb45ac99e0736d711e16ab83277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#a09f32eb45ac99e0736d711e16ab83277">BitmapHandler</a> (int <a class="el" href="../../d9/dbf/class_bitmap_handler.html#aad204798965e06a3564981c7eca49e9e">width</a>, int <a class="el" href="../../d9/dbf/class_bitmap_handler.html#a3a1df71b7300646c1d12a01becc530a4">height</a>)</td></tr>
 <tr class="separator:a09f32eb45ac99e0736d711e16ab83277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac309d5a11db05b19ae6e746ecb059e30" id="r_ac309d5a11db05b19ae6e746ecb059e30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#ac309d5a11db05b19ae6e746ecb059e30">loadFromFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ac309d5a11db05b19ae6e746ecb059e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja ladujaca bitmape do obiektu  <br /></td></tr>
 <tr class="separator:ac309d5a11db05b19ae6e746ecb059e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a540242b3987fd3c09733837a5034a535" id="r_a540242b3987fd3c09733837a5034a535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#a540242b3987fd3c09733837a5034a535">saveToFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a540242b3987fd3c09733837a5034a535"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja ladujaca bitmape z obiektu do pliku  <br /></td></tr>
 <tr class="separator:a540242b3987fd3c09733837a5034a535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511066eeb30de789c46b8e9c8f658be2" id="r_a511066eeb30de789c46b8e9c8f658be2"><td class="memItemLeft" align="right" valign="top">sf::Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#a511066eeb30de789c46b8e9c8f658be2">getbitmap</a> ()</td></tr>
 <tr class="separator:a511066eeb30de789c46b8e9c8f658be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98023ad77ac99f63d1408d4baaf53e0e" id="r_a98023ad77ac99f63d1408d4baaf53e0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#a98023ad77ac99f63d1408d4baaf53e0e">copyTo</a> (<a class="el" href="../../d9/dbf/class_bitmap_handler.html">BitmapHandler</a> &amp;other)</td></tr>
+<tr class="memdesc:a98023ad77ac99f63d1408d4baaf53e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">funkcja kopiujaca bitmape do innego obiektu typu <a class="el" href="../../d9/dbf/class_bitmap_handler.html" title="klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku,...">BitmapHandler</a>  <br /></td></tr>
 <tr class="separator:a98023ad77ac99f63d1408d4baaf53e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a428cf69304b1384d24f1da99e9680621" id="r_a428cf69304b1384d24f1da99e9680621"><td class="memItemLeft" align="right" valign="top">sf::Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#a428cf69304b1384d24f1da99e9680621">getImage</a> ()</td></tr>
 <tr class="separator:a428cf69304b1384d24f1da99e9680621"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,11 +129,15 @@ Atrybuty publiczne</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Atrybuty chronione</h2></td></tr>
 <tr class="memitem:aad204798965e06a3564981c7eca49e9e" id="r_aad204798965e06a3564981c7eca49e9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#aad204798965e06a3564981c7eca49e9e">width</a></td></tr>
+<tr class="memdesc:aad204798965e06a3564981c7eca49e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">szerokosc obiektu  <br /></td></tr>
 <tr class="separator:aad204798965e06a3564981c7eca49e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1df71b7300646c1d12a01becc530a4" id="r_a3a1df71b7300646c1d12a01becc530a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbf/class_bitmap_handler.html#a3a1df71b7300646c1d12a01becc530a4">height</a></td></tr>
+<tr class="memdesc:a3a1df71b7300646c1d12a01becc530a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">wysokosc obiektu  <br /></td></tr>
 <tr class="separator:a3a1df71b7300646c1d12a01becc530a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku, zaladowanie do pliku, kopiowanie. </p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
 <a id="a09f32eb45ac99e0736d711e16ab83277" name="a09f32eb45ac99e0736d711e16ab83277"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09f32eb45ac99e0736d711e16ab83277">&#9670;&#160;</a></span>BitmapHandler()</h2>
 
@@ -172,6 +182,14 @@ Atrybuty chronione</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>funkcja kopiujaca bitmape do innego obiektu typu <a class="el" href="../../d9/dbf/class_bitmap_handler.html" title="klasa sluzaca do obslugi bitmap z technicznego punktu widzenia tj. zaladowanie z pliku,...">BitmapHandler</a> </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>obiekt do ktorego ma byc przekopiowana bitmapa </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -225,6 +243,14 @@ Atrybuty chronione</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>funkcja ladujaca bitmape do obiektu </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku z ktorego bitmapa ma byc zaladowana. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a540242b3987fd3c09733837a5034a535" name="a540242b3987fd3c09733837a5034a535"></a>
@@ -242,6 +268,14 @@ Atrybuty chronione</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>funkcja ladujaca bitmape z obiektu do pliku </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nazwa pliku z ktorego bitmapa ma byc zaladowana. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -280,6 +314,8 @@ Atrybuty chronione</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>wysokosc obiektu </p>
+
 </div>
 </div>
 <a id="aad204798965e06a3564981c7eca49e9e" name="aad204798965e06a3564981c7eca49e9e"></a>
@@ -301,6 +337,8 @@ Atrybuty chronione</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>szerokosc obiektu </p>
 
 </div>
 </div>

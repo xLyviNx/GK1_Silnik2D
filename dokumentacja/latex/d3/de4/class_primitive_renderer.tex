@@ -2,6 +2,11 @@
 \hypertarget{class_primitive_renderer}{}\label{class_primitive_renderer}\index{PrimitiveRenderer@{PrimitiveRenderer}}
 
 
+klasa sluzaca do obslugi rysowania prymitywow  
+
+
+
+
 {\ttfamily \#include $<$Primitive\+Renderer.\+h$>$}
 
 Diagram dziedziczenia dla Primitive\+Renderer\begin{figure}[H]
@@ -21,15 +26,15 @@ Diagram dziedziczenia dla Primitive\+Renderer\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{class_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}{Draw\+Single\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f A, sf\+::\+Vector2f B, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em metoda sluzaca do rysowania pojedynczej linii wedlug algorytmu napisanego recznej \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_a77b725f465775a998309afd3e74f7093}{Draw\+Single\+Line\+SFML}} (sf\+::\+Vector2f posA, sf\+::\+Vector2f posB, float angle, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em funkcja rysujaca linie za pomoca metod biblioteki SFML \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{Draw\+Circle}} (sf\+::\+Vector2f center, float radius, sf\+::\+Color color)
-\item 
+\begin{DoxyCompactList}\small\item\em metoda rysujaca kolko \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_a5c902ca279cab032ff9c13c4b4731dfa}{Draw\+Circle}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f center, std\+::vector$<$ sf\+::\+Vector2f $>$ points, sf\+::\+Color color)
 \item 
 static void \mbox{\hyperlink{class_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, std\+::vector$<$ sf\+::\+Vector2f $>$ \texorpdfstring{$\ast$}{*}points, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em funkcja rysujaca linie po Vectorze punktow \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_ac687be5aa16beaae90444d712ed47c98}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f points\mbox{[}$\,$\mbox{]}, int points\+Count, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
 \item 
 static void \mbox{\hyperlink{class_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}{Draw\+Ellipse}} (sf\+::\+Vector2f center, float RX, float RY, sf\+::\+Color color)
@@ -38,10 +43,13 @@ static void \mbox{\hyperlink{class_primitive_renderer_ac727386a4965cfdde65af0447
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}}
-\item 
+\begin{DoxyCompactList}\small\item\em kolor obiektu \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+klasa sluzaca do obslugi rysowania prymitywow 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{class_primitive_renderer_a579f99c1724b09b26c898a25ad5ff70b}\label{class_primitive_renderer_a579f99c1724b09b26c898a25ad5ff70b} 
@@ -71,6 +79,19 @@ float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3c
 \doxysubsubsection{\texorpdfstring{DrawCircle()}{DrawCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{center,  }\item[{float}]{radius,  }\item[{sf\+::\+Color}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+metoda rysujaca kolko 
+
+
+\begin{DoxyParams}{Parametry}
+{\em center} & sf\+::\+Vector wskazujacy na srodek kola \\
+\hline
+{\em radius} & promien kola \\
+\hline
+{\em color} & kolor \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}\label{class_primitive_renderer_ac727386a4965cfdde65af04474c1acfc} 
 \index{PrimitiveRenderer@{PrimitiveRenderer}!DrawEllipse@{DrawEllipse}}
 \index{DrawEllipse@{DrawEllipse}!PrimitiveRenderer@{PrimitiveRenderer}}
@@ -83,12 +104,44 @@ float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3c
 \doxysubsubsection{\texorpdfstring{DrawSingleLine()}{DrawSingleLine()}}
 {\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Single\+Line (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{render\+Window,  }\item[{sf\+::\+Vector2f}]{A,  }\item[{sf\+::\+Vector2f}]{B,  }\item[{float}]{Width,  }\item[{sf\+::\+Color}]{Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+metoda sluzaca do rysowania pojedynczej linii wedlug algorytmu napisanego recznej 
+
+
+\begin{DoxyParams}{Parametry}
+{\em render\+Window} & okno w ktorym ma byc wyrenderowana linia \\
+\hline
+{\em A} & obiekt typu sf\+::\+Vector2f majacy wskazac pierwsza wspolrzedna do narysowania \\
+\hline
+{\em B} & obiekt typu sf\+::\+Vector2f majacy wskazac druga wspolrzedna do narysowania \\
+\hline
+{\em Width} & szerokosc linii \\
+\hline
+{\em Color} & kolor linii \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_primitive_renderer_a77b725f465775a998309afd3e74f7093}\label{class_primitive_renderer_a77b725f465775a998309afd3e74f7093} 
 \index{PrimitiveRenderer@{PrimitiveRenderer}!DrawSingleLineSFML@{DrawSingleLineSFML}}
 \index{DrawSingleLineSFML@{DrawSingleLineSFML}!PrimitiveRenderer@{PrimitiveRenderer}}
 \doxysubsubsection{\texorpdfstring{DrawSingleLineSFML()}{DrawSingleLineSFML()}}
 {\footnotesize\ttfamily void Primitive\+Renderer\+::\+Draw\+Single\+Line\+SFML (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{posA,  }\item[{sf\+::\+Vector2f}]{posB,  }\item[{float}]{angle,  }\item[{sf\+::\+Color}]{Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+funkcja rysujaca linie za pomoca metod biblioteki SFML 
+
+
+\begin{DoxyParams}{Parametry}
+{\em posA} & sf\+::\+Vector wskazujacy poczatek linii \\
+\hline
+{\em posB} & sf\+::\+Vector wskazujacy koniec linii \\
+\hline
+{\em angle} & kat lini \\
+\hline
+{\em Color} & kolor linii \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_primitive_renderer_ac687be5aa16beaae90444d712ed47c98}\label{class_primitive_renderer_ac687be5aa16beaae90444d712ed47c98} 
 \index{PrimitiveRenderer@{PrimitiveRenderer}!PointLine@{PointLine}}
 \index{PointLine@{PointLine}!PrimitiveRenderer@{PrimitiveRenderer}}
@@ -103,12 +156,31 @@ float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3c
 
 
 
+funkcja rysujaca linie po Vectorze punktow 
+
+
+\begin{DoxyParams}{Parametry}
+{\em render\+Window} & okno w ktorym ma sie wyrenderowac linia \\
+\hline
+{\em points} & Vector z punktami \\
+\hline
+{\em Width} & szerokosc linii \\
+\hline
+{\em Color} & kolor linii \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Dokumentacja atrybutów składowych}
 \Hypertarget{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}\label{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450} 
 \index{PrimitiveRenderer@{PrimitiveRenderer}!Color@{Color}}
 \index{Color@{Color}!PrimitiveRenderer@{PrimitiveRenderer}}
 \doxysubsubsection{\texorpdfstring{Color}{Color}}
 {\footnotesize\ttfamily sf\+::\+Color Primitive\+Renderer\+::\+Color}
+
+
+
+kolor obiektu 
 
 \Hypertarget{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}\label{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd} 
 \index{PrimitiveRenderer@{PrimitiveRenderer}!Width@{Width}}

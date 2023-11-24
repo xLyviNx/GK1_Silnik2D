@@ -1,0 +1,440 @@
+\doxysection{Dokumentacja klasy Flappy\+Bird\+::Menu}
+\hypertarget{class_flappy_bird_1_1_menu}{}\label{class_flappy_bird_1_1_menu}\index{FlappyBird::Menu@{FlappyBird::Menu}}
+
+
+Klasa reprezentujaca menu w grze.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+Diagram dziedziczenia dla Flappy\+Bird\+::Menu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.110553cm]{d3/dd5/class_flappy_bird_1_1_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_flappy_bird_1_1_menu_a8caa6100506d4b8e0d782e550dbc470e}{Menu}} (float width, float height)
+\begin{DoxyCompactList}\small\item\em Konstruktor menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flappy_bird_1_1_menu_acfb038bbd1050d6c55c86eec1f35dbdb}{Move\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Przesuwa w gore aktualnie zaznaczona opcje w menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_flappy_bird_1_1_menu_a804da9a381bb6c633d5d2bc4f839ec62}{Move\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Przesuwa w dol aktualnie zaznaczona opcje w menu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_flappy_bird_1_1_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}{get\+Pressed\+Option}} ()
+\begin{DoxyCompactList}\small\item\em Zwraca indeks nacisnietej opcji. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flappy_bird_1_1_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{delete\+Me}} () override
+\begin{DoxyCompactList}\small\item\em Usuwa obiekt menu. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flappy_bird_1_1_menu_a620012b606183501d56667c685c625fe}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em Rysuje menu. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flappy_bird_1_1_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}{Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key key\+Pressed) override
+\begin{DoxyCompactList}\small\item\em Obsluguje nacisniecie klawisza. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flappy_bird_1_1_menu_ab3a112f44c8dfd946c433a28b82a6ca7}{Key\+Released}} (sf\+::\+Keyboard\+::\+Key key\+Pressed) override
+\begin{DoxyCompactList}\small\item\em Obsluguje zwolnienie klawisza. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flappy_bird_1_1_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}{Mouse\+Pressed}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event) override
+\begin{DoxyCompactList}\small\item\em Obsluguje nacisniecie przycisku myszy. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_flappy_bird_1_1_menu_af6c488322a6423ea0dcf27990dff3613}{Mouse\+Released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event) override
+\begin{DoxyCompactList}\small\item\em Obsluguje zwolnienie przycisku myszy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_abedc0ee457b6072f593632d38d554034}{Update}} (float delta\+Time)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_ab5903922c2c25bb0b7a59d9f7f4173b1}{Start}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_updatable_object_a5fedff4165fc0f73376d5e3ab971ea65}{Updatable\+Object}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_updatable_object_a9e6864f4113259e2415b5a025b77cbe2}{\texorpdfstring{$\sim$}{\string~}\+Updatable\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7006135306f80fda695b125f3c291f00}{world\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera pozycje obiektu w swiecie. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aac315ec05d0b2079925997381a0677fe}{last\+World\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera ostatnia pozycje obiektu w swiecie. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aa459f1bfadf4e5a210239b03f98e10f1}{world\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera skale obiektu w swiecie. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a298b598ac30b9864295d03532518439c}{world\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera granice obiektu w swiecie. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_af982f629037e562a721c18bd44014fb4}{world\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera globalna rotacje obiektu w swiecie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ad148c3664977e6720d6b45da75cf2ad4}{Translate}} (float X, float Y)
+\begin{DoxyCompactList}\small\item\em Przesuwa obiekt o podane wartosci X i Y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ac075260cfbfbeec0519d4314c3e27ed7}{Translate}} (Vector2f XY)
+\begin{DoxyCompactList}\small\item\em Przesuwa obiekt o podany wektor XY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a16368890c2162a9a8e1a583759d656ca}{set\+Position}} (Vector2f XY)
+\begin{DoxyCompactList}\small\item\em Ustawia pozycje obiektu na podanej wartosci XY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3738feb9d275d8956dbcf1a27108550c}{Scale}} (float XY)
+\begin{DoxyCompactList}\small\item\em Skaluje obiekt o podana wartosc XY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0004187dde5019c70503fb949e865d5b}{Scale}} (float X, float Y)
+\begin{DoxyCompactList}\small\item\em Skaluje obiekt o podane wartosci X i Y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9a4c2bfeed878aaf7484a1a0287bfb1f}{set\+Scale}} (float X, float Y)
+\begin{DoxyCompactList}\small\item\em Ustawia skale obiektu na podane wartosci X i Y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a21b6e99113c7d40b42dbd0bfaaf0cca9}{Scale}} (Vector2f XY)
+\begin{DoxyCompactList}\small\item\em Skaluje obiekt o podany wektor XY. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7308d7e310bbca289073cf9217144444}{Rotate}} (float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
+\begin{DoxyCompactList}\small\item\em Obraca obiekt o podany kat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae77257ff4bf1e004100308e6787f9c89}{Set\+Parent}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}new\+Parent)
+\begin{DoxyCompactList}\small\item\em Przypisuje nowego rodzica obiektowi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{Transformable\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Ustawia obiekt jako dziecko nowego rodzica. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a8375e06531ab0da5fefd6ec4b0d03246}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a8336ba0cadb2fa32518a2c41bb512f2e}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja i rotacja. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1eab831d6a908b3574111267c973b2e2}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja, skala i rotacja. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a807c84102be46f84ded02aed59856733}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}}, \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9acab41ebb7848658ef00e2ca101e644}{parent}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana pozycja, skala, rotacja i rodzicem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a717e8d0241c4b49484f1272d01802c69}{Transformable\+Object}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9acab41ebb7848658ef00e2ca101e644}{parent}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podanym rodzicem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0e9d27bab16116023c0a8b87876983cf}{Get\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em Pobiera rodzica obiektu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a388cf56b15afd793172205fb40049909}{\texorpdfstring{$\sim$}{\string~}\+Transformable\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4ceff6806fdc7cc2377c8c53be0f732c}{Properties\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualna funkcja informujaca o zmianie wlasciwosci obiektu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4766b924212d5efa1d6e3342edeb45e5}{Children\+Properties\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Aktualizuje wlasciwosci dzieci przy zmianie wlasciwosci tego obiektu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3e4e5c67cc7870a265ec78720bf7feaa}{Transformable\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_transformable_object}{Transformable\+Object} z podana nazwa i pozycja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Engine2\+D\+::\+Input\+Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_input_reader_ae7d7eaec9edd0b8a5e6c5870f23070c3}{Input\+Reader}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_input_reader_a38875ce3bae818dd0836da36fb7ea891}{\texorpdfstring{$\sim$}{\string~}\+Input\+Reader}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
+\begin{DoxyCompactList}\small\item\em Funkcja rysujaca obiekt z podana tekstura. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Wirtualny destruktor klasy \doxylink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_flappy_bird_1_1_menu_a56b602185cf7c17e57ee5c395dcb7f9b}{menu\+Active}}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy menu jest aktywne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
+\begin{DoxyCompactList}\small\item\em Nazwa obiektu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
+\begin{DoxyCompactList}\small\item\em Flaga informujaca, czy obiekt jest usuwany. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3d8e6a75f95d9932b9f6c6baace36ba7}{children}}
+\begin{DoxyCompactList}\small\item\em Wektor dzieci obiektu poddajacego sie transformacjom. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}
+\begin{DoxyCompactList}\small\item\em Lokalna pozycja obiektu. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae353655a1c7faf056ac8bcc6472f77f7}{last\+Position}}
+\begin{DoxyCompactList}\small\item\em Ostatnia lokalna pozycja obiektu. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}
+\begin{DoxyCompactList}\small\item\em Lokalna skala obiektu. \end{DoxyCompactList}\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a202e416fbc2668115069500107839d57}{bounds}}
+\begin{DoxyCompactList}\small\item\em Lokalne granice obiektu. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7e1e1035533c53c3109774d8dd59190d}{tag}}
+\begin{DoxyCompactList}\small\item\em Etykieta obiektu. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}}
+\begin{DoxyCompactList}\small\item\em Lokalna rotacja obiektu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca widocznosc obiektu. \end{DoxyCompactList}\item 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
+\begin{DoxyCompactList}\small\item\em Wskaznik do okna renderowania. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy obiekt jest elementem interfejsu uzytkownika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_flappy_bird_1_1_menu_ac3489117c191838a1c53e2ae9601ebc6}{selected\+Option\+Index}}
+\begin{DoxyCompactList}\small\item\em Indeks aktualnie wybranej opcji w menu. \end{DoxyCompactList}\item 
+sf\+::\+Font \mbox{\hyperlink{class_flappy_bird_1_1_menu_a70ed3865f1016cc7fa5bbce5a68ec4e1}{font}}
+\begin{DoxyCompactList}\small\item\em Czcionka uzywana do wyswietlania tekstu w menu. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{class_flappy_bird_1_1_menu_ac05078d48250c5b33833f4eb64a22c52}{menu}} \mbox{[}\mbox{\hyperlink{_menu_8h_aca52961d3ff23468a7272214ccf77c5a}{MAX\+\_\+\+NUMBER\+\_\+\+OF\+\_\+\+OPTIONS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tekst dla poszczegolnych opcji w menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_flappy_bird_1_1_menu_af1ec7e8dbd29afee242f6a40b37f96d2}{return\+To\+Menu}}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy nalezy wrocic do menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_flappy_bird_1_1_menu_af413bafabdf8674a7086515e82903a5c}{end\+Game}}
+\begin{DoxyCompactList}\small\item\em Flaga okreslajaca, czy gra powinna zakonczyc sie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Updatable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_aa52d529135020d7205b20a267df3d30d}{All}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
+\begin{DoxyCompactList}\small\item\em Wektor wszystkich obiektow gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static set$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae92e9d8e9dd79d65e1eb662b00e768dd}{All}}
+\begin{DoxyCompactList}\small\item\em Zbior wszystkich obiektow poddajacych sie transformacjom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Engine2\+D\+::\+Input\+Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_input_reader_aa6bfd74c9208936363dd2fe1ec347b29}{Input\+Readers}} = vector$<$\mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}}\texorpdfstring{$\ast$}{*}$>$()
+\begin{DoxyCompactList}\small\item\em Vector sluzacy do przecchowyywania zdarzen wejscia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
+\begin{DoxyCompactList}\small\item\em Wektor zawierajacy wszystkie obiekty rysowalne. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa reprezentujaca menu w grze. 
+
+Klasa \doxylink{class_flappy_bird_1_1_menu}{Menu} dziedziczy po roznych klasach, aby dostarczyc funkcjonalnosci zwiazanej z aktualizacja, ksztaltem, obsluga interakcji wejsciowych oraz rysowaniem. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_flappy_bird_1_1_menu_a8caa6100506d4b8e0d782e550dbc470e}\label{class_flappy_bird_1_1_menu_a8caa6100506d4b8e0d782e550dbc470e} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+Konstruktor menu. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em width} & Szerokosc menu. \\
+\hline
+{\em height} & Wysokosc menu. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_flappy_bird_1_1_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}\label{class_flappy_bird_1_1_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Menu\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Usuwa obiekt menu. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_aca38754c86ab80159821e8f52cd1357e}{Engine2\+D\+::\+Updatable\+Object}}.
+
+\Hypertarget{class_flappy_bird_1_1_menu_a620012b606183501d56667c685c625fe}\label{class_flappy_bird_1_1_menu_a620012b606183501d56667c685c625fe} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!Draw@{Draw}}
+\index{Draw@{Draw}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Menu\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rysuje menu. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}{Engine2\+D\+::\+Drawable\+Object}}.
+
+\Hypertarget{class_flappy_bird_1_1_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}\label{class_flappy_bird_1_1_menu_a8d3bd2f28a74f01ff453838dbeb63ec7} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!getPressedOption@{getPressedOption}}
+\index{getPressedOption@{getPressedOption}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{getPressedOption()}{getPressedOption()}}
+{\footnotesize\ttfamily int Menu\+::get\+Pressed\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zwraca indeks nacisnietej opcji. 
+
+\begin{DoxyReturn}{Zwraca}
+Indeks nacisnietej opcji w menu. 
+\end{DoxyReturn}
+\Hypertarget{class_flappy_bird_1_1_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}\label{class_flappy_bird_1_1_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!KeyPressed@{KeyPressed}}
+\index{KeyPressed@{KeyPressed}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{KeyPressed()}{KeyPressed()}}
+{\footnotesize\ttfamily void Menu\+::\+Key\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsluguje nacisniecie klawisza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key\+Pressed} & Nacisniety klawisz. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_input_reader_a7994ee47581dce5628930d881b915de6}{Engine2\+D\+::\+Input\+Reader}}.
+
+\Hypertarget{class_flappy_bird_1_1_menu_ab3a112f44c8dfd946c433a28b82a6ca7}\label{class_flappy_bird_1_1_menu_ab3a112f44c8dfd946c433a28b82a6ca7} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!KeyReleased@{KeyReleased}}
+\index{KeyReleased@{KeyReleased}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{KeyReleased()}{KeyReleased()}}
+{\footnotesize\ttfamily void Menu\+::\+Key\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsluguje zwolnienie klawisza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key\+Pressed} & Zwolniony klawisz. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_input_reader_aac224c27aa127213ac417b30e85b7be9}{Engine2\+D\+::\+Input\+Reader}}.
+
+\Hypertarget{class_flappy_bird_1_1_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}\label{class_flappy_bird_1_1_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!MousePressed@{MousePressed}}
+\index{MousePressed@{MousePressed}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{MousePressed()}{MousePressed()}}
+{\footnotesize\ttfamily void Menu\+::\+Mouse\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsluguje nacisniecie przycisku myszy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mouse\+Event} & Informacje o nacisnieciu przycisku myszy. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e}{Engine2\+D\+::\+Input\+Reader}}.
+
+\Hypertarget{class_flappy_bird_1_1_menu_af6c488322a6423ea0dcf27990dff3613}\label{class_flappy_bird_1_1_menu_af6c488322a6423ea0dcf27990dff3613} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!MouseReleased@{MouseReleased}}
+\index{MouseReleased@{MouseReleased}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{MouseReleased()}{MouseReleased()}}
+{\footnotesize\ttfamily void Menu\+::\+Mouse\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obsluguje zwolnienie przycisku myszy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mouse\+Event} & Informacje o zwolnieniu przycisku myszy. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_input_reader_acb6f8db83ce53f06adcdadd29b7f232a}{Engine2\+D\+::\+Input\+Reader}}.
+
+\Hypertarget{class_flappy_bird_1_1_menu_a804da9a381bb6c633d5d2bc4f839ec62}\label{class_flappy_bird_1_1_menu_a804da9a381bb6c633d5d2bc4f839ec62} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!MoveDown@{MoveDown}}
+\index{MoveDown@{MoveDown}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{MoveDown()}{MoveDown()}}
+{\footnotesize\ttfamily void Menu\+::\+Move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przesuwa w dol aktualnie zaznaczona opcje w menu. 
+
+\Hypertarget{class_flappy_bird_1_1_menu_acfb038bbd1050d6c55c86eec1f35dbdb}\label{class_flappy_bird_1_1_menu_acfb038bbd1050d6c55c86eec1f35dbdb} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!MoveUp@{MoveUp}}
+\index{MoveUp@{MoveUp}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{MoveUp()}{MoveUp()}}
+{\footnotesize\ttfamily void Menu\+::\+Move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przesuwa w gore aktualnie zaznaczona opcje w menu. 
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_flappy_bird_1_1_menu_af413bafabdf8674a7086515e82903a5c}\label{class_flappy_bird_1_1_menu_af413bafabdf8674a7086515e82903a5c} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!endGame@{endGame}}
+\index{endGame@{endGame}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{endGame}{endGame}}
+{\footnotesize\ttfamily bool Flappy\+Bird\+::\+Menu\+::end\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga okreslajaca, czy gra powinna zakonczyc sie. 
+
+\Hypertarget{class_flappy_bird_1_1_menu_a70ed3865f1016cc7fa5bbce5a68ec4e1}\label{class_flappy_bird_1_1_menu_a70ed3865f1016cc7fa5bbce5a68ec4e1} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!font@{font}}
+\index{font@{font}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Flappy\+Bird\+::\+Menu\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Czcionka uzywana do wyswietlania tekstu w menu. 
+
+\Hypertarget{class_flappy_bird_1_1_menu_ac05078d48250c5b33833f4eb64a22c52}\label{class_flappy_bird_1_1_menu_ac05078d48250c5b33833f4eb64a22c52} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!menu@{menu}}
+\index{menu@{menu}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily sf\+::\+Text Flappy\+Bird\+::\+Menu\+::menu\mbox{[}\mbox{\hyperlink{_menu_8h_aca52961d3ff23468a7272214ccf77c5a}{MAX\+\_\+\+NUMBER\+\_\+\+OF\+\_\+\+OPTIONS}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tekst dla poszczegolnych opcji w menu. 
+
+\Hypertarget{class_flappy_bird_1_1_menu_a56b602185cf7c17e57ee5c395dcb7f9b}\label{class_flappy_bird_1_1_menu_a56b602185cf7c17e57ee5c395dcb7f9b} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!menuActive@{menuActive}}
+\index{menuActive@{menuActive}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{menuActive}{menuActive}}
+{\footnotesize\ttfamily bool Flappy\+Bird\+::\+Menu\+::menu\+Active}
+
+
+
+Flaga okreslajaca, czy menu jest aktywne. 
+
+\Hypertarget{class_flappy_bird_1_1_menu_af1ec7e8dbd29afee242f6a40b37f96d2}\label{class_flappy_bird_1_1_menu_af1ec7e8dbd29afee242f6a40b37f96d2} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!returnToMenu@{returnToMenu}}
+\index{returnToMenu@{returnToMenu}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{returnToMenu}{returnToMenu}}
+{\footnotesize\ttfamily bool Flappy\+Bird\+::\+Menu\+::return\+To\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga okreslajaca, czy nalezy wrocic do menu. 
+
+\Hypertarget{class_flappy_bird_1_1_menu_ac3489117c191838a1c53e2ae9601ebc6}\label{class_flappy_bird_1_1_menu_ac3489117c191838a1c53e2ae9601ebc6} 
+\index{FlappyBird::Menu@{FlappyBird::Menu}!selectedOptionIndex@{selectedOptionIndex}}
+\index{selectedOptionIndex@{selectedOptionIndex}!FlappyBird::Menu@{FlappyBird::Menu}}
+\doxysubsubsection{\texorpdfstring{selectedOptionIndex}{selectedOptionIndex}}
+{\footnotesize\ttfamily int Flappy\+Bird\+::\+Menu\+::selected\+Option\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indeks aktualnie wybranej opcji w menu. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_menu_8h}{Menu.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_menu_8cpp}{Menu.\+cpp}}\end{DoxyCompactItemize}

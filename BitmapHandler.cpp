@@ -1,5 +1,5 @@
 #include "BitmapHandler.h"
-
+using namespace Engine2D;
 BitmapHandler::BitmapHandler(int width, int height) {
     this->width = width;
     this->height = height;

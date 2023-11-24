@@ -2,6 +2,11 @@
 \hypertarget{class_point2_d}{}\label{class_point2_d}\index{Point2D@{Point2D}}
 
 
+klasa reprezentujaca obiekt \doxylink{class_point2_d}{Point2D} sluzacy do wskazywania wspolrzednych.  
+
+
+
+
 {\ttfamily \#include $<$Primitive\+Renderer.\+h$>$}
 
 Diagram dziedziczenia dla Point2D\begin{figure}[H]
@@ -16,7 +21,7 @@ Diagram dziedziczenia dla Point2D\begin{figure}[H]
 sf\+::\+Vector2f \mbox{\hyperlink{class_point2_d_ab4dd2afb28ecadcfbeecceacfc3762a8}{get\+Position}} ()
 \item 
 void \mbox{\hyperlink{class_point2_d_a1393cc417e91fbeabe70c182bbcc055a}{set\+Position}} (sf\+::\+Vector2f new\+Pos)
-\item 
+\begin{DoxyCompactList}\small\item\em metoda ustawiajaca pozycje punktu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_point2_d_a52d470c7dbfe30da1288441503f5711b}{Draw\+Point\+SFML}} ()
 \item 
 \mbox{\hyperlink{class_point2_d_a343d1a6faaae7aa7821f9156fc8f3e16}{Point2D}} (sf\+::\+Color color, float width, sf\+::\+Vector2f position)
@@ -37,7 +42,7 @@ sf\+::\+Vector2f \mbox{\hyperlink{class_point2_d_aa44d3b4d69eefb7d51b34e56b78b23
 \begin{DoxyCompactItemize}
 \item 
 sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}}
-\item 
+\begin{DoxyCompactList}\small\item\em kolor obiektu \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
@@ -45,20 +50,23 @@ float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3c
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{class_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}{Draw\+Single\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f A, sf\+::\+Vector2f B, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em metoda sluzaca do rysowania pojedynczej linii wedlug algorytmu napisanego recznej \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_a77b725f465775a998309afd3e74f7093}{Draw\+Single\+Line\+SFML}} (sf\+::\+Vector2f posA, sf\+::\+Vector2f posB, float angle, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em funkcja rysujaca linie za pomoca metod biblioteki SFML \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{Draw\+Circle}} (sf\+::\+Vector2f center, float radius, sf\+::\+Color color)
-\item 
+\begin{DoxyCompactList}\small\item\em metoda rysujaca kolko \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_a5c902ca279cab032ff9c13c4b4731dfa}{Draw\+Circle}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f center, std\+::vector$<$ sf\+::\+Vector2f $>$ points, sf\+::\+Color color)
 \item 
 static void \mbox{\hyperlink{class_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, std\+::vector$<$ sf\+::\+Vector2f $>$ \texorpdfstring{$\ast$}{*}points, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
-\item 
+\begin{DoxyCompactList}\small\item\em funkcja rysujaca linie po Vectorze punktow \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_primitive_renderer_ac687be5aa16beaae90444d712ed47c98}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f points\mbox{[}$\,$\mbox{]}, int points\+Count, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
 \item 
 static void \mbox{\hyperlink{class_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}{Draw\+Ellipse}} (sf\+::\+Vector2f center, float RX, float RY, sf\+::\+Color color)
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Opis szczegółowy}
+klasa reprezentujaca obiekt \doxylink{class_point2_d}{Point2D} sluzacy do wskazywania wspolrzednych. 
 
 \doxysubsection{Dokumentacja konstruktora i destruktora}
 \Hypertarget{class_point2_d_a343d1a6faaae7aa7821f9156fc8f3e16}\label{class_point2_d_a343d1a6faaae7aa7821f9156fc8f3e16} 
@@ -88,6 +96,15 @@ static void \mbox{\hyperlink{class_primitive_renderer_ac727386a4965cfdde65af0447
 \doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
 {\footnotesize\ttfamily void Point2\+D\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+Pos }\end{DoxyParamCaption})}
 
+
+
+metoda ustawiajaca pozycje punktu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em new\+Pos} & sf\+::\+Vector wskazujacy nowa pozycje \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Dokumentacja atrybutów składowych}

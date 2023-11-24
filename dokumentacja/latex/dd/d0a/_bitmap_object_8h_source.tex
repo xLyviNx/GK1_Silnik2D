@@ -6,23 +6,25 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_drawable_object_8h}{DrawableObject.h}}"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bitmap_object}{BitmapObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2D::DrawableObject}}\ }
-\DoxyCodeLine{00007\ \{}
-\DoxyCodeLine{00008\ \ \ \ \ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56}{i}}=0;}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_bitmap_object_adbc46c3c8c95d9ace00874a30c9e81ff}{offset}};}
-\DoxyCodeLine{00012\ \ \ \ \ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}{loadbitmaps}}(std::vector\ <sf::Texture>\ bitmapstoload);}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}{animate}}(\textcolor{keywordtype}{double}\ deltatime,\ \textcolor{keywordtype}{double}\ frame\_speed,\textcolor{keywordtype}{int}\ version);}
-\DoxyCodeLine{00016\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{class_bitmap_object_a027b556213b1555895e6d8af12663ba6}{renderobj}};}
-\DoxyCodeLine{00017\ \ \ \ \ std::vector\ <sf::Texture>\ \mbox{\hyperlink{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7}{bitmaps}};}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}{deleteMe}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//void\ virtual\ Draw();}}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_bitmap_object}{BitmapObject}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2D::DrawableObject}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_af70d42c94be5002e351030248d877345}{i}}\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a8d411e0ff51759f37bb46e0ef466ab3f}{offset}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}{loadbitmaps}}(std::vector\ <sf::Texture>\ bitmapstoload);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}{animate}}(\textcolor{keywordtype}{double}\ deltatime,\ \textcolor{keywordtype}{double}\ frame\_speed,\ \textcolor{keywordtype}{int}\ version);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a24c7a972af4a5004f4b9db832ce23615}{renderobj}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector\ <sf::Texture>\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a1b83ad45fbed8699d2096fee3adc2194}{bitmaps}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_bitmap_object_a207fc305d5b844f97418614bfa38547b}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//void\ virtual\ Draw();}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ \}}
 
 \end{DoxyCode}

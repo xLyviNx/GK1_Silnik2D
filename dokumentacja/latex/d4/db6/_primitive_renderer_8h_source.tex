@@ -7,32 +7,35 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_calculations_8h}{Calculations.h}}"{}}}
 \DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}}
-\DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ sf::Color\ \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}};}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}};}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}{DrawSingleLine}}(sf::RenderWindow*\ renderWindow,\ sf::Vector2f\ A,\ sf::Vector2f\ B,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}},\ sf::Color\ \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}});}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_a77b725f465775a998309afd3e74f7093}{DrawSingleLineSFML}}(sf::Vector2f\ posA,\ sf::Vector2f\ posB,\ \textcolor{keywordtype}{float}\ angle,\ sf::Color\ \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}});}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{DrawCircle}}(sf::Vector2f\ center,\ \textcolor{keywordtype}{float}\ radius,\ sf::Color\ color);}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{DrawCircle}}(sf::RenderWindow*\ renderWindow,\ sf::Vector2f\ center,\ std::vector<sf::Vector2f>\ points,\ sf::Color\ color);}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{PointLine}}(sf::RenderWindow*\ renderWindow,\ std::vector<sf::Vector2f>*\ points,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}},\ sf::Color\ \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}});}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{PointLine}}(sf::RenderWindow*\ renderWindow,\ sf::Vector2f\ points[],\ \textcolor{keywordtype}{int}\ pointsCount,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}},\ sf::Color\ \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}});}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}{DrawEllipse}}(sf::Vector2f\ center,\ \textcolor{keywordtype}{float}\ RX,\ \textcolor{keywordtype}{float}\ RY,\ sf::Color\ color);}
-\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_primitive_renderer_a579f99c1724b09b26c898a25ad5ff70b}{PrimitiveRenderer}}()\ :\ \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}}(sf::\mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}}::White),\ \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}(1.0f)\ \{\};}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_primitive_renderer_a579f99c1724b09b26c898a25ad5ff70b}{PrimitiveRenderer}}(sf::Color\ color,\ \textcolor{keywordtype}{float}\ width);}
-\DoxyCodeLine{00022\ \};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_point2_d}{Point2D}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}}
-\DoxyCodeLine{00025\ \{}
-\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00027\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_point2_d_aa44d3b4d69eefb7d51b34e56b78b23ab}{Position}};}
-\DoxyCodeLine{00028\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_point2_d_ab4dd2afb28ecadcfbeecceacfc3762a8}{getPosition}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point2_d_a1393cc417e91fbeabe70c182bbcc055a}{setPosition}}(sf::Vector2f\ newPos);}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point2_d_a52d470c7dbfe30da1288441503f5711b}{DrawPointSFML}}();}
-\DoxyCodeLine{00031\ \ \ \ \ }
-\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_point2_d}{Point2D}}(sf::Color\ color,\ \textcolor{keywordtype}{float}\ width,\ sf::Vector2f\ position);}
-\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer}{PrimitiveRenderer}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ sf::Color\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}{DrawSingleLine}}(sf::RenderWindow*\ renderWindow,\ sf::Vector2f\ A,\ sf::Vector2f\ B,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}},\ sf::Color\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a77b725f465775a998309afd3e74f7093}{DrawSingleLineSFML}}(sf::Vector2f\ posA,\ sf::Vector2f\ posB,\ \textcolor{keywordtype}{float}\ angle,\ sf::Color\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{DrawCircle}}(sf::Vector2f\ center,\ \textcolor{keywordtype}{float}\ radius,\ sf::Color\ color);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{DrawCircle}}(sf::RenderWindow*\ renderWindow,\ sf::Vector2f\ center,\ std::vector<sf::Vector2f>\ points,\ sf::Color\ color);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{PointLine}}(sf::RenderWindow*\ renderWindow,\ std::vector<sf::Vector2f>*\ points,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}},\ sf::Color\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}});}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{PointLine}}(sf::RenderWindow*\ renderWindow,\ sf::Vector2f\ points[],\ \textcolor{keywordtype}{int}\ pointsCount,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}},\ sf::Color\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}{DrawEllipse}}(sf::Vector2f\ center,\ \textcolor{keywordtype}{float}\ RX,\ \textcolor{keywordtype}{float}\ RY,\ sf::Color\ color);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_ad3db6a23e2db7c6fa47773ee1acd429c}{PrimitiveRenderer}}()\ :\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}}(sf::\mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a875f2c576c9b4bddf6bd4d9d08e6c104}{Color}}::White),\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_a9bbddd9dec6cf090a86896bd6d41f284}{Width}}(1.0f)\ \{\};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer_ad3db6a23e2db7c6fa47773ee1acd429c}{PrimitiveRenderer}}(sf::Color\ color,\ \textcolor{keywordtype}{float}\ width);}
+\DoxyCodeLine{00059\ \ \ \ \ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_point2_d}{Point2D}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_engine2_d_1_1_primitive_renderer}{PrimitiveRenderer}}}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_point2_d_abe0c73f088467181659d94d572c83c6a}{Position}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_point2_d_ab4dd2afb28ecadcfbeecceacfc3762a8}{getPosition}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_point2_d_a1393cc417e91fbeabe70c182bbcc055a}{setPosition}}(sf::Vector2f\ newPos);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_point2_d_a52d470c7dbfe30da1288441503f5711b}{DrawPointSFML}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_point2_d}{Point2D}}(sf::Color\ color,\ \textcolor{keywordtype}{float}\ width,\ sf::Vector2f\ position);}
+\DoxyCodeLine{00078\ \ \ \ \ \};}
+\DoxyCodeLine{00079\ \}}
 
 \end{DoxyCode}

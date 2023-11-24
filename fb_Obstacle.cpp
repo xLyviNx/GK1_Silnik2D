@@ -72,7 +72,7 @@ FlappyBird::flappyObstacle::flappyObstacle(GameManager* obstacleman) : Engine2D:
 
 FlappyBird::flappyObstacle::~flappyObstacle()
 {
-	cout << "DELETING"<<endl;
+	//cout << "DELETING"<<endl;
 }
 
 

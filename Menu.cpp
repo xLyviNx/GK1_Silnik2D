@@ -2,6 +2,7 @@
 #include "ShapeObject.h"
 #include "DrawableObject.h"
 #include "GameManager.hpp"
+using namespace FlappyBird;
 Menu::Menu(float width, float height)
 {
 	menuActive = true;
@@ -107,7 +108,7 @@ void Menu::KeyReleased(sf::Keyboard::Key keyPressed)
 				}
 				break;
 			case 1:
-				cout << "Wcisnieto wyjdz" << endl;
+				Engine::PrintLog("Wcisnieto wyjdz");
 				this->window->close();
 				menuActive = false;
 				break;

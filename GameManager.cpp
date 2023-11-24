@@ -30,7 +30,7 @@ void FlappyBird::GameManager::SpawnObstacles()
 	float scale = 5.f;
 	if (obstacles.size() < (maxOnScreen*2) &&  (obstacles.size()==0|| (obstacles.size() > 0 && obstacles[obstacles.size()-1]->worldPosition().x < appData->WindowSize.x - (13*scale*7))))
 	{
-		cout << obstacles.size() << endl;
+		//cout << obstacles.size() << endl;
 		float posY = Calculations::Random(minY, maxY);
 		for (int i = 0; i < 2; i++)
 		{
@@ -53,7 +53,7 @@ void FlappyBird::GameManager::SpawnObstacles()
 			if (i == 0) {
 				pos.y = appData->WindowSize.y / 2.0 + posY;
 				flappyScore* score = new flappyScore(pos);
-				cout << "X: " << score->worldPosition().x << ", Y : " << score->worldPosition().y << endl;
+				//cout << "X: " << score->worldPosition().x << ", Y : " << score->worldPosition().y << endl;
 				score->SetParent((TransformableObject*)obst);
 			}
 		}

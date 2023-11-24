@@ -1,0 +1,193 @@
+\doxysection{Dokumentacja klasy Engine2D\+::Input\+Reader}
+\hypertarget{class_engine2_d_1_1_input_reader}{}\label{class_engine2_d_1_1_input_reader}\index{Engine2D::InputReader@{Engine2D::InputReader}}
+
+
+klasa sluzaca do obslugi wejscia.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Reader.\+h$>$}
+
+Diagram dziedziczenia dla Engine2D\+::Input\+Reader\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d4/d28/class_engine2_d_1_1_input_reader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_input_reader_a7994ee47581dce5628930d881b915de6}{Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key key\+Pressed)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_input_reader_aac224c27aa127213ac417b30e85b7be9}{Key\+Released}} (sf\+::\+Keyboard\+::\+Key key\+Pressed)
+\begin{DoxyCompactList}\small\item\em metoda sluzaca do obslugi zwolnienia klawisza. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e}{Mouse\+Pressed}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event)
+\begin{DoxyCompactList}\small\item\em metoda do obslugi wcisniecia klawisza myszy \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_input_reader_acb6f8db83ce53f06adcdadd29b7f232a}{Mouse\+Released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event)
+\begin{DoxyCompactList}\small\item\em metoda do obslugi zwolnienia klawisza myszy \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_input_reader_ae7d7eaec9edd0b8a5e6c5870f23070c3}{Input\+Reader}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_input_reader_a38875ce3bae818dd0836da36fb7ea891}{\texorpdfstring{$\sim$}{\string~}\+Input\+Reader}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_input_reader_a0133ab08194ec0f4a2b0ed3b7ce489de}{delete\+Me}} () override
+\begin{DoxyCompactList}\small\item\em Usuwa obiekt gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyslny klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{class_engine2_d_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Statyczne atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_input_reader_aa6bfd74c9208936363dd2fe1ec347b29}{Input\+Readers}} = vector$<$\mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}}\texorpdfstring{$\ast$}{*}$>$()
+\begin{DoxyCompactList}\small\item\em Vector sluzacy do przecchowyywania zdarzen wejscia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Statyczne atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
+\begin{DoxyCompactList}\small\item\em Wektor wszystkich obiektow gry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Dodatkowe Dziedziczone Składowe}
+\doxysubsection*{Atrybuty publiczne dziedziczone z \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
+\begin{DoxyCompactList}\small\item\em Nazwa obiektu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
+\begin{DoxyCompactList}\small\item\em Flaga informujaca, czy obiekt jest usuwany. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+klasa sluzaca do obslugi wejscia. 
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_engine2_d_1_1_input_reader_ae7d7eaec9edd0b8a5e6c5870f23070c3}\label{class_engine2_d_1_1_input_reader_ae7d7eaec9edd0b8a5e6c5870f23070c3} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!InputReader@{InputReader}}
+\index{InputReader@{InputReader}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{InputReader()}{InputReader()}}
+{\footnotesize\ttfamily Input\+Reader\+::\+Input\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_input_reader_a38875ce3bae818dd0836da36fb7ea891}\label{class_engine2_d_1_1_input_reader_a38875ce3bae818dd0836da36fb7ea891} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!````~InputReader@{\texorpdfstring{$\sim$}{\string~}InputReader}}
+\index{````~InputReader@{\texorpdfstring{$\sim$}{\string~}InputReader}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}InputReader()}{\string~InputReader()}}
+{\footnotesize\ttfamily Input\+Reader\+::\texorpdfstring{$\sim$}{\string~}\+Input\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_engine2_d_1_1_input_reader_a0133ab08194ec0f4a2b0ed3b7ce489de}\label{class_engine2_d_1_1_input_reader_a0133ab08194ec0f4a2b0ed3b7ce489de} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Input\+Reader\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Usuwa obiekt gry. 
+
+
+
+Reimplementowana z \mbox{\hyperlink{class_engine2_d_1_1_game_object_a082e2f4c4eefc227d9b26cf309e060bc}{Engine2\+D\+::\+Game\+Object}}.
+
+
+
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{Flappy\+Bird\+::\+Menu}} i \mbox{\hyperlink{class_engine2_d_1_1_player_ab83f1535726023514ed80528ec924772}{Engine2\+D\+::\+Player}}.
+
+\Hypertarget{class_engine2_d_1_1_input_reader_a7994ee47581dce5628930d881b915de6}\label{class_engine2_d_1_1_input_reader_a7994ee47581dce5628930d881b915de6} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!KeyPressed@{KeyPressed}}
+\index{KeyPressed@{KeyPressed}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{KeyPressed()}{KeyPressed()}}
+{\footnotesize\ttfamily void Input\+Reader\+::\+Key\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+metoda sluzaca do obslugi wcisniecia klawisza.
+
+
+\begin{DoxyParams}{Parametry}
+{\em key\+Pressed} & parametr bedacy aktualnym przyciskiem \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}{Flappy\+Bird\+::\+Menu}} i \mbox{\hyperlink{class_engine2_d_1_1_player_aed552d7b30e84b5b6f4b7f8d42a4ba6f}{Engine2\+D\+::\+Player}}.
+
+\Hypertarget{class_engine2_d_1_1_input_reader_aac224c27aa127213ac417b30e85b7be9}\label{class_engine2_d_1_1_input_reader_aac224c27aa127213ac417b30e85b7be9} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!KeyReleased@{KeyReleased}}
+\index{KeyReleased@{KeyReleased}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{KeyReleased()}{KeyReleased()}}
+{\footnotesize\ttfamily void Input\+Reader\+::\+Key\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+metoda sluzaca do obslugi zwolnienia klawisza. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em key\+Pressed} & parametr bedacy aktualnym przyciskiem \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1_menu_ab3a112f44c8dfd946c433a28b82a6ca7}{Flappy\+Bird\+::\+Menu}} i \mbox{\hyperlink{class_engine2_d_1_1_player_a3c00bafeaf7d3ab7495ef1be54b38ac9}{Engine2\+D\+::\+Player}}.
+
+\Hypertarget{class_engine2_d_1_1_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e}\label{class_engine2_d_1_1_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!MousePressed@{MousePressed}}
+\index{MousePressed@{MousePressed}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{MousePressed()}{MousePressed()}}
+{\footnotesize\ttfamily void Input\+Reader\+::\+Mouse\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+metoda do obslugi wcisniecia klawisza myszy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mouse\+Event} & zdarzenie myszy \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}{Flappy\+Bird\+::\+Menu}}.
+
+\Hypertarget{class_engine2_d_1_1_input_reader_acb6f8db83ce53f06adcdadd29b7f232a}\label{class_engine2_d_1_1_input_reader_acb6f8db83ce53f06adcdadd29b7f232a} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!MouseReleased@{MouseReleased}}
+\index{MouseReleased@{MouseReleased}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{MouseReleased()}{MouseReleased()}}
+{\footnotesize\ttfamily void Input\+Reader\+::\+Mouse\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+metoda do obslugi zwolnienia klawisza myszy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em mouse\+Event} & zdarzenie myszy \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementowana w \mbox{\hyperlink{class_flappy_bird_1_1_menu_af6c488322a6423ea0dcf27990dff3613}{Flappy\+Bird\+::\+Menu}}.
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_engine2_d_1_1_input_reader_aa6bfd74c9208936363dd2fe1ec347b29}\label{class_engine2_d_1_1_input_reader_aa6bfd74c9208936363dd2fe1ec347b29} 
+\index{Engine2D::InputReader@{Engine2D::InputReader}!InputReaders@{InputReaders}}
+\index{InputReaders@{InputReaders}!Engine2D::InputReader@{Engine2D::InputReader}}
+\doxysubsubsection{\texorpdfstring{InputReaders}{InputReaders}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}} \texorpdfstring{$\ast$}{*} $>$ Input\+Reader\+::\+Input\+Readers = vector$<$\mbox{\hyperlink{class_engine2_d_1_1_input_reader}{Input\+Reader}}\texorpdfstring{$\ast$}{*}$>$()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Vector sluzacy do przecchowyywania zdarzen wejscia. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_input_reader_8h}{Input\+Reader.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_input_reader_8cpp}{Input\+Reader.\+cpp}}\end{DoxyCompactItemize}

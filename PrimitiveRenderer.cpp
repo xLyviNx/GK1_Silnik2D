@@ -1,6 +1,6 @@
 #include "PrimitiveRenderer.h"
 #include "Engine.h"
-
+using namespace Engine2D;
 void PrimitiveRenderer::DrawSingleLine(sf::RenderWindow* renderWindow, sf::Vector2f A, sf::Vector2f B, float Width, sf::Color Color)
 {
     if (renderWindow != NULL)

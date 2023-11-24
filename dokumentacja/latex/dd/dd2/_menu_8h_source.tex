@@ -12,30 +12,40 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MAX\_NUMBER\_OF\_OPTIONS\ 2}}
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}};}
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_menu}{Menu}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{UpdatableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_input_reader}{InputReader}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{DrawableObject}}}
-\DoxyCodeLine{00013\ \{}
-\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_menu_ad683e31dce093e5725229adaa34085e1}{selectedOptionIndex}};}
-\DoxyCodeLine{00016\ \ \ \ \ sf::Font\ \mbox{\hyperlink{class_menu_a9446727ebf60c6063218b5d4bcae170a}{font}};}
-\DoxyCodeLine{00017\ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_menu_a8146bdbd14ec1bccad60c38f9042d57d}{menu}}[\mbox{\hyperlink{_menu_8h_aca52961d3ff23468a7272214ccf77c5a}{MAX\_NUMBER\_OF\_OPTIONS}}];}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_menu_a5fbaa98697c3b8234fe32a2c146327ae}{returnToMenu}};}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_menu_a26412742883b67d1a9500822dc0b4d6f}{endGame}};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_menu_a45ce5ec0dd4a9c1b1d8129471096e40a}{menuActive}};}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_menu}{Menu}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height);}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_acfb038bbd1050d6c55c86eec1f35dbdb}{MoveUp}}();}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a804da9a381bb6c633d5d2bc4f839ec62}{MoveDown}}();}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}{getPressedOption}}();}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{deleteMe}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a620012b606183501d56667c685c625fe}{Draw}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}{KeyPressed}}(sf::Keyboard::Key\ keyPressed)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7}{KeyReleased}}(sf::Keyboard::Key\ keyPressed)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}{MousePressed}}(sf::Event::MouseButtonEvent\ mouseEvent)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_menu_af6c488322a6423ea0dcf27990dff3613}{MouseReleased}}(sf::Event::MouseButtonEvent\ mouseEvent)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \};}
-\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_flappy_bird}{FlappyBird}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_flappy_bird_1_1_menu}{Menu}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{UpdatableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_input_reader}{InputReader}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{DrawableObject}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_ac3489117c191838a1c53e2ae9601ebc6}{selectedOptionIndex}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ sf::Font\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a70ed3865f1016cc7fa5bbce5a68ec4e1}{font}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ sf::Text\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_ac05078d48250c5b33833f4eb64a22c52}{menu}}[\mbox{\hyperlink{_menu_8h_aca52961d3ff23468a7272214ccf77c5a}{MAX\_NUMBER\_OF\_OPTIONS}}];\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_af1ec7e8dbd29afee242f6a40b37f96d2}{returnToMenu}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_af413bafabdf8674a7086515e82903a5c}{endGame}};\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a56b602185cf7c17e57ee5c395dcb7f9b}{menuActive}};\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_flappy_bird_1_1_menu}{Menu}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_acfb038bbd1050d6c55c86eec1f35dbdb}{MoveUp}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a804da9a381bb6c633d5d2bc4f839ec62}{MoveDown}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}{getPressedOption}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a620012b606183501d56667c685c625fe}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}{KeyPressed}}(sf::Keyboard::Key\ keyPressed)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_ab3a112f44c8dfd946c433a28b82a6ca7}{KeyReleased}}(sf::Keyboard::Key\ keyPressed)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}{MousePressed}}(sf::Event::MouseButtonEvent\ mouseEvent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flappy_bird_1_1_menu_af6c488322a6423ea0dcf27990dff3613}{MouseReleased}}(sf::Event::MouseButtonEvent\ mouseEvent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00093\ \ \ \ \ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \}}
 
 \end{DoxyCode}

@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "BitmapObject.h"
-
+using namespace Engine2D;
 void BitmapObject::loadbitmaps(std::vector<sf::Texture> bitmapstoload)
 {
 	for (sf::Texture bitmapa : bitmapstoload)

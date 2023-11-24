@@ -244,7 +244,7 @@ void Engine2D::TransformableObject::ChildrenPropertiesChange()
 
 Engine2D::TransformableObject::TransformableObject(std::string name, Vector2f position) : GameObject(name)
 {
-	cout << "TRANSFORM CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
+	//cout << "TRANSFORM CONSTRUCT POSITION: " << position.x << " " << position.y << endl;
 	children = vector<TransformableObject*>();
 	this->parent = NULL;
 	lastPosition = position;

@@ -25,7 +25,7 @@ namespace Engine2D {
 
 	DrawableObject::~DrawableObject()
 	{
-		std::cout << "SETTING NULL DRAWABLE" << std::endl;
+		//std::cout << "SETTING NULL DRAWABLE" << std::endl;
 		for (vector<DrawableObject*>::iterator it = DrawableObject::All.begin(); it != DrawableObject::All.end(); ++it)
 		{
 			if (*it == this) {

@@ -1,6 +1,6 @@
 #include "AnimatedObject.h"
 
-void AnimatedObject::animate()
+void Engine2D::AnimatedObject::animate()
 {
 
 }

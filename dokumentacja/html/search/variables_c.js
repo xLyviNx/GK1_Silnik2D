@@ -2,8 +2,8 @@ var searchData=
 [
   ['maxframerate_0',['maxFramerate',['../d8/df9/struct_engine2_d_1_1_application_data.html#a5af8d8e496fcc046c0fbc5d3445e69d8',1,'Engine2D::ApplicationData']]],
   ['maxy_1',['maxy',['../d4/d31/class_flappy_bird_1_1flappy_obstacle.html#a5b2d022bf7676968f4988d5ecc831793',1,'FlappyBird::flappyObstacle::maxY'],['../d9/d0e/class_flappy_bird_1_1_game_manager.html#a65b1ad4d12939280bf76bfd2ee04c9be',1,'FlappyBird::GameManager::maxY']]],
-  ['menu_2',['menu',['../d2/db8/class_menu.html#a8146bdbd14ec1bccad60c38f9042d57d',1,'Menu']]],
-  ['menuactive_3',['menuActive',['../d2/db8/class_menu.html#a45ce5ec0dd4a9c1b1d8129471096e40a',1,'Menu']]],
+  ['menu_2',['menu',['../d3/dd5/class_flappy_bird_1_1_menu.html#ac05078d48250c5b33833f4eb64a22c52',1,'FlappyBird::Menu']]],
+  ['menuactive_3',['menuActive',['../d3/dd5/class_flappy_bird_1_1_menu.html#a56b602185cf7c17e57ee5c395dcb7f9b',1,'FlappyBird::Menu']]],
   ['miny_4',['miny',['../d4/d31/class_flappy_bird_1_1flappy_obstacle.html#a7ece65d52c90dc62fe8cd2d5776496dd',1,'FlappyBird::flappyObstacle::minY'],['../d9/d0e/class_flappy_bird_1_1_game_manager.html#af51d3b89998d6a664fcbec4ed5f840c0',1,'FlappyBird::GameManager::minY']]],
   ['mouseinputenabled_5',['mouseInputEnabled',['../d8/d0e/class_engine2_d_1_1_engine.html#aa77734822f9e56796684d2cbe17dadd5',1,'Engine2D::Engine']]],
   ['mouseposition_6',['mousePosition',['../d8/d0e/class_engine2_d_1_1_engine.html#ab2114bae3ea8475dfbe316a65447ea62',1,'Engine2D::Engine']]],

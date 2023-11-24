@@ -1,4 +1,4 @@
 var _input_reader_8h =
 [
-    [ "InputReader", "de/d7b/class_input_reader.html", "de/d7b/class_input_reader" ]
+    [ "Engine2D::InputReader", "d4/d28/class_engine2_d_1_1_input_reader.html", "d4/d28/class_engine2_d_1_1_input_reader" ]
 ];
