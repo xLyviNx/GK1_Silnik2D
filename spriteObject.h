@@ -7,14 +7,25 @@
 #include <iostream>
 #include "BitmapHandler.h"
 namespace Engine2D
-{ 
+{ /**
+  * @brief klasa reprezentujaca obiekt typu ,,sprite" dziedziczy po Bitmapobject, na ta chwile jest klasa abstrakcyjna, poniewaz jej role zastepuje klasa Player
+  */
 	class SpriteObject : public virtual BitmapObject, public virtual AnimatedObject
 	{ 
-		sf::Texture texture;
+		sf::Texture texture;///<aktualna tekstura
+		/**
+		 * @brief funkcja ustawiajaca dana teksture
+		 * 
+		 * @param obraz do zaladowania typu sf::Image
+		 */
 		void setTexture(sf::Image image);
-	protected:
-		int animation_index;
+
+		
 	public:
+		/**
+		 * @brief funkcja usuwajaca obiekt.
+		 * 
+		 */
 		virtual void deleteMe() override;
 	};
 }
