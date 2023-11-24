@@ -125,6 +125,12 @@ namespace Engine2D
          * @param rotation Kat rotacji.
          */
         void Rotate(float rotation);
+        /**
+         * @brief Przypisuje nowego rodzica obiektowi.
+         *
+         * @param newParent Nowy rodzic.
+         */
+        void SetParent(TransformableObject* newParent);
 
         /**
          * @brief Ustawia obiekt jako dziecko nowego rodzica.
