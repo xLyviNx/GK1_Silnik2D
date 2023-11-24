@@ -66,8 +66,8 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 	{
 		std::set<Collisions*> ignore;
 		ignore.insert((Collisions*)this);
-		Vector2f bottomL = worldPosition() + Vector2f(0, -4.f + bounds.y / 2.0) - Vector2f(worldBounds().x * 0.5f, 0);
-		Vector2f bottomR = worldPosition() + Vector2f(0, -4.f + bounds.y / 2.0) + Vector2f(worldBounds().x * 0.5f, 0);
+		Vector2f bottomL = worldPosition() + Vector2f(0, -4.f + bounds.y / 2.0) - Vector2f(worldBounds().x * 0.45f, 0);
+		Vector2f bottomR = worldPosition() + Vector2f(0, -4.f + bounds.y / 2.0) + Vector2f(worldBounds().x * 0.45f, 0);
 		RaycastHit hitL = Collisions::Raycast(bottomL , bottomL + Vector2f(0, 2), ignore);
 		RaycastHit hitR = Collisions::Raycast(bottomR, bottomR + Vector2f(0, 2), ignore);
 		isGrounded = hitL.hit || hitR.hit;
@@ -104,7 +104,8 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 			Vector2f goalPosition = position + (movement * (float)(movementSpeed * 25.0) * deltaTime);
 			this->Move(goalPosition, movement, NULL);
 			Vector2f gravpos = this->worldPosition() - Vector2f(0, gravityForce) * deltaTime;
-			this->Move(gravpos, movement,NULL);
+			//this->Move(gravpos, movement,NULL);
+			setPosition(gravpos);
 		}
 	}
 }

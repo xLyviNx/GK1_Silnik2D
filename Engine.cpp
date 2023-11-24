@@ -77,8 +77,10 @@ void Engine::InitGame()
 }
 void Engine::SpawnGame()
 {
-	Shapes::RectangleShape* gora = new Shapes::RectangleShape("Top", Vector2f(750, -50), 1500, 100, Color::Green, 1);
-	Shapes::RectangleShape* dol = new Shapes::RectangleShape("Floor", Vector2f(750, 770), 1500, 100, Color::Green, 1);
+	Shapes::RectangleShape* gora = new Shapes::RectangleShape("top", Vector2f(appData->WindowSize.x/2.0, -50), 1500, 100, Color::Green, 1);
+	Shapes::RectangleShape* dol = new Shapes::RectangleShape("bottom", Vector2f(appData->WindowSize.x/2.0, appData->WindowSize.y+50), 1500, 100, Color::Green, 1);
+	Shapes::RectangleShape* lewa = new Shapes::RectangleShape("left", Vector2f(-50, appData->WindowSize.y/2.0), 50, appData->WindowSize.y, Color::Green, 1);
+	Shapes::RectangleShape* prawa = new Shapes::RectangleShape("right", Vector2f(appData->WindowSize.x + 50, appData->WindowSize.y/2.0), 50, appData->WindowSize.y, Color::Green, 1);
 	gora->tag = "kill";
 	dol->tag = "kill";
 	dol->fillColor = Color::Transparent;
