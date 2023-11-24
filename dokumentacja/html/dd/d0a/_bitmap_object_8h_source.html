@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Plik źródłowy D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/BitmapObject.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dd/d0a/_bitmap_object_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/BitmapObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d0a/_bitmap_object_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/da5/_drawable_object_8h.html">DrawableObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../d5/d9d/class_bitmap_object.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d5/d9d/class_bitmap_object.html">BitmapObject</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d5/d9d/class_bitmap_object.html#a1ea0e37c4182a860b0699ac87d792c56">   10</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d5/d9d/class_bitmap_object.html#a1ea0e37c4182a860b0699ac87d792c56">i</a>=0;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d5/d9d/class_bitmap_object.html#adbc46c3c8c95d9ace00874a30c9e81ff">   11</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="../../d5/d9d/class_bitmap_object.html#adbc46c3c8c95d9ace00874a30c9e81ff">offset</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>: </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d9d/class_bitmap_object.html#aaec61c9acc89036fd1bd3c0645f845b2">loadbitmaps</a>(std::vector &lt;sf::Texture&gt; bitmapstoload);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d9d/class_bitmap_object.html#a36c69823bdaf0c1fd6e4f3d6b9508343">animate</a>(<span class="keywordtype">double</span> deltatime, <span class="keywordtype">double</span> frame_speed,<span class="keywordtype">int</span> version);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d5/d9d/class_bitmap_object.html#a027b556213b1555895e6d8af12663ba6">   16</a></span>    sf::Sprite <a class="code hl_variable" href="../../d5/d9d/class_bitmap_object.html#a027b556213b1555895e6d8af12663ba6">renderobj</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../d5/d9d/class_bitmap_object.html#ab4f029d81858b1a996a6e75d0a62d6b7">   17</a></span>    std::vector &lt;sf::Texture&gt; <a class="code hl_variable" href="../../d5/d9d/class_bitmap_object.html#ab4f029d81858b1a996a6e75d0a62d6b7">bitmaps</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d9d/class_bitmap_object.html#a207fc305d5b844f97418614bfa38547b">deleteMe</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">//void virtual Draw();</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+</div>
+<div class="ttc" id="a_drawable_object_8h_html"><div class="ttname"><a href="../../d2/da5/_drawable_object_8h.html">DrawableObject.h</a></div></div>
+<div class="ttc" id="aclass_bitmap_object_html"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html">BitmapObject</a></div><div class="ttdef"><b>Definition</b> BitmapObject.h:7</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_a027b556213b1555895e6d8af12663ba6"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#a027b556213b1555895e6d8af12663ba6">BitmapObject::renderobj</a></div><div class="ttdeci">sf::Sprite renderobj</div><div class="ttdef"><b>Definition</b> BitmapObject.h:16</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_a1ea0e37c4182a860b0699ac87d792c56"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#a1ea0e37c4182a860b0699ac87d792c56">BitmapObject::i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition</b> BitmapObject.h:10</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_a207fc305d5b844f97418614bfa38547b"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#a207fc305d5b844f97418614bfa38547b">BitmapObject::deleteMe</a></div><div class="ttdeci">virtual void deleteMe() override</div><div class="ttdef"><b>Definition</b> BitmapObject.cpp:33</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_a36c69823bdaf0c1fd6e4f3d6b9508343"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#a36c69823bdaf0c1fd6e4f3d6b9508343">BitmapObject::animate</a></div><div class="ttdeci">void animate(double deltatime, double frame_speed, int version)</div><div class="ttdef"><b>Definition</b> BitmapObject.cpp:17</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_aaec61c9acc89036fd1bd3c0645f845b2"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#aaec61c9acc89036fd1bd3c0645f845b2">BitmapObject::loadbitmaps</a></div><div class="ttdeci">void loadbitmaps(std::vector&lt; sf::Texture &gt; bitmapstoload)</div><div class="ttdef"><b>Definition</b> BitmapObject.cpp:5</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_ab4f029d81858b1a996a6e75d0a62d6b7"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#ab4f029d81858b1a996a6e75d0a62d6b7">BitmapObject::bitmaps</a></div><div class="ttdeci">std::vector&lt; sf::Texture &gt; bitmaps</div><div class="ttdef"><b>Definition</b> BitmapObject.h:17</div></div>
+<div class="ttc" id="aclass_bitmap_object_html_adbc46c3c8c95d9ace00874a30c9e81ff"><div class="ttname"><a href="../../d5/d9d/class_bitmap_object.html#adbc46c3c8c95d9ace00874a30c9e81ff">BitmapObject::offset</a></div><div class="ttdeci">double offset</div><div class="ttdef"><b>Definition</b> BitmapObject.h:11</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_drawable_object_html"><div class="ttname"><a href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></div><div class="ttdef"><b>Definition</b> DrawableObject.h:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dd/d0a/_bitmap_object_8h.html">BitmapObject.h</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

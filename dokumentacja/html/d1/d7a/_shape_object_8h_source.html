@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Plik źródłowy D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/ShapeObject.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d1/d7a/_shape_object_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/ShapeObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d1/d7a/_shape_object_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d2/da5/_drawable_object_8h.html">DrawableObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d56/_transform_8h.html">Transform.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d4/db6/_primitive_renderer_8h.html">PrimitiveRenderer.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../de/dcf/_engine_8h.html">Engine.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/da3/_collisions_8h.html">Collisions.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d06/namespace_engine2_d.html">Engine2D</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../d8/da7/class_engine2_d_1_1_shape_object.html">    9</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d8/da7/class_engine2_d_1_1_shape_object.html">ShapeObject</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">DrawableObject</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a9df557fb76c95bf84c4dd7df02970006">   12</a></span>        sf::RenderWindow* <a class="code hl_variable" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a9df557fb76c95bf84c4dd7df02970006">renderWindow</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a0d2611062ee174c49aed60ef7378b893">ShapeObject</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_function" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a0d2611062ee174c49aed60ef7378b893">ShapeObject</a>(Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <a class="code hl_function" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a0d2611062ee174c49aed60ef7378b893">ShapeObject</a>(std::string <a class="code hl_variable" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#af037dd66173dbb26ce8fe83c6d6a999d">deleteMe</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a6b746b4fcd24ae5e9f6ed213d8de40b2">Draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    };</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="../../df/dfc/namespace_engine2_d_1_1_shapes.html">   21</a></span>    <span class="keyword">namespace </span>Shapes</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">   23</a></span>        <span class="keyword">class </span><a class="code hl_class" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">RectangleShape</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../d8/da7/class_engine2_d_1_1_shape_object.html">ShapeObject</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a54f8c5afe6e52feaac14638bc89ffc40">   26</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a54f8c5afe6e52feaac14638bc89ffc40">localA</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a831d2af5cc0949879f4994b40193330f">   27</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a831d2af5cc0949879f4994b40193330f">localB</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ab4e483bb574565240b20b2cdad76f91a">   28</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ab4e483bb574565240b20b2cdad76f91a">worldA</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a10c629bd02ff8a9df94d329e8f2f0ad7">   29</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a10c629bd02ff8a9df94d329e8f2f0ad7">worldB</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aa90cb49ea48c2dbfde4752d46bb3a3af">   30</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aa90cb49ea48c2dbfde4752d46bb3a3af">outlinewidth</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a7444eeb00a11eb531b26c52d833c0125">   32</a></span>            sf::RectangleShape <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a7444eeb00a11eb531b26c52d833c0125">rectShape</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">   33</a></span>            Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">fillColor</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">   34</a></span>            Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ad4db942323b6533a3cb42c9b92fc83c7">PropertiesChanged</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="comment">//RectangleShape();</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_class" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">RectangleShape</a>(Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, <span class="keywordtype">float</span> A, <span class="keywordtype">float</span> B, Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, <span class="keywordtype">float</span> width);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_class" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">RectangleShape</a>(Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, <span class="keywordtype">float</span> A, <span class="keywordtype">float</span> B, Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">fillColor</a>, <span class="keywordtype">float</span> width);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_class" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">RectangleShape</a>(std::string <a class="code hl_variable" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, <span class="keywordtype">float</span> A, <span class="keywordtype">float</span> B, Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, <span class="keywordtype">float</span> width);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_class" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">RectangleShape</a>(std::string <a class="code hl_variable" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, <span class="keywordtype">float</span> A, <span class="keywordtype">float</span> B, Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, Color <a class="code hl_variable" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">fillColor</a>, <span class="keywordtype">float</span> width);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a60bcccff0e97e5fe745167c361cb28d8">deleteMe</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a45a7686de53428ca13d8746eaa412b2e">Draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaffc9698670417dfa96a315e789b66fc">ChangeSize</a>(<span class="keywordtype">float</span> A, <span class="keywordtype">float</span> B);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        };</div>
+</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html">   45</a></span>        <span class="keyword">class </span><a class="code hl_class" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html">CircleShape</a> : <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../d8/da7/class_engine2_d_1_1_shape_object.html">ShapeObject</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a34fb6405ece345f4decaf8f222699ebd">   48</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a34fb6405ece345f4decaf8f222699ebd">localRadius</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a3568fbbbaa99f511f23adeadc675b9f6">   49</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a3568fbbbaa99f511f23adeadc675b9f6">worldRadius</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a0a789dfc83ada7f23cd9b07f7c0a0fb1">   50</a></span>            <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a0a789dfc83ada7f23cd9b07f7c0a0fb1">width</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a735f74bc2979412147d8dddd9d24ab6b">   51</a></span>            sf::CircleShape <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a735f74bc2979412147d8dddd9d24ab6b">circleShape</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a060a1311daf674703e8a4c30578be425">   53</a></span>            Color <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a060a1311daf674703e8a4c30578be425">color</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#abc9bfb16d055257dc8896efc30638127">   54</a></span>            Color <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#abc9bfb16d055257dc8896efc30638127">fillColor</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#ae24d5790a7a8515f0840c854a23ae218">PropertiesChanged</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <a class="code hl_class" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html">CircleShape</a>(Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, <span class="keywordtype">float</span> Rad, <span class="keywordtype">float</span> <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a0a789dfc83ada7f23cd9b07f7c0a0fb1">width</a>, Color <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a060a1311daf674703e8a4c30578be425">color</a>, Color <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#abc9bfb16d055257dc8896efc30638127">fillColor</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_class" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html">CircleShape</a>(std::string <a class="code hl_variable" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, <span class="keywordtype">float</span> R, Color <a class="code hl_variable" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a060a1311daf674703e8a4c30578be425">color</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a25b0f60569320345f0d0618ad7d70bee">deleteMe</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a815ce0012a17f00d87d03b8834810743">Draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        };</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="ttc" id="a_collisions_8h_html"><div class="ttname"><a href="../../db/da3/_collisions_8h.html">Collisions.h</a></div></div>
+<div class="ttc" id="a_drawable_object_8h_html"><div class="ttname"><a href="../../d2/da5/_drawable_object_8h.html">DrawableObject.h</a></div></div>
+<div class="ttc" id="a_engine_8h_html"><div class="ttname"><a href="../../de/dcf/_engine_8h.html">Engine.h</a></div></div>
+<div class="ttc" id="a_primitive_renderer_8h_html"><div class="ttname"><a href="../../d4/db6/_primitive_renderer_8h.html">PrimitiveRenderer.h</a></div></div>
+<div class="ttc" id="a_transform_8h_html"><div class="ttname"><a href="../../db/d56/_transform_8h.html">Transform.h</a></div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_collisions_html"><div class="ttname"><a href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a></div><div class="ttdef"><b>Definition</b> Collisions.h:27</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_drawable_object_html"><div class="ttname"><a href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></div><div class="ttdef"><b>Definition</b> DrawableObject.h:8</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_game_object_html_ac18b4d45d12f94726e2ea97364187bb7"><div class="ttname"><a href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">Engine2D::GameObject::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition</b> GameObject.h:14</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shape_object_html"><div class="ttname"><a href="../../d8/da7/class_engine2_d_1_1_shape_object.html">Engine2D::ShapeObject</a></div><div class="ttdef"><b>Definition</b> ShapeObject.h:10</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shape_object_html_a0d2611062ee174c49aed60ef7378b893"><div class="ttname"><a href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a0d2611062ee174c49aed60ef7378b893">Engine2D::ShapeObject::ShapeObject</a></div><div class="ttdeci">ShapeObject()</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:5</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shape_object_html_a6b746b4fcd24ae5e9f6ed213d8de40b2"><div class="ttname"><a href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a6b746b4fcd24ae5e9f6ed213d8de40b2">Engine2D::ShapeObject::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:42</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shape_object_html_a9df557fb76c95bf84c4dd7df02970006"><div class="ttname"><a href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a9df557fb76c95bf84c4dd7df02970006">Engine2D::ShapeObject::renderWindow</a></div><div class="ttdeci">sf::RenderWindow * renderWindow</div><div class="ttdef"><b>Definition</b> ShapeObject.h:12</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shape_object_html_af037dd66173dbb26ce8fe83c6d6a999d"><div class="ttname"><a href="../../d8/da7/class_engine2_d_1_1_shape_object.html#af037dd66173dbb26ce8fe83c6d6a999d">Engine2D::ShapeObject::deleteMe</a></div><div class="ttdeci">virtual void deleteMe() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:38</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html">Engine2D::Shapes::CircleShape</a></div><div class="ttdef"><b>Definition</b> ShapeObject.h:46</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a060a1311daf674703e8a4c30578be425"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a060a1311daf674703e8a4c30578be425">Engine2D::Shapes::CircleShape::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> ShapeObject.h:53</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a0a789dfc83ada7f23cd9b07f7c0a0fb1"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a0a789dfc83ada7f23cd9b07f7c0a0fb1">Engine2D::Shapes::CircleShape::width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition</b> ShapeObject.h:50</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a25b0f60569320345f0d0618ad7d70bee"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a25b0f60569320345f0d0618ad7d70bee">Engine2D::Shapes::CircleShape::deleteMe</a></div><div class="ttdeci">void deleteMe() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:130</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a34fb6405ece345f4decaf8f222699ebd"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a34fb6405ece345f4decaf8f222699ebd">Engine2D::Shapes::CircleShape::localRadius</a></div><div class="ttdeci">float localRadius</div><div class="ttdef"><b>Definition</b> ShapeObject.h:48</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a3568fbbbaa99f511f23adeadc675b9f6"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a3568fbbbaa99f511f23adeadc675b9f6">Engine2D::Shapes::CircleShape::worldRadius</a></div><div class="ttdeci">float worldRadius</div><div class="ttdef"><b>Definition</b> ShapeObject.h:49</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a735f74bc2979412147d8dddd9d24ab6b"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a735f74bc2979412147d8dddd9d24ab6b">Engine2D::Shapes::CircleShape::circleShape</a></div><div class="ttdeci">sf::CircleShape circleShape</div><div class="ttdef"><b>Definition</b> ShapeObject.h:51</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_a815ce0012a17f00d87d03b8834810743"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a815ce0012a17f00d87d03b8834810743">Engine2D::Shapes::CircleShape::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:134</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_abc9bfb16d055257dc8896efc30638127"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#abc9bfb16d055257dc8896efc30638127">Engine2D::Shapes::CircleShape::fillColor</a></div><div class="ttdeci">Color fillColor</div><div class="ttdef"><b>Definition</b> ShapeObject.h:54</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_circle_shape_html_ae24d5790a7a8515f0840c854a23ae218"><div class="ttname"><a href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#ae24d5790a7a8515f0840c854a23ae218">Engine2D::Shapes::CircleShape::PropertiesChanged</a></div><div class="ttdeci">void PropertiesChanged() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:117</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">Engine2D::Shapes::RectangleShape</a></div><div class="ttdef"><b>Definition</b> ShapeObject.h:24</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a10c629bd02ff8a9df94d329e8f2f0ad7"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a10c629bd02ff8a9df94d329e8f2f0ad7">Engine2D::Shapes::RectangleShape::worldB</a></div><div class="ttdeci">float worldB</div><div class="ttdef"><b>Definition</b> ShapeObject.h:29</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a354d0b8ad0e5b0033a73173e3d8767ad"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">Engine2D::Shapes::RectangleShape::fillColor</a></div><div class="ttdeci">Color fillColor</div><div class="ttdef"><b>Definition</b> ShapeObject.h:33</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a45a7686de53428ca13d8746eaa412b2e"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a45a7686de53428ca13d8746eaa412b2e">Engine2D::Shapes::RectangleShape::Draw</a></div><div class="ttdeci">void Draw() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:98</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a54f8c5afe6e52feaac14638bc89ffc40"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a54f8c5afe6e52feaac14638bc89ffc40">Engine2D::Shapes::RectangleShape::localA</a></div><div class="ttdeci">float localA</div><div class="ttdef"><b>Definition</b> ShapeObject.h:26</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a60bcccff0e97e5fe745167c361cb28d8"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a60bcccff0e97e5fe745167c361cb28d8">Engine2D::Shapes::RectangleShape::deleteMe</a></div><div class="ttdeci">void deleteMe() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:94</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a7444eeb00a11eb531b26c52d833c0125"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a7444eeb00a11eb531b26c52d833c0125">Engine2D::Shapes::RectangleShape::rectShape</a></div><div class="ttdeci">sf::RectangleShape rectShape</div><div class="ttdef"><b>Definition</b> ShapeObject.h:32</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_a831d2af5cc0949879f4994b40193330f"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a831d2af5cc0949879f4994b40193330f">Engine2D::Shapes::RectangleShape::localB</a></div><div class="ttdeci">float localB</div><div class="ttdef"><b>Definition</b> ShapeObject.h:27</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_aa90cb49ea48c2dbfde4752d46bb3a3af"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aa90cb49ea48c2dbfde4752d46bb3a3af">Engine2D::Shapes::RectangleShape::outlinewidth</a></div><div class="ttdeci">float outlinewidth</div><div class="ttdef"><b>Definition</b> ShapeObject.h:30</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_aaa307ecd88238153e89a21591cfdbb18"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">Engine2D::Shapes::RectangleShape::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition</b> ShapeObject.h:34</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_aaffc9698670417dfa96a315e789b66fc"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaffc9698670417dfa96a315e789b66fc">Engine2D::Shapes::RectangleShape::ChangeSize</a></div><div class="ttdeci">void ChangeSize(float A, float B)</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:111</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_ab4e483bb574565240b20b2cdad76f91a"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ab4e483bb574565240b20b2cdad76f91a">Engine2D::Shapes::RectangleShape::worldA</a></div><div class="ttdeci">float worldA</div><div class="ttdef"><b>Definition</b> ShapeObject.h:28</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_shapes_1_1_rectangle_shape_html_ad4db942323b6533a3cb42c9b92fc83c7"><div class="ttname"><a href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ad4db942323b6533a3cb42c9b92fc83c7">Engine2D::Shapes::RectangleShape::PropertiesChanged</a></div><div class="ttdeci">virtual void PropertiesChanged() override</div><div class="ttdef"><b>Definition</b> ShapeObject.cpp:45</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_transformable_object_html"><div class="ttname"><a href="../../da/d00/class_engine2_d_1_1_transformable_object.html">Engine2D::TransformableObject</a></div><div class="ttdef"><b>Definition</b> Transform.h:12</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_transformable_object_html_aff0540d6a377d0360076ffbaf2efd6be"><div class="ttname"><a href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">Engine2D::TransformableObject::position</a></div><div class="ttdeci">Vector2f position</div><div class="ttdef"><b>Definition</b> Transform.h:19</div></div>
+<div class="ttc" id="anamespace_engine2_d_html"><div class="ttname"><a href="../../dc/d06/namespace_engine2_d.html">Engine2D</a></div><div class="ttdef"><b>Definition</b> ApplicationData.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d1/d7a/_shape_object_8h.html">ShapeObject.h</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

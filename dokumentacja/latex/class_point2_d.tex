@@ -1,0 +1,105 @@
+\doxysection{Point2D Class Reference}
+\hypertarget{class_point2_d}{}\label{class_point2_d}\index{Point2D@{Point2D}}
+
+
+{\ttfamily \#include $<$Primitive\+Renderer.\+h$>$}
+
+Inheritance diagram for Point2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_point2_d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_point2_d_ab4dd2afb28ecadcfbeecceacfc3762a8}{get\+Position}} ()
+\item 
+void \mbox{\hyperlink{class_point2_d_a1393cc417e91fbeabe70c182bbcc055a}{set\+Position}} (sf\+::\+Vector2f new\+Pos)
+\item 
+void \mbox{\hyperlink{class_point2_d_a52d470c7dbfe30da1288441503f5711b}{Draw\+Point\+SFML}} ()
+\item 
+\mbox{\hyperlink{class_point2_d_a343d1a6faaae7aa7821f9156fc8f3e16}{Point2D}} (sf\+::\+Color color, float width, sf\+::\+Vector2f position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_primitive_renderer_a579f99c1724b09b26c898a25ad5ff70b}{Primitive\+Renderer}} ()
+\item 
+\mbox{\hyperlink{class_primitive_renderer_abec77eb7ec17199fb76914f73b24dca1}{Primitive\+Renderer}} (sf\+::\+Color color, float width)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_point2_d_aa44d3b4d69eefb7d51b34e56b78b23ab}{Position}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}}
+\item 
+float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_afcb5cc7f77ef94456749fdc2c910705d}{Draw\+Single\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f A, sf\+::\+Vector2f B, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_a77b725f465775a998309afd3e74f7093}{Draw\+Single\+Line\+SFML}} (sf\+::\+Vector2f posA, sf\+::\+Vector2f posB, float angle, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_a0548f69ebe24b882da0d049d6c4f593d}{Draw\+Circle}} (sf\+::\+Vector2f center, float radius, sf\+::\+Color color)
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_a5c902ca279cab032ff9c13c4b4731dfa}{Draw\+Circle}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f center, std\+::vector$<$ sf\+::\+Vector2f $>$ points, sf\+::\+Color color)
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_a717d2f0714ab0b7f50290b5a676d041e}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, std\+::vector$<$ sf\+::\+Vector2f $>$ \texorpdfstring{$\ast$}{*}points, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_ac687be5aa16beaae90444d712ed47c98}{Point\+Line}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}render\+Window, sf\+::\+Vector2f points\mbox{[}$\,$\mbox{]}, int points\+Count, float \mbox{\hyperlink{class_primitive_renderer_a4fe01ffbc40d4f70ce1f306556c2f3cd}{Width}}, sf\+::\+Color \mbox{\hyperlink{class_primitive_renderer_a40718e9cd7b432b2393e55652b711450}{Color}})
+\item 
+static void \mbox{\hyperlink{class_primitive_renderer_ac727386a4965cfdde65af04474c1acfc}{Draw\+Ellipse}} (sf\+::\+Vector2f center, float RX, float RY, sf\+::\+Color color)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_point2_d_a343d1a6faaae7aa7821f9156fc8f3e16}\label{class_point2_d_a343d1a6faaae7aa7821f9156fc8f3e16} 
+\index{Point2D@{Point2D}!Point2D@{Point2D}}
+\index{Point2D@{Point2D}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{Point2D()}{Point2D()}}
+{\footnotesize\ttfamily Point2\+D\+::\+Point2D (\begin{DoxyParamCaption}\item[{sf\+::\+Color}]{color,  }\item[{float}]{width,  }\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_point2_d_a52d470c7dbfe30da1288441503f5711b}\label{class_point2_d_a52d470c7dbfe30da1288441503f5711b} 
+\index{Point2D@{Point2D}!DrawPointSFML@{DrawPointSFML}}
+\index{DrawPointSFML@{DrawPointSFML}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{DrawPointSFML()}{DrawPointSFML()}}
+{\footnotesize\ttfamily void Point2\+D\+::\+Draw\+Point\+SFML (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_point2_d_ab4dd2afb28ecadcfbeecceacfc3762a8}\label{class_point2_d_ab4dd2afb28ecadcfbeecceacfc3762a8} 
+\index{Point2D@{Point2D}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Point2\+D\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_point2_d_a1393cc417e91fbeabe70c182bbcc055a}\label{class_point2_d_a1393cc417e91fbeabe70c182bbcc055a} 
+\index{Point2D@{Point2D}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Point2\+D\+::set\+Position (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{new\+Pos }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_point2_d_aa44d3b4d69eefb7d51b34e56b78b23ab}\label{class_point2_d_aa44d3b4d69eefb7d51b34e56b78b23ab} 
+\index{Point2D@{Point2D}!Position@{Position}}
+\index{Position@{Position}!Point2D@{Point2D}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Point2\+D\+::\+Position}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_primitive_renderer_8h}{Primitive\+Renderer.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_primitive_renderer_8cpp}{Primitive\+Renderer.\+cpp}}\end{DoxyCompactItemize}

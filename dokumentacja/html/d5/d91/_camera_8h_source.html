@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Plik źródłowy D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/Camera.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d5/d91/_camera_8h_source.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/Camera.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d91/_camera_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="../../d9/dad/_updatable_object_8h.html">UpdatableObject.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d56/_transform_8h.html">Transform.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d5/d40/_input_reader_8h.html">InputReader.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../dc/d06/namespace_engine2_d.html">Engine2D</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d0/df6/class_engine2_d_1_1_camera.html">    7</a></span>    <span class="keyword">class </span><a class="code hl_class" href="../../d0/df6/class_engine2_d_1_1_camera.html">Camera</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a>, <span class="keyword">public</span> <span class="keyword">virtual</span> <a class="code hl_class" href="../../de/d4b/class_engine2_d_1_1_updatable_object.html">UpdatableObject</a>, <span class="keyword">public</span> <a class="code hl_class" href="../../de/d7b/class_input_reader.html">InputReader</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d0/df6/class_engine2_d_1_1_camera.html#af123ccaeab36a91ebc752777afbfa5ab">   10</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="../../d0/df6/class_engine2_d_1_1_camera.html">Camera</a>* <a class="code hl_variable" href="../../d0/df6/class_engine2_d_1_1_camera.html#af123ccaeab36a91ebc752777afbfa5ab">current</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="../../d0/df6/class_engine2_d_1_1_camera.html">Camera</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="code hl_variable" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/df6/class_engine2_d_1_1_camera.html#aea53f2292a0dfff4513543f4d8ab4fb4">Update</a>(<span class="keywordtype">float</span> deltaTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/df6/class_engine2_d_1_1_camera.html#a728eaef64c766aa992fa65794d69d6b6">deleteMe</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/df6/class_engine2_d_1_1_camera.html#a7b6022d5728037794efc3cb4f027f426">KeyPressed</a>(sf::Keyboard::Key keyPressed) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    };</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="ttc" id="a_input_reader_8h_html"><div class="ttname"><a href="../../d5/d40/_input_reader_8h.html">InputReader.h</a></div></div>
+<div class="ttc" id="a_transform_8h_html"><div class="ttname"><a href="../../db/d56/_transform_8h.html">Transform.h</a></div></div>
+<div class="ttc" id="a_updatable_object_8h_html"><div class="ttname"><a href="../../d9/dad/_updatable_object_8h.html">UpdatableObject.h</a></div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_camera_html"><div class="ttname"><a href="../../d0/df6/class_engine2_d_1_1_camera.html">Engine2D::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:8</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_camera_html_a728eaef64c766aa992fa65794d69d6b6"><div class="ttname"><a href="../../d0/df6/class_engine2_d_1_1_camera.html#a728eaef64c766aa992fa65794d69d6b6">Engine2D::Camera::deleteMe</a></div><div class="ttdeci">void deleteMe() override</div><div class="ttdef"><b>Definition</b> Camera.cpp:27</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_camera_html_a7b6022d5728037794efc3cb4f027f426"><div class="ttname"><a href="../../d0/df6/class_engine2_d_1_1_camera.html#a7b6022d5728037794efc3cb4f027f426">Engine2D::Camera::KeyPressed</a></div><div class="ttdeci">void KeyPressed(sf::Keyboard::Key keyPressed) override</div><div class="ttdef"><b>Definition</b> Camera.cpp:32</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_camera_html_aea53f2292a0dfff4513543f4d8ab4fb4"><div class="ttname"><a href="../../d0/df6/class_engine2_d_1_1_camera.html#aea53f2292a0dfff4513543f4d8ab4fb4">Engine2D::Camera::Update</a></div><div class="ttdeci">void Update(float deltaTime) override</div><div class="ttdef"><b>Definition</b> Camera.cpp:11</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_camera_html_af123ccaeab36a91ebc752777afbfa5ab"><div class="ttname"><a href="../../d0/df6/class_engine2_d_1_1_camera.html#af123ccaeab36a91ebc752777afbfa5ab">Engine2D::Camera::current</a></div><div class="ttdeci">static Camera * current</div><div class="ttdef"><b>Definition</b> Camera.h:10</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_game_object_html_ac18b4d45d12f94726e2ea97364187bb7"><div class="ttname"><a href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">Engine2D::GameObject::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition</b> GameObject.h:14</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_transformable_object_html"><div class="ttname"><a href="../../da/d00/class_engine2_d_1_1_transformable_object.html">Engine2D::TransformableObject</a></div><div class="ttdef"><b>Definition</b> Transform.h:12</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_transformable_object_html_aff0540d6a377d0360076ffbaf2efd6be"><div class="ttname"><a href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">Engine2D::TransformableObject::position</a></div><div class="ttdeci">Vector2f position</div><div class="ttdef"><b>Definition</b> Transform.h:19</div></div>
+<div class="ttc" id="aclass_engine2_d_1_1_updatable_object_html"><div class="ttname"><a href="../../de/d4b/class_engine2_d_1_1_updatable_object.html">Engine2D::UpdatableObject</a></div><div class="ttdef"><b>Definition</b> UpdatableObject.h:8</div></div>
+<div class="ttc" id="aclass_input_reader_html"><div class="ttname"><a href="../../de/d7b/class_input_reader.html">InputReader</a></div><div class="ttdef"><b>Definition</b> InputReader.h:8</div></div>
+<div class="ttc" id="anamespace_engine2_d_html"><div class="ttname"><a href="../../dc/d06/namespace_engine2_d.html">Engine2D</a></div><div class="ttdef"><b>Definition</b> ApplicationData.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/d91/_camera_8h.html">Camera.h</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

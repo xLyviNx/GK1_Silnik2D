@@ -1,0 +1,293 @@
+\doxysection{Menu Class Reference}
+\hypertarget{class_menu}{}\label{class_menu}\index{Menu@{Menu}}
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+Inheritance diagram for Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.110553cm]{class_menu}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_menu_a8caa6100506d4b8e0d782e550dbc470e}{Menu}} (float width, float height)
+\item 
+void \mbox{\hyperlink{class_menu_acfb038bbd1050d6c55c86eec1f35dbdb}{Move\+Up}} ()
+\item 
+void \mbox{\hyperlink{class_menu_a804da9a381bb6c633d5d2bc4f839ec62}{Move\+Down}} ()
+\item 
+int \mbox{\hyperlink{class_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}{get\+Pressed\+Option}} ()
+\item 
+virtual void \mbox{\hyperlink{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}{delete\+Me}} () override
+\item 
+virtual void \mbox{\hyperlink{class_menu_a620012b606183501d56667c685c625fe}{Draw}} () override
+\item 
+virtual void \mbox{\hyperlink{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}{Key\+Pressed}} (sf\+::\+Keyboard\+::\+Key key\+Pressed) override
+\item 
+virtual void \mbox{\hyperlink{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7}{Key\+Released}} (sf\+::\+Keyboard\+::\+Key key\+Pressed) override
+\item 
+virtual void \mbox{\hyperlink{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}{Mouse\+Pressed}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event) override
+\item 
+virtual void \mbox{\hyperlink{class_menu_af6c488322a6423ea0dcf27990dff3613}{Mouse\+Released}} (sf\+::\+Event\+::\+Mouse\+Button\+Event mouse\+Event) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_abedc0ee457b6072f593632d38d554034}{Update}} (float delta\+Time)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_ab5903922c2c25bb0b7a59d9f7f4173b1}{Start}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_updatable_object_a5fedff4165fc0f73376d5e3ab971ea65}{Updatable\+Object}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_updatable_object_a9e6864f4113259e2415b5a025b77cbe2}{\texorpdfstring{$\sim$}{\string~}\+Updatable\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7006135306f80fda695b125f3c291f00}{world\+Position}} ()
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aac315ec05d0b2079925997381a0677fe}{last\+World\+Position}} ()
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aa459f1bfadf4e5a210239b03f98e10f1}{world\+Scale}} ()
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a298b598ac30b9864295d03532518439c}{world\+Bounds}} ()
+\item 
+float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_af982f629037e562a721c18bd44014fb4}{world\+Rotation}} ()
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ad148c3664977e6720d6b45da75cf2ad4}{Translate}} (float X, float Y)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ac075260cfbfbeec0519d4314c3e27ed7}{Translate}} (Vector2f XY)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a16368890c2162a9a8e1a583759d656ca}{set\+Position}} (Vector2f XY)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3738feb9d275d8956dbcf1a27108550c}{Scale}} (float XY)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0004187dde5019c70503fb949e865d5b}{Scale}} (float X, float Y)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9a4c2bfeed878aaf7484a1a0287bfb1f}{set\+Scale}} (float X, float Y)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a21b6e99113c7d40b42dbd0bfaaf0cca9}{Scale}} (Vector2f XY)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7308d7e310bbca289073cf9217144444}{Rotate}} (float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae77257ff4bf1e004100308e6787f9c89}{Set\+Parent}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}new\+Parent)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{Transformable\+Object}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a8375e06531ab0da5fefd6ec4b0d03246}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a8336ba0cadb2fa32518a2c41bb512f2e}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1eab831d6a908b3574111267c973b2e2}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}})
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a807c84102be46f84ded02aed59856733}{Transformable\+Object}} (Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}, float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}}, \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a717e8d0241c4b49484f1272d01802c69}{Transformable\+Object}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}parent)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0e9d27bab16116023c0a8b87876983cf}{Get\+Parent}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a388cf56b15afd793172205fb40049909}{\texorpdfstring{$\sim$}{\string~}\+Transformable\+Object}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4ceff6806fdc7cc2377c8c53be0f732c}{Properties\+Changed}} ()
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4766b924212d5efa1d6e3342edeb45e5}{Children\+Properties\+Change}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3e4e5c67cc7870a265ec78720bf7feaa}{Transformable\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}, Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_reader_ae7d7eaec9edd0b8a5e6c5870f23070c3}{Input\+Reader}} ()
+\item 
+\mbox{\hyperlink{class_input_reader_a38875ce3bae818dd0836da36fb7ea891}{\texorpdfstring{$\sim$}{\string~}\+Input\+Reader}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_menu_a45ce5ec0dd4a9c1b1d8129471096e40a}{menu\+Active}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3d8e6a75f95d9932b9f6c6baace36ba7}{children}}
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}}
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae353655a1c7faf056ac8bcc6472f77f7}{last\+Position}}
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}}
+\item 
+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a202e416fbc2668115069500107839d57}{bounds}}
+\item 
+String \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a80ae42606efa183203d8735e5551f571}{tag}}
+\item 
+float \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
+\item 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Engine2\+D\+::\+Updatable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{Updatable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_aa52d529135020d7205b20a267df3d30d}{All}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Engine2\+D\+::\+Transformable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static set$<$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae92e9d8e9dd79d65e1eb662b00e768dd}{All}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_input_reader}{Input\+Reader}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_input_reader}{Input\+Reader}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_input_reader_aa6bfd74c9208936363dd2fe1ec347b29}{Input\+Readers}} = vector$<$\mbox{\hyperlink{class_input_reader}{Input\+Reader}}\texorpdfstring{$\ast$}{*}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_menu_a8caa6100506d4b8e0d782e550dbc470e}\label{class_menu_a8caa6100506d4b8e0d782e550dbc470e} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0}\label{class_menu_a8d0f4c2e89ad2ec8419b3f2c6a7f4ff0} 
+\index{Menu@{Menu}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Menu\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_updatable_object_aca38754c86ab80159821e8f52cd1357e}{Engine2\+D\+::\+Updatable\+Object}}.
+
+\Hypertarget{class_menu_a620012b606183501d56667c685c625fe}\label{class_menu_a620012b606183501d56667c685c625fe} 
+\index{Menu@{Menu}!Draw@{Draw}}
+\index{Draw@{Draw}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Menu\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}{Engine2\+D\+::\+Drawable\+Object}}.
+
+\Hypertarget{class_menu_a8d3bd2f28a74f01ff453838dbeb63ec7}\label{class_menu_a8d3bd2f28a74f01ff453838dbeb63ec7} 
+\index{Menu@{Menu}!getPressedOption@{getPressedOption}}
+\index{getPressedOption@{getPressedOption}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{getPressedOption()}{getPressedOption()}}
+{\footnotesize\ttfamily int Menu\+::get\+Pressed\+Option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112}\label{class_menu_a277ab5d136bc15e3cdd0e1f3a3e1e112} 
+\index{Menu@{Menu}!KeyPressed@{KeyPressed}}
+\index{KeyPressed@{KeyPressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{KeyPressed()}{KeyPressed()}}
+{\footnotesize\ttfamily void Menu\+::\+Key\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader_a7994ee47581dce5628930d881b915de6}{Input\+Reader}}.
+
+\Hypertarget{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7}\label{class_menu_ab3a112f44c8dfd946c433a28b82a6ca7} 
+\index{Menu@{Menu}!KeyReleased@{KeyReleased}}
+\index{KeyReleased@{KeyReleased}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{KeyReleased()}{KeyReleased()}}
+{\footnotesize\ttfamily void Menu\+::\+Key\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key\+Pressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader_aac224c27aa127213ac417b30e85b7be9}{Input\+Reader}}.
+
+\Hypertarget{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64}\label{class_menu_a979dfe8a2b6bf6bb0fa3f29d92581b64} 
+\index{Menu@{Menu}!MousePressed@{MousePressed}}
+\index{MousePressed@{MousePressed}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MousePressed()}{MousePressed()}}
+{\footnotesize\ttfamily void Menu\+::\+Mouse\+Pressed (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader_ac31fa7e5b94cdf19c640ac365d625d8e}{Input\+Reader}}.
+
+\Hypertarget{class_menu_af6c488322a6423ea0dcf27990dff3613}\label{class_menu_af6c488322a6423ea0dcf27990dff3613} 
+\index{Menu@{Menu}!MouseReleased@{MouseReleased}}
+\index{MouseReleased@{MouseReleased}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MouseReleased()}{MouseReleased()}}
+{\footnotesize\ttfamily void Menu\+::\+Mouse\+Released (\begin{DoxyParamCaption}\item[{sf\+::\+Event\+::\+Mouse\+Button\+Event}]{mouse\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_input_reader_acb6f8db83ce53f06adcdadd29b7f232a}{Input\+Reader}}.
+
+\Hypertarget{class_menu_a804da9a381bb6c633d5d2bc4f839ec62}\label{class_menu_a804da9a381bb6c633d5d2bc4f839ec62} 
+\index{Menu@{Menu}!MoveDown@{MoveDown}}
+\index{MoveDown@{MoveDown}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MoveDown()}{MoveDown()}}
+{\footnotesize\ttfamily void Menu\+::\+Move\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_menu_acfb038bbd1050d6c55c86eec1f35dbdb}\label{class_menu_acfb038bbd1050d6c55c86eec1f35dbdb} 
+\index{Menu@{Menu}!MoveUp@{MoveUp}}
+\index{MoveUp@{MoveUp}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{MoveUp()}{MoveUp()}}
+{\footnotesize\ttfamily void Menu\+::\+Move\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_menu_a45ce5ec0dd4a9c1b1d8129471096e40a}\label{class_menu_a45ce5ec0dd4a9c1b1d8129471096e40a} 
+\index{Menu@{Menu}!menuActive@{menuActive}}
+\index{menuActive@{menuActive}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{menuActive}{menuActive}}
+{\footnotesize\ttfamily bool Menu\+::menu\+Active}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_menu_8h}{Menu.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_menu_8cpp}{Menu.\+cpp}}\end{DoxyCompactItemize}

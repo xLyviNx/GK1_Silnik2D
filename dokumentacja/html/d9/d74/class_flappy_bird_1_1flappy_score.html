@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Dokumentacja klasy FlappyBird::flappyScore</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d9/d74/class_flappy_bird_1_1flappy_score.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="../../df/d42/class_flappy_bird_1_1flappy_score-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy FlappyBird::flappyScore</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../d7/de4/flappy_score_8hpp_source.html">flappyScore.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla FlappyBird::flappyScore</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d9/d74/class_flappy_bird_1_1flappy_score.png" usemap="#FlappyBird::flappyScore_map" alt=""/>
+  <map id="FlappyBird::flappyScore_map" name="FlappyBird::flappyScore_map">
+<area href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html" alt="Engine2D::Shapes::RectangleShape" shape="rect" coords="223,168,436,192"/>
+<area href="../../d6/dee/class_engine2_d_1_1_collisions.html" alt="Engine2D::Collisions" shape="rect" coords="446,168,659,192"/>
+<area href="../../d8/da7/class_engine2_d_1_1_shape_object.html" alt="Engine2D::ShapeObject" shape="rect" coords="223,112,436,136"/>
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="446,112,659,136"/>
+<area href="../../da/d00/class_engine2_d_1_1_transformable_object.html" alt="Engine2D::TransformableObject" shape="rect" coords="0,56,213,80"/>
+<area href="../../df/dab/class_engine2_d_1_1_drawable_object.html" alt="Engine2D::DrawableObject" shape="rect" coords="223,56,436,80"/>
+<area href="../../d6/dee/class_engine2_d_1_1_collisions.html" alt="Engine2D::Collisions" shape="rect" coords="446,56,659,80"/>
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="0,0,213,24"/>
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="223,0,436,24"/>
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="446,0,659,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a2357b144f9af2372b176f5a9744db12e" id="r_a2357b144f9af2372b176f5a9744db12e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html#a2357b144f9af2372b176f5a9744db12e">Draw</a> () override</td></tr>
+<tr class="separator:a2357b144f9af2372b176f5a9744db12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d0e15eb57c946292a7310303a6732d" id="r_a98d0e15eb57c946292a7310303a6732d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html#a98d0e15eb57c946292a7310303a6732d">deleteMe</a> ()</td></tr>
+<tr class="separator:a98d0e15eb57c946292a7310303a6732d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a398e5a0ebc076d5c72687ec74a197b86" id="r_a398e5a0ebc076d5c72687ec74a197b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html#a398e5a0ebc076d5c72687ec74a197b86">OnCollisionEnter</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other) override</td></tr>
+<tr class="separator:a398e5a0ebc076d5c72687ec74a197b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1482a7d5378849515eace99640b10962" id="r_a1482a7d5378849515eace99640b10962"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html#a1482a7d5378849515eace99640b10962">flappyScore</a> (Vector2f pos)</td></tr>
+<tr class="separator:a1482a7d5378849515eace99640b10962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">Engine2D::Shapes::RectangleShape</a></td></tr>
+<tr class="memitem:ad4db942323b6533a3cb42c9b92fc83c7 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_ad4db942323b6533a3cb42c9b92fc83c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ad4db942323b6533a3cb42c9b92fc83c7">PropertiesChanged</a> () override</td></tr>
+<tr class="separator:ad4db942323b6533a3cb42c9b92fc83c7 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f7d40a27eeb14cd1288bc0907f2e8b3 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a6f7d40a27eeb14cd1288bc0907f2e8b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a6f7d40a27eeb14cd1288bc0907f2e8b3">RectangleShape</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, float A, float B, Color <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, float width)</td></tr>
+<tr class="separator:a6f7d40a27eeb14cd1288bc0907f2e8b3 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30dbfe359c803491743095649efe26af inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a30dbfe359c803491743095649efe26af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a30dbfe359c803491743095649efe26af">RectangleShape</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, float A, float B, Color <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, Color <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">fillColor</a>, float width)</td></tr>
+<tr class="separator:a30dbfe359c803491743095649efe26af inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1145fb7ef7993565ebca21dd944b3fe inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_aa1145fb7ef7993565ebca21dd944b3fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aa1145fb7ef7993565ebca21dd944b3fe">RectangleShape</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, float A, float B, Color <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, float width)</td></tr>
+<tr class="separator:aa1145fb7ef7993565ebca21dd944b3fe inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06b2aafbdbe84bf2f24b18ea86c6055 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_ad06b2aafbdbe84bf2f24b18ea86c6055"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ad06b2aafbdbe84bf2f24b18ea86c6055">RectangleShape</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, float A, float B, Color <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a>, Color <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">fillColor</a>, float width)</td></tr>
+<tr class="separator:ad06b2aafbdbe84bf2f24b18ea86c6055 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60bcccff0e97e5fe745167c361cb28d8 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a60bcccff0e97e5fe745167c361cb28d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a60bcccff0e97e5fe745167c361cb28d8">deleteMe</a> () override</td></tr>
+<tr class="separator:a60bcccff0e97e5fe745167c361cb28d8 inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a7686de53428ca13d8746eaa412b2e inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a45a7686de53428ca13d8746eaa412b2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a45a7686de53428ca13d8746eaa412b2e">Draw</a> () override</td></tr>
+<tr class="separator:a45a7686de53428ca13d8746eaa412b2e inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffc9698670417dfa96a315e789b66fc inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_aaffc9698670417dfa96a315e789b66fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaffc9698670417dfa96a315e789b66fc">ChangeSize</a> (float A, float B)</td></tr>
+<tr class="separator:aaffc9698670417dfa96a315e789b66fc inherit pub_methods_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_shape_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_shape_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html">Engine2D::ShapeObject</a></td></tr>
+<tr class="memitem:a0d2611062ee174c49aed60ef7378b893 inherit pub_methods_class_engine2_d_1_1_shape_object" id="r_a0d2611062ee174c49aed60ef7378b893"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a0d2611062ee174c49aed60ef7378b893">ShapeObject</a> ()</td></tr>
+<tr class="separator:a0d2611062ee174c49aed60ef7378b893 inherit pub_methods_class_engine2_d_1_1_shape_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea02595fce95095735d9a985f641e9b inherit pub_methods_class_engine2_d_1_1_shape_object" id="r_a6ea02595fce95095735d9a985f641e9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a6ea02595fce95095735d9a985f641e9b">ShapeObject</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>)</td></tr>
+<tr class="separator:a6ea02595fce95095735d9a985f641e9b inherit pub_methods_class_engine2_d_1_1_shape_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb97701ab4a1a68ca55cb2ee957b9277 inherit pub_methods_class_engine2_d_1_1_shape_object" id="r_abb97701ab4a1a68ca55cb2ee957b9277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#abb97701ab4a1a68ca55cb2ee957b9277">ShapeObject</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>)</td></tr>
+<tr class="separator:abb97701ab4a1a68ca55cb2ee957b9277 inherit pub_methods_class_engine2_d_1_1_shape_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_transformable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_transformable_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">Engine2D::TransformableObject</a></td></tr>
+<tr class="memitem:a7006135306f80fda695b125f3c291f00 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a7006135306f80fda695b125f3c291f00"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a7006135306f80fda695b125f3c291f00">worldPosition</a> ()</td></tr>
+<tr class="separator:a7006135306f80fda695b125f3c291f00 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac315ec05d0b2079925997381a0677fe inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_aac315ec05d0b2079925997381a0677fe"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aac315ec05d0b2079925997381a0677fe">lastWorldPosition</a> ()</td></tr>
+<tr class="separator:aac315ec05d0b2079925997381a0677fe inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa459f1bfadf4e5a210239b03f98e10f1 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_aa459f1bfadf4e5a210239b03f98e10f1"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aa459f1bfadf4e5a210239b03f98e10f1">worldScale</a> ()</td></tr>
+<tr class="separator:aa459f1bfadf4e5a210239b03f98e10f1 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298b598ac30b9864295d03532518439c inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a298b598ac30b9864295d03532518439c"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a298b598ac30b9864295d03532518439c">worldBounds</a> ()</td></tr>
+<tr class="separator:a298b598ac30b9864295d03532518439c inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af982f629037e562a721c18bd44014fb4 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_af982f629037e562a721c18bd44014fb4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#af982f629037e562a721c18bd44014fb4">worldRotation</a> ()</td></tr>
+<tr class="separator:af982f629037e562a721c18bd44014fb4 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad148c3664977e6720d6b45da75cf2ad4 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_ad148c3664977e6720d6b45da75cf2ad4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#ad148c3664977e6720d6b45da75cf2ad4">Translate</a> (float X, float Y)</td></tr>
+<tr class="separator:ad148c3664977e6720d6b45da75cf2ad4 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac075260cfbfbeec0519d4314c3e27ed7 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_ac075260cfbfbeec0519d4314c3e27ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#ac075260cfbfbeec0519d4314c3e27ed7">Translate</a> (Vector2f XY)</td></tr>
+<tr class="separator:ac075260cfbfbeec0519d4314c3e27ed7 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16368890c2162a9a8e1a583759d656ca inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a16368890c2162a9a8e1a583759d656ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a16368890c2162a9a8e1a583759d656ca">setPosition</a> (Vector2f XY)</td></tr>
+<tr class="separator:a16368890c2162a9a8e1a583759d656ca inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3738feb9d275d8956dbcf1a27108550c inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a3738feb9d275d8956dbcf1a27108550c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a3738feb9d275d8956dbcf1a27108550c">Scale</a> (float XY)</td></tr>
+<tr class="separator:a3738feb9d275d8956dbcf1a27108550c inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0004187dde5019c70503fb949e865d5b inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a0004187dde5019c70503fb949e865d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a0004187dde5019c70503fb949e865d5b">Scale</a> (float X, float Y)</td></tr>
+<tr class="separator:a0004187dde5019c70503fb949e865d5b inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4c2bfeed878aaf7484a1a0287bfb1f inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a9a4c2bfeed878aaf7484a1a0287bfb1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a9a4c2bfeed878aaf7484a1a0287bfb1f">setScale</a> (float X, float Y)</td></tr>
+<tr class="separator:a9a4c2bfeed878aaf7484a1a0287bfb1f inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21b6e99113c7d40b42dbd0bfaaf0cca9 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a21b6e99113c7d40b42dbd0bfaaf0cca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a21b6e99113c7d40b42dbd0bfaaf0cca9">Scale</a> (Vector2f XY)</td></tr>
+<tr class="separator:a21b6e99113c7d40b42dbd0bfaaf0cca9 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7308d7e310bbca289073cf9217144444 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a7308d7e310bbca289073cf9217144444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a7308d7e310bbca289073cf9217144444">Rotate</a> (float <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a1d6b70c5cb7086a327d9581b08848ade">rotation</a>)</td></tr>
+<tr class="separator:a7308d7e310bbca289073cf9217144444 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77257ff4bf1e004100308e6787f9c89 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_ae77257ff4bf1e004100308e6787f9c89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#ae77257ff4bf1e004100308e6787f9c89">SetParent</a> (<a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *newParent)</td></tr>
+<tr class="separator:ae77257ff4bf1e004100308e6787f9c89 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cce4cde2ae1365bbdf363f09674e081 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a9cce4cde2ae1365bbdf363f09674e081"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a9cce4cde2ae1365bbdf363f09674e081">TransformableObject</a> ()</td></tr>
+<tr class="separator:a9cce4cde2ae1365bbdf363f09674e081 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8375e06531ab0da5fefd6ec4b0d03246 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a8375e06531ab0da5fefd6ec4b0d03246"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a8375e06531ab0da5fefd6ec4b0d03246">TransformableObject</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>)</td></tr>
+<tr class="separator:a8375e06531ab0da5fefd6ec4b0d03246 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8336ba0cadb2fa32518a2c41bb512f2e inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a8336ba0cadb2fa32518a2c41bb512f2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a8336ba0cadb2fa32518a2c41bb512f2e">TransformableObject</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, float <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a1d6b70c5cb7086a327d9581b08848ade">rotation</a>)</td></tr>
+<tr class="separator:a8336ba0cadb2fa32518a2c41bb512f2e inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eab831d6a908b3574111267c973b2e2 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a1eab831d6a908b3574111267c973b2e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a1eab831d6a908b3574111267c973b2e2">TransformableObject</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a08261eca79ac42fa630d89ec9e828718">scale</a>, float <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a1d6b70c5cb7086a327d9581b08848ade">rotation</a>)</td></tr>
+<tr class="separator:a1eab831d6a908b3574111267c973b2e2 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807c84102be46f84ded02aed59856733 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a807c84102be46f84ded02aed59856733"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a807c84102be46f84ded02aed59856733">TransformableObject</a> (Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>, Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a08261eca79ac42fa630d89ec9e828718">scale</a>, float <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a1d6b70c5cb7086a327d9581b08848ade">rotation</a>, <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *<a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a9acab41ebb7848658ef00e2ca101e644">parent</a>)</td></tr>
+<tr class="separator:a807c84102be46f84ded02aed59856733 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717e8d0241c4b49484f1272d01802c69 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a717e8d0241c4b49484f1272d01802c69"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a717e8d0241c4b49484f1272d01802c69">TransformableObject</a> (<a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *<a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a9acab41ebb7848658ef00e2ca101e644">parent</a>)</td></tr>
+<tr class="separator:a717e8d0241c4b49484f1272d01802c69 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9d27bab16116023c0a8b87876983cf inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a0e9d27bab16116023c0a8b87876983cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a0e9d27bab16116023c0a8b87876983cf">GetParent</a> ()</td></tr>
+<tr class="separator:a0e9d27bab16116023c0a8b87876983cf inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388cf56b15afd793172205fb40049909 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a388cf56b15afd793172205fb40049909"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a388cf56b15afd793172205fb40049909">~TransformableObject</a> ()</td></tr>
+<tr class="separator:a388cf56b15afd793172205fb40049909 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4766b924212d5efa1d6e3342edeb45e5 inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a4766b924212d5efa1d6e3342edeb45e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a4766b924212d5efa1d6e3342edeb45e5">ChildrenPropertiesChange</a> ()</td></tr>
+<tr class="separator:a4766b924212d5efa1d6e3342edeb45e5 inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4e5c67cc7870a265ec78720bf7feaa inherit pub_methods_class_engine2_d_1_1_transformable_object" id="r_a3e4e5c67cc7870a265ec78720bf7feaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a3e4e5c67cc7870a265ec78720bf7feaa">TransformableObject</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>, Vector2f <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a>)</td></tr>
+<tr class="separator:a3e4e5c67cc7870a265ec78720bf7feaa inherit pub_methods_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_abeeaa08c4d6f9f511916204d403450e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#abeeaa08c4d6f9f511916204d403450e0">GameObject</a> ()</td></tr>
+<tr class="separator:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a862384580261ca5ae326b03dcff52d80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a862384580261ca5ae326b03dcff52d80">GameObject</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>)</td></tr>
+<tr class="separator:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a1de11ee28a22197456e1a88f6ed3156d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a1de11ee28a22197456e1a88f6ed3156d">~GameObject</a> ()</td></tr>
+<tr class="separator:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
+<tr class="memitem:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_a14166278e3321b9bd5628d2a52c3125c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a14166278e3321b9bd5628d2a52c3125c">DrawableObject</a> ()</td></tr>
+<tr class="separator:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_aa219c52644f4c7b66ca3c7a3386e5f6d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#aa219c52644f4c7b66ca3c7a3386e5f6d">Draw</a> (sf::Texture texture)</td></tr>
+<tr class="separator:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_a0270327b9525c4e563545e6c515a5d8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a0270327b9525c4e563545e6c515a5d8e">~DrawableObject</a> ()</td></tr>
+<tr class="separator:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_collisions"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_collisions')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a></td></tr>
+<tr class="memitem:a5264316d0b313e520c9defb0e3a73e52 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a5264316d0b313e520c9defb0e3a73e52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a5264316d0b313e520c9defb0e3a73e52">Collisions</a> ()</td></tr>
+<tr class="separator:a5264316d0b313e520c9defb0e3a73e52 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b01e029856cb6ea1f551d388471a3e inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a72b01e029856cb6ea1f551d388471a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a72b01e029856cb6ea1f551d388471a3e">Collisions</a> (<a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *transform)</td></tr>
+<tr class="separator:a72b01e029856cb6ea1f551d388471a3e inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37260d5b577ffa990b6c7ff27116ccc4 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a37260d5b577ffa990b6c7ff27116ccc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a37260d5b577ffa990b6c7ff27116ccc4">~Collisions</a> ()</td></tr>
+<tr class="separator:a37260d5b577ffa990b6c7ff27116ccc4 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8065a4c5332cc6a31dfad496207cf4 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a6b8065a4c5332cc6a31dfad496207cf4"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a6b8065a4c5332cc6a31dfad496207cf4">getGlobalBounds</a> ()</td></tr>
+<tr class="separator:a6b8065a4c5332cc6a31dfad496207cf4 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc78323ca779ffe2a05fd424b35268b inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a8bc78323ca779ffe2a05fd424b35268b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a8bc78323ca779ffe2a05fd424b35268b">Collides</a> (sf::FloatRect otherRect)</td></tr>
+<tr class="separator:a8bc78323ca779ffe2a05fd424b35268b inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b187d6c671d4c3a70195ca1e4a4517 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a78b187d6c671d4c3a70195ca1e4a4517"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a78b187d6c671d4c3a70195ca1e4a4517">CollidesWithAny</a> ()</td></tr>
+<tr class="separator:a78b187d6c671d4c3a70195ca1e4a4517 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad056de7321e4f5aeefc4348833820a7c inherit pub_methods_class_engine2_d_1_1_collisions" id="r_ad056de7321e4f5aeefc4348833820a7c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ad056de7321e4f5aeefc4348833820a7c">OnCollisionStay</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:ad056de7321e4f5aeefc4348833820a7c inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a2ede66deeaf262b2586ad8a636341 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_ad4a2ede66deeaf262b2586ad8a636341"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ad4a2ede66deeaf262b2586ad8a636341">OnCollisionExit</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:ad4a2ede66deeaf262b2586ad8a636341 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca8922006e49d33dc9647bde0c199a0 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a1ca8922006e49d33dc9647bde0c199a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a1ca8922006e49d33dc9647bde0c199a0">Collides</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:a1ca8922006e49d33dc9647bde0c199a0 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24ff446c137e1ec27c48e7da3e7cdbe inherit pub_methods_class_engine2_d_1_1_collisions" id="r_ae24ff446c137e1ec27c48e7da3e7cdbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ae24ff446c137e1ec27c48e7da3e7cdbe">Collides</a> (sf::Vector2f point)</td></tr>
+<tr class="separator:ae24ff446c137e1ec27c48e7da3e7cdbe inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e0d148b835337fdd40941b0ffcc615 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a39e0d148b835337fdd40941b0ffcc615"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a39e0d148b835337fdd40941b0ffcc615">moveOutOfCollision</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *coll, sf::Vector2f position, sf::Vector2f velocity)</td></tr>
+<tr class="separator:a39e0d148b835337fdd40941b0ffcc615 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a61796ad1363ce2dca1887d8073b10 inherit pub_methods_class_engine2_d_1_1_collisions" id="r_a25a61796ad1363ce2dca1887d8073b10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a25a61796ad1363ce2dca1887d8073b10">Collides</a> (std::vector&lt; sf::Vector2f &gt; corners)</td></tr>
+<tr class="separator:a25a61796ad1363ce2dca1887d8073b10 inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88770d20ca7eb027b8c21d034d7820c inherit pub_methods_class_engine2_d_1_1_collisions" id="r_ac88770d20ca7eb027b8c21d034d7820c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ac88770d20ca7eb027b8c21d034d7820c">CalculateCorners</a> (float width, float height, float angle, const sf::Vector2f position)</td></tr>
+<tr class="separator:ac88770d20ca7eb027b8c21d034d7820c inherit pub_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_engine2_d_1_1_collisions"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_engine2_d_1_1_collisions')"><img src="../../closed.png" alt="-"/>&#160;Statyczne metody publiczne dziedziczone z <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a></td></tr>
+<tr class="memitem:abe71e2c4112e5900ed95c971e90b58a8 inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_abe71e2c4112e5900ed95c971e90b58a8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#abe71e2c4112e5900ed95c971e90b58a8">PointCollide</a> (sf::Vector2f point, <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *ignoreOne)</td></tr>
+<tr class="separator:abe71e2c4112e5900ed95c971e90b58a8 inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7368bcb59a0311b0abdc6074d3132326 inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_a7368bcb59a0311b0abdc6074d3132326"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a7368bcb59a0311b0abdc6074d3132326">Raycast</a> (sf::Vector2f start, sf::Vector2f end, std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt; ignore)</td></tr>
+<tr class="separator:a7368bcb59a0311b0abdc6074d3132326 inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3beec052b85cc49b0938f93e781352 inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_a0b3beec052b85cc49b0938f93e781352"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a0b3beec052b85cc49b0938f93e781352">RaycastBox</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *self, sf::Vector2f selfPosition, sf::Vector2f end, std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt; ignore)</td></tr>
+<tr class="separator:a0b3beec052b85cc49b0938f93e781352 inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87087ba943cacbab05cc13aaaf41405c inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_a87087ba943cacbab05cc13aaaf41405c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a87087ba943cacbab05cc13aaaf41405c">FindClosestNonCollidingPoint</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *Target, sf::Vector2f start, sf::Vector2f end, std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt; ignore)</td></tr>
+<tr class="separator:a87087ba943cacbab05cc13aaaf41405c inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7538ca90a93d4c2a12727d28ca25317b inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_a7538ca90a93d4c2a12727d28ca25317b"><td class="memItemLeft" align="right" valign="top">static sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a7538ca90a93d4c2a12727d28ca25317b">moveOutOfCollision</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *coll, sf::Vector2f position)</td></tr>
+<tr class="separator:a7538ca90a93d4c2a12727d28ca25317b inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc92fb7c35038a30c1fa41f1554d1e70 inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_abc92fb7c35038a30c1fa41f1554d1e70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#abc92fb7c35038a30c1fa41f1554d1e70">printCorners</a> (const std::vector&lt; sf::Vector2f &gt; &amp;corners)</td></tr>
+<tr class="separator:abc92fb7c35038a30c1fa41f1554d1e70 inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fcf16ec995148a9bca335b4118ca31 inherit pub_static_methods_class_engine2_d_1_1_collisions" id="r_a08fcf16ec995148a9bca335b4118ca31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a08fcf16ec995148a9bca335b4118ca31">drawCorners</a> (const std::vector&lt; sf::Vector2f &gt; &amp;corners)</td></tr>
+<tr class="separator:a08fcf16ec995148a9bca335b4118ca31 inherit pub_static_methods_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">Engine2D::Shapes::RectangleShape</a></td></tr>
+<tr class="memitem:a7444eeb00a11eb531b26c52d833c0125 inherit pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a7444eeb00a11eb531b26c52d833c0125"><td class="memItemLeft" align="right" valign="top">sf::RectangleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a7444eeb00a11eb531b26c52d833c0125">rectShape</a></td></tr>
+<tr class="separator:a7444eeb00a11eb531b26c52d833c0125 inherit pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354d0b8ad0e5b0033a73173e3d8767ad inherit pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a354d0b8ad0e5b0033a73173e3d8767ad"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a354d0b8ad0e5b0033a73173e3d8767ad">fillColor</a></td></tr>
+<tr class="separator:a354d0b8ad0e5b0033a73173e3d8767ad inherit pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa307ecd88238153e89a21591cfdbb18 inherit pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_aaa307ecd88238153e89a21591cfdbb18"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aaa307ecd88238153e89a21591cfdbb18">color</a></td></tr>
+<tr class="separator:aaa307ecd88238153e89a21591cfdbb18 inherit pub_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_transformable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_transformable_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">Engine2D::TransformableObject</a></td></tr>
+<tr class="memitem:a3d8e6a75f95d9932b9f6c6baace36ba7 inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_a3d8e6a75f95d9932b9f6c6baace36ba7"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a3d8e6a75f95d9932b9f6c6baace36ba7">children</a></td></tr>
+<tr class="separator:a3d8e6a75f95d9932b9f6c6baace36ba7 inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff0540d6a377d0360076ffbaf2efd6be inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_aff0540d6a377d0360076ffbaf2efd6be"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#aff0540d6a377d0360076ffbaf2efd6be">position</a></td></tr>
+<tr class="separator:aff0540d6a377d0360076ffbaf2efd6be inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae353655a1c7faf056ac8bcc6472f77f7 inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_ae353655a1c7faf056ac8bcc6472f77f7"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#ae353655a1c7faf056ac8bcc6472f77f7">lastPosition</a></td></tr>
+<tr class="separator:ae353655a1c7faf056ac8bcc6472f77f7 inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08261eca79ac42fa630d89ec9e828718 inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_a08261eca79ac42fa630d89ec9e828718"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a08261eca79ac42fa630d89ec9e828718">scale</a></td></tr>
+<tr class="separator:a08261eca79ac42fa630d89ec9e828718 inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a202e416fbc2668115069500107839d57 inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_a202e416fbc2668115069500107839d57"><td class="memItemLeft" align="right" valign="top">Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a202e416fbc2668115069500107839d57">bounds</a></td></tr>
+<tr class="separator:a202e416fbc2668115069500107839d57 inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ae42606efa183203d8735e5551f571 inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_a80ae42606efa183203d8735e5551f571"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a80ae42606efa183203d8735e5551f571">tag</a></td></tr>
+<tr class="separator:a80ae42606efa183203d8735e5551f571 inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d6b70c5cb7086a327d9581b08848ade inherit pub_attribs_class_engine2_d_1_1_transformable_object" id="r_a1d6b70c5cb7086a327d9581b08848ade"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#a1d6b70c5cb7086a327d9581b08848ade">rotation</a></td></tr>
+<tr class="separator:a1d6b70c5cb7086a327d9581b08848ade inherit pub_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_ac18b4d45d12f94726e2ea97364187bb7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a></td></tr>
+<tr class="separator:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_a4b29dc7811499e94d004bb0adc8167fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a4b29dc7811499e94d004bb0adc8167fa">isRemoving</a></td></tr>
+<tr class="separator:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
+<tr class="memitem:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_ae73cdf98d1ef84dd01d41af21ba018c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ae73cdf98d1ef84dd01d41af21ba018c5">visible</a></td></tr>
+<tr class="separator:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_addd9535d8e921b206d9aedde771fc395"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#addd9535d8e921b206d9aedde771fc395">window</a></td></tr>
+<tr class="separator:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_a5d6eeff01fe1042ae41f9590564bf2c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a5d6eeff01fe1042ae41f9590564bf2c3">isUi</a></td></tr>
+<tr class="separator:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_collisions"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_collisions')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a></td></tr>
+<tr class="memitem:a6f999173e0fe6b7bd37df29e32f87a37 inherit pub_attribs_class_engine2_d_1_1_collisions" id="r_a6f999173e0fe6b7bd37df29e32f87a37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a6f999173e0fe6b7bd37df29e32f87a37">enabled</a></td></tr>
+<tr class="separator:a6f999173e0fe6b7bd37df29e32f87a37 inherit pub_attribs_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d154a804cb8ee47c9bece965f25de6 inherit pub_attribs_class_engine2_d_1_1_collisions" id="r_ac4d154a804cb8ee47c9bece965f25de6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ac4d154a804cb8ee47c9bece965f25de6">myTransform</a></td></tr>
+<tr class="separator:ac4d154a804cb8ee47c9bece965f25de6 inherit pub_attribs_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af764da8e9509c19f58411721fb81fed8 inherit pub_attribs_class_engine2_d_1_1_collisions" id="r_af764da8e9509c19f58411721fb81fed8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#af764da8e9509c19f58411721fb81fed8">currentCollisions</a></td></tr>
+<tr class="separator:af764da8e9509c19f58411721fb81fed8 inherit pub_attribs_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10ec39c4639bc2a818969e3e6864b4d inherit pub_attribs_class_engine2_d_1_1_collisions" id="r_aa10ec39c4639bc2a818969e3e6864b4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Vector2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#aa10ec39c4639bc2a818969e3e6864b4d">myCorners</a></td></tr>
+<tr class="separator:aa10ec39c4639bc2a818969e3e6864b4d inherit pub_attribs_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_transformable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_transformable_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">Engine2D::TransformableObject</a></td></tr>
+<tr class="memitem:ae92e9d8e9dd79d65e1eb662b00e768dd inherit pub_static_attribs_class_engine2_d_1_1_transformable_object" id="r_ae92e9d8e9dd79d65e1eb662b00e768dd"><td class="memItemLeft" align="right" valign="top">static set&lt; <a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html#ae92e9d8e9dd79d65e1eb662b00e768dd">All</a></td></tr>
+<tr class="separator:ae92e9d8e9dd79d65e1eb662b00e768dd inherit pub_static_attribs_class_engine2_d_1_1_transformable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object" id="r_ac56370aaa845877752342e8091325a2b"><td class="memItemLeft" align="right" valign="top">static vector&lt; <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac56370aaa845877752342e8091325a2b">All</a></td></tr>
+<tr class="separator:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
+<tr class="memitem:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object" id="r_ab4f1788806b4cf6a682bb2eb6b7bc45c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">DrawableObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ab4f1788806b4cf6a682bb2eb6b7bc45c">All</a></td></tr>
+<tr class="separator:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_collisions"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_collisions')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a></td></tr>
+<tr class="memitem:acc316c98bd06099d878d7e356a3d8d0d inherit pub_static_attribs_class_engine2_d_1_1_collisions" id="r_acc316c98bd06099d878d7e356a3d8d0d"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#acc316c98bd06099d878d7e356a3d8d0d">All</a></td></tr>
+<tr class="separator:acc316c98bd06099d878d7e356a3d8d0d inherit pub_static_attribs_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html">Engine2D::Shapes::RectangleShape</a></td></tr>
+<tr class="memitem:a54f8c5afe6e52feaac14638bc89ffc40 inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a54f8c5afe6e52feaac14638bc89ffc40"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a54f8c5afe6e52feaac14638bc89ffc40">localA</a></td></tr>
+<tr class="separator:a54f8c5afe6e52feaac14638bc89ffc40 inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831d2af5cc0949879f4994b40193330f inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a831d2af5cc0949879f4994b40193330f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a831d2af5cc0949879f4994b40193330f">localB</a></td></tr>
+<tr class="separator:a831d2af5cc0949879f4994b40193330f inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e483bb574565240b20b2cdad76f91a inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_ab4e483bb574565240b20b2cdad76f91a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#ab4e483bb574565240b20b2cdad76f91a">worldA</a></td></tr>
+<tr class="separator:ab4e483bb574565240b20b2cdad76f91a inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c629bd02ff8a9df94d329e8f2f0ad7 inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_a10c629bd02ff8a9df94d329e8f2f0ad7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a10c629bd02ff8a9df94d329e8f2f0ad7">worldB</a></td></tr>
+<tr class="separator:a10c629bd02ff8a9df94d329e8f2f0ad7 inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90cb49ea48c2dbfde4752d46bb3a3af inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape" id="r_aa90cb49ea48c2dbfde4752d46bb3a3af"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#aa90cb49ea48c2dbfde4752d46bb3a3af">outlinewidth</a></td></tr>
+<tr class="separator:aa90cb49ea48c2dbfde4752d46bb3a3af inherit pro_attribs_class_engine2_d_1_1_shapes_1_1_rectangle_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_engine2_d_1_1_shape_object"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_engine2_d_1_1_shape_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html">Engine2D::ShapeObject</a></td></tr>
+<tr class="memitem:a9df557fb76c95bf84c4dd7df02970006 inherit pro_attribs_class_engine2_d_1_1_shape_object" id="r_a9df557fb76c95bf84c4dd7df02970006"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a9df557fb76c95bf84c4dd7df02970006">renderWindow</a></td></tr>
+<tr class="separator:a9df557fb76c95bf84c4dd7df02970006 inherit pro_attribs_class_engine2_d_1_1_shape_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_engine2_d_1_1_collisions"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_engine2_d_1_1_collisions')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty chronione dziedziczone z <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a></td></tr>
+<tr class="memitem:af85b52802bcc84debaff2ec09796077a inherit pro_attribs_class_engine2_d_1_1_collisions" id="r_af85b52802bcc84debaff2ec09796077a"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#af85b52802bcc84debaff2ec09796077a">globalBounds</a></td></tr>
+<tr class="separator:af85b52802bcc84debaff2ec09796077a inherit pro_attribs_class_engine2_d_1_1_collisions"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a1482a7d5378849515eace99640b10962" name="a1482a7d5378849515eace99640b10962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1482a7d5378849515eace99640b10962">&#9670;&#160;</a></span>flappyScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FlappyBird::flappyScore::flappyScore </td>
+          <td>(</td>
+          <td class="paramtype">Vector2f&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a98d0e15eb57c946292a7310303a6732d" name="a98d0e15eb57c946292a7310303a6732d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d0e15eb57c946292a7310303a6732d">&#9670;&#160;</a></span>deleteMe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlappyBird::flappyScore::deleteMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana z <a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#af037dd66173dbb26ce8fe83c6d6a999d">Engine2D::ShapeObject</a>.</p>
+
+</div>
+</div>
+<a id="a2357b144f9af2372b176f5a9744db12e" name="a2357b144f9af2372b176f5a9744db12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2357b144f9af2372b176f5a9744db12e">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlappyBird::flappyScore::Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana z <a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#a6b746b4fcd24ae5e9f6ed213d8de40b2">Engine2D::ShapeObject</a>.</p>
+
+</div>
+</div>
+<a id="a398e5a0ebc076d5c72687ec74a197b86" name="a398e5a0ebc076d5c72687ec74a197b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a398e5a0ebc076d5c72687ec74a197b86">&#9670;&#160;</a></span>OnCollisionEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FlappyBird::flappyScore::OnCollisionEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana z <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a7e81e8728a716783f1e67d85c3d58f0d">Engine2D::Collisions</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../d7/de4/flappy_score_8hpp_source.html">flappyScore.hpp</a></li>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../d6/df6/flappy_score_8cpp.html">flappyScore.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/dfb/namespace_flappy_bird.html">FlappyBird</a></li><li class="navelem"><a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html">flappyScore</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

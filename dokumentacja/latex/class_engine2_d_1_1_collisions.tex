@@ -1,0 +1,307 @@
+\doxysection{Engine2D\+::Collisions Class Reference}
+\hypertarget{class_engine2_d_1_1_collisions}{}\label{class_engine2_d_1_1_collisions}\index{Engine2D::Collisions@{Engine2D::Collisions}}
+
+
+{\ttfamily \#include $<$Collisions.\+h$>$}
+
+Inheritance diagram for Engine2D\+::Collisions\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.167421cm]{class_engine2_d_1_1_collisions}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_collisions_a5264316d0b313e520c9defb0e3a73e52}{Collisions}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_collisions_a72b01e029856cb6ea1f551d388471a3e}{Collisions}} (\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}transform)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_collisions_a37260d5b577ffa990b6c7ff27116ccc4}{\texorpdfstring{$\sim$}{\string~}\+Collisions}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07}{delete\+Me}} () override
+\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4}{get\+Global\+Bounds}} ()
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}{Collides}} (sf\+::\+Float\+Rect other\+Rect)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517}{Collides\+With\+Any}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d}{On\+Collision\+Enter}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c}{On\+Collision\+Stay}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341}{On\+Collision\+Exit}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a1ca8922006e49d33dc9647bde0c199a0}{Collides}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}other)
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_ae24ff446c137e1ec27c48e7da3e7cdbe}{Collides}} (sf\+::\+Vector2f point)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_collisions_a39e0d148b835337fdd40941b0ffcc615}{move\+Out\+Of\+Collision}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position, sf\+::\+Vector2f velocity)
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a25a61796ad1363ce2dca1887d8073b10}{Collides}} (std\+::vector$<$ sf\+::\+Vector2f $>$ corners)
+\item 
+void \mbox{\hyperlink{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c}{Calculate\+Corners}} (float width, float height, float angle, const sf\+::\+Vector2f position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8}{Point\+Collide}} (sf\+::\+Vector2f point, \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}ignore\+One)
+\item 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326}{Raycast}} (sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352}{Raycast\+Box}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}self, sf\+::\+Vector2f self\+Position, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+static \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} \mbox{\hyperlink{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c}{Find\+Closest\+Non\+Colliding\+Point}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}Target, sf\+::\+Vector2f start, sf\+::\+Vector2f end, std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ ignore)
+\item 
+static sf\+::\+Vector2f \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b}{move\+Out\+Of\+Collision}} (\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}coll, sf\+::\+Vector2f position)
+\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70}{print\+Corners}} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
+\item 
+static void \mbox{\hyperlink{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31}{draw\+Corners}} (const std\+::vector$<$ sf\+::\+Vector2f $>$ \&corners)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37}{enabled}}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6}{my\+Transform}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8}{current\+Collisions}}
+\item 
+std\+::vector$<$ Vector2f $>$ \mbox{\hyperlink{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d}{my\+Corners}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d}{All}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a}{global\+Bounds}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine2_d_1_1_collisions_a5264316d0b313e520c9defb0e3a73e52}\label{class_engine2_d_1_1_collisions_a5264316d0b313e520c9defb0e3a73e52} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Collisions@{Collisions}}
+\index{Collisions@{Collisions}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Collisions()}{Collisions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Engine2\+D\+::\+Collisions\+::\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a72b01e029856cb6ea1f551d388471a3e}\label{class_engine2_d_1_1_collisions_a72b01e029856cb6ea1f551d388471a3e} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Collisions@{Collisions}}
+\index{Collisions@{Collisions}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Collisions()}{Collisions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Engine2\+D\+::\+Collisions\+::\+Collisions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}} \texorpdfstring{$\ast$}{*}}]{transform }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a37260d5b577ffa990b6c7ff27116ccc4}\label{class_engine2_d_1_1_collisions_a37260d5b577ffa990b6c7ff27116ccc4} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!````~Collisions@{\texorpdfstring{$\sim$}{\string~}Collisions}}
+\index{````~Collisions@{\texorpdfstring{$\sim$}{\string~}Collisions}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Collisions()}{\string~Collisions()}}
+{\footnotesize\ttfamily Engine2\+D\+::\+Collisions\+::\texorpdfstring{$\sim$}{\string~}\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c}\label{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!CalculateCorners@{CalculateCorners}}
+\index{CalculateCorners@{CalculateCorners}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{CalculateCorners()}{CalculateCorners()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::\+Calculate\+Corners (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height,  }\item[{float}]{angle,  }\item[{const sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a1ca8922006e49d33dc9647bde0c199a0}\label{class_engine2_d_1_1_collisions_a1ca8922006e49d33dc9647bde0c199a0} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Collides@{Collides}}
+\index{Collides@{Collides}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Collides()}{Collides()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Engine2\+D\+::\+Collisions\+::\+Collides (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}\label{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Collides@{Collides}}
+\index{Collides@{Collides}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Collides()}{Collides()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Engine2\+D\+::\+Collisions\+::\+Collides (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{other\+Rect }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_ae24ff446c137e1ec27c48e7da3e7cdbe}\label{class_engine2_d_1_1_collisions_ae24ff446c137e1ec27c48e7da3e7cdbe} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Collides@{Collides}}
+\index{Collides@{Collides}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Collides()}{Collides()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Engine2\+D\+::\+Collisions\+::\+Collides (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{point }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a25a61796ad1363ce2dca1887d8073b10}\label{class_engine2_d_1_1_collisions_a25a61796ad1363ce2dca1887d8073b10} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Collides@{Collides}}
+\index{Collides@{Collides}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Collides()}{Collides()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Engine2\+D\+::\+Collisions\+::\+Collides (\begin{DoxyParamCaption}\item[{std\+::vector$<$ sf\+::\+Vector2f $>$}]{corners }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517}\label{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!CollidesWithAny@{CollidesWithAny}}
+\index{CollidesWithAny@{CollidesWithAny}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{CollidesWithAny()}{CollidesWithAny()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} Engine2\+D\+::\+Collisions\+::\+Collides\+With\+Any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07}\label{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_game_object_a082e2f4c4eefc227d9b26cf309e060bc}{Engine2\+D\+::\+Game\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a98d0e15eb57c946292a7310303a6732d}{Flappy\+Bird\+::flappy\+Score}}, \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a6901b9f1923b781770f201140c31d033}{Flappy\+Bird\+::flappy\+Obstacle}}, \mbox{\hyperlink{class_engine2_d_1_1_player_ab83f1535726023514ed80528ec924772}{Engine2\+D\+::\+Player}}, \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}{Engine2\+D\+::\+Shape\+Object}}, \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a60bcccff0e97e5fe745167c361cb28d8}{Engine2\+D\+::\+Shapes\+::\+Rectangle\+Shape}}, and \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a25b0f60569320345f0d0618ad7d70bee}{Engine2\+D\+::\+Shapes\+::\+Circle\+Shape}}.
+
+\Hypertarget{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31}\label{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!drawCorners@{drawCorners}}
+\index{drawCorners@{drawCorners}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{drawCorners()}{drawCorners()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::draw\+Corners (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ sf\+::\+Vector2f $>$ \&}]{corners }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c}\label{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!FindClosestNonCollidingPoint@{FindClosestNonCollidingPoint}}
+\index{FindClosestNonCollidingPoint@{FindClosestNonCollidingPoint}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{FindClosestNonCollidingPoint()}{FindClosestNonCollidingPoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} Engine2\+D\+::\+Collisions\+::\+Find\+Closest\+Non\+Colliding\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{Target,  }\item[{sf\+::\+Vector2f}]{start,  }\item[{sf\+::\+Vector2f}]{end,  }\item[{std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$}]{ignore }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4}\label{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!getGlobalBounds@{getGlobalBounds}}
+\index{getGlobalBounds@{getGlobalBounds}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{getGlobalBounds()}{getGlobalBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Engine2\+D\+::\+Collisions\+::get\+Global\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b}\label{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!moveOutOfCollision@{moveOutOfCollision}}
+\index{moveOutOfCollision@{moveOutOfCollision}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{moveOutOfCollision()}{moveOutOfCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Engine2\+D\+::\+Collisions\+::move\+Out\+Of\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{coll,  }\item[{sf\+::\+Vector2f}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a39e0d148b835337fdd40941b0ffcc615}\label{class_engine2_d_1_1_collisions_a39e0d148b835337fdd40941b0ffcc615} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!moveOutOfCollision@{moveOutOfCollision}}
+\index{moveOutOfCollision@{moveOutOfCollision}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{moveOutOfCollision()}{moveOutOfCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Engine2\+D\+::\+Collisions\+::move\+Out\+Of\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{coll,  }\item[{sf\+::\+Vector2f}]{position,  }\item[{sf\+::\+Vector2f}]{velocity }\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d}\label{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!OnCollisionEnter@{OnCollisionEnter}}
+\index{OnCollisionEnter@{OnCollisionEnter}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter()}{OnCollisionEnter()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::\+On\+Collision\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_engine2_d_1_1_player_aa913649b08266a7f80320e07b05b8dfb}{Engine2\+D\+::\+Player}}, and \mbox{\hyperlink{class_flappy_bird_1_1flappy_score_a398e5a0ebc076d5c72687ec74a197b86}{Flappy\+Bird\+::flappy\+Score}}.
+
+\Hypertarget{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341}\label{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!OnCollisionExit@{OnCollisionExit}}
+\index{OnCollisionExit@{OnCollisionExit}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{OnCollisionExit()}{OnCollisionExit()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::\+On\+Collision\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_engine2_d_1_1_player_a4fbe992b15a8a7240dc8c2846e2bc95e}{Engine2\+D\+::\+Player}}.
+
+\Hypertarget{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c}\label{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!OnCollisionStay@{OnCollisionStay}}
+\index{OnCollisionStay@{OnCollisionStay}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{OnCollisionStay()}{OnCollisionStay()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::\+On\+Collision\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_engine2_d_1_1_player_ab636e039042333f7eb7e587a449bb453}{Engine2\+D\+::\+Player}}.
+
+\Hypertarget{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8}\label{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!PointCollide@{PointCollide}}
+\index{PointCollide@{PointCollide}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{PointCollide()}{PointCollide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} Engine2\+D\+::\+Collisions\+::\+Point\+Collide (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{point,  }\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{ignore\+One }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70}\label{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!printCorners@{printCorners}}
+\index{printCorners@{printCorners}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{printCorners()}{printCorners()}}
+{\footnotesize\ttfamily void Engine2\+D\+::\+Collisions\+::print\+Corners (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ sf\+::\+Vector2f $>$ \&}]{corners }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326}\label{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!Raycast@{Raycast}}
+\index{Raycast@{Raycast}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{Raycast()}{Raycast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} Engine2\+D\+::\+Collisions\+::\+Raycast (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{start,  }\item[{sf\+::\+Vector2f}]{end,  }\item[{std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$}]{ignore }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352}\label{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!RaycastBox@{RaycastBox}}
+\index{RaycastBox@{RaycastBox}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{RaycastBox()}{RaycastBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{Raycast\+Hit}} Engine2\+D\+::\+Collisions\+::\+Raycast\+Box (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*}}]{self,  }\item[{sf\+::\+Vector2f}]{self\+Position,  }\item[{sf\+::\+Vector2f}]{end,  }\item[{std\+::set$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}} \texorpdfstring{$\ast$}{*} $>$}]{ignore }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d}\label{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!All@{All}}
+\index{All@{All}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{All}{All}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Engine2\+D\+::\+Collisions}} \texorpdfstring{$\ast$}{*} $>$ Engine2\+D\+::\+Collisions\+::\+All\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8}\label{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!currentCollisions@{currentCollisions}}
+\index{currentCollisions@{currentCollisions}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{currentCollisions}{currentCollisions}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}\texorpdfstring{$\ast$}{*}$>$ Engine2\+D\+::\+Collisions\+::current\+Collisions}
+
+\Hypertarget{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37}\label{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!enabled@{enabled}}
+\index{enabled@{enabled}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool Engine2\+D\+::\+Collisions\+::enabled}
+
+\Hypertarget{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a}\label{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!globalBounds@{globalBounds}}
+\index{globalBounds@{globalBounds}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{globalBounds}{globalBounds}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Engine2\+D\+::\+Collisions\+::global\+Bounds\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d}\label{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!myCorners@{myCorners}}
+\index{myCorners@{myCorners}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{myCorners}{myCorners}}
+{\footnotesize\ttfamily std\+::vector$<$Vector2f$>$ Engine2\+D\+::\+Collisions\+::my\+Corners}
+
+\Hypertarget{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6}\label{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6} 
+\index{Engine2D::Collisions@{Engine2D::Collisions}!myTransform@{myTransform}}
+\index{myTransform@{myTransform}!Engine2D::Collisions@{Engine2D::Collisions}}
+\doxysubsubsection{\texorpdfstring{myTransform}{myTransform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{Transformable\+Object}}\texorpdfstring{$\ast$}{*} Engine2\+D\+::\+Collisions\+::my\+Transform}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_collisions_8h}{Collisions.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_collisions_8cpp}{Collisions.\+cpp}}\end{DoxyCompactItemize}

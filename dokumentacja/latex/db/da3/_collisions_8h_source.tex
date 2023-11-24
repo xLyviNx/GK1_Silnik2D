@@ -1,0 +1,74 @@
+\doxysection{D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\+Collisions.h}
+\hypertarget{_collisions_8h_source}{}\label{_collisions_8h_source}\mbox{\hyperlink{_collisions_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_transform_8h}{Transform.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }Collisions;}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{RaycastHit}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_a1273d91f362b44293b065f370f2fbcfb}{hit}};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_a423f0017dd223a80badba3a591f3a6ee}{collidedObject}};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_aca24c7c0696d1f2733b23476f6cba709}{point}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_add6b2200deedd3407552f68798b6e06e}{pointBefore}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ac43376cdb31ded016bed308d903d9eb7}{targetEnd}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ad7f7f9e66200b7c34ba22549ee6905d6}{RaycastHit}}(\textcolor{keywordtype}{bool}\ hits,\ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ collided,\ sf::Vector2f\ hpoint,\ sf::Vector2f\ end,\ sf::Vector2f\ pointBef)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_a1273d91f362b44293b065f370f2fbcfb}{hit}}\ =\ hits;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_a423f0017dd223a80badba3a591f3a6ee}{collidedObject}}\ =\ collided;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_aca24c7c0696d1f2733b23476f6cba709}{point}}\ =\ hpoint;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_ac43376cdb31ded016bed308d903d9eb7}{targetEnd}}\ =\ end;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit_add6b2200deedd3407552f68798b6e06e}{pointBefore}}\ =\ pointBef;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{GameObject}}}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a99df6467e17d317a3d60b5b8532ea40f}{oldAngle}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a5e166ed75021ef2af55972b410fca40a}{oldSin}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a652243cc61f7544a16e11dbfc2263a3d}{oldCos}};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ sf::FloatRect\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_af85b52802bcc84debaff2ec09796077a}{globalBounds}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a6f999173e0fe6b7bd37df29e32f87a37}{enabled}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a5264316d0b313e520c9defb0e3a73e52}{Collisions}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a5264316d0b313e520c9defb0e3a73e52}{Collisions}}(\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ transform);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a37260d5b577ffa990b6c7ff27116ccc4}{\string~Collisions}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Collisions*>\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_acc316c98bd06099d878d7e356a3d8d0d}{All}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a964f14c4a467d3e0740ed27b6637ee07}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ sf::FloatRect\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a6b8065a4c5332cc6a31dfad496207cf4}{getGlobalBounds}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}{Collides}}(sf::FloatRect\ otherRect);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a78b187d6c671d4c3a70195ca1e4a4517}{CollidesWithAny}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//static\ Collisions*\ PointCollide(sf::Vector2f\ point);}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_abe71e2c4112e5900ed95c971e90b58a8}{PointCollide}}(sf::Vector2f\ point,\ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ ignoreOne);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_ac4d154a804cb8ee47c9bece965f25de6}{myTransform}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{RaycastHit}}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7368bcb59a0311b0abdc6074d3132326}{Raycast}}(sf::Vector2f\ start,\ sf::Vector2f\ end,\ std::set<Collisions*>\ ignore);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{RaycastHit}}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a0b3beec052b85cc49b0938f93e781352}{RaycastBox}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ self,\ sf::Vector2f\ selfPosition,\ sf::Vector2f\ end,\ std::set<Collisions*>\ ignore);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_engine2_d_1_1_raycast_hit}{RaycastHit}}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a87087ba943cacbab05cc13aaaf41405c}{FindClosestNonCollidingPoint}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ Target,\ sf::Vector2f\ start,\ sf::Vector2f\ end,\ std::set<Collisions*>\ ignore);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7e81e8728a716783f1e67d85c3d58f0d}{OnCollisionEnter}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ other);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_ad056de7321e4f5aeefc4348833820a7c}{OnCollisionStay}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ other);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_ad4a2ede66deeaf262b2586ad8a636341}{OnCollisionExit}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ other);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::vector<Collisions*>\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_af764da8e9509c19f58411721fb81fed8}{currentCollisions}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ sf::Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b}{moveOutOfCollision}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ coll,\ sf::Vector2f\ position);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}{Collides}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ other);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}{Collides}}(sf::Vector2f\ point);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a7538ca90a93d4c2a12727d28ca25317b}{moveOutOfCollision}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ coll,\ sf::Vector2f\ position,\ sf::Vector2f\ velocity);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a8bc78323ca779ffe2a05fd424b35268b}{Collides}}(std::vector<sf::Vector2f>\ corners);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_ac88770d20ca7eb027b8c21d034d7820c}{CalculateCorners}}(\textcolor{keywordtype}{float}\ width,\ \textcolor{keywordtype}{float}\ height,\ \textcolor{keywordtype}{float}\ angle,\ \textcolor{keyword}{const}\ sf::Vector2f\ position);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_abc92fb7c35038a30c1fa41f1554d1e70}{printCorners}}(\textcolor{keyword}{const}\ std::vector<sf::Vector2f>\&\ corners);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_a08fcf16ec995148a9bca335b4118ca31}{drawCorners}}(\textcolor{keyword}{const}\ std::vector<sf::Vector2f>\&\ corners);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::vector<Vector2f>\ \mbox{\hyperlink{class_engine2_d_1_1_collisions_aa10ec39c4639bc2a818969e3e6864b4d}{myCorners}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*Vector2f\ left;}}
+\DoxyCodeLine{00064\ \textcolor{comment}{\ \ \ \ \ \ \ \ Vector2f\ right;}}
+\DoxyCodeLine{00065\ \textcolor{comment}{\ \ \ \ \ \ \ \ Vector2f\ bottom;}}
+\DoxyCodeLine{00066\ \textcolor{comment}{\ \ \ \ \ \ \ \ Vector2f\ top;*/}}
+\DoxyCodeLine{00067\ \ \ \ \ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}

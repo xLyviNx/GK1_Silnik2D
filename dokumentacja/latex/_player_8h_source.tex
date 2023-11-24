@@ -1,0 +1,44 @@
+\doxysection{D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\+Player.h}
+\hypertarget{_player_8h_source}{}\label{_player_8h_source}\mbox{\hyperlink{_player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_input_reader_8h}{InputReader.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_transform_8h}{Transform.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_shape_object_8h}{ShapeObject.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collisions_8h}{Collisions.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_bitmap_object_8h}{BitmapObject.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_player}{Player}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape}{Shapes::RectangleShape}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_input_reader}{InputReader}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_updatable_object}{UpdatableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}},\textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_bitmap_object}{BitmapObject}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ jumped;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a5057a9413fbc0b67181f697098fa95f1}{isTopView}};}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_player_af381130ac3037b4c755a8744759a8225}{movementSpeed}};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a87086aa06a6d02a3cd50ad463c557497}{gravityForce}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_player_aff1f053ff1bcfdf5a474738e8c3c2f46}{isGrounded}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_player_ac4efb7ecb4f8043274e7805f63d1a14f}{movement}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a5bec454e1c9a6d4a971b4f0089bfa432}{jumpForce}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_player_afa80897546c9bdbddfcb3e1c58c3be55}{enableGravity}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_ab83f1535726023514ed80528ec924772}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_player}{Player}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}});}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_af7b71888bc59a1f5fd65d42473035eb7}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a4226386e0ab561d027097b10ed070dd1}{Movement}}(\mbox{\hyperlink{class_engine2_d_1_1_engine}{Engine}}*\ engine,\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_acf2bac8a633da1d174056580c974300d}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a3c00bafeaf7d3ab7495ef1be54b38ac9}{KeyReleased}}(sf::Keyboard::Key\ keyReleased)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_aed552d7b30e84b5b6f4b7f8d42a4ba6f}{KeyPressed}}(sf::Keyboard::Key\ keyPressed)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_aa913649b08266a7f80320e07b05b8dfb}{OnCollisionEnter}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_ab636e039042333f7eb7e587a449bb453}{OnCollisionStay}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a4fbe992b15a8a7240dc8c2846e2bc95e}{OnCollisionExit}}(\mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}*\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a7399bca2b15461a134b456736abf06d0}{canJumpMidAir}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a623cedbac158e72eef043f2331bcbc25}{Move}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ Vector2f\ dir,\ \textcolor{keywordtype}{bool}*\ collided);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a623cedbac158e72eef043f2331bcbc25}{Move}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ Vector2f\ dir,\ \textcolor{keywordtype}{bool}*\ collided,\ \textcolor{keywordtype}{bool}\ collisionsMoveOut);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_player_a08bb2dbde38ea18a2442e16767400d61}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}

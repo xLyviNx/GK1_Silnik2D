@@ -1,0 +1,144 @@
+\doxysection{Bitmap\+Object Class Reference}
+\hypertarget{class_bitmap_object}{}\label{class_bitmap_object}\index{BitmapObject@{BitmapObject}}
+
+
+{\ttfamily \#include $<$Bitmap\+Object.\+h$>$}
+
+Inheritance diagram for Bitmap\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_bitmap_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}{loadbitmaps}} (std\+::vector$<$ sf\+::\+Texture $>$ bitmapstoload)
+\item 
+void \mbox{\hyperlink{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}{animate}} (double deltatime, double frame\+\_\+speed, int version)
+\item 
+virtual void \mbox{\hyperlink{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}{delete\+Me}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_af5c0f9b5eb4304b17e2928da56e468a4}{Draw}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a14166278e3321b9bd5628d2a52c3125c}{Drawable\+Object}} ()
+\item 
+virtual void \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_aa219c52644f4c7b66ca3c7a3386e5f6d}{Draw}} (sf\+::\+Texture texture)
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a0270327b9525c4e563545e6c515a5d8e}{\texorpdfstring{$\sim$}{\string~}\+Drawable\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_abeeaa08c4d6f9f511916204d403450e0}{Game\+Object}} ()
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a862384580261ca5ae326b03dcff52d80}{Game\+Object}} (std\+::string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}})
+\item 
+\mbox{\hyperlink{class_engine2_d_1_1_game_object_a1de11ee28a22197456e1a88f6ed3156d}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_bitmap_object_a027b556213b1555895e6d8af12663ba6}{renderobj}}
+\item 
+std\+::vector$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7}{bitmaps}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae73cdf98d1ef84dd01d41af21ba018c5}{visible}}
+\item 
+sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_addd9535d8e921b206d9aedde771fc395}{window}}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_a5d6eeff01fe1042ae41f9590564bf2c3}{is\+Ui}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}}
+\item 
+bool \mbox{\hyperlink{class_engine2_d_1_1_game_object_a4b29dc7811499e94d004bb0adc8167fa}{is\+Removing}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56}{i}} =0
+\item 
+double \mbox{\hyperlink{class_bitmap_object_adbc46c3c8c95d9ace00874a30c9e81ff}{offset}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Engine2\+D\+::\+Drawable\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{Drawable\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ab4f1788806b4cf6a682bb2eb6b7bc45c}{All}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Engine2\+D\+::\+Game\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac56370aaa845877752342e8091325a2b}{All}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343}\label{class_bitmap_object_a36c69823bdaf0c1fd6e4f3d6b9508343} 
+\index{BitmapObject@{BitmapObject}!animate@{animate}}
+\index{animate@{animate}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily void Bitmap\+Object\+::animate (\begin{DoxyParamCaption}\item[{double}]{deltatime,  }\item[{double}]{frame\+\_\+speed,  }\item[{int}]{version }\end{DoxyParamCaption})}
+
+\Hypertarget{class_bitmap_object_a207fc305d5b844f97418614bfa38547b}\label{class_bitmap_object_a207fc305d5b844f97418614bfa38547b} 
+\index{BitmapObject@{BitmapObject}!deleteMe@{deleteMe}}
+\index{deleteMe@{deleteMe}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{deleteMe()}{deleteMe()}}
+{\footnotesize\ttfamily void Bitmap\+Object\+::delete\+Me (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine2_d_1_1_drawable_object_ae3025eb45f8dfef8d9bade9047023502}{Engine2\+D\+::\+Drawable\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_flappy_bird_1_1flappy_obstacle_a6901b9f1923b781770f201140c31d033}{Flappy\+Bird\+::flappy\+Obstacle}}, \mbox{\hyperlink{class_engine2_d_1_1_player_ab83f1535726023514ed80528ec924772}{Engine2\+D\+::\+Player}}, and \mbox{\hyperlink{class_engine2_d_1_1_sprite_object_a1be0b22130919272fb618cc15ac341ed}{Engine2\+D\+::\+Sprite\+Object}}.
+
+\Hypertarget{class_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2}\label{class_bitmap_object_aaec61c9acc89036fd1bd3c0645f845b2} 
+\index{BitmapObject@{BitmapObject}!loadbitmaps@{loadbitmaps}}
+\index{loadbitmaps@{loadbitmaps}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{loadbitmaps()}{loadbitmaps()}}
+{\footnotesize\ttfamily void Bitmap\+Object\+::loadbitmaps (\begin{DoxyParamCaption}\item[{std\+::vector$<$ sf\+::\+Texture $>$}]{bitmapstoload }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7}\label{class_bitmap_object_ab4f029d81858b1a996a6e75d0a62d6b7} 
+\index{BitmapObject@{BitmapObject}!bitmaps@{bitmaps}}
+\index{bitmaps@{bitmaps}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{bitmaps}{bitmaps}}
+{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Texture$>$ Bitmap\+Object\+::bitmaps}
+
+\Hypertarget{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56}\label{class_bitmap_object_a1ea0e37c4182a860b0699ac87d792c56} 
+\index{BitmapObject@{BitmapObject}!i@{i}}
+\index{i@{i}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int Bitmap\+Object\+::i =0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_object_adbc46c3c8c95d9ace00874a30c9e81ff}\label{class_bitmap_object_adbc46c3c8c95d9ace00874a30c9e81ff} 
+\index{BitmapObject@{BitmapObject}!offset@{offset}}
+\index{offset@{offset}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily double Bitmap\+Object\+::offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_bitmap_object_a027b556213b1555895e6d8af12663ba6}\label{class_bitmap_object_a027b556213b1555895e6d8af12663ba6} 
+\index{BitmapObject@{BitmapObject}!renderobj@{renderobj}}
+\index{renderobj@{renderobj}!BitmapObject@{BitmapObject}}
+\doxysubsubsection{\texorpdfstring{renderobj}{renderobj}}
+{\footnotesize\ttfamily sf\+::\+Sprite Bitmap\+Object\+::renderobj}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_bitmap_object_8h}{Bitmap\+Object.\+h}}\item 
+D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\mbox{\hyperlink{_bitmap_object_8cpp}{Bitmap\+Object.\+cpp}}\end{DoxyCompactItemize}

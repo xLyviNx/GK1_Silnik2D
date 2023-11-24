@@ -1,0 +1,58 @@
+\doxysection{D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\+Transform.h}
+\hypertarget{_transform_8h_source}{}\label{_transform_8h_source}\mbox{\hyperlink{_transform_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }sf;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_game_object}{GameObject}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ parent;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ set<TransformableObject*>\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae92e9d8e9dd79d65e1eb662b00e768dd}{All}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ vector<TransformableObject*>\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3d8e6a75f95d9932b9f6c6baace36ba7}{children}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae353655a1c7faf056ac8bcc6472f77f7}{lastPosition}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7006135306f80fda695b125f3c291f00}{worldPosition}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aac315ec05d0b2079925997381a0677fe}{lastWorldPosition}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aa459f1bfadf4e5a210239b03f98e10f1}{worldScale}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a202e416fbc2668115069500107839d57}{bounds}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a298b598ac30b9864295d03532518439c}{worldBounds}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ String\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a80ae42606efa183203d8735e5551f571}{tag}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_af982f629037e562a721c18bd44014fb4}{worldRotation}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ad148c3664977e6720d6b45da75cf2ad4}{Translate}}(\textcolor{keywordtype}{float}\ X,\ \textcolor{keywordtype}{float}\ Y);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ad148c3664977e6720d6b45da75cf2ad4}{Translate}}(Vector2f\ XY);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a16368890c2162a9a8e1a583759d656ca}{setPosition}}(Vector2f\ XY);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3738feb9d275d8956dbcf1a27108550c}{Scale}}(\textcolor{keywordtype}{float}\ XY);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3738feb9d275d8956dbcf1a27108550c}{Scale}}(\textcolor{keywordtype}{float}\ X,\ \textcolor{keywordtype}{float}\ Y);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9a4c2bfeed878aaf7484a1a0287bfb1f}{setScale}}(\textcolor{keywordtype}{float}\ X,\ \textcolor{keywordtype}{float}\ Y);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a3738feb9d275d8956dbcf1a27108550c}{Scale}}(Vector2f\ XY);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a7308d7e310bbca289073cf9217144444}{Rotate}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}});}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_ae77257ff4bf1e004100308e6787f9c89}{SetParent}}(\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ newParent);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}});}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}});}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a08261eca79ac42fa630d89ec9e828718}{scale}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a1d6b70c5cb7086a327d9581b08848ade}{rotation}},\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ parent);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}(\mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ parent);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}}*\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a0e9d27bab16116023c0a8b87876983cf}{GetParent}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a388cf56b15afd793172205fb40049909}{\string~TransformableObject}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4ceff6806fdc7cc2377c8c53be0f732c}{PropertiesChanged}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a4766b924212d5efa1d6e3342edeb45e5}{ChildrenPropertiesChange}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a9cce4cde2ae1365bbdf363f09674e081}{TransformableObject}}(std::string\ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_a00b40a401d377584501c810c1d33038e}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//virtual\ void\ checkPropertyChanged();}}
+\DoxyCodeLine{00052\ \ \ \ \ \};}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}

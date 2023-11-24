@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Dokumentacja klasy Engine2D::Engine</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d8/d0e/class_engine2_d_1_1_engine.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pub-static-attribs">Statyczne atrybuty publiczne</a> &#124;
+<a href="#pro-static-attribs">Statyczne atrybuty chronione</a> &#124;
+<a href="#pri-methods">Metody prywatne</a> &#124;
+<a href="#pri-static-methods">Statyczne metody prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="../../df/db4/class_engine2_d_1_1_engine-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy Engine2D::Engine</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../de/dcf/_engine_8h_source.html">Engine.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a8c98683b0a3aa28d8ab72a8bcd0d52f2" id="r_a8c98683b0a3aa28d8ab72a8bcd0d52f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2">Engine</a> ()</td></tr>
+<tr class="separator:a8c98683b0a3aa28d8ab72a8bcd0d52f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef7030a089ecb30bbfcb9e43094717a" id="r_a8ef7030a089ecb30bbfcb9e43094717a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a8ef7030a089ecb30bbfcb9e43094717a">~Engine</a> ()</td></tr>
+<tr class="separator:a8ef7030a089ecb30bbfcb9e43094717a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4997f7b6143ac76506aa7e4cd6c97e3" id="r_aa4997f7b6143ac76506aa7e4cd6c97e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#aa4997f7b6143ac76506aa7e4cd6c97e3">isKeyTriggered</a> (sf::Keyboard::Key key)</td></tr>
+<tr class="separator:aa4997f7b6143ac76506aa7e4cd6c97e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:acf56e5fefb796f7bc953d9af2f63b86a" id="r_acf56e5fefb796f7bc953d9af2f63b86a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#acf56e5fefb796f7bc953d9af2f63b86a">PrintLog</a> (const std::string &amp;log)</td></tr>
+<tr class="separator:acf56e5fefb796f7bc953d9af2f63b86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7470965f2b7388361b31ec0479e8ec" id="r_aeb7470965f2b7388361b31ec0479e8ec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html">Engine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#aeb7470965f2b7388361b31ec0479e8ec">GetSingleton</a> (bool)</td></tr>
+<tr class="separator:aeb7470965f2b7388361b31ec0479e8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2666f40bdfa2b4f593548a6fb81cdef6" id="r_a2666f40bdfa2b4f593548a6fb81cdef6"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a2666f40bdfa2b4f593548a6fb81cdef6">AngleToRad</a> (float angle)</td></tr>
+<tr class="separator:a2666f40bdfa2b4f593548a6fb81cdef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a7b6466937a41bce2ea717708295e3d31" id="r_a7b6466937a41bce2ea717708295e3d31"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a7b6466937a41bce2ea717708295e3d31">Window</a></td></tr>
+<tr class="separator:a7b6466937a41bce2ea717708295e3d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e522d197d59108b8c4a1e8f13851a9" id="r_a98e522d197d59108b8c4a1e8f13851a9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a98e522d197d59108b8c4a1e8f13851a9">deltaTime</a></td></tr>
+<tr class="separator:a98e522d197d59108b8c4a1e8f13851a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08748728ac09b10c8be0c33671d0c8c3" id="r_a08748728ac09b10c8be0c33671d0c8c3"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a08748728ac09b10c8be0c33671d0c8c3">baseFont</a></td></tr>
+<tr class="separator:a08748728ac09b10c8be0c33671d0c8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Statyczne atrybuty publiczne</h2></td></tr>
+<tr class="memitem:aa52909143dad8875ad6cd273115625aa" id="r_aa52909143dad8875ad6cd273115625aa"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#aa52909143dad8875ad6cd273115625aa">Gravity</a> = 9.81f</td></tr>
+<tr class="separator:aa52909143dad8875ad6cd273115625aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Statyczne atrybuty chronione</h2></td></tr>
+<tr class="memitem:a485fd989d0148f2db20718c8d9c43b52" id="r_a485fd989d0148f2db20718c8d9c43b52"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html">Engine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a485fd989d0148f2db20718c8d9c43b52">singleton</a> = NULL</td></tr>
+<tr class="separator:a485fd989d0148f2db20718c8d9c43b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Metody prywatne</h2></td></tr>
+<tr class="memitem:a2cbd5624354900239e762aa52e2cfd5a" id="r_a2cbd5624354900239e762aa52e2cfd5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a2cbd5624354900239e762aa52e2cfd5a">InitGame</a> ()</td></tr>
+<tr class="separator:a2cbd5624354900239e762aa52e2cfd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818c383477fd6843a523022aa680bc34" id="r_a818c383477fd6843a523022aa680bc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a818c383477fd6843a523022aa680bc34">EngineLoop</a> ()</td></tr>
+<tr class="separator:a818c383477fd6843a523022aa680bc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09116b4c628847d34c221fd2f43b95e1" id="r_a09116b4c628847d34c221fd2f43b95e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a09116b4c628847d34c221fd2f43b95e1">Cleanup</a> ()</td></tr>
+<tr class="separator:a09116b4c628847d34c221fd2f43b95e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70ea9ba93ef4ae4d2aa8bb89dfd4138b" id="r_a70ea9ba93ef4ae4d2aa8bb89dfd4138b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a70ea9ba93ef4ae4d2aa8bb89dfd4138b">CleanupScene</a> ()</td></tr>
+<tr class="separator:a70ea9ba93ef4ae4d2aa8bb89dfd4138b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d831870449eb9b371dfb79ddbc3dd1" id="r_a72d831870449eb9b371dfb79ddbc3dd1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a72d831870449eb9b371dfb79ddbc3dd1">SpawnGame</a> ()</td></tr>
+<tr class="separator:a72d831870449eb9b371dfb79ddbc3dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7096272ef8d1f831e780ece7976a8e98" id="r_a7096272ef8d1f831e780ece7976a8e98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a7096272ef8d1f831e780ece7976a8e98">removeAwaitingObjects</a> ()</td></tr>
+<tr class="separator:a7096272ef8d1f831e780ece7976a8e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Statyczne metody prywatne</h2></td></tr>
+<tr class="memitem:a089e1546600008d56ff3a7f7a1740134" id="r_a089e1546600008d56ff3a7f7a1740134"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a089e1546600008d56ff3a7f7a1740134">InitLogs</a> ()</td></tr>
+<tr class="separator:a089e1546600008d56ff3a7f7a1740134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a614215092cdde8ed504074cb30ef8a07" id="r_a614215092cdde8ed504074cb30ef8a07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#a614215092cdde8ed504074cb30ef8a07">enabled</a></td></tr>
+<tr class="separator:a614215092cdde8ed504074cb30ef8a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b003745f06d75439db3ea01decd3ce" id="r_ab9b003745f06d75439db3ea01decd3ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#ab9b003745f06d75439db3ea01decd3ce">keyboardInputEnabled</a></td></tr>
+<tr class="separator:ab9b003745f06d75439db3ea01decd3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa77734822f9e56796684d2cbe17dadd5" id="r_aa77734822f9e56796684d2cbe17dadd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#aa77734822f9e56796684d2cbe17dadd5">mouseInputEnabled</a></td></tr>
+<tr class="separator:aa77734822f9e56796684d2cbe17dadd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2114bae3ea8475dfbe316a65447ea62" id="r_ab2114bae3ea8475dfbe316a65447ea62"><td class="memItemLeft" align="right" valign="top">sf::Vector2i&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html#ab2114bae3ea8475dfbe316a65447ea62">mousePosition</a></td></tr>
+<tr class="separator:ab2114bae3ea8475dfbe316a65447ea62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a8c98683b0a3aa28d8ab72a8bcd0d52f2" name="a8c98683b0a3aa28d8ab72a8bcd0d52f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c98683b0a3aa28d8ab72a8bcd0d52f2">&#9670;&#160;</a></span>Engine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::Engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ef7030a089ecb30bbfcb9e43094717a" name="a8ef7030a089ecb30bbfcb9e43094717a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef7030a089ecb30bbfcb9e43094717a">&#9670;&#160;</a></span>~Engine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::~Engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a2666f40bdfa2b4f593548a6fb81cdef6" name="a2666f40bdfa2b4f593548a6fb81cdef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2666f40bdfa2b4f593548a6fb81cdef6">&#9670;&#160;</a></span>AngleToRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Engine2D::Engine::AngleToRad </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09116b4c628847d34c221fd2f43b95e1" name="a09116b4c628847d34c221fd2f43b95e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09116b4c628847d34c221fd2f43b95e1">&#9670;&#160;</a></span>Cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::Cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70ea9ba93ef4ae4d2aa8bb89dfd4138b" name="a70ea9ba93ef4ae4d2aa8bb89dfd4138b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ea9ba93ef4ae4d2aa8bb89dfd4138b">&#9670;&#160;</a></span>CleanupScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::CleanupScene </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a818c383477fd6843a523022aa680bc34" name="a818c383477fd6843a523022aa680bc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818c383477fd6843a523022aa680bc34">&#9670;&#160;</a></span>EngineLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::EngineLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb7470965f2b7388361b31ec0479e8ec" name="aeb7470965f2b7388361b31ec0479e8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7470965f2b7388361b31ec0479e8ec">&#9670;&#160;</a></span>GetSingleton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html">Engine</a> * Engine::GetSingleton </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>CreateIfNull</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cbd5624354900239e762aa52e2cfd5a" name="a2cbd5624354900239e762aa52e2cfd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbd5624354900239e762aa52e2cfd5a">&#9670;&#160;</a></span>InitGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::InitGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a089e1546600008d56ff3a7f7a1740134" name="a089e1546600008d56ff3a7f7a1740134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089e1546600008d56ff3a7f7a1740134">&#9670;&#160;</a></span>InitLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::InitLogs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4997f7b6143ac76506aa7e4cd6c97e3" name="aa4997f7b6143ac76506aa7e4cd6c97e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4997f7b6143ac76506aa7e4cd6c97e3">&#9670;&#160;</a></span>isKeyTriggered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Engine::isKeyTriggered </td>
+          <td>(</td>
+          <td class="paramtype">sf::Keyboard::Key&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf56e5fefb796f7bc953d9af2f63b86a" name="acf56e5fefb796f7bc953d9af2f63b86a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf56e5fefb796f7bc953d9af2f63b86a">&#9670;&#160;</a></span>PrintLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::PrintLog </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>log</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7096272ef8d1f831e780ece7976a8e98" name="a7096272ef8d1f831e780ece7976a8e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7096272ef8d1f831e780ece7976a8e98">&#9670;&#160;</a></span>removeAwaitingObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::removeAwaitingObjects </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72d831870449eb9b371dfb79ddbc3dd1" name="a72d831870449eb9b371dfb79ddbc3dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d831870449eb9b371dfb79ddbc3dd1">&#9670;&#160;</a></span>SpawnGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::SpawnGame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a08748728ac09b10c8be0c33671d0c8c3" name="a08748728ac09b10c8be0c33671d0c8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08748728ac09b10c8be0c33671d0c8c3">&#9670;&#160;</a></span>baseFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Font Engine2D::Engine::baseFont</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98e522d197d59108b8c4a1e8f13851a9" name="a98e522d197d59108b8c4a1e8f13851a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e522d197d59108b8c4a1e8f13851a9">&#9670;&#160;</a></span>deltaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Engine2D::Engine::deltaTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a614215092cdde8ed504074cb30ef8a07" name="a614215092cdde8ed504074cb30ef8a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614215092cdde8ed504074cb30ef8a07">&#9670;&#160;</a></span>enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Engine::enabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa52909143dad8875ad6cd273115625aa" name="aa52909143dad8875ad6cd273115625aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52909143dad8875ad6cd273115625aa">&#9670;&#160;</a></span>Gravity</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::Gravity = 9.81f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9b003745f06d75439db3ea01decd3ce" name="ab9b003745f06d75439db3ea01decd3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b003745f06d75439db3ea01decd3ce">&#9670;&#160;</a></span>keyboardInputEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Engine::keyboardInputEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa77734822f9e56796684d2cbe17dadd5" name="aa77734822f9e56796684d2cbe17dadd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa77734822f9e56796684d2cbe17dadd5">&#9670;&#160;</a></span>mouseInputEnabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Engine::mouseInputEnabled</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2114bae3ea8475dfbe316a65447ea62" name="ab2114bae3ea8475dfbe316a65447ea62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2114bae3ea8475dfbe316a65447ea62">&#9670;&#160;</a></span>mousePosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2i Engine2D::Engine::mousePosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a485fd989d0148f2db20718c8d9c43b52" name="a485fd989d0148f2db20718c8d9c43b52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485fd989d0148f2db20718c8d9c43b52">&#9670;&#160;</a></span>singleton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html">Engine</a> * Engine::singleton = NULL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b6466937a41bce2ea717708295e3d31" name="a7b6466937a41bce2ea717708295e3d31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6466937a41bce2ea717708295e3d31">&#9670;&#160;</a></span>Window</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::RenderWindow* Engine2D::Engine::Window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../de/dcf/_engine_8h_source.html">Engine.h</a></li>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../d4/d68/_engine_8cpp.html">Engine.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/d06/namespace_engine2_d.html">Engine2D</a></li><li class="navelem"><a class="el" href="../../d8/d0e/class_engine2_d_1_1_engine.html">Engine</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

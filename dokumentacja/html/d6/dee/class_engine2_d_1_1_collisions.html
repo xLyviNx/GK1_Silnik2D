@@ -1,0 +1,1009 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Dokumentacja klasy Engine2D::Collisions</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d6/dee/class_engine2_d_1_1_collisions.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-static-methods">Statyczne metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pub-static-attribs">Statyczne atrybuty publiczne</a> &#124;
+<a href="#pro-attribs">Atrybuty chronione</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="../../da/d08/class_engine2_d_1_1_collisions-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy Engine2D::Collisions</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../db/da3/_collisions_8h_source.html">Collisions.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Engine2D::Collisions</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d6/dee/class_engine2_d_1_1_collisions.png" usemap="#Engine2D::Collisions_map" alt=""/>
+  <map id="Engine2D::Collisions_map" name="Engine2D::Collisions_map">
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="334,0,547,24"/>
+<area href="../../d6/d4b/class_engine2_d_1_1_player.html" alt="Engine2D::Player" shape="rect" coords="0,112,213,136"/>
+<area href="../../d8/da7/class_engine2_d_1_1_shape_object.html" alt="Engine2D::ShapeObject" shape="rect" coords="223,112,436,136"/>
+<area href="../../d4/d31/class_flappy_bird_1_1flappy_obstacle.html" alt="FlappyBird::flappyObstacle" shape="rect" coords="446,112,659,136"/>
+<area href="../../d9/d74/class_flappy_bird_1_1flappy_score.html" alt="FlappyBird::flappyScore" shape="rect" coords="669,112,882,136"/>
+<area href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html" alt="Engine2D::Shapes::CircleShape" shape="rect" coords="111,168,324,192"/>
+<area href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html" alt="Engine2D::Shapes::RectangleShape" shape="rect" coords="334,168,547,192"/>
+<area href="../../d6/d4b/class_engine2_d_1_1_player.html" alt="Engine2D::Player" shape="rect" coords="111,224,324,248"/>
+<area href="../../d4/d31/class_flappy_bird_1_1flappy_obstacle.html" alt="FlappyBird::flappyObstacle" shape="rect" coords="334,224,547,248"/>
+<area href="../../d9/d74/class_flappy_bird_1_1flappy_score.html" alt="FlappyBird::flappyScore" shape="rect" coords="557,224,770,248"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a5264316d0b313e520c9defb0e3a73e52" id="r_a5264316d0b313e520c9defb0e3a73e52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a5264316d0b313e520c9defb0e3a73e52">Collisions</a> ()</td></tr>
+<tr class="separator:a5264316d0b313e520c9defb0e3a73e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b01e029856cb6ea1f551d388471a3e" id="r_a72b01e029856cb6ea1f551d388471a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a72b01e029856cb6ea1f551d388471a3e">Collisions</a> (<a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *transform)</td></tr>
+<tr class="separator:a72b01e029856cb6ea1f551d388471a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37260d5b577ffa990b6c7ff27116ccc4" id="r_a37260d5b577ffa990b6c7ff27116ccc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a37260d5b577ffa990b6c7ff27116ccc4">~Collisions</a> ()</td></tr>
+<tr class="separator:a37260d5b577ffa990b6c7ff27116ccc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964f14c4a467d3e0740ed27b6637ee07" id="r_a964f14c4a467d3e0740ed27b6637ee07"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a964f14c4a467d3e0740ed27b6637ee07">deleteMe</a> () override</td></tr>
+<tr class="separator:a964f14c4a467d3e0740ed27b6637ee07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8065a4c5332cc6a31dfad496207cf4" id="r_a6b8065a4c5332cc6a31dfad496207cf4"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a6b8065a4c5332cc6a31dfad496207cf4">getGlobalBounds</a> ()</td></tr>
+<tr class="separator:a6b8065a4c5332cc6a31dfad496207cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc78323ca779ffe2a05fd424b35268b" id="r_a8bc78323ca779ffe2a05fd424b35268b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a8bc78323ca779ffe2a05fd424b35268b">Collides</a> (sf::FloatRect otherRect)</td></tr>
+<tr class="separator:a8bc78323ca779ffe2a05fd424b35268b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b187d6c671d4c3a70195ca1e4a4517" id="r_a78b187d6c671d4c3a70195ca1e4a4517"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a78b187d6c671d4c3a70195ca1e4a4517">CollidesWithAny</a> ()</td></tr>
+<tr class="separator:a78b187d6c671d4c3a70195ca1e4a4517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e81e8728a716783f1e67d85c3d58f0d" id="r_a7e81e8728a716783f1e67d85c3d58f0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a7e81e8728a716783f1e67d85c3d58f0d">OnCollisionEnter</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:a7e81e8728a716783f1e67d85c3d58f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad056de7321e4f5aeefc4348833820a7c" id="r_ad056de7321e4f5aeefc4348833820a7c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ad056de7321e4f5aeefc4348833820a7c">OnCollisionStay</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:ad056de7321e4f5aeefc4348833820a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a2ede66deeaf262b2586ad8a636341" id="r_ad4a2ede66deeaf262b2586ad8a636341"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ad4a2ede66deeaf262b2586ad8a636341">OnCollisionExit</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:ad4a2ede66deeaf262b2586ad8a636341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca8922006e49d33dc9647bde0c199a0" id="r_a1ca8922006e49d33dc9647bde0c199a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a1ca8922006e49d33dc9647bde0c199a0">Collides</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *other)</td></tr>
+<tr class="separator:a1ca8922006e49d33dc9647bde0c199a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24ff446c137e1ec27c48e7da3e7cdbe" id="r_ae24ff446c137e1ec27c48e7da3e7cdbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ae24ff446c137e1ec27c48e7da3e7cdbe">Collides</a> (sf::Vector2f point)</td></tr>
+<tr class="separator:ae24ff446c137e1ec27c48e7da3e7cdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e0d148b835337fdd40941b0ffcc615" id="r_a39e0d148b835337fdd40941b0ffcc615"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a39e0d148b835337fdd40941b0ffcc615">moveOutOfCollision</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *coll, sf::Vector2f position, sf::Vector2f velocity)</td></tr>
+<tr class="separator:a39e0d148b835337fdd40941b0ffcc615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a61796ad1363ce2dca1887d8073b10" id="r_a25a61796ad1363ce2dca1887d8073b10"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a25a61796ad1363ce2dca1887d8073b10">Collides</a> (std::vector&lt; sf::Vector2f &gt; corners)</td></tr>
+<tr class="separator:a25a61796ad1363ce2dca1887d8073b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88770d20ca7eb027b8c21d034d7820c" id="r_ac88770d20ca7eb027b8c21d034d7820c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ac88770d20ca7eb027b8c21d034d7820c">CalculateCorners</a> (float width, float height, float angle, const sf::Vector2f position)</td></tr>
+<tr class="separator:ac88770d20ca7eb027b8c21d034d7820c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_abeeaa08c4d6f9f511916204d403450e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#abeeaa08c4d6f9f511916204d403450e0">GameObject</a> ()</td></tr>
+<tr class="separator:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a862384580261ca5ae326b03dcff52d80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a862384580261ca5ae326b03dcff52d80">GameObject</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>)</td></tr>
+<tr class="separator:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a1de11ee28a22197456e1a88f6ed3156d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a1de11ee28a22197456e1a88f6ed3156d">~GameObject</a> ()</td></tr>
+<tr class="separator:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:abe71e2c4112e5900ed95c971e90b58a8" id="r_abe71e2c4112e5900ed95c971e90b58a8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#abe71e2c4112e5900ed95c971e90b58a8">PointCollide</a> (sf::Vector2f point, <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *ignoreOne)</td></tr>
+<tr class="separator:abe71e2c4112e5900ed95c971e90b58a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7368bcb59a0311b0abdc6074d3132326" id="r_a7368bcb59a0311b0abdc6074d3132326"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a7368bcb59a0311b0abdc6074d3132326">Raycast</a> (sf::Vector2f start, sf::Vector2f end, std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt; ignore)</td></tr>
+<tr class="separator:a7368bcb59a0311b0abdc6074d3132326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3beec052b85cc49b0938f93e781352" id="r_a0b3beec052b85cc49b0938f93e781352"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a0b3beec052b85cc49b0938f93e781352">RaycastBox</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *self, sf::Vector2f selfPosition, sf::Vector2f end, std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt; ignore)</td></tr>
+<tr class="separator:a0b3beec052b85cc49b0938f93e781352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87087ba943cacbab05cc13aaaf41405c" id="r_a87087ba943cacbab05cc13aaaf41405c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a87087ba943cacbab05cc13aaaf41405c">FindClosestNonCollidingPoint</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *Target, sf::Vector2f start, sf::Vector2f end, std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt; ignore)</td></tr>
+<tr class="separator:a87087ba943cacbab05cc13aaaf41405c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7538ca90a93d4c2a12727d28ca25317b" id="r_a7538ca90a93d4c2a12727d28ca25317b"><td class="memItemLeft" align="right" valign="top">static sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a7538ca90a93d4c2a12727d28ca25317b">moveOutOfCollision</a> (<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *coll, sf::Vector2f position)</td></tr>
+<tr class="separator:a7538ca90a93d4c2a12727d28ca25317b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc92fb7c35038a30c1fa41f1554d1e70" id="r_abc92fb7c35038a30c1fa41f1554d1e70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#abc92fb7c35038a30c1fa41f1554d1e70">printCorners</a> (const std::vector&lt; sf::Vector2f &gt; &amp;corners)</td></tr>
+<tr class="separator:abc92fb7c35038a30c1fa41f1554d1e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08fcf16ec995148a9bca335b4118ca31" id="r_a08fcf16ec995148a9bca335b4118ca31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a08fcf16ec995148a9bca335b4118ca31">drawCorners</a> (const std::vector&lt; sf::Vector2f &gt; &amp;corners)</td></tr>
+<tr class="separator:a08fcf16ec995148a9bca335b4118ca31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a6f999173e0fe6b7bd37df29e32f87a37" id="r_a6f999173e0fe6b7bd37df29e32f87a37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a6f999173e0fe6b7bd37df29e32f87a37">enabled</a></td></tr>
+<tr class="separator:a6f999173e0fe6b7bd37df29e32f87a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d154a804cb8ee47c9bece965f25de6" id="r_ac4d154a804cb8ee47c9bece965f25de6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#ac4d154a804cb8ee47c9bece965f25de6">myTransform</a></td></tr>
+<tr class="separator:ac4d154a804cb8ee47c9bece965f25de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af764da8e9509c19f58411721fb81fed8" id="r_af764da8e9509c19f58411721fb81fed8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#af764da8e9509c19f58411721fb81fed8">currentCollisions</a></td></tr>
+<tr class="separator:af764da8e9509c19f58411721fb81fed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa10ec39c4639bc2a818969e3e6864b4d" id="r_aa10ec39c4639bc2a818969e3e6864b4d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Vector2f &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#aa10ec39c4639bc2a818969e3e6864b4d">myCorners</a></td></tr>
+<tr class="separator:aa10ec39c4639bc2a818969e3e6864b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_ac18b4d45d12f94726e2ea97364187bb7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a></td></tr>
+<tr class="separator:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_a4b29dc7811499e94d004bb0adc8167fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a4b29dc7811499e94d004bb0adc8167fa">isRemoving</a></td></tr>
+<tr class="separator:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Statyczne atrybuty publiczne</h2></td></tr>
+<tr class="memitem:acc316c98bd06099d878d7e356a3d8d0d" id="r_acc316c98bd06099d878d7e356a3d8d0d"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#acc316c98bd06099d878d7e356a3d8d0d">All</a></td></tr>
+<tr class="separator:acc316c98bd06099d878d7e356a3d8d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object" id="r_ac56370aaa845877752342e8091325a2b"><td class="memItemLeft" align="right" valign="top">static vector&lt; <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac56370aaa845877752342e8091325a2b">All</a></td></tr>
+<tr class="separator:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:af85b52802bcc84debaff2ec09796077a" id="r_af85b52802bcc84debaff2ec09796077a"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#af85b52802bcc84debaff2ec09796077a">globalBounds</a></td></tr>
+<tr class="separator:af85b52802bcc84debaff2ec09796077a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a99df6467e17d317a3d60b5b8532ea40f" id="r_a99df6467e17d317a3d60b5b8532ea40f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a99df6467e17d317a3d60b5b8532ea40f">oldAngle</a></td></tr>
+<tr class="separator:a99df6467e17d317a3d60b5b8532ea40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e166ed75021ef2af55972b410fca40a" id="r_a5e166ed75021ef2af55972b410fca40a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a5e166ed75021ef2af55972b410fca40a">oldSin</a></td></tr>
+<tr class="separator:a5e166ed75021ef2af55972b410fca40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652243cc61f7544a16e11dbfc2263a3d" id="r_a652243cc61f7544a16e11dbfc2263a3d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html#a652243cc61f7544a16e11dbfc2263a3d">oldCos</a></td></tr>
+<tr class="separator:a652243cc61f7544a16e11dbfc2263a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a5264316d0b313e520c9defb0e3a73e52" name="a5264316d0b313e520c9defb0e3a73e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5264316d0b313e520c9defb0e3a73e52">&#9670;&#160;</a></span>Collisions() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine2D::Collisions::Collisions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72b01e029856cb6ea1f551d388471a3e" name="a72b01e029856cb6ea1f551d388471a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b01e029856cb6ea1f551d388471a3e">&#9670;&#160;</a></span>Collisions() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine2D::Collisions::Collisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a> *&#160;</td>
+          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37260d5b577ffa990b6c7ff27116ccc4" name="a37260d5b577ffa990b6c7ff27116ccc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37260d5b577ffa990b6c7ff27116ccc4">&#9670;&#160;</a></span>~Collisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine2D::Collisions::~Collisions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ac88770d20ca7eb027b8c21d034d7820c" name="ac88770d20ca7eb027b8c21d034d7820c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88770d20ca7eb027b8c21d034d7820c">&#9670;&#160;</a></span>CalculateCorners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::CalculateCorners </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Vector2f&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ca8922006e49d33dc9647bde0c199a0" name="a1ca8922006e49d33dc9647bde0c199a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ca8922006e49d33dc9647bde0c199a0">&#9670;&#160;</a></span>Collides() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Collisions::Collides </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bc78323ca779ffe2a05fd424b35268b" name="a8bc78323ca779ffe2a05fd424b35268b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc78323ca779ffe2a05fd424b35268b">&#9670;&#160;</a></span>Collides() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Collisions::Collides </td>
+          <td>(</td>
+          <td class="paramtype">sf::FloatRect&#160;</td>
+          <td class="paramname"><em>otherRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae24ff446c137e1ec27c48e7da3e7cdbe" name="ae24ff446c137e1ec27c48e7da3e7cdbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24ff446c137e1ec27c48e7da3e7cdbe">&#9670;&#160;</a></span>Collides() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Collisions::Collides </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25a61796ad1363ce2dca1887d8073b10" name="a25a61796ad1363ce2dca1887d8073b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a61796ad1363ce2dca1887d8073b10">&#9670;&#160;</a></span>Collides() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Collisions::Collides </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; sf::Vector2f &gt;&#160;</td>
+          <td class="paramname"><em>corners</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78b187d6c671d4c3a70195ca1e4a4517" name="a78b187d6c671d4c3a70195ca1e4a4517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b187d6c671d4c3a70195ca1e4a4517">&#9670;&#160;</a></span>CollidesWithAny()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * Engine2D::Collisions::CollidesWithAny </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a964f14c4a467d3e0740ed27b6637ee07" name="a964f14c4a467d3e0740ed27b6637ee07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964f14c4a467d3e0740ed27b6637ee07">&#9670;&#160;</a></span>deleteMe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::deleteMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a082e2f4c4eefc227d9b26cf309e060bc">Engine2D::GameObject</a>.</p>
+
+<p>Reimplementowana w <a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html#a98d0e15eb57c946292a7310303a6732d">FlappyBird::flappyScore</a>, <a class="el" href="../../d4/d31/class_flappy_bird_1_1flappy_obstacle.html#a6901b9f1923b781770f201140c31d033">FlappyBird::flappyObstacle</a>, <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html#ab83f1535726023514ed80528ec924772">Engine2D::Player</a>, <a class="el" href="../../d8/da7/class_engine2_d_1_1_shape_object.html#af037dd66173dbb26ce8fe83c6d6a999d">Engine2D::ShapeObject</a>, <a class="el" href="../../d1/d48/class_engine2_d_1_1_shapes_1_1_rectangle_shape.html#a60bcccff0e97e5fe745167c361cb28d8">Engine2D::Shapes::RectangleShape</a> i <a class="el" href="../../d9/df7/class_engine2_d_1_1_shapes_1_1_circle_shape.html#a25b0f60569320345f0d0618ad7d70bee">Engine2D::Shapes::CircleShape</a>.</p>
+
+</div>
+</div>
+<a id="a08fcf16ec995148a9bca335b4118ca31" name="a08fcf16ec995148a9bca335b4118ca31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08fcf16ec995148a9bca335b4118ca31">&#9670;&#160;</a></span>drawCorners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::drawCorners </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; sf::Vector2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corners</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87087ba943cacbab05cc13aaaf41405c" name="a87087ba943cacbab05cc13aaaf41405c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87087ba943cacbab05cc13aaaf41405c">&#9670;&#160;</a></span>FindClosestNonCollidingPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a> Engine2D::Collisions::FindClosestNonCollidingPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>Target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td>
+          <td class="paramname"><em>ignore</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b8065a4c5332cc6a31dfad496207cf4" name="a6b8065a4c5332cc6a31dfad496207cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8065a4c5332cc6a31dfad496207cf4">&#9670;&#160;</a></span>getGlobalBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::FloatRect Engine2D::Collisions::getGlobalBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7538ca90a93d4c2a12727d28ca25317b" name="a7538ca90a93d4c2a12727d28ca25317b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7538ca90a93d4c2a12727d28ca25317b">&#9670;&#160;</a></span>moveOutOfCollision() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f Engine2D::Collisions::moveOutOfCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>coll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39e0d148b835337fdd40941b0ffcc615" name="a39e0d148b835337fdd40941b0ffcc615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e0d148b835337fdd40941b0ffcc615">&#9670;&#160;</a></span>moveOutOfCollision() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f Engine2D::Collisions::moveOutOfCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>coll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e81e8728a716783f1e67d85c3d58f0d" name="a7e81e8728a716783f1e67d85c3d58f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e81e8728a716783f1e67d85c3d58f0d">&#9670;&#160;</a></span>OnCollisionEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::OnCollisionEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana w <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html#aa913649b08266a7f80320e07b05b8dfb">Engine2D::Player</a> i <a class="el" href="../../d9/d74/class_flappy_bird_1_1flappy_score.html#a398e5a0ebc076d5c72687ec74a197b86">FlappyBird::flappyScore</a>.</p>
+
+</div>
+</div>
+<a id="ad4a2ede66deeaf262b2586ad8a636341" name="ad4a2ede66deeaf262b2586ad8a636341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a2ede66deeaf262b2586ad8a636341">&#9670;&#160;</a></span>OnCollisionExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::OnCollisionExit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana w <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html#a4fbe992b15a8a7240dc8c2846e2bc95e">Engine2D::Player</a>.</p>
+
+</div>
+</div>
+<a id="ad056de7321e4f5aeefc4348833820a7c" name="ad056de7321e4f5aeefc4348833820a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad056de7321e4f5aeefc4348833820a7c">&#9670;&#160;</a></span>OnCollisionStay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::OnCollisionStay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana w <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html#ab636e039042333f7eb7e587a449bb453">Engine2D::Player</a>.</p>
+
+</div>
+</div>
+<a id="abe71e2c4112e5900ed95c971e90b58a8" name="abe71e2c4112e5900ed95c971e90b58a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe71e2c4112e5900ed95c971e90b58a8">&#9670;&#160;</a></span>PointCollide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * Engine2D::Collisions::PointCollide </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>ignoreOne</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc92fb7c35038a30c1fa41f1554d1e70" name="abc92fb7c35038a30c1fa41f1554d1e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc92fb7c35038a30c1fa41f1554d1e70">&#9670;&#160;</a></span>printCorners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine2D::Collisions::printCorners </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; sf::Vector2f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>corners</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7368bcb59a0311b0abdc6074d3132326" name="a7368bcb59a0311b0abdc6074d3132326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7368bcb59a0311b0abdc6074d3132326">&#9670;&#160;</a></span>Raycast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a> Engine2D::Collisions::Raycast </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td>
+          <td class="paramname"><em>ignore</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b3beec052b85cc49b0938f93e781352" name="a0b3beec052b85cc49b0938f93e781352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3beec052b85cc49b0938f93e781352">&#9670;&#160;</a></span>RaycastBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d0/daf/struct_engine2_d_1_1_raycast_hit.html">RaycastHit</a> Engine2D::Collisions::RaycastBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>selfPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a> * &gt;&#160;</td>
+          <td class="paramname"><em>ignore</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="acc316c98bd06099d878d7e356a3d8d0d" name="acc316c98bd06099d878d7e356a3d8d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc316c98bd06099d878d7e356a3d8d0d">&#9670;&#160;</a></span>All</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Engine2D::Collisions</a> * &gt; Engine2D::Collisions::All</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af764da8e9509c19f58411721fb81fed8" name="af764da8e9509c19f58411721fb81fed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af764da8e9509c19f58411721fb81fed8">&#9670;&#160;</a></span>currentCollisions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a>*&gt; Engine2D::Collisions::currentCollisions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f999173e0fe6b7bd37df29e32f87a37" name="a6f999173e0fe6b7bd37df29e32f87a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f999173e0fe6b7bd37df29e32f87a37">&#9670;&#160;</a></span>enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine2D::Collisions::enabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af85b52802bcc84debaff2ec09796077a" name="af85b52802bcc84debaff2ec09796077a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85b52802bcc84debaff2ec09796077a">&#9670;&#160;</a></span>globalBounds</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::FloatRect Engine2D::Collisions::globalBounds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa10ec39c4639bc2a818969e3e6864b4d" name="aa10ec39c4639bc2a818969e3e6864b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa10ec39c4639bc2a818969e3e6864b4d">&#9670;&#160;</a></span>myCorners</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Vector2f&gt; Engine2D::Collisions::myCorners</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4d154a804cb8ee47c9bece965f25de6" name="ac4d154a804cb8ee47c9bece965f25de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4d154a804cb8ee47c9bece965f25de6">&#9670;&#160;</a></span>myTransform</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d00/class_engine2_d_1_1_transformable_object.html">TransformableObject</a>* Engine2D::Collisions::myTransform</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99df6467e17d317a3d60b5b8532ea40f" name="a99df6467e17d317a3d60b5b8532ea40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99df6467e17d317a3d60b5b8532ea40f">&#9670;&#160;</a></span>oldAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine2D::Collisions::oldAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a652243cc61f7544a16e11dbfc2263a3d" name="a652243cc61f7544a16e11dbfc2263a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a652243cc61f7544a16e11dbfc2263a3d">&#9670;&#160;</a></span>oldCos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine2D::Collisions::oldCos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e166ed75021ef2af55972b410fca40a" name="a5e166ed75021ef2af55972b410fca40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e166ed75021ef2af55972b410fca40a">&#9670;&#160;</a></span>oldSin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine2D::Collisions::oldSin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../db/da3/_collisions_8h_source.html">Collisions.h</a></li>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../d2/d8c/_collisions_8cpp.html">Collisions.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/d06/namespace_engine2_d.html">Engine2D</a></li><li class="navelem"><a class="el" href="../../d6/dee/class_engine2_d_1_1_collisions.html">Collisions</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

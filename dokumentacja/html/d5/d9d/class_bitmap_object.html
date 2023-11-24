@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Silnik2D - Demo Flappy Bird: Dokumentacja klasy BitmapObject</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Silnik2D - Demo Flappy Bird
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('d5/d9d/class_bitmap_object.html','../../'); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Wczytywanie...</div>
+<div class="SRStatus" id="Searching">Szukanie...</div>
+<div class="SRStatus" id="NoMatches">Brak dopasowań</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="#pro-attribs">Atrybuty chronione</a> &#124;
+<a href="../../d8/d39/class_bitmap_object-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy BitmapObject</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="../../dd/d0a/_bitmap_object_8h_source.html">BitmapObject.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla BitmapObject</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d5/d9d/class_bitmap_object.png" usemap="#BitmapObject_map" alt=""/>
+  <map id="BitmapObject_map" name="BitmapObject_map">
+<area href="../../df/dab/class_engine2_d_1_1_drawable_object.html" alt="Engine2D::DrawableObject" shape="rect" coords="175,56,340,80"/>
+<area href="../../db/d78/class_engine2_d_1_1_game_object.html" alt="Engine2D::GameObject" shape="rect" coords="175,0,340,24"/>
+<area href="../../d6/d4b/class_engine2_d_1_1_player.html" alt="Engine2D::Player" shape="rect" coords="0,168,165,192"/>
+<area href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html" alt="Engine2D::SpriteObject" shape="rect" coords="175,168,340,192"/>
+<area href="../../d4/d31/class_flappy_bird_1_1flappy_obstacle.html" alt="FlappyBird::flappyObstacle" shape="rect" coords="350,168,515,192"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aaec61c9acc89036fd1bd3c0645f845b2" id="r_aaec61c9acc89036fd1bd3c0645f845b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#aaec61c9acc89036fd1bd3c0645f845b2">loadbitmaps</a> (std::vector&lt; sf::Texture &gt; bitmapstoload)</td></tr>
+<tr class="separator:aaec61c9acc89036fd1bd3c0645f845b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c69823bdaf0c1fd6e4f3d6b9508343" id="r_a36c69823bdaf0c1fd6e4f3d6b9508343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a36c69823bdaf0c1fd6e4f3d6b9508343">animate</a> (double deltatime, double frame_speed, int version)</td></tr>
+<tr class="separator:a36c69823bdaf0c1fd6e4f3d6b9508343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a207fc305d5b844f97418614bfa38547b" id="r_a207fc305d5b844f97418614bfa38547b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a207fc305d5b844f97418614bfa38547b">deleteMe</a> () override</td></tr>
+<tr class="separator:a207fc305d5b844f97418614bfa38547b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
+<tr class="memitem:af5c0f9b5eb4304b17e2928da56e468a4 inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_af5c0f9b5eb4304b17e2928da56e468a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#af5c0f9b5eb4304b17e2928da56e468a4">Draw</a> ()</td></tr>
+<tr class="separator:af5c0f9b5eb4304b17e2928da56e468a4 inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_a14166278e3321b9bd5628d2a52c3125c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a14166278e3321b9bd5628d2a52c3125c">DrawableObject</a> ()</td></tr>
+<tr class="separator:a14166278e3321b9bd5628d2a52c3125c inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_aa219c52644f4c7b66ca3c7a3386e5f6d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#aa219c52644f4c7b66ca3c7a3386e5f6d">Draw</a> (sf::Texture texture)</td></tr>
+<tr class="separator:aa219c52644f4c7b66ca3c7a3386e5f6d inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object" id="r_a0270327b9525c4e563545e6c515a5d8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a0270327b9525c4e563545e6c515a5d8e">~DrawableObject</a> ()</td></tr>
+<tr class="separator:a0270327b9525c4e563545e6c515a5d8e inherit pub_methods_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Metody publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_abeeaa08c4d6f9f511916204d403450e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#abeeaa08c4d6f9f511916204d403450e0">GameObject</a> ()</td></tr>
+<tr class="separator:abeeaa08c4d6f9f511916204d403450e0 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a862384580261ca5ae326b03dcff52d80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a862384580261ca5ae326b03dcff52d80">GameObject</a> (std::string <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a>)</td></tr>
+<tr class="separator:a862384580261ca5ae326b03dcff52d80 inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object" id="r_a1de11ee28a22197456e1a88f6ed3156d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a1de11ee28a22197456e1a88f6ed3156d">~GameObject</a> ()</td></tr>
+<tr class="separator:a1de11ee28a22197456e1a88f6ed3156d inherit pub_methods_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:a027b556213b1555895e6d8af12663ba6" id="r_a027b556213b1555895e6d8af12663ba6"><td class="memItemLeft" align="right" valign="top">sf::Sprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a027b556213b1555895e6d8af12663ba6">renderobj</a></td></tr>
+<tr class="separator:a027b556213b1555895e6d8af12663ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f029d81858b1a996a6e75d0a62d6b7" id="r_ab4f029d81858b1a996a6e75d0a62d6b7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::Texture &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#ab4f029d81858b1a996a6e75d0a62d6b7">bitmaps</a></td></tr>
+<tr class="separator:ab4f029d81858b1a996a6e75d0a62d6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
+<tr class="memitem:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_ae73cdf98d1ef84dd01d41af21ba018c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ae73cdf98d1ef84dd01d41af21ba018c5">visible</a></td></tr>
+<tr class="separator:ae73cdf98d1ef84dd01d41af21ba018c5 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_addd9535d8e921b206d9aedde771fc395"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#addd9535d8e921b206d9aedde771fc395">window</a></td></tr>
+<tr class="separator:addd9535d8e921b206d9aedde771fc395 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object" id="r_a5d6eeff01fe1042ae41f9590564bf2c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#a5d6eeff01fe1042ae41f9590564bf2c3">isUi</a></td></tr>
+<tr class="separator:a5d6eeff01fe1042ae41f9590564bf2c3 inherit pub_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_ac18b4d45d12f94726e2ea97364187bb7"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac18b4d45d12f94726e2ea97364187bb7">name</a></td></tr>
+<tr class="separator:ac18b4d45d12f94726e2ea97364187bb7 inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object" id="r_a4b29dc7811499e94d004bb0adc8167fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#a4b29dc7811499e94d004bb0adc8167fa">isRemoving</a></td></tr>
+<tr class="separator:a4b29dc7811499e94d004bb0adc8167fa inherit pub_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Atrybuty chronione</h2></td></tr>
+<tr class="memitem:a1ea0e37c4182a860b0699ac87d792c56" id="r_a1ea0e37c4182a860b0699ac87d792c56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#a1ea0e37c4182a860b0699ac87d792c56">i</a> =0</td></tr>
+<tr class="separator:a1ea0e37c4182a860b0699ac87d792c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc46c3c8c95d9ace00874a30c9e81ff" id="r_adbc46c3c8c95d9ace00874a30c9e81ff"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d9d/class_bitmap_object.html#adbc46c3c8c95d9ace00874a30c9e81ff">offset</a></td></tr>
+<tr class="separator:adbc46c3c8c95d9ace00874a30c9e81ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Dodatkowe Dziedziczone Składowe</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_drawable_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_drawable_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">Engine2D::DrawableObject</a></td></tr>
+<tr class="memitem:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object" id="r_ab4f1788806b4cf6a682bb2eb6b7bc45c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html">DrawableObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ab4f1788806b4cf6a682bb2eb6b7bc45c">All</a></td></tr>
+<tr class="separator:ab4f1788806b4cf6a682bb2eb6b7bc45c inherit pub_static_attribs_class_engine2_d_1_1_drawable_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_engine2_d_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_engine2_d_1_1_game_object')"><img src="../../closed.png" alt="-"/>&#160;Statyczne atrybuty publiczne dziedziczone z <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">Engine2D::GameObject</a></td></tr>
+<tr class="memitem:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object" id="r_ac56370aaa845877752342e8091325a2b"><td class="memItemLeft" align="right" valign="top">static vector&lt; <a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html">GameObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d78/class_engine2_d_1_1_game_object.html#ac56370aaa845877752342e8091325a2b">All</a></td></tr>
+<tr class="separator:ac56370aaa845877752342e8091325a2b inherit pub_static_attribs_class_engine2_d_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a36c69823bdaf0c1fd6e4f3d6b9508343" name="a36c69823bdaf0c1fd6e4f3d6b9508343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c69823bdaf0c1fd6e4f3d6b9508343">&#9670;&#160;</a></span>animate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitmapObject::animate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>deltatime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>frame_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a207fc305d5b844f97418614bfa38547b" name="a207fc305d5b844f97418614bfa38547b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a207fc305d5b844f97418614bfa38547b">&#9670;&#160;</a></span>deleteMe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitmapObject::deleteMe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplementowana z <a class="el" href="../../df/dab/class_engine2_d_1_1_drawable_object.html#ae3025eb45f8dfef8d9bade9047023502">Engine2D::DrawableObject</a>.</p>
+
+<p>Reimplementowana w <a class="el" href="../../d4/d31/class_flappy_bird_1_1flappy_obstacle.html#a6901b9f1923b781770f201140c31d033">FlappyBird::flappyObstacle</a>, <a class="el" href="../../d6/d4b/class_engine2_d_1_1_player.html#ab83f1535726023514ed80528ec924772">Engine2D::Player</a> i <a class="el" href="../../d1/d0b/class_engine2_d_1_1_sprite_object.html#a1be0b22130919272fb618cc15ac341ed">Engine2D::SpriteObject</a>.</p>
+
+</div>
+</div>
+<a id="aaec61c9acc89036fd1bd3c0645f845b2" name="aaec61c9acc89036fd1bd3c0645f845b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec61c9acc89036fd1bd3c0645f845b2">&#9670;&#160;</a></span>loadbitmaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitmapObject::loadbitmaps </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; sf::Texture &gt;&#160;</td>
+          <td class="paramname"><em>bitmapstoload</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="ab4f029d81858b1a996a6e75d0a62d6b7" name="ab4f029d81858b1a996a6e75d0a62d6b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f029d81858b1a996a6e75d0a62d6b7">&#9670;&#160;</a></span>bitmaps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;sf::Texture&gt; BitmapObject::bitmaps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ea0e37c4182a860b0699ac87d792c56" name="a1ea0e37c4182a860b0699ac87d792c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea0e37c4182a860b0699ac87d792c56">&#9670;&#160;</a></span>i</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BitmapObject::i =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbc46c3c8c95d9ace00874a30c9e81ff" name="adbc46c3c8c95d9ace00874a30c9e81ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc46c3c8c95d9ace00874a30c9e81ff">&#9670;&#160;</a></span>offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double BitmapObject::offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a027b556213b1555895e6d8af12663ba6" name="a027b556213b1555895e6d8af12663ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027b556213b1555895e6d8af12663ba6">&#9670;&#160;</a></span>renderobj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Sprite BitmapObject::renderobj</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../dd/d0a/_bitmap_object_8h_source.html">BitmapObject.h</a></li>
+<li>D:/PSK/Semestr3/GRAFIKA/Silnik2D/GK1_Silnik2D/<a class="el" href="../../d0/d34/_bitmap_object_8cpp.html">BitmapObject.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d5/d9d/class_bitmap_object.html">BitmapObject</a></li>
+    <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

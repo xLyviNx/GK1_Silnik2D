@@ -1,0 +1,67 @@
+\doxysection{D\+:/\+PSK/\+Semestr3/\+GRAFIKA/\+Silnik2\+D/\+GK1\+\_\+\+Silnik2\+D/\+Shape\+Object.h}
+\hypertarget{_shape_object_8h_source}{}\label{_shape_object_8h_source}\mbox{\hyperlink{_shape_object_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_drawable_object_8h}{DrawableObject.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_transform_8h}{Transform.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_primitive_renderer_8h}{PrimitiveRenderer.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_engine_8h}{Engine.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collisions_8h}{Collisions.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine2_d}{Engine2D}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_shape_object}{ShapeObject}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object}{TransformableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_drawable_object}{DrawableObject}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_collisions}{Collisions}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ sf::RenderWindow*\ \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a9df557fb76c95bf84c4dd7df02970006}{renderWindow}};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a0d2611062ee174c49aed60ef7378b893}{ShapeObject}}();}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a0d2611062ee174c49aed60ef7378b893}{ShapeObject}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a0d2611062ee174c49aed60ef7378b893}{ShapeObject}}(std::string\ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shape_object_af037dd66173dbb26ce8fe83c6d6a999d}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shape_object_a6b746b4fcd24ae5e9f6ed213d8de40b2}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{namespace\ }Shapes}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape}{RectangleShape}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_shape_object}{ShapeObject}}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a54f8c5afe6e52feaac14638bc89ffc40}{localA}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a831d2af5cc0949879f4994b40193330f}{localB}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_ab4e483bb574565240b20b2cdad76f91a}{worldA}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a10c629bd02ff8a9df94d329e8f2f0ad7}{worldB}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aa90cb49ea48c2dbfde4752d46bb3a3af}{outlinewidth}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ sf::RectangleShape\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a7444eeb00a11eb531b26c52d833c0125}{rectShape}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a354d0b8ad0e5b0033a73173e3d8767ad}{fillColor}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aaa307ecd88238153e89a21591cfdbb18}{color}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_ad4db942323b6533a3cb42c9b92fc83c7}{PropertiesChanged}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//RectangleShape();}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape}{RectangleShape}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ A,\ \textcolor{keywordtype}{float}\ B,\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aaa307ecd88238153e89a21591cfdbb18}{color}},\ \textcolor{keywordtype}{float}\ width);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape}{RectangleShape}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ A,\ \textcolor{keywordtype}{float}\ B,\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aaa307ecd88238153e89a21591cfdbb18}{color}},\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a354d0b8ad0e5b0033a73173e3d8767ad}{fillColor}},\ \textcolor{keywordtype}{float}\ width);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape}{RectangleShape}}(std::string\ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ A,\ \textcolor{keywordtype}{float}\ B,\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aaa307ecd88238153e89a21591cfdbb18}{color}},\ \textcolor{keywordtype}{float}\ width);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape}{RectangleShape}}(std::string\ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ A,\ \textcolor{keywordtype}{float}\ B,\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aaa307ecd88238153e89a21591cfdbb18}{color}},\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a354d0b8ad0e5b0033a73173e3d8767ad}{fillColor}},\ \textcolor{keywordtype}{float}\ width);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a60bcccff0e97e5fe745167c361cb28d8}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_a45a7686de53428ca13d8746eaa412b2e}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_rectangle_shape_aaffc9698670417dfa96a315e789b66fc}{ChangeSize}}(\textcolor{keywordtype}{float}\ A,\ \textcolor{keywordtype}{float}\ B);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape}{CircleShape}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine2_d_1_1_shape_object}{ShapeObject}}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a34fb6405ece345f4decaf8f222699ebd}{localRadius}};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a3568fbbbaa99f511f23adeadc675b9f6}{worldRadius}};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a0a789dfc83ada7f23cd9b07f7c0a0fb1}{width}};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ sf::CircleShape\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a735f74bc2979412147d8dddd9d24ab6b}{circleShape}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}{color}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_abc9bfb16d055257dc8896efc30638127}{fillColor}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_ae24d5790a7a8515f0840c854a23ae218}{PropertiesChanged}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape}{CircleShape}}(Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ Rad,\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a0a789dfc83ada7f23cd9b07f7c0a0fb1}{width}},\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}{color}},\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_abc9bfb16d055257dc8896efc30638127}{fillColor}});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape}{CircleShape}}(std::string\ \mbox{\hyperlink{class_engine2_d_1_1_game_object_ac18b4d45d12f94726e2ea97364187bb7}{name}},\ Vector2f\ \mbox{\hyperlink{class_engine2_d_1_1_transformable_object_aff0540d6a377d0360076ffbaf2efd6be}{position}},\ \textcolor{keywordtype}{float}\ R,\ Color\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a060a1311daf674703e8a4c30578be425}{color}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a25b0f60569320345f0d0618ad7d70bee}{deleteMe}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine2_d_1_1_shapes_1_1_circle_shape_a815ce0012a17f00d87d03b8834810743}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
