@@ -202,7 +202,7 @@ namespace Engine2D {
 		{
 			for (size_t j = 0; j < myCorners.size(); ++j) {
 				sf::Vector2f edge = myCorners[j] - myCorners[(j + 1) % myCorners.size()];
-				sf::Vector2f axis(-edge.y, edge.x); // Perpendicular to the edge
+				sf::Vector2f axis(-edge.y, edge.x);
 
 				float minA = std::numeric_limits<float>::max();
 				float maxA = std::numeric_limits<float>::lowest();
@@ -219,33 +219,30 @@ namespace Engine2D {
 				maxB = std::max(maxB, projection);
 
 				if (maxA < minB || maxB < minA)
-					return false; // No collision
+					return false;
 			}
 
-			return true; // Collision
+			return true; 
 		}
 		return false;
 	}
 	sf::Vector2f Collisions::moveOutOfCollision(Collisions* coll, sf::Vector2f position, sf::Vector2f velocity) {
 		if (Calculations::Vector2f_Magnitude(velocity) <= 0.0)
 			return moveOutOfCollision(coll, position);
-		std::vector<sf::Vector2f> corners = coll->myCorners; // Copy coll->myCorners
+		std::vector<sf::Vector2f> corners = coll->myCorners;
 		sf::Vector2f displacement(0.f, 0.f);
 
 		for (auto& other : Collisions::All)
 		{
-			if (coll == other) continue; // Skip the same object
+			if (coll == other) continue;
 
 			while (other->Collides(corners)) {
-				// Calculate the displacement vector based on the velocity
 				sf::Vector2f direction = -velocity / std::sqrt(velocity.x * velocity.x + velocity.y * velocity.y); // Normalize the velocity vector and reverse it
 
-				// Add a small step in the direction to each corner
 				for (auto& corner : corners) {
 					corner += direction * 0.1f;
 				}
 
-				// Add the step to the displacement
 				displacement += direction * 0.1f;
 			}
 		}
