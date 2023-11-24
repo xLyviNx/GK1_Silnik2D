@@ -8,42 +8,42 @@ using namespace std;
 namespace Engine2D
 {
     /**
-     * @brief Enumeracja reprezentuj¹ca ró¿ne tryby wyœwietlania aplikacji.
+     * @brief Enumeracja reprezentujaca rozne tryby wyswietlania aplikacji.
      */
     enum DisplayMode
     {
         Windowed,    ///< Tryb okienkowy.
-        Fullscreen,  ///< Tryb pe³noekranowy.
+        Fullscreen,  ///< Tryb pelnoekranowy.
     };
 
     /**
-     * @brief Struktura przechowuj¹ca dane aplikacji.
+     * @brief Struktura przechowujaca dane aplikacji.
      */
     struct ApplicationData
     {
         sf::String ApplicationName; ///< Nazwa aplikacji.
         sf::Vector2<int> WindowSize; ///< Rozmiar okna aplikacji.
-        DisplayMode displayMode; ///< Tryb wyœwietlania.
-        int maxFramerate; ///< Maksymalna liczba klatek na sekundê.
+        DisplayMode displayMode; ///< Tryb wyswietlania.
+        int maxFramerate; ///< Maksymalna liczba klatek na sekunde.
 
         /**
          * @brief Konstruktor struktury ApplicationData z parametrami.
          * @param appName Nazwa aplikacji.
-         * @param Width Szerokoœæ okna.
-         * @param Height Wysokoœæ okna.
-         * @param dispMode Tryb wyœwietlania.
-         * @param maxFps Maksymalna liczba klatek na sekundê.
+         * @param Width Szerokosc okna.
+         * @param Height Wysokosc okna.
+         * @param dispMode Tryb wyswietlania.
+         * @param maxFps Maksymalna liczba klatek na sekunde.
          */
         ApplicationData(sf::String appName, int Width, int Height, DisplayMode dispMode, int maxFps);
 
         /**
-         * @brief Domyœlny konstruktor struktury ApplicationData.
+         * @brief Domyslny konstruktor struktury ApplicationData.
          */
         ApplicationData();
     };
 
     /**
-     * @brief WskaŸnik na obiekt ApplicationData, przechowuj¹cy globalne dane aplikacji.
+     * @brief Wskaznik na obiekt ApplicationData, przechowujacy globalne dane aplikacji.
      */
     extern ApplicationData* appData;
 
@@ -53,8 +53,8 @@ namespace Engine2D
     void LoadAppData();
 
     /**
-     * @brief Funkcja tworz¹ca obiekt ApplicationData, jeœli nie istnieje.
-     * @param data WskaŸnik na dane aplikacji.
+     * @brief Funkcja tworzaca obiekt ApplicationData, jesli nie istnieje.
+     * @param data Wskaznik na dane aplikacji.
      */
     void createApplicationDataIfNone(ApplicationData* data);
 }

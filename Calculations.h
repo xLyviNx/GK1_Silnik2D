@@ -5,7 +5,7 @@
 namespace Engine2D
 {
     /**
-     * @brief Klasa zawieraj¹ca ró¿ne matematyczne operacje.
+     * @brief Klasa zawierajaca rozne matematyczne operacje.
      */
     class Calculations {
     public:
@@ -17,14 +17,14 @@ namespace Engine2D
         static sf::Vector2f Vector2f_Normalize(sf::Vector2f Vector);
 
         /**
-         * @brief Oblicza d³ugoœæ wektora sf::Vector2f.
-         * @param Vector Wektor, którego d³ugoœæ ma byæ obliczona.
-         * @return D³ugoœæ wektora.
+         * @brief Oblicza dlugosc wektora sf::Vector2f.
+         * @param Vector Wektor, ktorego dlugosc ma byc obliczona.
+         * @return Dlugosc wektora.
          */
         static float Vector2f_Magnitude(sf::Vector2f Vector);
 
         /**
-         * @brief Oblicza iloczyn skalarny dwóch wektorów sf::Vector2f.
+         * @brief Oblicza iloczyn skalarny dwoch wektorow sf::Vector2f.
          * @param a Pierwszy wektor.
          * @param b Drugi wektor.
          * @return Iloczyn skalarny.
@@ -32,9 +32,9 @@ namespace Engine2D
         static float dotProduct(const sf::Vector2f& a, const sf::Vector2f& b);
 
         /**
-         * @brief Generuje losow¹ liczbê ca³kowit¹ w okreœlonym zakresie.
+         * @brief Generuje losowa liczbe calkowita w okreslonym zakresie.
          * @param min Dolna granica zakresu.
-         * @param max Górna granica zakresu.
+         * @param max Gorna granica zakresu.
          * @return Wygenerowana liczba losowa.
          */
         static int Random(int min, int max);
