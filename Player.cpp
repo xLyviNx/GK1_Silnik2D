@@ -66,8 +66,8 @@ void Engine2D::Player::Movement(Engine* engine, float deltaTime)
 	{
 		std::set<Collisions*> ignore;
 		ignore.insert((Collisions*)this);
-		Vector2f bottomL = worldPosition() + Vector2f(0, -2.5f + bounds.y / 2.0) - Vector2f(worldBounds().x * 0.5f, 0);
-		Vector2f bottomR = worldPosition() + Vector2f(0, -2.5f + bounds.y / 2.0) + Vector2f(worldBounds().x * 0.5f, 0);
+		Vector2f bottomL = worldPosition() + Vector2f(0, -4.f + bounds.y / 2.0) - Vector2f(worldBounds().x * 0.5f, 0);
+		Vector2f bottomR = worldPosition() + Vector2f(0, -4.f + bounds.y / 2.0) + Vector2f(worldBounds().x * 0.5f, 0);
 		RaycastHit hitL = Collisions::Raycast(bottomL , bottomL + Vector2f(0, 2), ignore);
 		RaycastHit hitR = Collisions::Raycast(bottomR, bottomR + Vector2f(0, 2), ignore);
 		isGrounded = hitL.hit || hitR.hit;
