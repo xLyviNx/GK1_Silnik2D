@@ -10,10 +10,10 @@ using namespace sf;
 namespace Engine2D
 {
     /**
-     * @brief Klasa reprezentuj¹ca obiekt gry poddaj¹cy siê transformacjom.
+     * @brief Klasa reprezentujaca obiekt gry poddajacy sie transformacjom.
      *
      * Klasa TransformableObject dziedziczy po klasie GameObject
-     * i dodaje w³aœciwoœci oraz funkcje zwi¹zane z transformacjami.
+     * i dodaje wlasciwosci oraz funkcje zwiazane z transformacjami.
      */
     class TransformableObject : public virtual GameObject
     {
@@ -21,40 +21,40 @@ namespace Engine2D
         TransformableObject* parent;
 
     public:
-        static set<TransformableObject*> All; ///< Zbiór wszystkich obiektów poddaj¹cych siê transformacjom.
-        vector<TransformableObject*> children; ///< Wektor dzieci obiektu poddaj¹cego siê transformacjom.
+        static set<TransformableObject*> All; ///< Zbior wszystkich obiektow poddajacych sie transformacjom.
+        vector<TransformableObject*> children; ///< Wektor dzieci obiektu poddajacego sie transformacjom.
         Vector2f position; ///< Lokalna pozycja obiektu.
         Vector2f lastPosition; ///< Ostatnia lokalna pozycja obiektu.
 
         /**
-         * @brief Pobiera pozycjê obiektu w œwiecie.
+         * @brief Pobiera pozycje obiektu w swiecie.
          *
-         * @return Pozycja obiektu w œwiecie.
+         * @return Pozycja obiektu w swiecie.
          */
         Vector2f worldPosition();
 
         /**
-         * @brief Pobiera ostatni¹ pozycjê obiektu w œwiecie.
+         * @brief Pobiera ostatnia pozycje obiektu w swiecie.
          *
-         * @return Ostatnia pozycja obiektu w œwiecie.
+         * @return Ostatnia pozycja obiektu w swiecie.
          */
         Vector2f lastWorldPosition();
 
         Vector2f scale; ///< Lokalna skala obiektu.
 
         /**
-         * @brief Pobiera skalê obiektu w œwiecie.
+         * @brief Pobiera skale obiektu w swiecie.
          *
-         * @return Skala obiektu w œwiecie.
+         * @return Skala obiektu w swiecie.
          */
         Vector2f worldScale();
 
         Vector2f bounds; ///< Lokalne granice obiektu.
 
         /**
-         * @brief Pobiera granice obiektu w œwiecie.
+         * @brief Pobiera granice obiektu w swiecie.
          *
-         * @return Granice obiektu w œwiecie.
+         * @return Granice obiektu w swiecie.
          */
         Vector2f worldBounds();
         string tag; ///< Etykieta obiektu.
@@ -218,6 +218,6 @@ namespace Engine2D
          * Nadpisuje funkcje z klasy bazowej GameObject.
          */
         virtual void deleteMe() override;
-		//virtual void checkPropertyChanged();
-	};
+        //virtual void checkPropertyChanged();
+    };
 }

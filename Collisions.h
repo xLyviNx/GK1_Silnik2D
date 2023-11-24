@@ -5,13 +5,6 @@
 #include <vector>
 namespace Engine2D
 {
-	/**
-	 * @brief Klasa reprezentujaca obiekt odpowiedzialny za obsluge kolizji.
-	 *
-	 * Klasa Collisions zawiera funkcje do obslugi detekcji kolizji oraz reakcji na nie.
-	 * Jest dziedziczona po klasie GameObject, co oznacza, ze moze byc uzywana jako
-	 * podstawowy element w strukturze gry.
-	 */
 	class Collisions;
 
 	/**
@@ -43,7 +36,13 @@ namespace Engine2D
 		{
 		}
 	};
-
+	/**
+	 * @brief Klasa reprezentujaca obiekt odpowiedzialny za obsluge kolizji.
+	 *
+	 * Klasa Collisions zawiera funkcje do obslugi detekcji kolizji oraz reakcji na nie.
+	 * Jest dziedziczona po klasie GameObject, co oznacza, ze moze byc uzywana jako
+	 * podstawowy element w strukturze gry.
+	 */
 	class Collisions : public virtual GameObject
 	{
 	private:

@@ -7,13 +7,14 @@
 
 namespace FlappyBird
 {
+
+    class flappyObstacle; // Deklaracja wstepna klasy flappyObstacle
     /**
      * @brief Klasa reprezentujaca menadzera gry w Flappy Bird.
      *
      * Klasa GameManager dziedziczy po klasie UpdatableObject, co umozliwia
      * jej aktualizacje w glownej petli gry.
      */
-    class flappyObstacle; // Deklaracja wstepna klasy flappyObstacle
     class GameManager : public virtual Engine2D::UpdatableObject
     {
     public:

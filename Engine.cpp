@@ -7,7 +7,6 @@
 #include "Player.h"
 #include "BitmapHandler.h"
 #include "GameManager.hpp"
-#include "Camera.h"
 #include "BitmapObject.h"
 
 using namespace std;
